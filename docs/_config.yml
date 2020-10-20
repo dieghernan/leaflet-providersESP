@@ -1,4 +1,4 @@
-remote_theme: dieghernan/chulapa@v1.0.0-beta.1
+remote_theme: dieghernan/chulapa
 locale                  :     es-ES
 title                   : #default["repository_name"]
 title_separator         :     #default [" | "]
