@@ -26,17 +26,6 @@ var layersControl = L.control.layers(baseLayers, overlays, {
 
 baseLayers[Object.keys(baseLayers)[0]].addTo(map);
 
-	L.easyButton('fa-square-o', function(){
-    map.setView([40,-3],5);
-}).addTo(map);
-
-L.easyButton('<span>C</span>', function(){
-    map.setView([28, -15.8],6);
-}).addTo(map);
-L.easyButton('fa-globe', function(){
-    map.setView([40,-3],2);
-}).addTo(map);
-
 map.locate({setView: true, maxZoom: 16});
 
 function onLocationFound(e) {
@@ -52,6 +41,25 @@ function onLocationError(e) {
 }
 
 map.on('locationerror', onLocationError);
+
+L.easyButton('fa-square-o', function(){
+    map.locate({setView: true, maxZoom: 16});
+    map.on('locationfound', onLocationFound);
+    
+}).addTo(map);
+
+	L.easyButton('fa-square-o', function(){
+    map.setView([40,-3],5);
+}).addTo(map);
+
+L.easyButton('<span>C</span>', function(){
+    map.setView([28, -15.8],6);
+}).addTo(map);
+L.easyButton('fa-globe', function(){
+    map.setView([40,-3],2);
+}).addTo(map);
+
+
 
         // Control 3: This add a Search bar
             var searchControl = new L.esri.Controls.Geosearch().addTo(map);
