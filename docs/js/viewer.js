@@ -40,7 +40,7 @@ function onLocationError(e) {
 
 map.on('locationerror', onLocationError);
 
-L.easyButton('fa-square-o', function(){
+L.easyButton('fa-crosshairs', function(){
     map.locate({setView: true, maxZoom: 16});
     map.on('locationfound', onLocationFound);
     
