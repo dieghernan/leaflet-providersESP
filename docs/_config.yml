@@ -13,12 +13,7 @@ author:
   location              :  "Madrid, Spain"
 gtag_id                 :  
 analytics_id            :  
-search:
-  provider              : lunr
-  label                 : Buscar
-  landing_page          :  #default ["/search"] Link on navbar 
-  lunr_maxwords         :  200
-  
+
 # B. Navigation
 # Configure your navbar and the footer of your site
 
@@ -27,11 +22,12 @@ search:
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
   brand:
-    title   :  Home # Title in navbar
-    url     :  # default["url/baseurl"]
-    img     :  # An small image, try 30x30px
-  nav:
-  - title   : Ver en Github # Label
+    title   :  '<i class="fas fa-home"></i>'
+  - title: Demo
+    child: 
+    - title: Preview
+      url: ./preview
+  - title   : <i class="fab fa-github"></i> # Label
     url     : https://github.com/dieghernan/leaflet-providersESP # url	
 #  - title   : # Label submenu
 #    child:		
