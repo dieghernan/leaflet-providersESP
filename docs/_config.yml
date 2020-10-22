@@ -1,9 +1,9 @@
 remote_theme: dieghernan/chulapa
 locale                  :     es-ES
-title                   : #default["repository_name"]
+title                   : 
 title_separator         :     #default [" | "]
-subtitle                :   #default [your-repository-tagline]  
-description             : #default [your-repository-tagline]
+subtitle                :   Leaflet plugin
+description             : Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España
 timezone                : "Europe/Madrid"
 
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
