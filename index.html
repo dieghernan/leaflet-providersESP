@@ -110,7 +110,7 @@
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	<script src="./dist/leaflet-providersESP.min.js"></script>
+	<script src="./src/leaflet-providersESP.js"></script>
 	<style>
 	.map {
 	height: 50%,
@@ -174,15 +174,15 @@
 			<script>
 	
 			var map3 = L.map('map3', {
-			center: [40.9480800,-4.1183900], // Segovia
-			zoom: 12,
+			center: [40,-4],
+			zoom: 6,
 			zoomControl: true
 			});
 			var base = {
 			'CartoDB': L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map3)
 			};
 			var over ={
-			'Catastro tranparente' : L.tileLayer.providerESP('Catastro.Catastro',{transparent: true}).addTo(map3)
+			'Masas de agua' : L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)
 			};
 			L.control.layers(base, over, {collapsed: false}).addTo(map3);	
 			</script>
