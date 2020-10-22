@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Leaflet Provider Demo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+	<style>
+		html {
+			height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: baseline;
+		}
+		body, #container { height: 100%; margin: 0; padding: 0;}
+		.map { height: 100%; }
+
+		#info {
+			background: rgba(255, 255, 255, 0.6);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			position: fixed;
+			width: 50%;
+			max-width: 600px;
+			left: 3%;
+			padding: 6px 8px;
+			border-radius: 5px;
+		}
+		#info h4:first-child {
+			margin: 0 0 5px;
+		}
+		#info h4 {
+			margin: 5px 0 5px;
+		}
+		#info h4 code {
+			font-weight: normal;
+		}
+		#info .provider {
+			padding-bottom: 5px;
+			display: block;
+			padding-left: 15px;
+			font-size: 1em;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/control.layers.minimap.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<!-- Easy Button -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+
+</head>
+<body>
+	<div id="info">
+		<h1 class="lead"><a href="https://github.com/leaflet-extras/leaflet-providers">Visualizacion de proveedores Leaflet en España</a></h1>
+		<p>
+		   Esta página muestra mini mapas para todas las capas disponibles en <a href="https://github.com/dieghernan/leaflet-providersESP">Leaflet-providersESP</a>.
+		</p>
+	</div>
+	<div id="map" class="map"></div>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="./src/leaflet-providersESP.js"></script>	
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+	<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/zenburn.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="./js/shared.js"></script>
+	<script src="./js/preview.js"></script>
+	<script>
+		L.easyButton('fa-globe', function(){
+    map.setView([40,-3],2);
+}, {position: 'bottomleft'}).addTo(map);
+	
+	L.easyButton('fa-square-o', function(){
+    map.setView([40,-3],5);
+}, {position: 'bottomleft'}).addTo(map);
+
+
+
+	</script>
+</body>
+</html>
