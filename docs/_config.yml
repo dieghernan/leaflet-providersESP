@@ -23,6 +23,7 @@ analytics_id            :
 navbar:
   brand:
     title   :  '<i class="fas fa-home"></i>'
+  nav:
   - title: Demo
     child: 
     - title: Preview
