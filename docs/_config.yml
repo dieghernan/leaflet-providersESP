@@ -28,15 +28,13 @@ navbar:
     child: 
     - title: Preview
       url: ./preview
+    - title: Viewer
+      url: ./viewer
+  - title: Changelog
+    url: ./CHANGELOG
   - title   : <i class="fab fa-github"></i> # Label
-    url     : https://github.com/dieghernan/leaflet-providersESP # url	
-#  - title   : # Label submenu
-#    child:		
-#    - title: # Child label		
-#      url  : # child url	
-#    - title: # Child label		
-#      url  : # child url	
-#Social links to be placed on your site footer
+    url     : https://github.com/dieghernan/leaflet-providersESP 
+    
 footer:
   links:
     - label : Github # Label
@@ -50,13 +48,11 @@ footer:
       url: https://dieghernan.github.io/
   
 # C. Theme Settings
-# Google Fonts https://fonts.google.com/, add as many as you need
-googlefonts:
- # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+
 
 # Theme and colors
 chulapa-skin: 
-  highlight     :  murphy
+  highlight     :  zenburn
   skin          :  lymcha
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
