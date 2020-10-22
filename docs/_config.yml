@@ -55,7 +55,6 @@ chulapa-skin:
   highlight     :  zenburn
   skin          :  lymcha
   vars          :    
-    primary     :   'darkblue'
     enable-responsive-font-sizes : true
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
