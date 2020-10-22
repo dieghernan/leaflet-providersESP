@@ -163,17 +163,6 @@ var providersESP = {
 		}
 	},
 	Catastro: {
-		url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx',
-		options: {
-			layers: 'Catastro',
-			format: 'image/png',
-			attribution: '<a href="http://www.sedecatastro.gob.es/" target="_blank">Spanish General Directorate for Cadastre</a>'
-		},
-		variants: {
-			Catastro: {},
-			Parcela: {options: {layers: 'PARCELA',minZoom: 15}}}
-	},
-	CatastroINSPIRE: {
 		url: 'https://ovc.catastro.meh.es/cartografia/INSPIRE/spadgcwms.aspx',
 		options: {
 			layers: 'CP.CadastralParcel',
@@ -183,6 +172,19 @@ var providersESP = {
 			attribution: '<a href="http://www.sedecatastro.gob.es/" target="_blank">Spanish General Directorate for Cadastre</a>'
 		},
 		variants: {
+		    Catastro: {
+				url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx',
+				options: {
+					layers: 'Catastro'
+					}
+			},
+			Parcela: {
+				url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx',
+				options: {
+					layers: 'PARCELA',
+					minZoom: 15
+					}
+			},
 			CadastralParcel: {},
 			CadastralZoning: 'CP.CadastralZoning',
 			Address: 'AD.Address',
