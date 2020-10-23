@@ -73,8 +73,12 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 </body>
 ```
 
-<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+<div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
   <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen></iframe>
+</div>
+
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a>
 </div>
 
 ### Varias capas
@@ -91,10 +95,13 @@ Pico del Mulhacén
 </script>
 ```
 
-<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+<div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
   <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen></iframe>
 </div>
 
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
+</div>
 
 ### leaflet-providersESP + leaflet-providers
 
@@ -111,9 +118,14 @@ Masas de agua + CartoDB
 </script>
 ```
 
-<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+<div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
   <iframe class="embed-responsive-item" src="./demo/leafletproviders" allowfullscreen></iframe>
 </div>
+
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a>
+</div>
+
 
 ## Proveedores disponibles
 
