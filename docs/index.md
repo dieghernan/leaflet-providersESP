@@ -80,9 +80,9 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
   <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen></iframe>
 </div>
 
-<div class="d-flex justify-content-center">
-    <a class="btn btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a>
-</div>
+
+<a class="btn btn-block btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a>
+
 
 ### Varias capas
 
@@ -102,9 +102,8 @@ Pico del Mulhacén
   <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen></iframe>
 </div>
 
-<div class="d-flex justify-content-center">
-    <a class="btn btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
-</div>
+<a class="btn btn-block btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
+
 
 ### leaflet-providersESP + leaflet-providers
 
@@ -125,9 +124,9 @@ Terremotos + CartoDB
   <iframe class="embed-responsive-item" src="./demo/leafletproviders" allowfullscreen></iframe>
 </div>
 
-<div class="d-flex justify-content-center">
-    <a class="btn btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a>
-</div>
+
+<a class="btn btn-block btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a>
+
 
 
 ## Proveedores disponibles
