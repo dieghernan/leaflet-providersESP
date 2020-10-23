@@ -10,6 +10,8 @@ header_type: hero
 
 Este plugin es compatible con el plugin [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers).
 
+{{ site.github.releases[0].tag_name }}
+
 ## Instalación 
 
 ### Via CDN
