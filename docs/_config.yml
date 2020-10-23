@@ -28,8 +28,8 @@ navbar:
     child: 
     - title: Preview
       url: ./preview
-    - title: Viewer
-      url: ./viewer
+    - title: Visor
+      url: ./visor
   - title: Changelog
     url: ./CHANGELOG
   - title   : <i class="fab fa-github"></i> # Label

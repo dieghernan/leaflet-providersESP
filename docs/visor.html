@@ -1,44 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Leaflet Provider Demo</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-        <!-- Easy Button -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" />
-        <style>
-            html {
-                height: 100%;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                vertical-align: baseline;
-            }
-            body,
-            #container {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .map {
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="map" class="map"></div>
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script src="./src/leaflet-providersESP.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-        <script src="./js/shared.js"></script>
+---
+layout: compress
+title: Leaflet-providersESP visor de mapas
+---
+<!doctype html>
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include fullmap_head.html -%}
+	<!-- Display map full page -->
+	<style>
+		html {
+			height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: baseline;
+		}
+		body, #container { height: 100%; margin: 0; padding: 0;}
+		.map { height: 100%; }
+	</style>
+	<!-- Easy Button -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
         <!-- Load Esri Leaflet from CDN -->
         <script src="https://unpkg.com/esri-leaflet@2.5.1/dist/esri-leaflet.js" integrity="sha512-q7X96AASUF0hol5Ih7AeZpRF6smJS55lcvy+GLWzJfZN+31/BQ8cgNx2FGF+IQSA4z2jHwB20vml+drmooqzzQ==" crossorigin=""></script>
-
         <!-- Load Esri Leaflet Geocoder from CDN -->
         <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.css" integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g==" crossorigin="" />
         <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js" integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA==" crossorigin=""></script>
+        <script src="../js/shared.js"></script>
+</head>
+<body>
+<!-- Create map -->
+	<div id="map"></div>
         <script>
             var map = L.map("map", {
                 center: [40.4166, -3.70384],
@@ -84,22 +76,26 @@
 
             map.on("locationerror", onLocationError);
 
-            L.easyButton("fa-crosshairs", function () {
+            L.easyButton('<i class="fas fa-crosshairs"></i>',
+            function () {
                 map.locate({ setView: true, maxZoom: 16 });
                 map.on("locationfound", onLocationFound);
             }).addTo(map);
+            
+            L.easyButton('<i class="fas fa-border-style"></i>',
+            function(){ map.setView([40,-3],5);}).addTo(map);
 
-            L.easyButton("fa-square-o", function () {
-                map.setView([40, -3], 5);
-            }).addTo(map);
-
-            L.easyButton("<span>C</span>", function () {
+            L.easyButton("<i class="fas fa-dove"></i>", 
+            function ()
+            {
                 map.setView([28, -15.8], 6);
             }).addTo(map);
-            L.easyButton("fa-globe", function () {
+            
+            L.easyButton('<i class="fas fa-globe"></i>', function () {
                 map.setView([40, -3], 2);
             }).addTo(map);
             
+ 
             // create the geocoding control and add it to the map
             var searchControl = L.esri.Geocoding.geosearch().addTo(map);
             var results = L.layerGroup().addTo(map);
