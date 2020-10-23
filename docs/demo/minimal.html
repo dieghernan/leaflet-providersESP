@@ -8,5 +8,9 @@ title: Minimal example
 	<script>
 	var mymap = L.map('map').setView([40.4166, -3.7038400], 18);
 	L.tileLayer.providerESP('IDErioja').addTo(mymap);
+	
+	L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
+              window.location.href = "https://dieghernan.github.io/leaflet-providersESP/";
+              }).addTo(mymap);
 	</script>
 

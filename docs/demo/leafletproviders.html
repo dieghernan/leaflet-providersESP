@@ -11,4 +11,8 @@ title: Leaflet providers
   var base = {'CartoDB': L.tileLayer.provider('CartoDB.DarkMatterNoLabels').addTo(map3)};
   var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
+  
+  L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
+              window.location.href = "https://dieghernan.github.io/leaflet-providersESP/";
+              }).addTo(map3);
 </script>

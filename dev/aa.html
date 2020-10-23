@@ -24,6 +24,11 @@
 		width: 100%
 	}
 	</style>
+	
+	<link
+  <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+	
 </head>
 <body>
 	<script src="shared.js"></script>
@@ -62,5 +67,22 @@
 
           
            L.tileLayer.providerESP('IDErioja').addTo(map);
+           // you want to get it of the window global
+           
+    
+var GeoSearchControl = window.GeoSearch.GeoSearchControl;
+var OpenStreetMapProvider = window.GeoSearch.OpenStreetMapProvider;
+
+
+// remaining is the same as in the docs, accept for the var instead of const declarations
+var provider = new OpenStreetMapProvider();
+
+var searchControl = new GeoSearchControl({
+  provider: provider,
+});
+
+
+map.addControl(searchControl);
+           
            </script>
 </body>
