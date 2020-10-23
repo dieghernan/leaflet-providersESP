@@ -71,10 +71,9 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 	</script>
 </body>
 ```
-<iframe id="inlineFrameExample"
-    title="Inline Frame Example"
+<iframe title="Minimal"
     height="200"
-    src="minimal.html" class="map embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg border border-primary">
+    src="/demo/minimal/" class="map embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg border border-primary">
 </iframe>
 
 
@@ -92,14 +91,6 @@ Pico del Mulhacén
 </script>
 ```
 
-<div id="map2"></div>
-<script>
-  var map2 = L.map('map2', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('MDT.Relieve').addTo(map2);
-			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
-			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
-</script>
-
 ### leaflet-providersESP + leaflet-providers
 
 Masas de agua + CartoDB
@@ -114,15 +105,6 @@ Masas de agua + CartoDB
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
 ```
-
-<div id="map3"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
-<script>
-  var map3 = L.map('map3',{center: [40,-4],zoom: 6});
-  var base = {'CartoDB': L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map3)};
-  var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
-  L.control.layers(base, over, {collapsed: false}).addTo(map3);
-</script>
 
 ## Proveedores disponibles
 
