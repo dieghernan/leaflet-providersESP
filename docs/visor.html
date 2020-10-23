@@ -37,8 +37,11 @@ title: Leaflet-providersESP visor de mapas
                 zoomControl: true,
                 zoom: 5,
             });
+            
+            	var mymap = L.map('map').setView([40.4166, -3.7038400], 18);
+	L.tileLayer.providerESP('IDErioja').addTo(mymap);
 
-            // collect all layers available in the provider definition
+            /* collect all layers available in the provider definition
             var baseLayers = {};
             var overlays = {};
             var addLayer = function (name) {
@@ -61,6 +64,8 @@ title: Leaflet-providersESP visor de mapas
                 .addTo(map);
 
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
+*/
+
 
             map.locate({ setView: true, maxZoom: 16 });
 
