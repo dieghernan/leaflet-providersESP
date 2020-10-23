@@ -23,6 +23,7 @@ analytics_id            :
 navbar:
   brand:
     title   :  '<i class="fas fa-home"></i>'
+    img     : './assets/icon/favicon-32x32.png'
   nav:
   - title: Demo
     child: 
