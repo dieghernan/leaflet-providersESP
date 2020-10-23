@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities xmlns:srv="http://schemas.opengis.net/iso/19139/20060504/srv/srv.xsd" xmlns:gmd="http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd" xmlns:gco="http://schemas.opengis.net/iso/19139/20060504/gco/gco.xsd" xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xmlns:gml="http://schemas.opengis.net/gml" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" version="1.3.0" updateSequence="3203" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://inspire.ec.europa.eu/schemas/inspire_vs/1.0">
+  <Service>
+    <Name>WMS</Name>
+    <Title>ELF Base Map of Spain</Title>
+    <Abstract>View Service in accordance with INSPIRE profile of ISO19128-WMS1.3.0 that provides access to maps from diferent geographic databases of IGN Spain: National Topographic Database, scale 1:25,000 (BTN25) and Basic Gazetteer of Spain (NGBE). It Displays geographic information related to the  following  ELF  themes: Geographical names, Transport networks, Hydrography , Building and Land Cover . The name and title of the layers is consistent with the ELF Specification and every layer has the ELF default style. BaseMap layer is a group of layers for viewing all previous layers.</Abstract>
+    <KeywordList>
+      <Keyword vocabulary="ISO 19119 geographic services taxonomy, version 2.3">infoMapAccessService</Keyword>
+      <Keyword vocabulary="ISO 19119 geographic services taxonomy, version 2.3">infoManagementService</Keyword>
+      <Keyword>IGN</Keyword>
+      <Keyword>National Geographic Institute</Keyword>
+      <Keyword>National Center for Geographic Information</Keyword>
+      <Keyword>CNIG</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization>National Geographic Institute</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Point of contact</ContactPosition>
+      <ContactAddress>
+        <AddressType>Postal</AddressType>
+        <Address>C/ General Ibáñez de Ibero, 3</Address>
+        <City>Madrid</City>
+        <StateOrProvince>Madrid</StateOrProvince>
+        <PostCode>28003</PostCode>
+        <Country>Spain</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>+34 91 597 96 46</ContactVoiceTelephone>
+      <ContactFacsimileTelephone>+34 91 597 97 64</ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>ign@fomento.es</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>No conditions apply</Fees>
+    <AccessConstraints>CC BY 4.0 ign.es</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+    </Exception>
+    <inspire_vs:ExtendedCapabilities>
+      <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
+        <inspire_common:URL>https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignwms_ELFbasemap</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      </inspire_common:MetadataUrl>
+      <inspire_common:SupportedLanguages xsi:type="inspire_common:supportedLanguagesType">
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>eng</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>eng</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+    </inspire_vs:ExtendedCapabilities>
+    <Layer>
+      <Title>ELF Base Map of Spain</Title>
+      <Abstract>Web Map Service in accordance with INSPIRE profile of ISO19128-WMS1.3.0 that provides access to maps from diferent geographic databases of IGN Spain: National Topographic Database, scale 1:25,000 (BTN25) and Basic Gazetteer of Spain (NGBE). It Displays geographic information related to the  following  ELF  themes: Geographical names, Transport networks, Hydrography , Building and Land Cover . The name and title of the layers is consistent with the ELF Specification and every layer has the ELF default style. BaseMap layer is a group of layers for viewing all previous layers. The access or connection of this service to obtain their intended functionalities is free of charge in any case if the authorship of IGN as proprietary of the service and its contents (which can be stored for private use) is mentioned as follows: "© Instituto Geográfico Nacional de España".</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-24.75288248126628</westBoundLongitude>
+        <eastBoundLongitude>5.486358882618641</eastBoundLongitude>
+        <southBoundLatitude>23.002892900726714</southBoundLatitude>
+        <northBoundLatitude>47.44012920799093</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-24.75288248126628" miny="23.002892900726714" maxx="5.486358882618641" maxy="47.44012920799093"/>
+      <BoundingBox CRS="EPSG:4258" minx="23.002892900726714" miny="-24.75288248126628" maxx="47.44012920799093" maxy="5.486358882618641"/>
+      <BoundingBox CRS="EPSG:3035" minx="38094.279136185534" miny="767047.9766968475" maxx="3311233.8241038467" maxy="3980541.1404605093"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2755478.273480304" miny="2632368.488742269" maxx="610738.6771222604" maxy="6014212.606916708"/>
+      <Layer queryable="1" opaque="0">
+        <Name>GN.GeographicalNames.NamedPlace</Name>
+        <Title>Named Place</Title>
+        <Abstract>Spatial data portrayal of "Named Place" layer, it corresponds to "Geographical names" theme in ELF Specification. Data source: Basic Gazetteer of Spain (Nomenclátor Geográfico Básico de España - NGBE).</Abstract>
+        <KeywordList>
+          <Keyword>Toponymy</Keyword>
+          <Keyword>Geographical name</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-24.75288248126628</westBoundLongitude>
+        <eastBoundLongitude>5.486358882618641</eastBoundLongitude>
+        <southBoundLatitude>23.002892900726714</southBoundLatitude>
+        <northBoundLatitude>47.44012920799093</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-24.75288248126628" miny="23.002892900726714" maxx="5.486358882618641" maxy="47.44012920799093"/>
+      <BoundingBox CRS="EPSG:4258" minx="23.002892900726714" miny="-24.75288248126628" maxx="47.44012920799093" maxy="5.486358882618641"/>
+      <BoundingBox CRS="EPSG:3035" minx="38094.279136185534" miny="767047.9766968475" maxx="3311233.8241038467" maxy="3980541.1404605093"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2755478.273480304" miny="2632368.488742269" maxx="610738.6771222604" maxy="6014212.606916708"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_namedplace</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_NGBE_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>GN.GeographicalNames.NamedPlace</Name>
+          <Title>ELF: Named places default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=GN.GeographicalNames.NamedPlace"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>TN.RoadTransportNetwork.RoadLink</Name>
+        <Title>Road Link</Title>
+        <Abstract>Spatial data portrayal of "Road Link" layer, it corresponds to "Road network" theme in ELF Specification. Data Source: Numeric Topographic Base of Spain, Scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>road</Keyword>
+          <Keyword>street</Keyword>
+          <Keyword>motorway</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-24.75288248126628</westBoundLongitude>
+        <eastBoundLongitude>5.486358882618641</eastBoundLongitude>
+        <southBoundLatitude>23.002892900726714</southBoundLatitude>
+        <northBoundLatitude>47.44012920799093</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-24.75288248126628" miny="23.002892900726714" maxx="5.486358882618641" maxy="47.44012920799093"/>
+      <BoundingBox CRS="EPSG:4258" minx="23.002892900726714" miny="-24.75288248126628" maxx="47.44012920799093" maxy="5.486358882618641"/>
+      <BoundingBox CRS="EPSG:3035" minx="38094.279136185534" miny="767047.9766968475" maxx="3311233.8241038467" maxy="3980541.1404605093"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2755478.273480304" miny="2632368.488742269" maxx="610738.6771222604" maxy="6014212.606916708"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_roadlink</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_RoadTransportRoadLink_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>TN.RoadTransportNetwork.RoadLink</Name>
+          <Title>ELF: Road Link default style</Title>
+          <Abstract/>
+          <LegendURL width="496" height="319">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap/leyendas/TN.RoadTransportNetwork.RoadLink.png"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>TN.RailwayNetwork.RailwayLink</Name>
+        <Title>Railway Link</Title>
+        <Abstract>Spatial data portrayal of "Railway Link" layer, it corresponds to "Railway network" theme in ELF Specification. Data Source: Numeric Topographic Base of Spain, scale 1;25,000.</Abstract> 
+        <KeywordList>
+          <Keyword>train</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-24.75288248126628</westBoundLongitude>
+        <eastBoundLongitude>5.486358882618641</eastBoundLongitude>
+        <southBoundLatitude>23.002892900726714</southBoundLatitude>
+        <northBoundLatitude>47.44012920799093</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-24.75288248126628" miny="23.002892900726714" maxx="5.486358882618641" maxy="47.44012920799093"/>
+      <BoundingBox CRS="EPSG:4258" minx="23.002892900726714" miny="-24.75288248126628" maxx="47.44012920799093" maxy="5.486358882618641"/>
+      <BoundingBox CRS="EPSG:3035" minx="38094.279136185534" miny="767047.9766968475" maxx="3311233.8241038467" maxy="3980541.1404605093"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2755478.273480304" miny="2632368.488742269" maxx="610738.6771222604" maxy="6014212.606916708"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_railwaylink</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_RoadTransportRailwayLink_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>TN.RailwayNetwork.RailwayLink</Name>
+          <Title>ELF: Railway Link default style</Title>
+          <Abstract/>
+          <LegendURL width="438" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap/leyendas/TN.RailwayNetwork.RailwayLink.png"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>HY.Hydrography.WatercourseLine</Name>
+        <Title>Watercourse line</Title>
+        <Abstract>Spatial data portrayal of "Watercourse line" layer, it corresponds to "Hydrography" theme in ELF Specification. Data Source:   National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>River</Keyword>
+          <Keyword>Hydrographic network</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.49505448875864</westBoundLongitude>
+          <eastBoundLongitude>5.439290760312999</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.401793281779334</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.49505448875864" miny="23.48337348947741" maxx="5.439290760312999" maxy="45.401793281779334"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2494710.0303457184" maxy="3861396.8822780163"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.495054488758637" maxx="45.40179328272244" maxy="5.439290760312999"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2615457.501848828" miny="2690580.1005637124" maxx="605499.0777146008" maxy="5684998.975635513"/>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_watercourseline</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_HydrographyWatercourseLine_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>HY.Hydrography.WatercourseLine</Name>
+          <Title>ELF: Watercourse line default style</Title>
+          <Abstract/>
+          <LegendURL width="230" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=HY.Hydrography.WatercourseLine"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>HY.Hydrography.StandingWater</Name>
+        <Title>Standing water</Title>
+        <Abstract>Spatial data portrayal of "Standing water" layer, it corresponds to "Hydrography" theme in ELF Specification. Data Source: National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>Waterbodies</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.477553265215548</westBoundLongitude>
+          <eastBoundLongitude>5.410159642748041</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.365585379673725</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.477553265215548" miny="23.48337348947741" maxx="5.410159642748041" maxy="45.365585379673725"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2490910.4440909885" maxy="3858456.8694000905"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.477553265215548" maxx="45.36558538061686" maxy="5.410159642748042"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2613509.274555751" miny="2690580.1005637124" maxx="602256.2165410308" maxy="5679260.223440247"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_standingwaters</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_HydrographyStandingWater_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>HY.Hydrography.StandingWater</Name>
+          <Title>ELF: Standing water default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=HY.Hydrography.StandingWater"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>HY.Hydrography.Wetland</Name>
+        <Title>Wetland</Title>
+        <Abstract>Spatial data portrayal of "Wetland" layer, it corresponds to "Hydrography" theme in ELF Specification. Feature types:marshes, satured lands, etc. Data Source: National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>Waterbodies</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.477553265215548</westBoundLongitude>
+          <eastBoundLongitude>5.410159642748041</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.365585379673725</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.477553265215548" miny="23.48337348947741" maxx="5.410159642748041" maxy="45.365585379673725"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2490910.4440909885" maxy="3858456.8694000905"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.477553265215548" maxx="45.36558538061686" maxy="5.410159642748042"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2613509.274555751" miny="2690580.1005637124" maxx="602256.2165410308" maxy="5679260.223440247"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_wetland</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaign_HydrographyWetland_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>HY.Hydrography.Wetland</Name>
+          <Title>ELF: Wetland default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=HY.Hydrography.Wetland"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TN.AirTransport.AerodromeArea</Name>
+        <Title>Aerodrome Area</Title>
+        <Abstract>Spatial data portrayal of "Aerodrome Area" layer, it corresponds to "Transport network" theme in ELF Specification. Data Source:  National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>airport</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.371331590640168</westBoundLongitude>
+          <eastBoundLongitude>5.366552648028317</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.15438067099497</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.371331590640168" miny="23.48337348947741" maxx="5.366552648028317" maxy="45.15438067099497"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2467741.1583990743" maxy="3854055.7460988453"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.371331590640168" maxx="45.15438067193817" maxy="5.366552648028317"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2601684.7318308116" miny="2690580.1005637124" maxx="597401.908093806" maxy="5645858.401355498"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_aerodromearea</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignAirTransportAerodromeArea_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>TN.AirTransport.AerodromeArea</Name>
+          <Title>ELF: Aerodrome area default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TN.AirTransport.AerodromeArea"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TN.AirTransport.RunwayArea</Name>
+        <Title>Runway Area</Title>
+        <Abstract>Spatial data portrayal of "Runway area" layer, it corresponds to "Transport network" theme in ELF Specification. Data Source:  National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>airport</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.33540181711464</westBoundLongitude>
+          <eastBoundLongitude>5.38823935175638</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.085179237960915</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.33540181711464" miny="23.48337348947741" maxx="5.38823935175638" maxy="45.085179237960915"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2459861.7604087847" maxy="3856244.543428683"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.33540181711464" maxx="45.08517923890414" maxy="5.388239351756379"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2597685.0477376333" miny="2690580.1005637124" maxx="599816.0609097987" maxy="5634941.203182045"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_runwayarea</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignAirTransportRunwayArea_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>TN.AirTransport.RunwayArea</Name>
+          <Title>ELF: Runway area default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TN.AirTransport.RunwayArea"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TN.RailwayNetwork.RailwayStationArea</Name>
+        <Title>Railway station area</Title>
+        <Abstract>Spatial data portrayal of "Railway station area" layer, it corresponds to "Railway network" theme in ELF Specification. Data Source:National Topographic Database, scale 1:25,000 (BTN25).</Abstract>
+        <KeywordList>
+          <Keyword>estaciones_ffcc</Keyword>
+          <Keyword>train station</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-8.7625093460083</westBoundLongitude>
+          <eastBoundLongitude>3.15843820571899</eastBoundLongitude>
+          <southBoundLatitude>36.423458098463485</southBoundLatitude>
+          <northBoundLatitude>43.666595458042124</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-8.7625093460083" miny="36.423458098463485" maxx="3.15843820571899" maxy="43.666595458042124"/>
+        <BoundingBox CRS="EPSG:4258" minx="36.4234580993652" miny="-8.7625093460083" maxx="43.6665954589844" maxy="3.15843820571899"/>
+        <BoundingBox CRS="EPSG:3035" minx="1511735.253634003" miny="2642078.8508380027" maxx="2473257.5912203044" maxy="3768697.670141679"/>
+        <BoundingBox CRS="EPSG:3857" minx="-975438.0784689446" miny="4359046.092945746" maxx="351595.7327626586" maxy="5413991.204595085"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_railwaystation</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignRailwayNetworkRailwayStationArea_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>TN.RailwayNetwork.RailwayStationArea</Name>
+          <Title>ELF: Railway station area default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TN.RailwayNetwork.RailwayStationArea"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>4500</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>BU.Building</Name>
+        <Title>Building</Title>
+        <Abstract>Spatial data portrayal of "Building" layer, it corresponds to "Building" theme in ELF Specification. Data Source:  National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>Building</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-24.501630248649406</westBoundLongitude>
+          <eastBoundLongitude>5.436549868731617</eastBoundLongitude>
+          <southBoundLatitude>23.49929453284967</southBoundLatitude>
+          <northBoundLatitude>47.377862729129596</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-24.501630248649406" miny="23.49929453284967" maxx="5.436549868731617" maxy="47.377862729129596"/>
+        <BoundingBox CRS="EPSG:3035" minx="545644.3506148709" miny="1550443.9899817999" maxx="2714961.1477440945" maxy="3861132.9178346707"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.499294533540276" miny="-24.501630248649406" maxx="47.377862730069445" maxy="5.436549868731617"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2727509.0028847205" miny="2692512.5867464216" maxx="605193.9630594419" maxy="6003970.474862134"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_building</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignBuilding_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>BU.Building.Building</Name>
+           <Title>ELF: Building default style</Title>
+          <Abstract/>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=BU.Building"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>4500</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>LC.LandCover.LandCoverUnit</Name>
+        <Title>Land cover unit</Title>
+        <Abstract>Spatial data portrayal corresponding to the "Land cover unit" layer of "Land Cover" theme in ELF Specification. Data Source: National topographic Database of Spain, scale 1:25,000.</Abstract>
+        <KeywordList>
+          <Keyword>Land cover surfaces</Keyword>
+          <Keyword>CORINE Land Cover</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-23.489385487801844</westBoundLongitude>
+          <eastBoundLongitude>5.438002204893616</eastBoundLongitude>
+          <southBoundLatitude>23.48337348947741</southBoundLatitude>
+          <northBoundLatitude>45.39065416731566</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-23.489385487801844" miny="23.48337348947741" maxx="5.438002204893616" maxy="45.39065416731566"/>
+        <BoundingBox CRS="EPSG:3035" minx="545373.0" miny="1546035.0" maxx="2493479.816375411" maxy="3861266.8385636895"/>
+        <BoundingBox CRS="EPSG:4258" minx="23.483373490167665" miny="-23.489385487801844" maxx="45.39065416825878" maxy="5.438002204893616"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2614826.4315490117" miny="2690580.1005637124" maxx="605355.6363814564" maxy="5683233.096125219"/>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_landcoverunit</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignLandCover_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>LC.LandCover.LandCoverUnit</Name>
+          <Title>ELF: Land cover unit default style</Title>
+          <Abstract/>
+          <LegendURL width="300" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=LC.LandCover.LandCoverUnit"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>basemap</Name>
+        <Title>Base Map of Spain</Title>
+        <Abstract>Spatial data portrayal of geographical names, transport (roads, railways, aerodromes, runways, railway stations and urban roads), hydrography (hydrographic network, wetlands and standing waters),  land cover units and buildings.  Data Source: National topographic Database of Spain, scale 1:25.000 (BTN25).</Abstract>
+        <KeywordList>
+          <Keyword>transport</Keyword>
+          <Keyword>hydrography</Keyword>
+          <Keyword>land cover</Keyword>
+          <Keyword>buildings</Keyword>
+        </KeywordList>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>CRS:84</CRS>
+         <EX_GeographicBoundingBox>
+        <westBoundLongitude>-24.75288248126628</westBoundLongitude>
+        <eastBoundLongitude>5.486358882618641</eastBoundLongitude>
+        <southBoundLatitude>23.002892900726714</southBoundLatitude>
+        <northBoundLatitude>47.44012920799093</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+       <BoundingBox CRS="CRS:84" minx="-24.75288248126628" miny="23.002892900726714" maxx="5.486358882618641" maxy="47.44012920799093"/>
+      <BoundingBox CRS="EPSG:4258" minx="23.002892900726714" miny="-24.75288248126628" maxx="47.44012920799093" maxy="5.486358882618641"/>
+      <BoundingBox CRS="EPSG:3035" minx="38094.279136185534" miny="767047.9766968475" maxx="3311233.8241038467" maxy="3980541.1404605093"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2755478.273480304" miny="2632368.488742269" maxx="610738.6771222604" maxy="6014212.606916708"/>
+        <Attribution>
+          <Title>Instituto Geográfico Nacional</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </Attribution>
+        <AuthorityURL name="IGN">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.ign.es"/>
+        </AuthorityURL>
+        <Identifier authority="IGN">ign_basemap</Identifier>
+        <MetadataURL type="ISO19115:2003">
+            <Format>text/plain</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://www.ign.es/csw-inspire/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=spaignbasemap_ELF"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>ELF default style</Title>
+          <Abstract/>
+          <LegendURL width="893" height="315">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://elf.ign.es/wms/basemap/leyendas/basemap.png"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>72200</MaxScaleDenominator>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
