@@ -1,5 +1,5 @@
 /*
- leaflet-providersESP.js plugin v1.0.0
+ leaflet-providersESP.js plugin v1.0.0-9000
  (c) D. Hernangomez 			
  MIT License 
  https://dieghernan.github.io/leaflet-providersESP/ 
@@ -7,7 +7,7 @@
  All providers are open source. Please check attributions
  Feel free to contribute */
 
-var providersESPversion = 'v1.0.0';
+var providersESPversion = 'v1.0.1-9000';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
 var providersESP = {

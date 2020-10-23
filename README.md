@@ -12,11 +12,12 @@ Compatible with [leaflet-providers](https://github.com/leaflet-extras/leaflet-pr
 
 
 ```html
-<!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@{{ site.github.releases[0].tag_name }}/dist/leaflet-providersESP.min.js"></script>
+<!-- Latest -->
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
 
-<!-- Specific release -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@version/dist/leaflet-providersESP.js"></script>
+<!-- By version -->
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.0.0/dist/leaflet-providersESP.min.js"></script>
+
 ```
 
 ### Local
