@@ -5,7 +5,10 @@ title: Leaflet-providersESP preview
 <!doctype html>
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include fullmap_head.html -%}
-	
+	<!-- Theme css (Bootstrap included) -->
+	<link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/main.css" />
+	<!-- Highlighter -->
+  <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/highlighter.css" />
 	<!-- Display map full page -->
 	<style>
 		html {
@@ -19,7 +22,7 @@ title: Leaflet-providersESP preview
 		.map { height: 100%; }
 
 		#info {
-			background: rgba(255, 255, 255, 0.6);
+			background: rgba(255, 255, 255, 0.7);
 			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 			position: fixed;
 			width: 50%;
@@ -57,7 +60,7 @@ title: Leaflet-providersESP preview
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
 </head>
 <body>
-	<div id="info">
+	<div id="info" class="d-none">
 		<h1 class="lead"><a href="https://github.com/leaflet-extras/leaflet-providers">Visualizacion de proveedores Leaflet en España</a></h1>
 		<p>
 		   Esta página muestra mini mapas para todas las capas disponibles en <a href="https://github.com/dieghernan/leaflet-providersESP">Leaflet-providersESP</a>.
@@ -67,13 +70,17 @@ title: Leaflet-providersESP preview
 	<script src="../js/shared.js"></script>
 	<script src="../js/preview.js"></script>
 	<script>
-		L.easyButton('<i class="fas fa-globe-europe"></i>', function(){
+		L.easyButton('<i class="fas fa-globe"></i>', function(){
     map.setView([40,-3],2);
 }, {position: 'bottomleft'}).addTo(map);
 	
 	L.easyButton('<i class="fas fa-border-style"></i>', function(){
     map.setView([40,-3],5);
 }, {position: 'bottomleft'}).addTo(map);
+
+	L.easyButton('&cularr;', function(
+	  window.location.href = 'https://dieghernan.github.io/leaflet-providersESP/';
+	){}, {position: 'bottomleft'}).addTo(map);
 	</script>
 </body>
 </html>

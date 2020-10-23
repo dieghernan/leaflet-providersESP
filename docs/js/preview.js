@@ -3,6 +3,7 @@ var map = L.map('map', {
 	zoomControl: false,
 	zoom: 7
 });
+
 function escapeHtml(string) {
 	return string
 		.replace(/&/g, '&amp;')
@@ -111,6 +112,8 @@ map.addControl(new(L.Control.extend({
 	onAdd: function(map) {
 		var container = L.DomUtil.get('info');
 		L.DomEvent.disableClickPropagation(container);
+		container.classList.add("d-none");
+		container.classList.add("d-md-block");
 		L.DomUtil.create('h6','font-weight-bold' , container).innerHTML = 'Proveedores disponibles en <code>leaflet-providersESP.js</code>';
 		var providerNames = L.DomUtil.create('code', 'provider', container);
 		L.DomUtil.create('h6', 'font-weight-bold', container).innerHTML = 'JavaScript:';
