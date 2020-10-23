@@ -92,6 +92,13 @@ Pico del Mulhacén
 </script>
 ```
 
+<div id="map2"></div>
+<script>
+  var map2 = L.map('map2', {center: [37.053333,-3.311389],zoom: 15});
+			L.tileLayer.providerESP('MDT.Relieve').addTo(map2);
+			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
+			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
+</script>
 
 ### leaflet-providersESP + leaflet-providers
 
