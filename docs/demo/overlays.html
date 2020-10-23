@@ -4,10 +4,10 @@ title: Overlays
 ---
 
 <div id="map"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
 <script>
-  var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('MDT.Relieve').addTo(map2);
-			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
-			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
+  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 8});
+  var base = {'CartoDB': L.tileLayer.provider('CartoDB.DarkMatterNoLabels').addTo(map3)};
+  var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
+  L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
-

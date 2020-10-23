@@ -104,8 +104,8 @@ Masas de agua + CartoDB
 <div id="map"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
 <script>
-  var map3 = L.map('map',{center: [40,-4],zoom: 6});
-  var base = {'CartoDB': L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map3)};
+  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 8});
+  var base = {'CartoDB': L.tileLayer.provider('CartoDB.DarkMatterNoLabels').addTo(map3)};
   var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
@@ -117,5 +117,45 @@ Masas de agua + CartoDB
 
 ## Proveedores disponibles
 
-
 <p id="pr"></p>
+
+<script src="./js/shared.js"></script>
+<script>
+  // Add it to the page
+  nprovs = document.getElementById('pr');
+  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
++ allnames.length + '</strong> proveedores:';
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proveedor</th>
+      <th>Capas</th>
+    </tr>
+  </thead>
+  <tbody id="listprov">
+  </tbody>
+</table>
+
+<script>
+  for (var provider in providersESP) {
+    if (providersESP[provider].variants) {
+      var allnames = [];
+      for (var variant in providersESP[provider].variants) {
+        allnames.push('<code>' + variant +'</code>');
+      }
+    } else {		
+      allnames = [];
+    }
+    row = document.createElement('tr');
+    row.innerHTML = '<td><code>' +
+    provider + '</code></td><td>'
+    + allnames.join(', ') +'</td>';
+    document.getElementById('listprov').appendChild(row);
+  }
+</script>
+
+## Colabora
+
+Este proyecto es Open Source. Si deseas colaborar puedes abrir un issue o enviar un PR. 

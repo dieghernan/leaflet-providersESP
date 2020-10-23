@@ -1,12 +1,12 @@
+---
+layout: compress
+title: Leaflet-providersESP preview
+---
 <!doctype html>
-<html lang="en">
-<head>
-	<title>Leaflet Provider Demo</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include fullmap_head.html -%}
+	
+	<!-- Display map full page -->
 	<style>
 		html {
 			height: 100%;
@@ -44,11 +44,17 @@
 			font-size: 1em;
 		}
 	</style>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/control.layers.minimap.css">
-	<link rel="stylesheet" href="./css/main.css">
 	<!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
-
+		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+		<!-- Highlighter -->
+		<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/zenburn.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+		<!-- Control Layers Minimap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/control.layers.minimap.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
 </head>
 <body>
 	<div id="info">
@@ -58,27 +64,16 @@
 		</p>
 	</div>
 	<div id="map" class="map"></div>
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	<script src="./src/leaflet-providersESP.js"></script>	
-	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-	<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/zenburn.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="./js/shared.js"></script>
 	<script src="./js/preview.js"></script>
 	<script>
-		L.easyButton('fa-globe', function(){
+		L.easyButton('<i class="fas fa-globe-europe"></i>', function(){
     map.setView([40,-3],2);
 }, {position: 'bottomleft'}).addTo(map);
 	
-	L.easyButton('fa-square-o', function(){
+	L.easyButton('<i class="fas fa-border-style"></i>', function(){
     map.setView([40,-3],5);
 }, {position: 'bottomleft'}).addTo(map);
-
-
-
 	</script>
 </body>
 </html>
