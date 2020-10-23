@@ -1,5 +1,0 @@
----
-title: test
----
-
-{{ site.github }}
