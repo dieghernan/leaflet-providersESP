@@ -15,7 +15,7 @@ title: Leaflet-providersESP visor de mapas
 			vertical-align: baseline;
 		}
 		body, #container { height: 100%; margin: 0; padding: 0;}
-		.map { height: 100%; }
+		#map { height: 100%; width: 100%; }
 	</style>
 	<!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
@@ -39,9 +39,8 @@ title: Leaflet-providersESP visor de mapas
             });
             
             	var mymap = L.map('map').setView([40.4166, -3.7038400], 18);
-	L.tileLayer.providerESP('IDErioja').addTo(mymap);
 
-            /* collect all layers available in the provider definition
+            // collect all layers available in the provider definition
             var baseLayers = {};
             var overlays = {};
             var addLayer = function (name) {
@@ -64,8 +63,6 @@ title: Leaflet-providersESP visor de mapas
                 .addTo(map);
 
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
-*/
-
 
             map.locate({ setView: true, maxZoom: 16 });
 
