@@ -16,10 +16,10 @@ Este plugin es compatible con el plugin [leaflet-providers](https://github.com/l
 
 ```html
 <!-- Last version -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.js"></script>
 
 <!-- Specific release -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@version/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@version/dist/leaflet-providersESP.js"></script>
 ```
 
 ### Local
@@ -105,15 +105,15 @@ Pico del Mulhacén
 
 ### leaflet-providersESP + leaflet-providers
 
-Masas de agua + CartoDB
+Terremotos + CartoDB
 
 ```html
 <div id="map"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
 <script>
-  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 8});
+  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 5});
   var base = {'CartoDB': L.tileLayer.provider('CartoDB.DarkMatterNoLabels').addTo(map3)};
-  var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
+  var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
 ```
