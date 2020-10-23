@@ -1,3 +1,5 @@
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
+
 # leaflet-providersESP
 
 An extension to Leaflet that contains configurations for various free WMS/WMTS tile providers of Spain.
@@ -8,9 +10,10 @@ Compatible with [leaflet-providers](https://github.com/leaflet-extras/leaflet-pr
 
 ### Via CDN
 
+
 ```html
 <!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.0.0/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@{{ site.github.releases[0].tag_name }}/dist/leaflet-providersESP.min.js"></script>
 
 <!-- Specific release -->
 <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@version/dist/leaflet-providersESP.js"></script>
