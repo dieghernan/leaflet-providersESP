@@ -115,6 +115,15 @@ Masas de agua + CartoDB
 </script>
 ```
 
+<div id="map3"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
+<script>
+  var map3 = L.map('map3',{center: [40,-4],zoom: 6});
+  var base = {'CartoDB': L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map3)};
+  var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
+  L.control.layers(base, over, {collapsed: false}).addTo(map3);
+</script>
+
 ## Proveedores disponibles
 
 
