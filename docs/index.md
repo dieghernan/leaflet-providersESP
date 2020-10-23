@@ -2,6 +2,7 @@
 layout: default
 title: Leaflet-providersESP
 subtitle: Plugin para Leaflet con información de organismos españoles
+header_type: hero
 ---
 
 **Leaflet-providersESP** es un plugin para mapas [Leaflet](https://leafletjs.com/) que proporciona un acceso fácil a diferentes servicios web de mapas (WMS) y servicios web de mapas teselados (WMTS) proporcionados por organismos públicos de España, como el Instituto Geográfico Nacional ([IGN](https://www.ign.es/web/ign/portal/ide-area-nodo-ide-ign)) o el servicio de Infraestructura de Datos Espaciales de España ([IDEE](https://www.idee.es/directorio-de-servicios)) del Consejo Superior Geográfico.
@@ -71,40 +72,48 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 	</script>
 </body>
 ```
-<iframe title="Minimal"
-    height="200"
-    src="/demo/minimal/" class="map embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg border border-primary">
-</iframe>
 
+<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+  <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen></iframe>
+</div>
 
 ### Varias capas
 
 Pico del Mulhacén
 
 ```html
-<div id="map2"></div>
+<div id="map"></div>
 <script>
-  var map2 = L.map('map2', {center: [37.053333,-3.311389],zoom: 15});
+  var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
 			L.tileLayer.providerESP('MDT.Relieve').addTo(map2);
 			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
 			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
 </script>
 ```
 
+<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+  <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen></iframe>
+</div>
+
+
 ### leaflet-providersESP + leaflet-providers
 
 Masas de agua + CartoDB
 
 ```html
-<div id="map3"></div>
+<div id="map"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
 <script>
-  var map3 = L.map('map3',{center: [40,-4],zoom: 6});
+  var map3 = L.map('map',{center: [40,-4],zoom: 6});
   var base = {'CartoDB': L.tileLayer.provider('CartoDB.PositronNoLabels').addTo(map3)};
   var over ={'Masas de agua': L.tileLayer.providerESP('Hidrografia.MasaAgua',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
 ```
+
+<div class="embed-responsive embed-responsive-21by9 my-2 chulapa-rounded-lg border border-primary">
+  <iframe class="embed-responsive-item" src="./demo/leafletproviders" allowfullscreen></iframe>
+</div>
 
 ## Proveedores disponibles
 
