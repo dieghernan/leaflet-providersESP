@@ -1,0 +1,12 @@
+---
+layout: fullmap
+title: Minimal example
+---
+	<!-- Create map -->
+	<div id="mapid"></div>
+	<!-- Puerta del Sol - IDErioja server -->
+	<script>
+	var mymap = L.map('mapid').setView([40.4166, -3.7038400], 18);
+	L.tileLayer.providerESP('IDErioja').addTo(mymap);
+	</script>
+
