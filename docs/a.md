@@ -2,4 +2,4 @@
 title: test
 ---
 
-{{ site.github.releases[0] }}
+{{ site.github }}
