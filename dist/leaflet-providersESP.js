@@ -175,7 +175,8 @@ var providersESP = {
 		    Catastro: {
 				url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx',
 				options: {
-					layers: 'Catastro'
+					layers: 'Catastro',
+					minZoom: 0
 					}
 			},
 			Parcela: {
