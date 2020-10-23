@@ -3,6 +3,8 @@ layout: default
 title: Leaflet-providersESP
 subtitle: Plugin para Leaflet con información de organismos españoles
 header_type: hero
+header_img: './assets/leaflet-providersESP.png'
+excerpt: 'Leaflet-providersESP es un plugin para mapas Leaflet que proporciona un acceso fácil a diferentes servicios web de mapas (WMS) y servicios web de mapas teselados (WMTS) proporcionados por organismos públicos de España, como el Instituto Geográfico Nacional (IGN) o el servicio de Infraestructura de Datos Espaciales de España (IDEE) del Consejo Superior Geográfico.'
 ---
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
