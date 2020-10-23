@@ -6,7 +6,7 @@ subtitle                :   Leaflet plugin
 description             : Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España
 timezone                : "Europe/Madrid"
 
-og_image                :     #default[author.avatar (see below)] or [github-avatar]
+og_image                :     ./assets/leaflet-providersESP.png
 twitter_site            :   dieghernan
 author:
   name                  :  D. Hernangomez 
