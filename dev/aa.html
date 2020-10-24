@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
-	<script src="../src/leaflet-providersESP.js"></script>
+	<script src="leaflet-providersESP.js"></script>
 	<!-- Display map full page -->
 	<style>
 	html {
@@ -20,7 +20,7 @@
 		padding: 0;
 	}
 	#map {
-		height: 100%;
+		height: 80%;
 		width: 100%
 	}
 	</style>
@@ -85,4 +85,42 @@ var searchControl = new GeoSearchControl({
 map.addControl(searchControl);
            
            </script>
+           
+ <p id="pr"></p>
+
+<script>
+  // Add it to the page
+  nprovs = document.getElementById('pr');
+  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
++ allnames.length + '</strong> proveedores:';
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proveedor</th>
+      <th>Capas</th>
+    </tr>
+  </thead>
+  <tbody id="listprov">
+  </tbody>
+</table>
+
+<script>
+  for (var provider in providersESP) {
+    if (providersESP[provider].variants) {
+      var allnames = [];
+      for (var variant in providersESP[provider].variants) {
+        allnames.push('<code>' + variant +'</code>');
+      }
+    } else {		
+      allnames = [];
+    }
+    row = document.createElement('tr');
+    row.innerHTML = '<td><code>' +
+    provider + '</code></td><td>'
+    + allnames.join(', ') +'</td>';
+    document.getElementById('listprov').appendChild(row);
+  }
+</script>
 </body>

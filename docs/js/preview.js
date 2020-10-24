@@ -129,7 +129,7 @@ map.addControl(new(L.Control.extend({
 				if (event && event.type === 'layerremove' && layer === event.layer) {
 					continue;
 				}
-				names.push(L.Util.template('<a href="#filter={name}">{name}</a>', {
+				names.push(L.Util.template('{name}', {
 					name: layer.options.providerName
 				}));
 				code.innerHTML += getExampleJS(layer.options.providerName);

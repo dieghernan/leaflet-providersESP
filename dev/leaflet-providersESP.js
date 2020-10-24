@@ -1,5 +1,5 @@
 /*
- leaflet-providersESP.js plugin v1.0.0
+ leaflet-providersESP.js plugin v1.0.1-9000
  (c) D. Hernangomez 			
  MIT License 
  https://dieghernan.github.io/leaflet-providersESP/ 
@@ -7,7 +7,7 @@
  All providers are open source. Please check attributions
  Feel free to contribute */
 
-var providersESPversion = 'v1.0.0';
+var providersESPversion = 'v1.0.1-9000';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
 var providersESP = {
@@ -280,8 +280,22 @@ var providersESP = {
 		},
 		// Selected, there are more, feel free to contribute
 		variants: {
-			MasaAgua: {}
-		}		
+			MasaAgua: {},
+			Cuencas: {
+	           url:'https://wms.mapama.gob.es/sig/Agua/CuencasCauces/wms.aspx?',
+	           options: {
+	              attribution: 'Ministerio para la Transici&oacute;n Ecol&oacute;gica y el Reto Demogr&aacute;fico',
+	              layers: 'HY.PhysicalWaters.Catchments'
+	              }
+	         },
+	         Subcuencas: {
+	           url:'https://wms.mapama.gob.es/sig/Agua/SubcuencasCauces/wms.aspx?',
+	           options: {
+	              attribution: 'Ministerio para la Transici&oacute;n Ecol&oacute;gica y el Reto Demogr&aacute;fico',
+	              layers: 'HY.PhysicalWaters.Catchments'
+	              }
+	         }
+	       }	
 	},
 	Militar: {
 		url: 'http://wms-defensa.idee.es/mapas?',
@@ -294,10 +308,41 @@ var providersESP = {
 		variants: {
 			CEGET1M: {},
 			CEGETM7814: 'CEGET_M7814',
-			CEGETM7815: 'CEGET_M7815'
+			CEGETM7815: 'CEGET_M7815',
+			CEGETM682: 'ceget_M682',
+			CECAF1M: 'cecaf_cnv_1M'
 		}
 		
-	}
+	},
+	ADIF: {
+		url: 'http://ideadif.adif.es/services/wms?',
+		options: {
+			layers: 'TN.RailTransportNetwork.RailwayLink',
+			format: 'image/png',
+			transparent: true,
+			attribution: "&copy; ADIF)"			
+		},
+		variants: {
+			Vias: {},
+			Nodos: 'TN.RailTransportNetwork.RailwayNode',
+			Estaciones: 'TN.RailTransportNetwork.RailwayStationNode'
+		}
+		
+	},
+	LimitesMaritimos: {
+	  url: 'http://ideihm.covam.es/ihm-inspire/wms-unidadesmaritimas?',
+	  options: {
+			layers: 'AU.MaritimeBoundary',
+			format: 'image/png',
+			transparent: true,
+			attribution: "&copy; Instituto Hidrogr&aacute;fico de la Marina)"			
+		},
+		variants: {
+		  LimitesMaritimos: {},
+		  LineasBase: 'AU.Baseline'
+		}
+	},
+	
 };
 
 // Adapted from https://github.com/leaflet-extras/leaflet-providers 
