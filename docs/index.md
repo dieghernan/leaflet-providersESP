@@ -83,7 +83,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 </div>
 
 
-<a class="btn btn-block btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a>
+<a id="btndemo1" class="btn btn-block btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a>
 
 
 ### Varias capas
@@ -102,7 +102,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
   <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen></iframe>
 </div>
 
-<a class="btn btn-block btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
+<a id="btndemo2" class="btn btn-block btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
 
 
 ### leaflet-providersESP + leaflet-providers
@@ -123,7 +123,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 </div>
 
 
-<a class="btn btn-block btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a>
+<a id="btndemo3" class="btn btn-block btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a>
 
 
 
