@@ -42,4 +42,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 </body>
 ```
 
+![example](./docs/assets/example.png)
+
+
 [Full demo](https://dieghernan.github.io/leaflet-providersESP/) and [providers](https://dieghernan.github.io/leaflet-providersESP#proveedores-disponibles) (ES).

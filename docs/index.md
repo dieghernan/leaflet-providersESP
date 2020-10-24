@@ -88,8 +88,6 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 
 ### Varias capas
 
-Pico del Mulhacén
-
 ```html
 <div id="map"></div>
 <script>
@@ -108,8 +106,6 @@ Pico del Mulhacén
 
 
 ### leaflet-providersESP + leaflet-providers
-
-Terremotos + CartoDB
 
 ```html
 <div id="map"></div>
