@@ -345,7 +345,7 @@ var providersESP = {
 // Adapted from https://github.com/leaflet-extras/leaflet-providers 
 // Copyright (c) 2013 Leaflet Providers contributors All rights reserved.
 // BSD 2-Clause "Simplified" License
-function LPESP_composenames(arg,
+function providerOpts(arg,
     options) {
     var providers = providersESP;
     var parts = arg.split('.');
@@ -434,7 +434,7 @@ function LPESP_composenames(arg,
 }
 L.tileLayer.providerESP = function (
     name, opts) {
-    var newprov = LPESP_composenames(name,
+    var newprov = providerOpts(name,
         opts);
     var nameurl = newprov.url;
     if (nameurl.includes("{x}")) {
