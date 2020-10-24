@@ -31,8 +31,8 @@ navbar:
     - title: Visor
       url: ./visor
   - title: Changelog
-    url: ./CHANGELOG
-  - title   : <i class="fab fa-github"></i> # Label
+    url: https://github.com/dieghernan/leaflet-providersESP/blob/master/CHANGELOG.md
+  - title   : <i class="fab fa-github fa-lg"></i> # Label
     url     : https://github.com/dieghernan/leaflet-providersESP 
     
 footer:

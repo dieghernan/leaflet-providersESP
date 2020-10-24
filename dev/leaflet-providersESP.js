@@ -4,19 +4,21 @@
 // Issues: https://dieghernan.github.io/leaflet-providersESP/issues 
 // All providers are open source. Please check attributions
 // Feel free to contribute
+"use strict";
 var providersESPversion = 'v1.0.1-dev2';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
+var completeWMTS = "&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}";
 var providersESP = {
     IDErioja: {
-        url: "https://rts.larioja.org/wmts/mapa_base_rioja?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=mapa_base_rioja&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://rts.larioja.org/wmts/mapa_base_rioja?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=mapa_base_rioja" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 <a href='https://www.iderioja.org'>www.iderioja.org</a>"
         }
     },
     // IGN Mapa Base
     IGNBase: {
-        url: "https://www.ign.es/wmts/ign-base?service=WMTS&request=GetTile&version=1.0.0&Format=image/{ext}&layer={variant}&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://www.ign.es/wmts/ign-base?service=WMTS&request=GetTile&version=1.0.0&Format=image/{ext}&layer={variant}" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 scne.es. Sistema Geogr&aacute;fico Nacional <a href='http://www.ign.es'>IGN</a> ",
             variant: "IGNBaseTodo",
@@ -54,7 +56,7 @@ var providersESP = {
     },
     // MDT 
     MDT: {
-        url: "https://servicios.idee.es/wmts/mdt?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://servicios.idee.es/wmts/mdt?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}" + completeWMTS,
         options: {
             attribution: "<a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
             variant: "EL.GridCoverage",
@@ -83,7 +85,7 @@ var providersESP = {
     },
     // Mapa Topografico Nacional
     MTN: {
-        url: "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetTile&version=1.0.0&Format=image/jpeg&layer=MTN&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetTile&version=1.0.0&Format=image/jpeg&layer=MTN&style=default" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 <a href='http://www.ign.es/'>ign.es</a>",
             minZoom: 4,
@@ -99,7 +101,7 @@ var providersESP = {
     },
     // Plan Nacional de Ortofotografia Aerea
     PNOA: {
-        url: "https://www.ign.es/wmts/pnoa-ma?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://www.ign.es/wmts/pnoa-ma?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=OI.OrthoimageCoverage" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 scne.es. <a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
             minZoom: 4,
@@ -115,7 +117,7 @@ var providersESP = {
     },
     // Ocupacion Suelo
     OcupacionSuelo: {
-        url: "https://servicios.idee.es/wmts/ocupacion-suelo?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://servicios.idee.es/wmts/ocupacion-suelo?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}&style=default" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 scne.es. <a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
             variant: "LC.LandCoverSurfaces"
@@ -127,13 +129,12 @@ var providersESP = {
     },
     // Light Detection and Ranging - LiDAR
     LiDAR: {
-        url: "https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}",
+        url: "https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}" + completeWMTS,
         options: {
             attribution: "CC BY 4.0 scne.es. <a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
             variant: "EL.GridCoverageDSM",
         }
     },
-
     //WMS Servers
     Geofisica: {
         url: "https://www.ign.es/wms-inspire/geofisica?",
