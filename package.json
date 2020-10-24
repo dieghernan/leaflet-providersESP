@@ -1,29 +1,29 @@
 {
-  "name": "leaflet-providersESP",
-  "version": "1.0.0",
-  "description": "An extension to Leaflet that contains configurations for various free WMS/WMTS tile providers of Spain.",
-  "main": "dist/leaflet-providersESP.js",
+  "name": "leaflet-providers",
+  "version": "1.10.2",
+  "description": "An extension to Leaflet that contains configurations for various free tile providers.",
+  "main": "leaflet-providers.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dieghernan/leaflet-providersESP.git"
+    "url": "git://github.com/leaflet-extras/leaflet-providers.git"
   },
   "scripts": {
     "test": "npm run lint && npm run testsuite",
     "testsuite": "mocha-chrome tests/index.html",
-    "lint": "eslint --config .eslintrc dist/leaflet-providersESP.js",
-    "min": "uglifyjs dist/leaflet-providersESP.js -mc -o dist/leaflet-providersESP.min.js",
+    "lint": "eslint --config .eslintrc leaflet-providers.js index.html preview/*.js preview/*.html tests/*",
+    "min": "uglifyjs leaflet-providers.js -mc -o leaflet-providers.min.js",
     "release-patch": "mversion patch -m",
     "release-minor": "mversion minor -m"
   },
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/dieghernan/leaflet-providersESP/issues"
+    "url": "https://github.com/leaflet-extras/leaflet-providers/issues"
   },
   "files": [
-    "dist/leaflet-providersESP.js",
+    "leaflet-providers.js",
     "README.md",
-    "CHANGELOG.md"
-    "LICENSE"
+    "CHANGELOG.md",
+    "licence.md"
   ],
   "devDependencies": {
     "chai": "^4.1.2",
@@ -36,10 +36,10 @@
   },
   "autoupdate": {
     "source": "git",
-    "target": "git://github.com/dieghernan/leaflet-providersESP.git",
+    "target": "git://github.com/leaflet-extras/leaflet-providers.git",
     "basePath": "/",
     "files": [
-      "dist/leaflet-providersESP.js"
+      "leaflet-providers.js"
     ]
   }
 }
