@@ -339,7 +339,7 @@ var providersESP = {
             LimitesMaritimos: {},
             LineasBase: "AU.Baseline"
         }
-    },
+    }
 
 };
 // Adapted from https://github.com/leaflet-extras/leaflet-providers 
