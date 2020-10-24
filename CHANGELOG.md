@@ -1,26 +1,28 @@
----
-title: CHANGELOG
-subtitle: Version control
----
+
 
 ## v1.0.0 - 2020-10-23
 
 Initial version
 
 
------
-
-## [RELEASE VERSION] - YYYY-MM-DD
-
 ### Added
+
+Code and docs
 
 ### Changed
 
+NA
+
 ### Removed
+
+NA
 
 ### Fixed
 
-#### [dev]
+NA
 
-- [ ] Bump version on script
-- [ ] Minify
+#### Checks
+
+- [x] Bump version on script
+- [x] Beautify
+- [ ] Lint
