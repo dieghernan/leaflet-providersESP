@@ -64,7 +64,7 @@
                     collapsed: true,
                 })
                 .addTo(map);
-
+baseLayers[Object.keys(baseLayers)[0]].addTo(map);
           var ZoomViewer = L.Control.extend({
 		onAdd: function(){
 			var gauge = L.DomUtil.create('div');
@@ -79,7 +79,7 @@
 	});
 
 	(new ZoomViewer).addTo(map);
-           L.tileLayer.providerESP('IDErioja').addTo(map);
+           
            // you want to get it of the window global
            
     

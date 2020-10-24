@@ -87,7 +87,7 @@ var providersESP = {
     MTN: {
         url: "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetTile&version=1.0.0&Format=image/jpeg&layer=MTN&style=default" + completeWMTS,
         options: {
-            attribution: "CC BY 4.0 <a href='http://www.ign.es/'>ign.es</a>",
+            attribution: "{attribution.MDT}",
             minZoom: 4,
             bounds: [
                 [22.173559281306314, -
@@ -103,7 +103,7 @@ var providersESP = {
     PNOA: {
         url: "https://www.ign.es/wmts/pnoa-ma?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=OI.OrthoimageCoverage" + completeWMTS,
         options: {
-            attribution: "CC BY 4.0 scne.es. <a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
+            attribution: "{attribution.MDT}",
             minZoom: 4,
             bounds: [
                 [22.173559281306314, -
@@ -131,8 +131,8 @@ var providersESP = {
     LiDAR: {
         url: "https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}" + completeWMTS,
         options: {
-            attribution: "CC BY 4.0 scne.es. <a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
-            variant: "EL.GridCoverageDSM",
+            attribution: "{attribution.MDT}",
+            variant: "EL.GridCoverageDSM"
         }
     },
     //WMS Servers
@@ -142,7 +142,7 @@ var providersESP = {
             layers: "Ultimos10dias",
             format: "image/png",
             transparent: true,
-            attribution: "CC BY 4.0 ign.es <a href='http://www.ign.es'>Instituto Geogr&aacute;fico Nacional</a>"
+            attribution: "{attribution.IGNBase}"
         },
         // Selected
         variants: {
@@ -250,7 +250,7 @@ var providersESP = {
             layers: "GN.GeographicalNames",
             format: "image/png",
             transparent: true,
-            attribution: "<a href='http://www.ign.es'>Instituto Geogr&aacute;fico Nacional</a>",
+            attribution: "{attribution.IGNBase}",
             minZoom: 6
 
         }
@@ -261,7 +261,7 @@ var providersESP = {
             layers: "AU.AdministrativeBoundary",
             format: "image/png",
             transparent: true,
-            attribution: "CC BY 4.0 ign.es <a href='http://www.ign.es'>Instituto Geogr&aacute;fico Nacional</a>"
+            attribution: "{attribution.IGNBase}"
 
         },
         variants: {
@@ -319,7 +319,7 @@ var providersESP = {
             layers: "TN.RailTransportNetwork.RailwayLink",
             format: "image/png",
             transparent: true,
-            attribution: "&copy; ADIF)"
+            attribution: "&copy; ADIF"
         },
         variants: {
             Vias: {},
@@ -334,7 +334,7 @@ var providersESP = {
             layers: "AU.MaritimeBoundary",
             format: "image/png",
             transparent: true,
-            attribution: "&copy; Instituto Hidrogr&aacute;fico de la Marina)"
+            attribution: "&copy; Instituto Hidrogr&aacute;fico de la Marina"
         },
         variants: {
             LimitesMaritimos: {},
