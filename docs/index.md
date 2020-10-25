@@ -79,7 +79,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 ```
 
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen loading="lazy"></iframe>
 </div>
 
 
@@ -99,7 +99,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 ```
 
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="./demo/overlays" allowfullscreen loading="lazy"></iframe>
 </div>
 
 <a id="btndemo2" class="btn btn-block btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a>
@@ -119,7 +119,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 ```
 
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe class="embed-responsive-item" src="./demo/leafletproviders" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="./demo/leafletproviders" allowfullscreen loading="lazy"></iframe>
 </div>
 
 
