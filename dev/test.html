@@ -121,23 +121,25 @@ map.addControl(searchControl);
 <script>
   for (var provider in providersESP) {
     if (providersESP[provider].variants) {
-      var allnames = [];
+      var printNames = [];
       for (var variant in providersESP[provider].variants) {
-        allnames.push('<code>' + variant +'</code>');
+        printNames.push('<code>' + variant +'</code>');
       }
     } else {		
-      allnames = [];
+      printNames = [];
     }
     row = document.createElement('tr');
     row.innerHTML = '<td><code>' +
     provider + '</code></td><td>'
-    + allnames.join(', ') +'</td>';
+    + printNames.join(', ') +'</td>';
     document.getElementById('listprov').appendChild(row);
   }
 </script>
 <!-- Current version -->
 <script src="../dist/leaflet-providersESP.js"></script>
+
 <p id="pr2"></p>
+<script src="../docs/js/shared.js"></script>
 
 <script>
 
@@ -151,6 +153,7 @@ for (var provider in providersESP) {
 			allnames.push(provider);
 		}
 	}
+	console.log(allnames);
 
   // Add it to the page
   nprovs = document.getElementById('pr2');

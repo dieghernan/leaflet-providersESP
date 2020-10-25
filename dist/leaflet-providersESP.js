@@ -1,3 +1,4 @@
+ 
 /*
  leaflet-providersESP.js plugin v1.0.0
  (c) D. Hernangomez 			
@@ -138,6 +139,22 @@ var providersESP = {
 	},
 
 	//WMS Servers
+	Geofisica: {
+		url: 'https://www.ign.es/wms-inspire/geofisica?',
+		options: {
+			layers: 'Ultimos10dias',
+			format: 'image/png',
+			transparent: true,
+			attribution: 'CC BY 4.0 ign.es <a href="http://www.ign.es">Instituto Geogr&aacute;fico Nacional</a>'
+		},
+		// Selected
+		variants: {
+			Terremotos10dias: {},
+			Terremotos30dias: 'Ultimos30dias',
+			Terremotos365dias: 'Ultimos365dias',
+			VigilanciaVolcanica: 'VigilanciaVolcanica'
+		}
+	},
 	CaminoDeSantiago: {
 		url: 'https://www.ign.es/wms-inspire/camino-santiago?',
 		options: {
@@ -175,7 +192,9 @@ var providersESP = {
 		    Catastro: {
 				url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx',
 				options: {
-					layers: 'Catastro'
+					layers: 'Catastro',
+					minZoom: 1,
+					transparent: false
 					}
 			},
 			Parcela: {
