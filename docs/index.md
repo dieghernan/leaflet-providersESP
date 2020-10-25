@@ -15,6 +15,11 @@ excerpt: 'Leaflet-providersESP es un plugin para mapas Leaflet que proporciona u
 Este plugin es compatible con el plugin [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers).
 
 
+* TOC
+{:toc}
+
+
+
 ## Instalación 
 
 ### Via CDN
