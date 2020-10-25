@@ -132,12 +132,6 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 <p id="pr"></p>
 
 <script src="./js/shared.js"></script>
-<script>
-  // Add it to the page
-  nprovs = document.getElementById('pr');
-  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
-+ allnames.length + '</strong> capas (layers):';
-</script>
 
 **View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)**
 {: .lead}
