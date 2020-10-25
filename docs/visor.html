@@ -59,12 +59,20 @@ excerpt: Preview de los proveedores incluidos
 
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
             map.locate({ setView: true, maxZoom: 16 });
+            
+            function onLocationFoundMark(e) {
+    var radius = e.accuracy * 1.5;
+
+    L.marker(e.latlng).addTo(map);
+
+    L.circle(e.latlng, radius).addTo(map);
+}
 
             function onLocationFound(e) {
                 var radius = e.accuracy * 2;
             }
 
-            map.on("locationfound", onLocationFound);
+            map.on("locationfound", onLocationFoundMark);
 
             function onLocationError(e) {
                 alert(e.message);
