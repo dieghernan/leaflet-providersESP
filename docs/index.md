@@ -50,7 +50,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@{{ site.github.releases[0].tag_name }}/dist/leaflet-providersESP.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
 	<!-- Display map full page -->
 	<style>
 	html {
