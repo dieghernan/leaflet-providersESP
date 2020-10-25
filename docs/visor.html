@@ -60,22 +60,16 @@ excerpt: Preview de los proveedores incluidos
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
             map.locate({ setView: true, maxZoom: 16 });
             
-            var gpsMarker = null;
-var gpsCircleMarker;
+
+var gpsCircleMarker = null;
 
 function onLocationFound(e) {
-  var radius = e.accuracy / 2;
-  var popupContent = "You are within " + radius + " meters from this point";
-
-  if (gpsMarker == null) {
-    gpsMarker = L.marker(e.latlng).addTo(map);
-    gpsMarker.bindPopup(popupContent).openPopup();
+  var radius = e.accuracy * 1.5;
+  if (gpsCircleMarker == null) {
     gpsCircleMarker = L.circle(e.latlng, radius).addTo(map);
     }
   else {
-   gpsMarker.getPopup().setContent(popupContent);   
-   gpsMarker.setLatLng(e.latlng);
-   gpsCircleMarker.setLatLng(e.latlng);
+  gpsCircleMarker.setLatLng(e.latlng);
    gpsCircleMarker.setRadius(radius);
   }
 }
