@@ -118,7 +118,6 @@ map.addControl(searchControl);
   <tbody id="listprov">
   </tbody>
 </table>
-
 <script>
   for (var provider in providersESP) {
     if (providersESP[provider].variants) {
@@ -136,4 +135,44 @@ map.addControl(searchControl);
     document.getElementById('listprov').appendChild(row);
   }
 </script>
+<!-- Current version -->
+<script src="../dist/leaflet-providersESP.js"></script>
+<p id="pr2"></p>
+
+<script>
+  // Add it to the page
+  nprovs = document.getElementById('pr2');
+  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
++ allnames.length + '</strong> proveedores:';
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proveedor</th>
+      <th>Capas</th>
+    </tr>
+  </thead>
+  <tbody id="listprov2">
+  </tbody>
+</table>
+
+<script>
+  for (var provider in providersESP) {
+    if (providersESP[provider].variants) {
+      var allnames = [];
+      for (var variant in providersESP[provider].variants) {
+        allnames.push('<code>' + variant +'</code>');
+      }
+    } else {		
+      allnames = [];
+    }
+    row = document.createElement('tr');
+    row.innerHTML = '<td><code>' +
+    provider + '</code></td><td>'
+    + allnames.join(', ') +'</td>';
+    document.getElementById('listprov2').appendChild(row);
+  }
+</script>
+
 </body>

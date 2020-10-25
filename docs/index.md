@@ -136,7 +136,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
   // Add it to the page
   nprovs = document.getElementById('pr');
   nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
-+ allnames.length + '</strong> proveedores:';
++ allnames.length + '</strong> capas (layers):';
 </script>
 
 <table>
