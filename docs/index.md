@@ -139,8 +139,8 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 + allnames.length + '</strong> capas (layers):';
 </script>
 
-View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)
-{: .alert .alert-info .p-3 .mx-2 .mb-3}
+**View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)**
+{: .lead}
 
 <table>
   <thead>
