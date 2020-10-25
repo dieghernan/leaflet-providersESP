@@ -140,6 +140,18 @@ map.addControl(searchControl);
 <p id="pr2"></p>
 
 <script>
+
+var allnames = [];
+for (var provider in providersESP) {
+		if (providersESP[provider].variants) {
+			for (var variant in providersESP[provider].variants) {
+				allnames.push(provider + '.' + variant);
+			}
+		} else {
+			allnames.push(provider);
+		}
+	}
+
   // Add it to the page
   nprovs = document.getElementById('pr2');
   nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
