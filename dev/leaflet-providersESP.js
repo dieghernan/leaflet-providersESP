@@ -1,4 +1,4 @@
-// leaflet-providersESP.js plugin v1.0.1-dev2
+// leaflet-providersESP.js plugin v1.1.0
 // (c) D. Hernangomez - MIT License
 // https://dieghernan.github.io/leaflet-providersESP/
 // Issues: https://dieghernan.github.io/leaflet-providersESP/issues
