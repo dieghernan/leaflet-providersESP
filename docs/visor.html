@@ -23,6 +23,10 @@ excerpt: Preview de los proveedores incluidos
         <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
 <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
         <script src="../js/shared.js"></script>
+        
+        
+        <script src="https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/master/dev/leaflet-providersESP.js"></script>
+        
 </head>
 <body>
 <!-- Create map -->
@@ -58,13 +62,13 @@ excerpt: Preview de los proveedores incluidos
                 .addTo(map);
 
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
-            map.locate({ setView: true, maxZoom: 16 });
+            map.locate({ setView: true, maxZoom: 17 });
             
 
 var gpsCircleMarker = null;
 
 function onLocationFound(e) {
-  var radius = e.accuracy * 1.5;
+  var radius = e.accuracy * 2;
   if (gpsCircleMarker == null) {
     gpsCircleMarker = L.circle(e.latlng, radius).addTo(map);
     }
@@ -84,7 +88,7 @@ function onLocationFound(e) {
 
             L.easyButton('<i class="fas fa-crosshairs"></i>',
             function () {
-                map.locate({ setView: true, maxZoom: 16 });
+                map.locate({ setView: true, maxZoom: 17 });
                 map.on("locationfound", onLocationFound);
             }).addTo(map);
             
