@@ -24,12 +24,10 @@ navbar:
   brand:
     title   :  '<i class="fas fa-home" style="color: #FABD00"></i>'
   nav:
-  - title: Demo
-    child: 
-    - title: Preview
-      url: ./preview
-    - title: Visor
-      url: ./visor
+  - title: Preview
+    url: ./preview
+  - title: Visor - Webapp
+    url: ./visor
   - title: Changelog
     url: https://github.com/dieghernan/leaflet-providersESP/blob/master/CHANGELOG.md
   - title   : <i class="fab fa-github fa-lg"></i> # Label
