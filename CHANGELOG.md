@@ -1,3 +1,9 @@
+# v1.1.1 - *2020-10-25*
+
+## Fixed 
+
+- Version on script
+
 # v1.1.0 - *2020-10-25*
 
 ## Added

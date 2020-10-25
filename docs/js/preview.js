@@ -20,7 +20,7 @@ function renderValue(value) {
 	}
 }
 function getExampleJS(name) {
-	var prov = LPESP_composenames(name);
+	var prov = providerOpts(name);
 	var layerName = name.replace('.', '_');
 	var url = prov.url;
 	var options = L.extend({}, prov.options || {});
