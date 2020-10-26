@@ -1,4 +1,4 @@
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP) ![CodeQL](https://github.com/dieghernan/leaflet-providersESP/workflows/CodeQL/badge.svg)
 
 # leaflet-providersESP
 
