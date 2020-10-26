@@ -151,6 +151,13 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
   </tbody>
 </table>
 
+*Nota*: En aquellos proveedores con varias capas, la llamada a `PROVEEDOR`  equivale a `PROVEEDOR.PRIMERA_CAPA`:
+
+```js
+L.tileLayer.providerESP('IGNBase') === L.tileLayer.providerESP('IGNBase.Todo')
+
+```
+
 <script>
   for (var provider in providersESP) {
     if (providersESP[provider].variants) {

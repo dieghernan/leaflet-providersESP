@@ -1,3 +1,19 @@
+# v1.2.0 - *2020-10-26*
+
+## Added
+
+- `Hidrografia`: `POI, ManMade, LineaCosta, Rios, Humedales`.
+- `PNOA` : `Mosaico`
+
+## Changed
+
+- `Hidrografia.Cuencas` from IDEE.
+- Due to the addition of `PNOA.Mosaico`, previous `PNOA` needs to be called as `PNOA.MaximaActualidad` on the examples only (`PNOA` would still work).
+
+- [x] Bump version on script
+- [x] Beautify
+- [x] Lint
+
 # v1.1.2 - *2020-10-25*
 
 ## Fixed 

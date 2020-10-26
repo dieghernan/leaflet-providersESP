@@ -1,11 +1,11 @@
-// leaflet-providersESP.js plugin v1.1.2
+// leaflet-providersESP.js plugin v1.2.0
 // (c) D. Hernangomez - MIT License
 // https://dieghernan.github.io/leaflet-providersESP/
 // Issues: https://dieghernan.github.io/leaflet-providersESP/issues
 // All providers are open source. Please check attributions
 // Feel free to contribute
 "use strict";
-var providersESPversion = 'v1.1.2';
+var providersESPversion = 'v1.2.0';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
 var completeWMTS = "&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}";
@@ -81,20 +81,6 @@ var providersESP = {
       }
     }
   },
-  // Mapa Topografico Nacional
-  MTN: {
-    url: "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetTile&version=1.0.0&Format=image/jpeg&layer=MTN&style=default" + completeWMTS,
-    options: {
-      attribution: "{attribution.MDT}",
-      minZoom: 4,
-      bounds: [
-        [22.173559281306314, -47.0716243806546],
-        [66.88067635831743,
-          40.8749629405498
-        ]
-      ]
-    }
-  },
   // Plan Nacional de Ortofotografia Aerea
   PNOA: {
     url: "https://www.ign.es/wmts/pnoa-ma?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=OI.OrthoimageCoverage" + completeWMTS,
@@ -107,6 +93,17 @@ var providersESP = {
           40.8749629405498
         ]
       ]
+    },
+    variants: {
+      MaximaActualidad: {},
+      Mosaico: {
+        url: "http://www.ign.es/wms-inspire/pnoa-ma?",
+        options: {
+          layers: "OI.MosaicElement",
+          format: "image/png",
+          transparent: true
+        }
+      }
     }
   },
   // Ocupacion Suelo
@@ -127,6 +124,20 @@ var providersESP = {
     options: {
       attribution: "{attribution.MDT}",
       variant: "EL.GridCoverageDSM"
+    }
+  },
+  // Mapa Topografico Nacional
+  MTN: {
+    url: "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetTile&version=1.0.0&Format=image/jpeg&layer=MTN&style=default" + completeWMTS,
+    options: {
+      attribution: "{attribution.MDT}",
+      minZoom: 4,
+      bounds: [
+        [22.173559281306314, -47.0716243806546],
+        [66.88067635831743,
+          40.8749629405498
+        ]
+      ]
     }
   },
   //WMS Servers
@@ -272,20 +283,29 @@ var providersESP = {
     // Selected, there are more, feel free to contribute
     variants: {
       MasaAgua: {},
-      Cuencas: {
-        url: "https://wms.mapama.gob.es/sig/Agua/CuencasCauces/wms.aspx?",
-        options: {
-          attribution: "Ministerio para la Transici&oacute;n Ecol&oacute;gica y el Reto Demogr&aacute;fico",
-          layers: "HY.PhysicalWaters.Catchments"
-        }
-      },
+      Cuencas: "HY.PhysicalWaters.Catchments",
       Subcuencas: {
         url: "https://wms.mapama.gob.es/sig/Agua/SubcuencasCauces/wms.aspx?",
         options: {
           attribution: "Ministerio para la Transici&oacute;n Ecol&oacute;gica y el Reto Demogr&aacute;fico",
           layers: "HY.PhysicalWaters.Catchments"
         }
-      }
+      },
+      POI: "HY.PhysicalWaters.HydroPointOfInterest",
+      ManMade: {
+        options: {
+          minZoom: 10,
+          layers: "HY.PhysicalWaters.ManMadeObject"
+        }
+      },
+      LineaCosta: "HY.PhysicalWaters.LandWaterBoundary",
+      Rios: {
+        options: {
+          layers: "HY.Network",
+          minZoom: 6
+        }
+      },
+      Humedales: "HY.PhysicalWaters.Wetland"
     }
   },
   Militar: {
