@@ -145,7 +145,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 <script>
   // Add it to the page
   nprovs = document.getElementById('pr');
-  nprovs.innerHTML = '<strong>'
+  nprovs.innerHTML = '<strong class="lead">'
 + allnames.length + '</strong> capas disponibles:';
 </script>
 
