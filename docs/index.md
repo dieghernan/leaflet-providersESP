@@ -133,12 +133,21 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 
 ## Proveedores disponibles
 
+**View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)**
+{: .lead}
+
 <p id="pr"></p>
 
 <script src="./js/shared.js"></script>
 
-**View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)**
-{: .lead}
+<p id="pr"></p>
+
+<script>
+  // Add it to the page
+  nprovs = document.getElementById('pr');
+  nprovs.innerHTML = '<strong>'
++ allnames.length + '</strong> capas disponibles:';
+</script>
 
 <table>
   <thead>
