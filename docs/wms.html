@@ -1,0 +1,139 @@
+---
+layout: compress
+title: Serviciks WMS
+excerpt: Preview de los proveedores WMS incluidos
+---
+<!doctype html>
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include fullmap_head.html -%}
+	<!-- Display map full page -->
+	<style>
+		html {
+			height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: baseline;
+		}
+		body, #container { height: 100%; margin: 0; padding: 0;}
+		#map { height: 100%; width: 100%; }
+	</style>
+
+        <!-- leaflet geosesrch -->
+        <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+        <script src="../js/shared.js"></script>
+        
+</head>
+<body>
+<!-- Create map -->
+	<div id="map"></div>
+        <script>
+            var map = L.map("map", {
+                center: [40.4166, -3.70384],
+                zoomControl: true,
+                zoom: 5,
+            });
+            
+            var isWMTS = function(providerName) {
+              var newprov = providerOpts(providerName);
+              var nameurl = newprov.url;
+              if (nameurl.includes("{x}")) {
+                return false;
+              } else {
+                return true;
+              }
+            };
+            
+
+            // collect all layers available in the provider definition
+            var baseLayers = {};
+            var overlays = {};
+            var addLayer = function (name) {
+                if (isIgnored(name)) {
+                    return;
+                }
+                if (isWMTS(name)) {
+                    
+                } else {
+                  return;
+                };
+                
+                var layer = L.tileLayer.providerESP(name);
+                if (isOverlay(name, layer)) {
+                    overlays[name] = layer;
+                } else {
+                    baseLayers[name] = layer;
+                }
+            };
+            L.tileLayer.providerESP.eachLayer(addLayer);
+            // add minimap control to the map
+            var layersControl = L.control
+                .layers(baseLayers, overlays, {
+                    collapsed: true,
+                })
+                .addTo(map);
+
+            baseLayers[Object.keys(baseLayers)[0]].addTo(map);
+            map.locate({ setView: true, maxZoom: 17 });
+            
+
+var gpsCircleMarker = null;
+
+function onLocationFound(e) {
+  var radius = e.accuracy * 2;
+  if (gpsCircleMarker == null) {
+    gpsCircleMarker = L.circle(e.latlng, radius).addTo(map);
+    }
+  else {
+  gpsCircleMarker.setLatLng(e.latlng);
+   gpsCircleMarker.setRadius(radius);
+  }
+}
+
+            map.on("locationfound", onLocationFound);
+
+            function onLocationError(e) {
+                alert(e.message);
+            }
+
+            map.on("locationerror", onLocationError);
+
+            L.easyButton('<i class="fas fa-crosshairs"></i>',
+            function () {
+                map.locate({ setView: true, maxZoom: 17 });
+                map.on("locationfound", onLocationFound);
+            }).addTo(map);
+            
+            L.easyButton('<i class="fas fa-expand"></i>',
+            function(){ map.setView([40,-3],5);}).addTo(map);
+
+            L.easyButton('<i class="fas fa-dove"></i>', 
+            function ()
+            {
+                map.setView([28, -15.8], 6);
+            }).addTo(map);
+            
+            L.easyButton('<i class="fas fa-globe"></i>', function () {
+                map.setView([40, -3], 2);
+            }).addTo(map);
+            
+ 
+            var GeoSearchControl = window.GeoSearch.GeoSearchControl;
+var OpenStreetMapProvider = window.GeoSearch.OpenStreetMapProvider;
+
+var provider = new OpenStreetMapProvider();
+
+var searchControl = new GeoSearchControl({
+  provider: provider,
+});
+
+map.addControl(searchControl);
+
+            L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
+              window.location.href = "https://dieghernan.github.io/leaflet-providersESP/";
+              }).addTo(map);
+
+        </script>
+    </body>
+</html>

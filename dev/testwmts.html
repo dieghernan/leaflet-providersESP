@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal page | leaflet-providersESP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Load Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<!-- Install leaflet-providersESP -->
+	<script src="leaflet-providersESP.js"></script>
+	<!-- Display map full page -->
+	<style>
+	html {
+		height: 100%
+	}
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	#map {
+		height: 80%;
+		width: 100%
+	}
+	</style>
+	
+	<link
+  <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+	
+</head>
+<body>
+	<script src="../docs/js/shared.js"></script>
+	
+</head>
+<body>
+<!-- Create map -->
+	<div id="map"></div>
+        <script>
+        
+        var isWMTS = function(providerName) {
+          var newprov = providerOpts(providerName);
+  var nameurl = newprov.url;
+  if (nameurl.includes("{x}")) {
+    return false;
+  } else {
+    return true;
+  }
+};
+        
+        
+            var map = L.map("map", {
+                center: [40.4166, -3.70384],
+                zoomControl: true,
+                zoom: 5,
+            });
+            
+            var baseLayers = {};
+            var overlays = {};
+            var addLayer = function (name) {
+                if (isIgnored(name)) {
+                    return;
+                }
+                if (isWMTS(name)) {
+                    
+                } else {
+                  return;
+                };
+                
+                var layer = L.tileLayer.providerESP(name);
+                if (isOverlay(name, layer)) {
+                    overlays[name] = layer;
+                } else {
+                    baseLayers[name] = layer;
+                }
+            };
+            L.tileLayer.providerESP.eachLayer(addLayer);
+            // add minimap control to the map
+            var layersControl = L.control
+                .layers(baseLayers, overlays, {
+                    collapsed: true,
+                })
+                .addTo(map);
+baseLayers[Object.keys(baseLayers)[0]].addTo(map);
+          var ZoomViewer = L.Control.extend({
+		onAdd: function(){
+			var gauge = L.DomUtil.create('div');
+			gauge.style.width = '200px';
+			gauge.style.background = 'rgba(255,255,255,0.5)';
+			gauge.style.textAlign = 'left';
+			map.on('zoomstart zoom zoomend', function(ev){
+				gauge.innerHTML = 'Zoom level: ' + map.getZoom();
+			})
+			return gauge;
+		}
+	});
+
+	(new ZoomViewer).addTo(map);
+           
+           // you want to get it of the window global
+           
+    
+var GeoSearchControl = window.GeoSearch.GeoSearchControl;
+var OpenStreetMapProvider = window.GeoSearch.OpenStreetMapProvider;
+
+
+// remaining is the same as in the docs, accept for the var instead of const declarations
+var provider = new OpenStreetMapProvider();
+
+var searchControl = new GeoSearchControl({
+  provider: provider,
+});
+
+
+map.addControl(searchControl);
+           
+           </script>
+           
+ <p id="pr"></p>
+
+<script>
+  // Add it to the page
+  nprovs = document.getElementById('pr');
+  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
++ allnames.length + '</strong> proveedores:';
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proveedor</th>
+      <th>Capas</th>
+    </tr>
+  </thead>
+  <tbody id="listprov">
+  </tbody>
+</table>
+<script>
+  for (var provider in providersESP) {
+    if (providersESP[provider].variants) {
+      var printNames = [];
+      for (var variant in providersESP[provider].variants) {
+        printNames.push('<code>' + variant +'</code>');
+      }
+    } else {		
+      printNames = [];
+    }
+    row = document.createElement('tr');
+    row.innerHTML = '<td><code>' +
+    provider + '</code></td><td>'
+    + printNames.join(', ') +'</td>';
+    document.getElementById('listprov').appendChild(row);
+  }
+</script>
+<!-- Current version -->
+<!-- Latest -->
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
+
+
+<p id="pr2"></p>
+<script src="../docs/js/shared.js"></script>
+
+<script>
+
+var allnames = [];
+for (var provider in providersESP) {
+		if (providersESP[provider].variants) {
+			for (var variant in providersESP[provider].variants) {
+				allnames.push(provider + '.' + variant);
+			}
+		} else {
+			allnames.push(provider);
+		}
+	}
+	console.log(allnames);
+
+  // Add it to the page
+  nprovs = document.getElementById('pr2');
+  nprovs.innerHTML = 'En la version <code>'+ providersESPversion +'</code> hay <strong>'
++ allnames.length + '</strong> proveedores:';
+</script>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proveedor</th>
+      <th>Capas</th>
+    </tr>
+  </thead>
+  <tbody id="listprov2">
+  </tbody>
+</table>
+
+<script>
+  for (var provider in providersESP) {
+    if (providersESP[provider].variants) {
+      var allnames = [];
+      for (var variant in providersESP[provider].variants) {
+        allnames.push('<code>' + variant +'</code>');
+      }
+    } else {		
+      allnames = [];
+    }
+    row = document.createElement('tr');
+    row.innerHTML = '<td><code>' +
+    provider + '</code></td><td>'
+    + allnames.join(', ') +'</td>';
+    document.getElementById('listprov2').appendChild(row);
+  }
+</script>
+
+</body>
