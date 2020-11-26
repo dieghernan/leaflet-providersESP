@@ -96,7 +96,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 <div id="map"></div>
 <script>
   var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('MDT.Relieve').addTo(map2);
+			L.tileLayer.providerESP('LiDAR').addTo(map2);
 			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
 			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
 </script>
