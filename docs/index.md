@@ -10,6 +10,8 @@ excerpt: 'Leaflet-providersESP es un plugin para mapas Leaflet que proporciona u
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4318010.svg)](https://doi.org/10.5281/zenodo.4318010)
 
+![CodeQL](https://github.com/dieghernan/leaflet-providersESP/workflows/CodeQL/badge.svg) [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp/badge)](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp) ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
+
 
 **Leaflet-providersESP** es un plugin para mapas [Leaflet](https://leafletjs.com/) que proporciona un acceso fácil a diferentes servicios web de mapas (WMS) y servicios web de mapas teselados (WMTS) proporcionados por organismos públicos de España, como el Instituto Geográfico Nacional ([IGN](https://www.ign.es/web/ign/portal/ide-area-nodo-ide-ign)) o el servicio de Infraestructura de Datos Espaciales de España ([IDEE](https://www.idee.es/directorio-de-servicios)) del Consejo Superior Geográfico.
 
