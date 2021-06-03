@@ -1,0 +1,72 @@
+---
+layout: compress
+title: Preview
+excerpt: Todas las capas
+---
+<!doctype html>
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include fullmap_head.html -%}
+	<!-- Display map full page -->
+	<style>
+		html {
+			height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: baseline;
+		}
+		body, #container { height: 100%; margin: 0; padding: 0;}
+		#map { height: 100%; width: 100%; }
+	</style>
+
+        <script src="../js/shared.js"></script>
+        
+</head>
+<body>
+<!-- Create map -->
+	<div id="map"></div>
+        <script>
+            var map = L.map("map", {
+                center: [40.4166, -3.70384],
+                zoomControl: true,
+                zoom: 5,
+            });
+            
+
+            // collect all layers available in the provider definition
+            var baseLayers = {};
+            var overlays = {};
+            var addLayer = function (name) {
+                if (isIgnored(name)) {
+                    return;
+                }
+                var layer = L.tileLayer.providerESP(name);
+                if (isOverlay(name, layer)) {
+                    overlays[name] = layer;
+                } else {
+                    baseLayers[name] = layer;
+                }
+            };
+            L.tileLayer.providerESP.eachLayer(addLayer);
+            // add minimap control to the map
+            var layersControl = L.control
+                .layers(baseLayers, overlays, {
+                    collapsed: true,
+                })
+                .addTo(map);
+
+            baseLayers[Object.keys(baseLayers)[0]].addTo(map);
+            map.locate({ setView: true, maxZoom: 17 });
+        
+
+            L.easyButton('<i class="fas fa-expand"></i>',
+            function(){ map.setView([40,-3],5);}).addTo(map);
+
+            
+            L.easyButton('<i class="fas fa-globe"></i>', function () {
+                map.setView([40, -3], 2);
+            }).addTo(map);
+            
+        </script>
+    </body>
+</html>
