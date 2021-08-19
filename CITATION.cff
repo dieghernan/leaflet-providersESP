@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hernangómez"
+  given-names: "Diego"
+  orcid: "https://orcid.org/0000-0001-8457-4658"
+title: "leaflet-providersESP"
+version: 1.2.0
+doi: 10.5281/zenodo.4318010
+repository-code: "https://github.com/dieghernan/leaflet-providersESP"
+url: https://dieghernan.github.io/leaflet-providersESP/
+license: MIT
+abstract: "An extension to Leaflet that contains configurations for various free WMS/WMTS tile providers of Spain."
