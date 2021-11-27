@@ -4,7 +4,7 @@ authors:
 - family-names: "Hernangómez"
   given-names: "Diego"
   orcid: "https://orcid.org/0000-0001-8457-4658"
-title: "leaflet-providersESP"
+title: "leaflet-providersESP: A leaflet plugin with Spanish services"
 version: 1.2.0
 doi: 10.5281/zenodo.4318010
 repository-code: "https://github.com/dieghernan/leaflet-providersESP"
