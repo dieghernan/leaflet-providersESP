@@ -1,3 +1,17 @@
+# v1.3.0 - *2022-02-16*
+
+## Added
+
+- `Catastro`: `BuildingPart, AdministrativeBoundary, AdministrativeUnit`.
+
+## Changed
+
+NA
+
+- [x] Bump version on script
+- [x] Beautify
+- [x] Lint
+
 # v1.2.0 - *2020-10-26*
 
 ## Added
