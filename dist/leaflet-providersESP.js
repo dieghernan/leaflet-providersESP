@@ -1,11 +1,11 @@
-// leaflet-providersESP.js plugin v1.2.0
+// leaflet-providersESP.js plugin v1.3.0
 // (c) D. Hernangomez - MIT License
 // https://dieghernan.github.io/leaflet-providersESP/
 // Issues: https://dieghernan.github.io/leaflet-providersESP/issues
 // All providers are open source. Please check attributions
 // Feel free to contribute
 "use strict";
-var providersESPversion = 'v1.2.0';
+var providersESPversion = 'v1.3.0';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
 var completeWMTS = "&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}";
@@ -186,7 +186,7 @@ var providersESP = {
     options: {
       layers: "CP.CadastralParcel",
       transparent: true,
-      minZoom: 15,
+      minZoom: 10,
       format: "image/png",
       attribution: "<a href='http://www.sedecatastro.gob.es/' target='_blank'>Spanish General Directorate for Cadastre</a>"
     },
@@ -203,13 +203,17 @@ var providersESP = {
         url: "http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx",
         options: {
           layers: "PARCELA",
-          minZoom: 15
+          minZoom: 10
         }
       },
-      CadastralParcel: {},
+      CadastralParcel: "CP.CadastralParcel",
       CadastralZoning: "CP.CadastralZoning",
       Address: "AD.Address",
-      Building: "BU.Building"
+      Building: "BU.Building",
+      BuildingPart: "BU.BuildingPart",
+      AdministrativeBoundary: "AU.AdministrativeBoundary",
+      AdministrativeUnit: "AU.AdministrativeUnit"
+
     }
   },
   RedTransporte: {
@@ -448,7 +452,7 @@ function providerOpts(arg, options) {
     if (attr.indexOf('{attribution.') === -1) {
       return attr;
     }
-    return attr.replace(/\{attribution.(\w*)\}/g, function (match, attributionName) {
+    return attr.replace(/\{attribution.(\w*)\}/g, function(match, attributionName) {
       return attributionReplacer(providers[attributionName].options.attribution);
     });
   }
@@ -461,7 +465,7 @@ function providerOpts(arg, options) {
   };
   return providerend;
 }
-L.tileLayer.providerESP = function (name, opts) {
+L.tileLayer.providerESP = function(name, opts) {
   var newprov = providerOpts(name, opts);
   var nameurl = newprov.url;
   if (nameurl.includes("{x}")) {
