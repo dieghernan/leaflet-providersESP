@@ -1,3 +1,16 @@
+# v1.3.1 - *2022-10-25*
+
+## Fixed
+
+Fix MDT Relieve
+
+### Checks
+
+- [x] Bump version on script
+- [x] Beautify
+- [ ] Lint
+
+
 # v1.3.0 - *2022-02-16*
 
 ## Added
@@ -100,7 +113,7 @@ NA
 - [x] Beautify
 - [ ] Lint
 
-# On dev - *unreleased*
+ On dev - *unreleased*
 
 ## Added
 

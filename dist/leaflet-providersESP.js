@@ -1,11 +1,11 @@
-// leaflet-providersESP.js plugin v1.3.0
+// leaflet-providersESP.js plugin v1.3.1
 // (c) D. Hernangomez - MIT License
 // https://dieghernan.github.io/leaflet-providersESP/
 // Issues: https://dieghernan.github.io/leaflet-providersESP/issues
 // All providers are open source. Please check attributions
 // Feel free to contribute
 "use strict";
-var providersESPversion = 'v1.3.0';
+var providersESPversion = 'v1.3.1';
 // Databases
 // WMTS Servers - Tile Maps - Mapas de Teselas
 var completeWMTS = "&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}";
@@ -59,7 +59,7 @@ var providersESP = {
     url: "https://servicios.idee.es/wmts/mdt?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer={variant}" + completeWMTS,
     options: {
       attribution: "<a href='http://www.ign.es/'>Infraestructura de Datos Espaciales de Espa&ntilde;a (IDEE)</a>",
-      variant: "EL.GridCoverage",
+      variant: "EL.ElevationGridCoverage",
       bounds: [
         [22.173559281306314, -47.0716243806546],
         [66.88067635831743,
