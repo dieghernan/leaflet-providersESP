@@ -51,11 +51,7 @@
                     return;
                 }
                 var layer = L.tileLayer.providerESP(name);
-                if (isOverlay(name, layer)) {
-                    overlays[name] = layer;
-                } else {
                     baseLayers[name] = layer;
-                }
             };
             L.tileLayer.providerESP.eachLayer(addLayer);
             // add minimap control to the map

@@ -1,8 +1,27 @@
+# v1.3.2 - *2022-11-14*
+
+Cleanup
+
+## Added
+
+- MDT.SpotElevation
+- Geofisica
+  -  ObservedEvents, NZ.HazardArea
+- VigilanciaVolcanica
+
+## Fixed
+
+- MDT.CurvasNivel
+- CaminoDeSantiago updated
+- Copernicus updated 
+
+
+
 # v1.3.1 - *2022-10-25*
 
 ## Fixed
 
-Fix MDT Relieve
+Fix MDT.Relieve
 
 ### Checks
 
