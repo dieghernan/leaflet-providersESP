@@ -1,6 +1,6 @@
 ---
 layout: compress
-title: Serviciks WMS
+title: Servicios WMS
 excerpt: Preview de los proveedores WMS incluidos
 ---
 <!doctype html>
@@ -39,9 +39,9 @@ excerpt: Preview de los proveedores WMS incluidos
               var newprov = providerOpts(providerName);
               var nameurl = newprov.url;
               if (nameurl.includes("{x}")) {
-                return false;
-              } else {
                 return true;
+              } else {
+                return false;
               }
             };
             
@@ -60,11 +60,7 @@ excerpt: Preview de los proveedores WMS incluidos
                 };
                 
                 var layer = L.tileLayer.providerESP(name);
-                if (isOverlay(name, layer)) {
-                    overlays[name] = layer;
-                } else {
-                    baseLayers[name] = layer;
-                }
+                baseLayers[name] = layer;
             };
             L.tileLayer.providerESP.eachLayer(addLayer);
             // add minimap control to the map
