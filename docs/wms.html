@@ -54,10 +54,8 @@ excerpt: Preview de los proveedores WMS incluidos
                     return;
                 }
                 if (isWMTS(name)) {
-                    
-                } else {
                   return;
-                };
+                } 
                 
                 var layer = L.tileLayer.providerESP(name);
                 baseLayers[name] = layer;
