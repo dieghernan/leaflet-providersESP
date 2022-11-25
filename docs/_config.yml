@@ -1,4 +1,4 @@
-remote_theme: dieghernan/chulapa
+theme: chulapa-jekyll
 locale                  :     es-ES
 title                   : 
 title_separator         :     #default [" | "]
