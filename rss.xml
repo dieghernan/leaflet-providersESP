@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>leaflet-providersESP | Leaflet plugin</title>
+		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
+		<link>https://dieghernan.github.io/leaflet-providersESP</link>
+		<description>Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España</description>
+		<language>es-ES</language>
+		<copyright>(c) 2022, D. Hernangomez</copyright>	
+		<pubDate>Sat, 26 Nov 2022 01:19:02 +0100</pubDate>
+		<lastBuildDate>Sat, 26 Nov 2022 01:19:02 +0100</lastBuildDate>
+		<category>blog</category>
+		<ttl>60</ttl>
+		<atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
+		<image>
+			<title>leaflet-providersESP | Leaflet plugin</title>
+			<url>https://dieghernan.github.io/leaflet-providersESP/assets/leaflet-providersESP.png</url>
+			<link>https://dieghernan.github.io/leaflet-providersESP</link>
+			<description>Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España</description>
+		</image></channel>
+</rss>
