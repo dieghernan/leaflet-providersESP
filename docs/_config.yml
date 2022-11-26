@@ -1,4 +1,6 @@
 theme: chulapa-jekyll
+repository: dieghernan/leaflet-providersESP
+
 locale                  :     es-ES
 title                   : 
 title_separator         :     #default [" | "]
