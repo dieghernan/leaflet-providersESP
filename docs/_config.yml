@@ -1,5 +1,8 @@
 theme: chulapa-jekyll
 repository: dieghernan/leaflet-providersESP
+url: "https://dieghernan.github.io"
+baseurl: "/leaflet-providersESP"
+
 
 locale                  :     es-ES
 title                   : 
