@@ -11,10 +11,30 @@ var providersESPversion = 'v1.3.2';
 var completeWMTS = "&style=default&tilematrixset=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}";
 var providersESP = {
   IDErioja: {
-    url: "https://rts.larioja.org/wmts/mapa_base_rioja?service=WMTS&request=GetTile&version=1.0.0&Format=image/png&layer=mapa_base_rioja" + completeWMTS,
+    url: "https://rts.larioja.org/mapa-base/{variant}/{z}/{x}/{y}.{ext}",
     options: {
-      attribution: "CC BY 4.0 <a href='https://www.iderioja.org'>www.iderioja.org</a>"
-    }
+      attribution: "CC BY 4.0 <a href='https://www.iderioja.org'>www.iderioja.org</a>",
+      variant: "rioja",
+      ext: "png" 
+    },
+    variants: {
+      Base: {},
+      Relieve: {
+        options: {
+          variant: "rioja_relieve"
+        }
+      },
+      Claro: {
+        options: {
+          variant: "rioja_claro"
+        }
+      },
+      Oscuro: {
+        options: {
+          variant: "rioja_oscuro"
+        }
+      }
+    } 
   },
   // IGN Mapa Base
   IGNBase: {
