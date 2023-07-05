@@ -1,4 +1,4 @@
-# On dev - *unreleased*
+# v1.3.3 - *unreleased*
 
 ## Added
 
@@ -12,7 +12,7 @@
 
 ### Checks
 
-- [ ] Bump version on script
+- [x] Bump version on script
 - [ ] Beautify
 - [ ] Lint
 
