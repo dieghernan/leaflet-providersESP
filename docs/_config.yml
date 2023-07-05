@@ -28,7 +28,7 @@ analytics_id            :
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
   brand:
-    title   :  '<i class="fas fa-home" style="color: #FABD00"></i><span class="d-none">Home</span>'
+    title   :  '<i class="fas fa-home" style="color: white"></i><span class="d-none">Home</span>'
   nav:
   - title: Preview
     url: ./preview
