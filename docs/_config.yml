@@ -1,4 +1,5 @@
-theme: chulapa-jekyll
+remote_theme: dieghernan/chulapa
+
 repository: dieghernan/leaflet-providersESP
 url: "https://dieghernan.github.io"
 baseurl: "/leaflet-providersESP"
