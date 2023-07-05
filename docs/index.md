@@ -123,7 +123,7 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.10.2/leaflet-providers.min.js"></script>
 <script>
   var map3 = L.map('map',{center: [38.8,-5.3],zoom: 5});
-  var base = {'CartoDB': L.tileLayer.provider('CartoDB.DarkMatterNoLabels').addTo(map3)};
+  var base = {'Stamen': L.tileLayer.provider('Stamen.Toner').addTo(map3)};
   var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
 </script>
