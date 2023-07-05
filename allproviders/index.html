@@ -5,22 +5,20 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-11-26 01:32:33 +0100 -->
+    <!-- Page build 2023-07-05 21:02:44 +0200 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
       "@context": "https://schema.org",
-	  
 	  "@type": "Article",
-	  
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://dieghernan.github.io/leaflet-providersESP/allproviders/"
       },
       "headline": "Preview",
       "image": "https://dieghernan.github.io/leaflet-providersESP/assets/leaflet-providersESP.png",
-      "datePublished": "2022-11-26T01:32:33+01:00",
-      "dateModified": "2022-11-26T01:32:33+01:00",
+      "datePublished": "2023-07-05T21:02:44+02:00",
+      "dateModified": "2023-07-05T21:02:44+02:00",
       "author": {
         "@type": "Person",
         "name": "D. Hernangomez"
@@ -35,7 +33,6 @@
       }
     }
     </script>
-    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,8 +49,6 @@
       }]
     }
     </script>
-    
-    
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -66,20 +61,15 @@
 {
   "@context" : "https://schema.org",
   "@type" : "Person",
-  
-  
   "homeLocation": {
     "@type": "Place",
     "name": "Madrid, Spain"
     },
-  
   "description": "Publisher",
   "name" : "D. Hernangomez",
   "url" : "https://dieghernan.github.io/leaflet-providersESP/"
-  
 }
 </script>
-
    <title>Preview | leaflet-providersESP</title>
   <link rel="canonical" href="https://dieghernan.github.io/leaflet-providersESP/allproviders/">
     <!-- Atom feed -->
@@ -93,7 +83,6 @@
    <meta name="description" content="Todas las capas"/>
    <meta name="thumbnail" content="https://dieghernan.github.io/leaflet-providersESP/assets/leaflet-providersESP.png" />
    <meta name="robots" content="index, follow"><meta name="keywords" content="leaflet,leaflet-providersesp,plugin,spain,wms-service,wmts-tile-providers"/>
-    
     <!-- OpenGraph -->
    <meta property="og:title" content="Preview | leaflet-providersESP" />
    <meta property="og:url" content="https://dieghernan.github.io/leaflet-providersESP/allproviders/" />
@@ -105,29 +94,24 @@
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:site" content="@dieghernan" />
     <!-- CSS -->
-    
     <!-- Fontawesome-->
     <!-- v5.13 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
-    
     <!-- Theme css (Bootstrap included) 
   <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/main.css" /> -->
     <!-- Highlighter -->
   <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/highlighter.css" />
     <!-- Custom css -->
   <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/custom.css" />
-    
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7DT123587"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-B7DT123587');
 </script>
 <!-- start custom head snippets -->
-
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="apple-touch-icon" sizes="180x180" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon-32x32.png">
@@ -140,18 +124,14 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#240202">
-
-
 <!-- Load Leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
-
 <!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-
 <!-- end custom head snippets -->
 </head>
 <!-- Display map full page -->
@@ -166,9 +146,7 @@
 		body, #container { height: 100%; margin: 0; padding: 0;}
 		#map { height: 100%; width: 100%; }
 	</style>
-
         <script src="../js/shared.js"></script>
-        
 </head>
 <body>
 <!-- Create map -->
@@ -179,8 +157,6 @@
                 zoomControl: true,
                 zoom: 5,
             });
-            
-
             // collect all layers available in the provider definition
             var baseLayers = {};
             var overlays = {};
@@ -202,19 +178,12 @@
                     collapsed: true,
                 })
                 .addTo(map);
-
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
-        
-
             L.easyButton('<i class="fas fa-expand"></i>',
             function(){ map.setView([40,-3],5);}).addTo(map);
-
-            
             L.easyButton('<i class="fas fa-globe"></i>', function () {
                 map.setView([40, -3], 2);
             }).addTo(map);
-            
         </script>
    </body>
 </html>
-
