@@ -1,4 +1,4 @@
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP) ![CodeQL](https://github.com/dieghernan/leaflet-providersESP/workflows/CodeQL/badge.svg) ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP) [![CodeQL](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml) ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg)](https://doi.org/10.5281/zenodo.5731395)
 [![ko-fi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/dieghernan)
 

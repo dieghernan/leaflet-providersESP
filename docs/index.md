@@ -9,7 +9,7 @@ excerpt: 'Leaflet-providersESP es un plugin para mapas Leaflet que proporciona u
 <div markdown="1" class="badges">
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4318010.svg)](https://doi.org/10.5281/zenodo.4318010)
-![CodeQL](https://github.com/dieghernan/leaflet-providersESP/workflows/CodeQL/badge.svg)
+[![CodeQL](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp/badge)](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
 [![ko-fi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/dieghernan)
