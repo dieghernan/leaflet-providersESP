@@ -7,8 +7,8 @@
 		<description>Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España</description>
 		<language>es-ES</language>
 		<copyright>(c) 2023, D. Hernangomez</copyright>	
-		<pubDate>Mon, 31 Jul 2023 23:38:45 +0200</pubDate>
-		<lastBuildDate>Mon, 31 Jul 2023 23:38:45 +0200</lastBuildDate>
+		<pubDate>Mon, 31 Jul 2023 23:43:23 +0200</pubDate>
+		<lastBuildDate>Mon, 31 Jul 2023 23:43:23 +0200</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
