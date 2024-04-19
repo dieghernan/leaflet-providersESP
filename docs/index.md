@@ -58,8 +58,8 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.9/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
 	<!-- Display map full page -->
