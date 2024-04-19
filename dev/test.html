@@ -5,8 +5,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<script src="leaflet-providersESP.js"></script>
 	<!-- Display map full page -->
@@ -24,15 +24,15 @@
 		width: 100%
 	}
 	</style>
-	
+
 	<link
   <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
 <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
-	
+
 </head>
 <body>
 	<script src="../docs/js/shared.js"></script>
-	
+
 </head>
 <body>
 <!-- Create map -->
@@ -43,7 +43,7 @@
                 zoomControl: true,
                 zoom: 5,
             });
-            
+
             var baseLayers = {};
             var overlays = {};
             var addLayer = function (name) {
@@ -75,10 +75,10 @@ baseLayers[Object.keys(baseLayers)[0]].addTo(map);
 	});
 
 	(new ZoomViewer).addTo(map);
-           
+
            // you want to get it of the window global
-           
-    
+
+
 var GeoSearchControl = window.GeoSearch.GeoSearchControl;
 var OpenStreetMapProvider = window.GeoSearch.OpenStreetMapProvider;
 
@@ -92,9 +92,9 @@ var searchControl = new GeoSearchControl({
 
 
 map.addControl(searchControl);
-           
+
            </script>
-           
+
  <p id="pr"></p>
 
 <script>
@@ -121,7 +121,7 @@ map.addControl(searchControl);
       for (var variant in providersESP[provider].variants) {
         printNames.push('<code>' + variant +'</code>');
       }
-    } else {		
+    } else {
       printNames = [];
     }
     row = document.createElement('tr');
@@ -177,7 +177,7 @@ for (var provider in providersESP) {
       for (var variant in providersESP[provider].variants) {
         allnames.push('<code>' + variant +'</code>');
       }
-    } else {		
+    } else {
       allnames = [];
     }
     row = document.createElement('tr');

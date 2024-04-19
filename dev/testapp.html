@@ -2,8 +2,8 @@
 <html lang="{{- site.locale | default: 'en-US' -}}">
 	{%- include fullmap_head.html -%}
 	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
 
@@ -12,7 +12,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
 
 <!-- end custom head snippets -->
-	
+
 	<!-- Display map full page -->
 	<style>
 		html {
@@ -30,7 +30,7 @@
         <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
 <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
         <script src="../docs/js/shared.js"></script>
-        
+
 </head>
 <body>
 <!-- Create map -->
@@ -41,7 +41,7 @@
                 zoomControl: true,
                 zoom: 5,
             });
-            
+
 
             // collect all layers available in the provider definition
             var baseLayers = {};
@@ -67,7 +67,7 @@
 
             baseLayers[Object.keys(baseLayers)[0]].addTo(map);
             map.locate({ setView: true, maxZoom: 17 });
-            
+
 
 var gpsCircleMarker = null;
 
@@ -95,21 +95,21 @@ function onLocationFound(e) {
                 map.locate({ setView: true, maxZoom: 17 });
                 map.on("locationfound", onLocationFound);
             }).addTo(map);
-            
+
             L.easyButton('<i class="fas fa-expand"></i>',
             function(){ map.setView([40,-3],5);}).addTo(map);
 
-            L.easyButton('<i class="fas fa-dove"></i>', 
+            L.easyButton('<i class="fas fa-dove"></i>',
             function ()
             {
                 map.setView([28, -15.8], 6);
             }).addTo(map);
-            
+
             L.easyButton('<i class="fas fa-globe"></i>', function () {
                 map.setView([40, -3], 2);
             }).addTo(map);
-            
- 
+
+
             var GeoSearchControl = window.GeoSearch.GeoSearchControl;
 var OpenStreetMapProvider = window.GeoSearch.OpenStreetMapProvider;
 

@@ -5,8 +5,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<!-- Display map full page -->
 	<style>
@@ -23,7 +23,7 @@
 		width: 100%
 	}
 	</style>
-	
+
 </head>
 <body>
 
@@ -37,11 +37,11 @@
                 zoomControl: true,
                 zoom: 5,
             });
-            
+
             var wmsLayer = L.tileLayer('https://worldtiles1.waze.com/tiles/{z}/{x}/{y}.png', {attribution: 'a'}).addTo(map);
-            
+
             var wmsLayer2 = L.tileLayer('https://heatmap-external-{s}.strava.com/tiles/all/hot/{z}/{x}/{y}.png', {subdomains: 'abc'}).addTo(map);
-           
-           
+
+
            </script>
 </body>

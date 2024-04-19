@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{- site.locale | default: 'en-US' -}}">
+	{%- include fullmap_head.html -%}
+	<!-- Load Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+	<!-- Install leaflet-providersESP -->
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
+
+<!-- Easy Button -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+  <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+<!-- end custom head snippets -->
+
+	<!-- Display map full page -->
+	<style>
+		html {
+			height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: baseline;
+		}
+		body, #container { height: 100%; margin: 0; padding: 0;}
+		#map { height: 100%; width: 100%; }
+	</style>
+
+        <!-- leaflet geosesrch -->
+        <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+        <script src="../docs/js/shared.js"></script>
+
+</head>
+<body>
+<div id="map"></div>
+<script>
+  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 5});
+  var base = {'CartoDB.Positron': L.tileLayer.provider('CartoDB.Positron').addTo(map3),
+              'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap')
+  };
+  var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
+  L.control.layers(base, over, {collapsed: false}).addTo(map3);
+
+  L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
+              window.location.href = "https://dieghernan.github.io/leaflet-providersESP#btndemo3";
+              }).addTo(map3);
+</script>
+    </body>
+</html>

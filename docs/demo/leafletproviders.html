@@ -6,13 +6,15 @@ excerpt: Compatible con el plugin leaflet-providers
 
 
 <div id="map"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"></script>
+  <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
 <script>
   var map3 = L.map('map',{center: [38.8,-5.3],zoom: 5});
-  var base = {'Stamen': L.tileLayer.provider('Stamen.Toner').addTo(map3)};
+  var base = {'CartoDB.Positron': L.tileLayer.provider('CartoDB.Positron').addTo(map3),
+              'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap')
+  };
   var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
   L.control.layers(base, over, {collapsed: false}).addTo(map3);
-  
+
   L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
               window.location.href = "https://dieghernan.github.io/leaflet-providersESP#btndemo3";
               }).addTo(map3);

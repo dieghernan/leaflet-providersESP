@@ -5,8 +5,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
 	<script src="leaflet-providersESP.js"></script>
 	<!-- Display map full page -->
@@ -24,16 +24,16 @@
 		width: 100%
 	}
 	</style>
-	
+
 	<link
   <!-- Control Layers Minimap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/control.layers.minimap.css">
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
-	
+
 </head>
 <body>
 	<script src="../docs/js/shared.js"></script>
-	
+
 </head>
 <body>
 <!-- Create map -->
@@ -44,7 +44,7 @@
                 zoomControl: true,
                 zoom: 5,
             });
-            
+
             var baseLayers = {};
             var overlays = {};
             var addLayer = function (name) {
@@ -66,10 +66,10 @@
                 })
                 .addTo(map);
 baseLayers[Object.keys(baseLayers)[0]].addTo(map);
-    
-           
+
+
            </script>
-           
+
 
 
 </body>
