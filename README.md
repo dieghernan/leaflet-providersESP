@@ -5,6 +5,7 @@ SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP
 (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg)](https://doi.org/10.5281/zenodo.5731395)
 [![ko-fi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/dieghernan)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP?ref=badge_shield)
 
 # leaflet-providersESP
 
@@ -54,3 +55,7 @@ Get
 [Full demo](https://dieghernan.github.io/leaflet-providersESP/) and
 [providers](https://dieghernan.github.io/leaflet-providersESP#proveedores-disponibles)
 (ES).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP?ref=badge_large)
