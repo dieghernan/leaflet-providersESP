@@ -57,7 +57,7 @@ footer:
 # Theme and colors
 chulapa-skin: 
   highlight     :  zenburn
-  skin          :  gitdev
+  skin          :  gitdev-dark
   vars          :    
     enable-responsive-font-sizes : true
     
