@@ -1,3 +1,5 @@
+github: [metadata]
+
 remote_theme: dieghernan/chulapa
 
 repository: dieghernan/leaflet-providersESP
@@ -110,6 +112,7 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 
 # Exclude these files from production site
