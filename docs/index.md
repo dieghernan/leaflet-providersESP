@@ -35,7 +35,7 @@ Este plugin es compatible con el plugin [leaflet-providers](https://github.com/l
 <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
 
 <!-- By version -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@{{ site.github.releases[0].tag_name }}/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.3.3/dist/leaflet-providersESP.min.js"></script>
 ```
 
 ### Local
