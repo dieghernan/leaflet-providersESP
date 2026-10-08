@@ -125,6 +125,10 @@ exclude:
 include:
  - _pages
 
+# Identify the individual publishing this site in JSON-LD.
+publisher:
+  type: Person
+
 # Conversion
 markdown: kramdown
 highlighter: rouge
