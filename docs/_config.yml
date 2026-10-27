@@ -57,12 +57,17 @@ footer:
   
 # C. Theme Settings
 
+# C.1. Google Fonts
+googlefonts:
+- url: https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap
+- url: https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap
 
 # Theme and colors
-chulapa-skin: 
-  highlight     :  zenburn
-  skin          :  gitdev-dark
-  vars          :    
+chulapa-skin:
+  highlight: github
+  skin: gitdev
+  vars:
+    font-family-monospace: Fira Code        :    
     enable-responsive-font-sizes : true
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
