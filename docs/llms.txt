@@ -1,0 +1,22 @@
+# leaflet-providersESP
+
+> Plugin para Leaflet que facilita el acceso a proveedores de mapas WMS y WMTS de organismos públicos de España, desarrollado por Diego Hernangómez.
+
+El plugin contiene configuraciones de servicios cartográficos y es compatible con leaflet-providers. La API utiliza L.tileLayer.providerESP para crear capas. La disponibilidad, la cobertura, las condiciones de uso y la atribución dependen de cada proveedor; que una configuración figure en el catálogo no garantiza que el servicio remoto esté disponible.
+
+## Documentación
+
+- [Documentación del proyecto](https://dieghernan.github.io/leaflet-providersESP/): Instalación, ejemplos y catálogo de proveedores.
+- [README](https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/main/README.md): Introducción y uso básico en Markdown.
+- [Fuente de la documentación](https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/main/docs/index.md): Instrucciones y ejemplos de integración con Leaflet.
+
+## Código y distribución
+
+- [Distribución JavaScript](https://github.com/dieghernan/leaflet-providersESP/tree/main/dist): Archivos del plugin para su integración local.
+- [Versiones publicadas](https://github.com/dieghernan/leaflet-providersESP/releases): Versiones y cambios publicados.
+- [Licencia](https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/main/LICENSE): Licencia del proyecto; consultar también las condiciones de los proveedores.
+
+## Optional
+
+- [Repositorio](https://github.com/dieghernan/leaflet-providersESP): Código, incidencias e historial.
+- [Autor](https://dieghernan.github.io/): Web personal de Diego Hernangómez.
