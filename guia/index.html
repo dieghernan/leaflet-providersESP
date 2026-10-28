@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+    <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme - v2.2.1 (development) -->
+    <!-- MIT License -->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2026-10-28 -->
+    <!-- Jekyll Version 4.4.1 -->
+    <!-- Google structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://dieghernan.github.io/leaflet-providersESP/guia/",
+        "name": "Guía de uso",
+        "description": "De la primera capa a un mapa con varios proveedores - Instalación, ejemplos y opciones de leaflet-providersESP.",
+        "headline": "Guía de uso",
+        "image": "https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "dieghernan",
+          "url": "https://dieghernan.github.io/",
+          "sameAs": [
+            "https://github.com/dieghernan",
+            "https://orcid.org/0000-0001-8457-4658",
+            "https://fosstodon.org/@dhernangomez",
+            "https://bsky.app/profile/dieghernan.bsky.social",
+            "https://x.com/dhernangomez",
+            "https://stackoverflow.com/users/7877917/dieghernan"
+          ]
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "dieghernan",
+          "url": "https://dieghernan.github.io/",
+          "image": "https://dieghernan.github.io/assets/img/site/avatar.png"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://dieghernan.github.io/leaflet-providersESP/guia/#breadcrumb",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "@id": "https://dieghernan.github.io/leaflet-providersESP/guia/#breadcrumb-1",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://dieghernan.github.io/leaflet-providersESP/"
+          },{
+            "@type": "ListItem",
+            "@id": "https://dieghernan.github.io/leaflet-providersESP/guia/#breadcrumb-2",
+            "position": 2,
+            "item": "https://dieghernan.github.io/leaflet-providersESP/guia/",
+            "name": "Guía de uso"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "image": "https://dieghernan.github.io/assets/img/site/avatar.png",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Madrid, Spain"
+        },
+        "description": "Site author",
+        "name": "dieghernan",
+        "url": "https://dieghernan.github.io/leaflet-providersESP/",
+        "sameAs": [
+          "https://dieghernan.github.io/",
+          "https://github.com/dieghernan",
+          "https://orcid.org/0000-0001-8457-4658",
+          "https://fosstodon.org/@dhernangomez",
+          "https://bsky.app/profile/dieghernan.bsky.social",
+          "https://x.com/dhernangomez",
+          "https://stackoverflow.com/users/7877917/dieghernan"
+        ]
+      }
+    </script>
+    <title>Guía de uso | Leaflet-providersESP</title>
+    <link rel="canonical" href="https://dieghernan.github.io/leaflet-providersESP/guia/">
+    <!-- Atom feed -->
+    <link href="https://dieghernan.github.io/leaflet-providersESP/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed Leaflet-providersESP" >
+    <!-- RSS 2.0 feed -->
+    <link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed Leaflet-providersESP" >
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="dieghernan" >
+    <meta name="copyright" content="dieghernan" >
+    <meta name="description" content="De la primera capa a un mapa con varios proveedores - Instalación, ejemplos y opciones de leaflet-providersESP.">
+    <meta name="thumbnail" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg" >
+    <meta name="robots" content="index, follow">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Guía de uso | Leaflet-providersESP" >
+    <meta property="og:site_name" content="Leaflet-providersESP" >
+    <meta property="og:url" content="https://dieghernan.github.io/leaflet-providersESP/guia/" >
+    <meta property="og:type" content="website" >
+    <meta property="og:description" content="De la primera capa a un mapa con varios proveedores - Instalación, ejemplos y opciones de leaflet-providersESP." >
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg" >
+    <meta property="og:image:alt" content="Leaflet-providersESP. Cartografía pública de España para mapas Leaflet, con un mapa de la península ibérica." >
+    <meta property="og:image:width" content="1200" >
+    <meta property="og:image:height" content="630" >
+    <meta property="og:image:type" content="image/jpeg" >
+    <!-- Twitter/X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="De la primera capa a un mapa con varios proveedores - Instalación, ejemplos y opciones de leaflet-providersESP.">
+    <meta name="twitter:site" content="@dhernangomez" >
+    <meta name="twitter:creator" content="@dhernangomez" >
+    <!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+    <!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Fontawesome-->
+    <!-- v6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <link rel="preload" href="/leaflet-providersESP/assets/js/chulapa_script.js" as="script" >
+    <link rel="preload" href="/leaflet-providersESP/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+    <link rel="stylesheet" id="maincss" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/main.css" >
+    <!-- Highlighter -->
+    <link id="csshigh" rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/highlighter.css" >
+    <!-- Custom css -->
+    <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/custom.css" >
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7DT123587"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B7DT123587');
+    </script>
+    <link rel="describedby" type="text/plain" href="/leaflet-providersESP/llms.txt">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="c23b83bb-5f33-4256-a5b5-fbc59c1c7ae8" data-domains="dieghernan.github.io"></script>
+<!-- Author identity and incoming Webmention discovery -->
+<link rel="author" href="https://dieghernan.github.io/">
+<link rel="me" href="https://github.com/dieghernan">
+<link rel="me" href="https://fosstodon.org/@dhernangomez">
+<meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
+<link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
+<link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
+<link rel="icon" type="image/svg+xml" href="/leaflet-providersESP/assets/icon/favicon.svg">
+<meta name="twitter:title" content="Guía de uso | Leaflet-providersESP">
+<meta name="twitter:image" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg">
+<meta name="twitter:image:alt" content="Leaflet-providersESP. Cartografía pública de España para mapas Leaflet, con un mapa de la península ibérica.">
+<!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/site.webmanifest">
+<link rel="mask-icon" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/safari-pinned-tab.svg" color="#ff0000">
+<link rel="shortcut icon" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="leaflet-providersESP">
+<meta name="application-name" content="leaflet-providersESP">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#22272e">
+<!-- end custom head snippets -->
+</head>
+<body class="d-flex flex-column" id="body">
+	<a class="sr-only sr-only-focusable chulapa-skip-link" href="#chulapa-content">Skip to content</a>
+	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
+	<div class="container-fluid mx-md-2">
+			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/"><i class="fas fa-home" aria-hidden="true" style="color: white"></i><span class="sr-only">Inicio</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav ml-auto"><li class="nav-item">
+						<a class="nav-link  active font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/guia/" aria-current="page">Guía de uso<span class="sr-only">(current)</span></a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Catálogo</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/visor/">Visor</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">Cambios</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP">GitHub</a>
+					</li>
+			</ul>
+			</div></div>
+</nav>
+			<div id="chulapa-content" tabindex="-1"></div><div class="h-entry d-flex flex-column flex-fill">
+    <a class="u-url d-none" href="https://dieghernan.github.io/leaflet-providersESP/guia/">Invisible link to canonical for Microformats</a>
+	<main class="d-flex flex-column flex-fill">
+	<header class="text-center header-chulapa"><div class="container-lg mt-2">
+       <div class="row">
+           <div class="col-lg-8 offset-lg-2">
+           <h1 class="p-name">Guía de uso</h1><p class="lead chulapa-subtitle p-summary">De la primera capa a un mapa con varios proveedores</p>
+           <hr class="mb-0">
+			</div>
+		</div>
+	</div>
+</header>
+	<div class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<div class="col-lg-2 mt-lg-3 small"></div>
+			<article id="maincontent" class="col-lg-8 mt-3">
+			<div class="e-content"><ul id="markdown-toc">
+ <li><a href="#instalación" id="markdown-toc-instalación">Instalación</a>   <ul>
+     <li><a href="#vía-cdn" id="markdown-toc-vía-cdn">Vía CDN</a></li>
+     <li><a href="#local" id="markdown-toc-local">Local</a></li>
+   </ul>
+ </li>
+ <li><a href="#ejemplos" id="markdown-toc-ejemplos">Ejemplos</a>   <ul>
+     <li><a href="#un-mapa-completo" id="markdown-toc-un-mapa-completo">Un mapa completo</a></li>
+     <li><a href="#varias-capas" id="markdown-toc-varias-capas">Varias capas</a></li>
+     <li><a href="#leaflet-providersesp--leaflet-providers" id="markdown-toc-leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</a></li>
+   </ul>
+ </li>
+ <li><a href="#elegir-una-capa" id="markdown-toc-elegir-una-capa">Elegir una capa</a></li>
+ <li><a href="#fondos-superposiciones-y-opciones" id="markdown-toc-fondos-superposiciones-y-opciones">Fondos, superposiciones y opciones</a></li>
+ <li><a href="#compatibilidad-y-cambios-de-nombres" id="markdown-toc-compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</a>   <ul>
+     <li><a href="#nombres-de-variantes-y-deprecaciones" id="markdown-toc-nombres-de-variantes-y-deprecaciones">Nombres de variantes y deprecaciones</a></li>
+   </ul>
+ </li>
+ <li><a href="#si-el-mapa-no-se-ve" id="markdown-toc-si-el-mapa-no-se-ve">Si el mapa no se ve</a></li>
+ <li><a href="#atribución-y-condiciones-de-uso" id="markdown-toc-atribución-y-condiciones-de-uso">Atribución y condiciones de uso</a></li>
+</ul>
+<h2 id="instalación">Instalación</h2>
+<p>Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
+El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.</p>
+<h3 id="vía-cdn">Vía CDN</h3>
+<p>Para usar la versión publicada <code class="language-plaintext highlighter-rouge">v1.4.0</code> con Leaflet <code class="language-plaintext highlighter-rouge">1.9.4</code>:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Para seguir el desarrollo en <code class="language-plaintext highlighter-rouge">main</code>, sustituye solo el script del plugin por:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@main/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>La URL de <code class="language-plaintext highlighter-rouge">main</code> sigue esa rama y puede cambiar. Para probar los cambios sin
+publicar de tu copia del repositorio, usa los archivos locales.</p>
+<h3 id="local">Local</h3>
+<p>Copia <code class="language-plaintext highlighter-rouge">dist/leaflet-providersESP.min.js</code> junto a tu archivo HTML y sustituye el
+script del plugin en el ejemplo completo de abajo por:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>También puedes copiar <code class="language-plaintext highlighter-rouge">dist/leaflet-providersESP.js</code> y usar
+<code class="language-plaintext highlighter-rouge">src="./leaflet-providersESP.js"</code> para cargar el código sin minificar. Los archivos
+están en <a href="https://github.com/dieghernan/leaflet-providersESP/tree/main/dist">dist/</a>.
+Mantén las referencias al CSS y al JavaScript de Leaflet antes del plugin.</p>
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="un-mapa-completo">Un mapa completo</h3>
+<p>Guarda este ejemplo como <code class="language-plaintext highlighter-rouge">index.html</code> y ábrelo en el navegador. El contenedor del
+mapa necesita una altura explícita para ser visible.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"es"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Mapa de España<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="nf">#map</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">).</span><span class="nf">setView</span><span class="p">([</span><span class="mf">40.4166</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7038</span><span class="p">],</span> <span class="mi">12</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">IGNBase.Todo</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<div id="btndemo1" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
+  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/minimal/" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<h3 id="varias-capas">Varias capas</h3>
+<p>Los siguientes fragmentos sustituyen el contenedor y el script del mapa del
+ejemplo completo. Conserva los estilos y las dependencias del <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">map2</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.053333</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.311389</span><span class="p">],</span>
+	<span class="na">zoom</span><span class="p">:</span> <span class="mi">15</span> <span class="p">});</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">LiDAR</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">MDT.CurvasNivel</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">NombresGeograficos</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<div id="btndemo2" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
+  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/overlays/" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<h3 id="leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet-providers@4.0.0/leaflet-providers.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">map3</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">38.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.3</span><span class="p">],</span>
+	<span class="na">zoom</span><span class="p">:</span> <span class="mi">5</span> <span class="p">});</span>
+<span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">),</span>
+	<span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">)</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">over</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">Terremotos Ult. 30dias</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">Geofisica.Terremotos30dias</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">transparent</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">)</span> <span class="p">};</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nf">layers</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">over</span><span class="p">,</span> <span class="p">{</span> <span class="na">collapsed</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<div id="btndemo3" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
+  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/leafletproviders/" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<h2 id="elegir-una-capa">Elegir una capa</h2>
+<p>Cada capa se identifica con <code class="language-plaintext highlighter-rouge">Proveedor.Variante</code>, por ejemplo <code class="language-plaintext highlighter-rouge">IGNBase.Gris</code>.
+Si omites la variante se usa la predeterminada del proveedor: <code class="language-plaintext highlighter-rouge">IGNBase</code> y
+<code class="language-plaintext highlighter-rouge">IGNBase.Todo</code> muestran la misma cartografía, aunque cada llamada crea un objeto
+Leaflet distinto.</p>
+<p>Busca una capa en el <a href="/leaflet-providersESP/preview/">catálogo</a>, comprueba su
+aspecto y copia su llamada a <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>.</p>
+<h2 id="fondos-superposiciones-y-opciones">Fondos, superposiciones y opciones</h2>
+<p>Un fondo aporta la cartografía principal. Las superposiciones añaden información
+sobre él, como límites administrativos o curvas de nivel. Algunas capas solo
+muestran información a partir de un nivel de zoom o dentro de su cobertura.</p>
+<p>Puedes pasar opciones de Leaflet como segundo argumento:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">UnidadesAdm.Limites</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">opacity</span><span class="p">:</span> <span class="mf">0.7</span>
+<span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+</code></pre></div></div>
+<p>El <a href="/leaflet-providersESP/visor/">visor</a> permite combinar un fondo con varias
+superposiciones y ajustar su opacidad. La clasificación del catálogo se deduce
+de las opciones de transparencia y opacidad del proveedor.</p>
+<h2 id="compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</h2>
+<p>La API de este plugin es <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>. La de <strong>leaflet-providers</strong>
+es <code class="language-plaintext highlighter-rouge">L.tileLayer.provider()</code>. Puedes usar ambas en el mismo mapa; no necesitas
+cargar <strong>leaflet-providers</strong> si solo usas las capas de este proyecto.</p>
+<h3 id="nombres-de-variantes-y-deprecaciones">Nombres de variantes y deprecaciones</h3>
+<p>Desde la versión 1.4.0, los nombres recomendados son
+<code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosNordeste</code> y <code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2002</code> (mapa NCSE-02 de
+2002). Los nombres anteriores, <code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosCatalanes</code> y
+<code class="language-plaintext highlighter-rouge">Geofisica.HazardArea</code>, siguen funcionando como alias de las mismas capas.</p>
+<p>Las demás variantes de <code class="language-plaintext highlighter-rouge">Copernicus</code> usan los servicios oficiales de EEA y conservan
+sus nombres y los productos de 2012/2015. La cobertura sigue los productos europeos.
+<code class="language-plaintext highlighter-rouge">ForestLeaf</code> solicita EPSG:4326 automáticamente, también en el mapa Mercator
+predeterminado de Leaflet. Las otras variantes usan EPSG:3857. Las peticiones
+combinan las resoluciones o las capas ráster y vectoriales disponibles para que el
+servicio seleccione la representación adecuada según la escala.</p>
+<p><code class="language-plaintext highlighter-rouge">Copernicus.RiparianGreen</code> está deprecada: el servicio no está disponible y no se
+ha identificado un WMS oficial equivalente. La llamada sigue admitida por
+compatibilidad y muestra un aviso en la consola una vez por página. Esta variante
+ya no se incluye en las listas de capas disponibles ni en las previsualizaciones.</p>
+<h2 id="si-el-mapa-no-se-ve">Si el mapa no se ve</h2>
+<ul>
+ <li>Comprueba que el contenedor tiene altura y que cargas el CSS de Leaflet.</li>
+ <li>Carga el JavaScript de Leaflet antes del plugin y crea el mapa después del
+contenedor HTML.</li>
+ <li>Acércate a la zona de cobertura: una capa puede no tener datos en todo el
+territorio o a todas las escalas.</li>
+ <li>Consulta la consola y la pestaña de red del navegador. Una petición fallida
+puede deberse al servicio remoto, a sus condiciones de acceso o a CORS.</li>
+ <li>Si una capa transparente parece vacía, añade un fondo y comprueba su zoom
+mínimo en el catálogo.</li>
+</ul>
+<h2 id="atribución-y-condiciones-de-uso">Atribución y condiciones de uso</h2>
+<p>Mantén visible el control de atribución de Leaflet. El plugin incorpora la
+atribución configurada para cada capa, pero debes consultar las condiciones del
+organismo antes de reutilizar sus mapas. La licencia MIT del código no sustituye
+las condiciones de los servicios cartográficos.</p>
+<p>La presencia de una capa en el catálogo no garantiza su disponibilidad. Consulta
+las <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">incidencias conocidas</a>
+y la <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md">auditoría de servicios</a>
+para conocer las comprobaciones realizadas y sus fechas.</p>
+</div>
+			</article>
+		</div>
+	</div>
+	</main></div>
+  <!-- Footer -->
+  <footer class="footer-chulapa text-center mt-0 pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <nav aria-label="Footer links" class="d-flex flex-wrap justify-content-center">
+            <a href="https://dieghernan.github.io/" title="footerdieghernan" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-blog fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">dieghernan</span>
+            </a>
+            <a href="https://github.com/dieghernan/leaflet-providersESP" title="footerGitHub" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a href="https://orcid.org/0000-0001-8457-4658" title="footerORCID" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-orcid fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">ORCID</span>
+            </a>
+            <a href="https://fosstodon.org/@dhernangomez" title="footerMastodon" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Mastodon</span>
+            </a>
+            <a href="https://bsky.app/profile/dieghernan.bsky.social" title="footerBluesky" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-square-bluesky fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Bluesky</span>
+            </a>
+            <a href="https://x.com/dhernangomez" title="footerTwitter/X" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-square-x-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Twitter/X</span>
+            </a>
+            <a href="https://stackoverflow.com/users/7877917/dieghernan" title="footerStack Overflow" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Stack Overflow</span>
+            </a>
+          </nav>
+          <p class="mt-2 mb-3">&copy; 2026 dieghernan</p>
+          <!-- Do not remove this in order to give attributions -->
+          <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>GitDev</b> skin by <a href="https://github.com/dieghernan">dieghernan</a></p>
+          <!-- End attributions -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="/leaflet-providersESP/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

@@ -1,5 +1,6 @@
 https://dieghernan.github.io/leaflet-providersESP/404.html
 https://dieghernan.github.io/leaflet-providersESP/allproviders/
+https://dieghernan.github.io/leaflet-providersESP/guia/
 https://dieghernan.github.io/leaflet-providersESP/
 https://dieghernan.github.io/leaflet-providersESP/demo/leafletproviders/
 https://dieghernan.github.io/leaflet-providersESP/demo/minimal/
