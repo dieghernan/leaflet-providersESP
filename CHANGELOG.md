@@ -25,7 +25,7 @@ Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual revi
 
 ## Fixed
 
-- Installation examples include Leaflet 1.9.4, its CSS, script loading order and a map container with an explicit height. CDN examples pin v1.4.0 and distinguish it from the main development branch. The tag URLs become available after publication.
+- Installation examples include Leaflet 1.9.4, its CSS, script loading order and a map container with an explicit height. CDN examples pin v1.4.0 and distinguish it from the main development branch.
 - `CaminoDeSantiago.CaminosCatalanes` now requests the advertised `caminos_nordeste` layer, keeping the existing public variant name.
 - `Cartociudad` and `Cartociudad.CodigosPostales` display postal codes from zoom 11 instead of 14, matching nonempty GetMap responses in Madrid and Logrono.
 - `Cartociudad.Direcciones` starts at zoom 17 instead of 15, avoiding empty tiles at zooms 15 and 16 in the tested locations.

@@ -23,8 +23,7 @@ plugin works directly with Leaflet; loading leaflet-providers is optional.
 
 ### Via CDN
 
-Use `v1.4.0` with Leaflet `1.9.4`. The CDN URLs below become available after
-the `v1.4.0` tag is published; until then, use the local distribution files:
+Use the published `v1.4.0` release with Leaflet `1.9.4`:
 
 ``` html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">

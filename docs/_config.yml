@@ -39,7 +39,7 @@ navbar:
   - title: Visor - Webapp
     url: ./visor
   - title: Changelog
-    url: https://github.com/dieghernan/leaflet-providersESP/blob/master/CHANGELOG.md
+    url: https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md
   - title   : <i class="fab fa-github fa-lg"></i> # Label
     url     : https://github.com/dieghernan/leaflet-providersESP
 

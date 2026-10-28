@@ -8,7 +8,7 @@ excerpt: 'Leaflet-providersESP es un plugin para mapas Leaflet que proporciona u
 
 <div markdown="1" class="badges">
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4318010.svg)](https://doi.org/10.5281/zenodo.4318010)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg)](https://doi.org/10.5281/zenodo.5731395)
 [![CodeQL](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp/badge)](https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
@@ -33,8 +33,7 @@ El plugin funciona directamente con Leaflet; cargar leaflet-providers es opciona
 
 ### Vía CDN
 
-Para usar `v1.4.0` con Leaflet `1.9.4`. Estas URL estarán disponibles cuando se
-publique la etiqueta `v1.4.0`; hasta entonces, usa los archivos locales:
+Para usar la versión publicada `v1.4.0` con Leaflet `1.9.4`:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -136,7 +135,7 @@ L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
 <script>
 var map3 = L.map('map', { center: [38.8, -5.3],
 	zoom: 5 });
-var base = { 'OpenStreetMap.Mapnik': L.tileLayer.provider('OpenStreetMap.Mapnikn').addTo(map3),
+var base = { 'OpenStreetMap.Mapnik': L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map3),
 	'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap') };
 var over = { 'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias', { transparent: true }).addTo(map3) };
 L.control.layers(base, over, { collapsed: false }).addTo(map3);
