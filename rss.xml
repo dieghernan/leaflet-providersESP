@@ -7,8 +7,8 @@
 		<description>Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España</description>
 		<language>es-ES</language>
 		<copyright>(c) 2026, dieghernan</copyright>	
-		<pubDate>Wed, 28 Oct 2026 19:19:49 +0100</pubDate>
-		<lastBuildDate>Wed, 28 Oct 2026 19:19:49 +0100</lastBuildDate>
+		<pubDate>Wed, 28 Oct 2026 19:29:04 +0100</pubDate>
+		<lastBuildDate>Wed, 28 Oct 2026 19:29:04 +0100</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
