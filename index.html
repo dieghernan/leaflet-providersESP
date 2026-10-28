@@ -152,7 +152,7 @@
 					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/visor">Visor - Webapp</a>
 					</li><li class="nav-item">
-						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP/blob/master/CHANGELOG.md">Changelog</a>
+						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">Changelog</a>
 					</li><li class="nav-item">
 						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP"><i class="fab fa-github fa-lg"></i></a>
 					</li>
@@ -173,7 +173,7 @@
 			<article id="maincontent" class="col-lg-8 mt-3">
 			<div class="e-content"><div class="badges">
  <p><img src="https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP" alt="GitHub release (latest SemVer)" />
-<a href="https://doi.org/10.5281/zenodo.4318010"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4318010.svg" alt="DOI" /></a>
+<a href="https://doi.org/10.5281/zenodo.5731395"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg" alt="DOI" /></a>
 <a href="https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml"><img src="https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL" /></a>
 <a href="https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp"><img src="https://www.codefactor.io/repository/github/dieghernan/leaflet-providersesp/badge" alt="CodeFactor" /></a>
 <img src="https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP" alt="jsDelivr hits (GitHub)" />
@@ -203,8 +203,7 @@
 <p>Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
 El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.</p>
 <h3 id="vía-cdn">Vía CDN</h3>
-<p>Para usar <code class="language-plaintext highlighter-rouge">v1.4.0</code> con Leaflet <code class="language-plaintext highlighter-rouge">1.9.4</code>. Estas URL estarán disponibles cuando se
-publique la etiqueta <code class="language-plaintext highlighter-rouge">v1.4.0</code>; hasta entonces, usa los archivos locales:</p>
+<p>Para usar la versión publicada <code class="language-plaintext highlighter-rouge">v1.4.0</code> con Leaflet <code class="language-plaintext highlighter-rouge">1.9.4</code>:</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -276,7 +275,7 @@ ejemplo completo. Conserva los estilos y las dependencias del <code class="langu
 <span class="nt">&lt;script&gt;</span>
 <span class="kd">var</span> <span class="nx">map3</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">38.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.3</span><span class="p">],</span>
 	<span class="na">zoom</span><span class="p">:</span> <span class="mi">5</span> <span class="p">});</span>
-<span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">OpenStreetMap.Mapnikn</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">),</span>
+<span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">),</span>
 	<span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">)</span> <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">over</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">Terremotos Ult. 30dias</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">Geofisica.Terremotos30dias</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">transparent</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">)</span> <span class="p">};</span>
 <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nf">layers</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">over</span><span class="p">,</span> <span class="p">{</span> <span class="na">collapsed</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">);</span>
