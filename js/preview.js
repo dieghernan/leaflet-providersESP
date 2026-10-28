@@ -1,3 +1,5 @@
+/* global hljs */
+/* exported map */
 var map = L.map('map', {
 	center: [40.4166, -3.7038400],
 	zoomControl: false,
@@ -13,8 +15,12 @@ function escapeHtml(string) {
 		.replace(/'/g, '&#039;');
 }
 function renderValue(value) {
-	if (typeof value === 'string') {
-		return "'" + escapeHtml(value) + "'";
+	if (value === L.CRS.EPSG4326) {
+		return 'L.CRS.EPSG4326';
+	} else if (value === undefined) {
+		return 'undefined';
+	} else if (typeof value === 'string') {
+		return '\'' + escapeHtml(value) + '\'';
 	} else {
 		return JSON.stringify(value).replace(/,/g, ', ');
 	}
@@ -39,8 +45,8 @@ function getExampleJS(name) {
 			delete options[option];
 		}
 	}
-	var call = '';
-	if (url2.includes("{x}")) {
+	var call;
+	if (url2.includes('{x}')) {
 		call = ' = L.tileLayer(\'';
 	} else {
 		call = ' = L.tileLayer.wms(\'';
@@ -75,7 +81,7 @@ var addLayer = function(name) {
 };
 L.tileLayer.providerESP.eachLayer(addLayer);
 // add minimap control to the map
-var layersControl = L.control.layers.minimap(baseLayers, overlays, {
+L.control.layers.minimap(baseLayers, overlays, {
 	collapsed: false
 }).addTo(map);
 
@@ -105,16 +111,16 @@ L.DomEvent.on(window, 'hashchange', filterLayersControl);
 */
 baseLayers[Object.keys(baseLayers)[0]].addTo(map);
 
-map.addControl(new(L.Control.extend({
+map.addControl(new (L.Control.extend({
 	options: {
 		position: 'topleft'
 	},
 	onAdd: function(map) {
 		var container = L.DomUtil.get('info');
 		L.DomEvent.disableClickPropagation(container);
-		container.classList.add("d-none");
-		container.classList.add("d-md-block");
-		L.DomUtil.create('h6','font-weight-bold' , container).innerHTML = 'Proveedores disponibles en <code>leaflet-providersESP.js</code>';
+		container.classList.add('d-none');
+		container.classList.add('d-md-block');
+		L.DomUtil.create('h6', 'font-weight-bold', container).innerHTML = 'Proveedores disponibles en <code>leaflet-providersESP.js</code>';
 		var providerNames = L.DomUtil.create('code', 'provider', container);
 		L.DomUtil.create('h6', 'font-weight-bold', container).innerHTML = 'JavaScript:';
 		var pre = L.DomUtil.create('pre', null, container);
@@ -135,16 +141,15 @@ map.addControl(new(L.Control.extend({
 				code.innerHTML += getExampleJS(layer.options.providerName);
 			}
 			providerNames.innerHTML = names.join(', ');
-			/* global hljs:true */
 			hljs.highlightBlock(code);
 		};
 		map.on({
-			'layeradd': update,
-			'layerremove': update
+			layeradd: update,
+			layerremove: update
 		});
 		update();
 		return container;
 	},
-})));
+}))());
 
 

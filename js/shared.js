@@ -1,8 +1,12 @@
-L.tileLayer.providerESP.eachLayer = function (callback) {
+/* exported allnames, isOverlay, isIgnored */
+L.tileLayer.providerESP.eachLayer = function(callback) {
 	for (var provider in providersESP) {
 		if (providersESP[provider].variants) {
-			//callback(provider);
+			// callback(provider);
 			for (var variant in providersESP[provider].variants) {
+				if (providersESP[provider].variants[variant].deprecated) {
+					continue;
+				}
 				callback(provider + '.' + variant);
 			}
 		} else {
@@ -13,16 +17,19 @@ L.tileLayer.providerESP.eachLayer = function (callback) {
 
 var allnames = [];
 for (var provider in providersESP) {
-		if (providersESP[provider].variants) {
-			for (var variant in providersESP[provider].variants) {
-				allnames.push(provider + '.' + variant);
+	if (providersESP[provider].variants) {
+		for (var variant in providersESP[provider].variants) {
+			if (providersESP[provider].variants[variant].deprecated) {
+				continue;
 			}
-		} else {
-			allnames.push(provider);
+			allnames.push(provider + '.' + variant);
 		}
+	} else {
+		allnames.push(provider);
 	}
+}
 if (!String.prototype.startsWith) {
-	String.prototype.startsWith = function (searchString, position) {
+	String.prototype.startsWith = function(searchString, position) {
 		position = position || 0;
 		return this.substr(position, searchString.length) === searchString;
 	};
@@ -35,9 +42,7 @@ var isOverlay = function(providerName, layer) {
 	if (layer.options.transparent) {
 		return true;
 	}
-	var overlayPatterns = [
-		'NA]'
-	];
+	var overlayPatterns = ['NA]'];
 	return providerName.match('(' + overlayPatterns.join('|') + ')') !== null;
 };
 // Ignore some providers in the preview

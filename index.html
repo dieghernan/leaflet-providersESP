@@ -6,7 +6,7 @@
     <!-- MIT License -->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2026-10-27 -->
+    <!-- Page build 2026-10-28 -->
     <!-- Jekyll Version 4.4.1 -->
     <!-- Google structured data -->
     <script type="application/ld+json">
@@ -130,10 +130,10 @@
 <meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#240202">
 <!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
 <!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
@@ -183,82 +183,87 @@
 <p>Este plugin es compatible con el plugin <a href="https://github.com/leaflet-extras/leaflet-providers">leaflet-providers</a>.</p>
 <ul id="markdown-toc">
  <li><a href="#instalación" id="markdown-toc-instalación">Instalación</a>   <ul>
-     <li><a href="#via-cdn" id="markdown-toc-via-cdn">Via CDN</a></li>
+     <li><a href="#vía-cdn" id="markdown-toc-vía-cdn">Vía CDN</a></li>
      <li><a href="#local" id="markdown-toc-local">Local</a></li>
    </ul>
  </li>
  <li><a href="#demos" id="markdown-toc-demos">Demos</a>   <ul>
-     <li><a href="#full-page" id="markdown-toc-full-page">Full page</a></li>
+     <li><a href="#página-completa" id="markdown-toc-página-completa">Página completa</a></li>
      <li><a href="#varias-capas" id="markdown-toc-varias-capas">Varias capas</a></li>
      <li><a href="#leaflet-providersesp--leaflet-providers" id="markdown-toc-leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</a></li>
    </ul>
  </li>
- <li><a href="#proveedores-disponibles" id="markdown-toc-proveedores-disponibles">Proveedores disponibles</a></li>
+ <li><a href="#proveedores-disponibles" id="markdown-toc-proveedores-disponibles">Proveedores disponibles</a>   <ul>
+     <li><a href="#nombres-de-variantes-y-deprecaciones" id="markdown-toc-nombres-de-variantes-y-deprecaciones">Nombres de variantes y deprecaciones</a></li>
+   </ul>
+ </li>
  <li><a href="#colabora" id="markdown-toc-colabora">Colabora</a></li>
 </ul>
 <h2 id="instalación">Instalación</h2>
-<h3 id="via-cdn">Via CDN</h3>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Latest --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-<span class="c">&lt;!-- By version --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.3.3/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<p>Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
+El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.</p>
+<h3 id="vía-cdn">Vía CDN</h3>
+<p>Para usar <code class="language-plaintext highlighter-rouge">v1.4.0</code> con Leaflet <code class="language-plaintext highlighter-rouge">1.9.4</code>. Estas URL estarán disponibles cuando se
+publique la etiqueta <code class="language-plaintext highlighter-rouge">v1.4.0</code>; hasta entonces, usa los archivos locales:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div></div>
+<p>Para seguir el desarrollo en <code class="language-plaintext highlighter-rouge">main</code>, sustituye solo el script del plugin por:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@main/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>La URL de <code class="language-plaintext highlighter-rouge">main</code> sigue esa rama y puede cambiar. Para probar los cambios sin
+publicar de tu copia del repositorio, usa los archivos locales.</p>
 <h3 id="local">Local</h3>
-<p>Get <a href="https://github.com/dieghernan/leaflet-providersESP/tree/master/dist">leaflet-providersESP.js</a>:</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Last version --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./path/to/your/folder/leaflet-providersESP.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<p>Copia <code class="language-plaintext highlighter-rouge">dist/leaflet-providersESP.min.js</code> junto a tu archivo HTML y sustituye el
+script del plugin en el ejemplo completo de abajo por:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div></div>
+<p>También puedes copiar <code class="language-plaintext highlighter-rouge">dist/leaflet-providersESP.js</code> y usar
+<code class="language-plaintext highlighter-rouge">src="./leaflet-providersESP.js"</code> para cargar el código sin minificar. Los archivos
+están en <a href="https://github.com/dieghernan/leaflet-providersESP/tree/main/dist">dist/</a>.
+Mantén las referencias al CSS y al JavaScript de Leaflet antes del plugin.</p>
 <h2 id="demos">Demos</h2>
-<h3 id="full-page">Full page</h3>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
+<h3 id="página-completa">Página completa</h3>
+<p>Guarda este ejemplo como <code class="language-plaintext highlighter-rouge">index.html</code> y ábrelo en el navegador. El contenedor del
+mapa necesita una altura explícita para ser visible.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"es"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
-	<span class="nt">&lt;title&gt;</span>Minimal page | leaflet-providersESP<span class="nt">&lt;/title&gt;</span>
-	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
-	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-	<span class="c">&lt;!-- Load Leaflet --&gt;</span>
-	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://unpkg.com/leaflet@latest/dist/leaflet.css"</span> <span class="nt">/&gt;</span>
-	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/leaflet@latest/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-	<span class="c">&lt;!-- Install leaflet-providersESP --&gt;</span>
-	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-	<span class="c">&lt;!-- Display map full page --&gt;</span>
-	<span class="nt">&lt;style&gt;</span>
-	<span class="nt">html</span> <span class="p">{</span>
-		<span class="nl">height</span><span class="p">:</span> <span class="m">100%</span>
-	<span class="p">}</span>
-	<span class="nt">body</span> <span class="p">{</span>
-		<span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-		<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-		<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-	<span class="p">}</span>
-	<span class="nf">#mapid</span> <span class="p">{</span>
-		<span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-		<span class="nl">width</span><span class="p">:</span> <span class="m">100%</span>
-	<span class="p">}</span>
-	<span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Mapa de España<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="nf">#map</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-	<span class="c">&lt;!-- Create map --&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mapid"</span><span class="nt">&gt;&lt;/div&gt;</span>
-	<span class="c">&lt;!-- Puerta del Sol - IDErioja server --&gt;</span>
-	<span class="nt">&lt;script&gt;</span>
-	<span class="kd">var</span> <span class="nx">mymap</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">mapid</span><span class="dl">'</span><span class="p">).</span><span class="nf">setView</span><span class="p">([</span><span class="mf">40.4166</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7038400</span><span class="p">],</span> <span class="mi">18</span><span class="p">);</span>
-	<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">IDErioja</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">mymap</span><span class="p">);</span>
-	<span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">).</span><span class="nf">setView</span><span class="p">([</span><span class="mf">40.4166</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7038</span><span class="p">],</span> <span class="mi">12</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">IGNBase.Todo</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
   <iframe class="embed-responsive-item" src="./demo/minimal" allowfullscreen="" loading="lazy"></iframe>
 </div>
 <p><a id="btndemo1" class="btn btn-block btn-primary btn-sm" href="./demo/minimal" role="button">Full screen</a></p>
 <h3 id="varias-capas">Varias capas</h3>
+<p>Los siguientes fragmentos sustituyen el contenedor y el script del mapa del
+ejemplo completo. Conserva los estilos y las dependencias del <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-  <span class="kd">var</span> <span class="nx">map2</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.053333</span><span class="p">,</span><span class="o">-</span><span class="mf">3.311389</span><span class="p">],</span><span class="na">zoom</span><span class="p">:</span> <span class="mi">15</span><span class="p">});</span>
-			<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">LiDAR</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
-			<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">MDT.CurvasNivel</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
-			<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">NombresGeograficos</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">map2</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.053333</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.311389</span><span class="p">],</span>
+	<span class="na">zoom</span><span class="p">:</span> <span class="mi">15</span> <span class="p">});</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">LiDAR</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">MDT.CurvasNivel</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">NombresGeograficos</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map2</span><span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
@@ -267,14 +272,14 @@
 <p><a id="btndemo2" class="btn btn-block btn-primary btn-sm" href="./demo/overlays" role="button">Full screen</a></p>
 <h3 id="leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet-providers@4.0.0/leaflet-providers.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
-  <span class="kd">var</span> <span class="nx">map3</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,{</span><span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">38.8</span><span class="p">,</span><span class="o">-</span><span class="mf">5.3</span><span class="p">],</span><span class="na">zoom</span><span class="p">:</span> <span class="mi">5</span><span class="p">});</span>
-  <span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="p">{</span><span class="dl">'</span><span class="s1">CartoDB.Positron</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">CartoDB.Positron</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">),</span>
-              <span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">)</span>
-  <span class="p">};</span>
-  <span class="kd">var</span> <span class="nx">over</span> <span class="o">=</span><span class="p">{</span><span class="dl">'</span><span class="s1">Terremotos Ult. 30dias</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">Geofisica.Terremotos30dias</span><span class="dl">'</span><span class="p">,{</span><span class="na">transparent</span><span class="p">:</span> <span class="kc">true</span><span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">)};</span>
-  <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nf">layers</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">over</span><span class="p">,</span> <span class="p">{</span><span class="na">collapsed</span><span class="p">:</span> <span class="kc">false</span><span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">map3</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="dl">'</span><span class="s1">map</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">38.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.3</span><span class="p">],</span>
+	<span class="na">zoom</span><span class="p">:</span> <span class="mi">5</span> <span class="p">});</span>
+<span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">OpenStreetMap.Mapnik</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">OpenStreetMap.Mapnikn</span><span class="dl">'</span><span class="p">).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">),</span>
+	<span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">provider</span><span class="p">(</span><span class="dl">'</span><span class="s1">Esri.WorldTopoMap</span><span class="dl">'</span><span class="p">)</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">over</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">'</span><span class="s1">Terremotos Ult. 30dias</span><span class="dl">'</span><span class="p">:</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">Geofisica.Terremotos30dias</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">transparent</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">)</span> <span class="p">};</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nf">layers</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span> <span class="nx">over</span><span class="p">,</span> <span class="p">{</span> <span class="na">collapsed</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map3</span><span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
@@ -282,6 +287,21 @@
 </div>
 <p><a id="btndemo3" class="btn btn-block btn-primary btn-sm" href="./demo/leafletproviders" role="button">Full screen</a></p>
 <h2 id="proveedores-disponibles">Proveedores disponibles</h2>
+<h3 id="nombres-de-variantes-y-deprecaciones">Nombres de variantes y deprecaciones</h3>
+<p>Desde la versión 1.4.0, los nombres recomendados son
+<code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosNordeste</code> y <code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2002</code> (mapa NCSE-02 de
+2002). Los nombres anteriores, <code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosCatalanes</code> y
+<code class="language-plaintext highlighter-rouge">Geofisica.HazardArea</code>, siguen funcionando como alias de las mismas capas.</p>
+<p>Las demás variantes de <code class="language-plaintext highlighter-rouge">Copernicus</code> usan los servicios oficiales de EEA y conservan
+sus nombres y los productos de 2012/2015. La cobertura sigue los productos europeos.
+<code class="language-plaintext highlighter-rouge">ForestLeaf</code> solicita EPSG:4326 automáticamente, también en el mapa Mercator
+predeterminado de Leaflet. Las otras variantes usan EPSG:3857. Las peticiones
+combinan las resoluciones o las capas ráster y vectoriales disponibles para que el
+servicio seleccione la representación adecuada según la escala.</p>
+<p><code class="language-plaintext highlighter-rouge">Copernicus.RiparianGreen</code> está deprecada: el servicio no está disponible y no se
+ha identificado un WMS oficial equivalente. La llamada sigue admitida por
+compatibilidad y muestra un aviso en la consola una vez por página. Esta variante
+ya no se incluye en las listas de capas disponibles ni en las previsualizaciones.</p>
 <p class="lead"><strong>View all: <a href="https://dieghernan.github.io/leaflet-providersESP/preview/">Preview</a></strong></p>
 <p id="pr"></p>
 <script src="./js/shared.js"></script>
@@ -310,6 +330,9 @@
     if (providersESP[provider].variants) {
       var allnames = [];
       for (var variant in providersESP[provider].variants) {
+        if (providersESP[provider].variants[variant].deprecated) {
+          continue;
+        }
         allnames.push('<code>' + variant +'</code>');
       }
     } else {		

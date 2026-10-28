@@ -1,0 +1,10 @@
+https://dieghernan.github.io/leaflet-providersESP/404.html
+https://dieghernan.github.io/leaflet-providersESP/allproviders/
+https://dieghernan.github.io/leaflet-providersESP/
+https://dieghernan.github.io/leaflet-providersESP/demo/leafletproviders/
+https://dieghernan.github.io/leaflet-providersESP/demo/minimal/
+https://dieghernan.github.io/leaflet-providersESP/demo/overlays/
+https://dieghernan.github.io/leaflet-providersESP/preview/
+https://dieghernan.github.io/leaflet-providersESP/visor/
+https://dieghernan.github.io/leaflet-providersESP/wms/
+https://dieghernan.github.io/leaflet-providersESP/wmts/

@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2026-10-27 16:53:54 +0100 -->
+    <!-- Page build 2026-10-28 19:14:05 +0100 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Overlays",
       "image": "https://dieghernan.github.io/leaflet-providersESP/assets/leaflet-providersESP.png",
-      "datePublished": "2026-10-27T16:53:54+01:00",
-      "dateModified": "2026-10-27T16:53:54+01:00",
+      "datePublished": "2026-10-28T19:14:05+01:00",
+      "dateModified": "2026-10-28T19:14:05+01:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -108,10 +108,12 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7DT123587"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B7DT123587');
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+	window.dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'G-B7DT123587');
 </script>
 <link rel="describedby" type="text/plain" href="/leaflet-providersESP/llms.txt">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="c23b83bb-5f33-4256-a5b5-fbc59c1c7ae8" data-domains="dieghernan.github.io"></script>
@@ -136,10 +138,10 @@
 <meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#240202">
 <!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
 <!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
@@ -162,13 +164,14 @@
 	</style>
 	<body><div id="map"></div>
 <script>
-  var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('LiDAR').addTo(map2);
-			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
-			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
-			L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
-              window.location.href = "https://dieghernan.github.io/leaflet-providersESP#btndemo2";
-              }).addTo(map2);
+var map2 = L.map('map', { center: [37.053333, -3.311389],
+	zoom: 15 });
+L.tileLayer.providerESP('LiDAR').addTo(map2);
+L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
+L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
+L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function() {
+	window.location.href = 'https://dieghernan.github.io/leaflet-providersESP#btndemo2';
+}).addTo(map2);
 </script>
 </body>
 </html>
