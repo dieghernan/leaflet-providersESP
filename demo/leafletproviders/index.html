@@ -82,7 +82,7 @@ var map3 = L.map('map', { center: [38.8, -5.3],
 var base = { 'OpenStreetMap.Mapnik': L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map3),
 	'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap') };
 var over = { 'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias', { transparent: true }).addTo(map3) };
-L.control.layers(base, over, { collapsed: false }).addTo(map3);
+L.control.layers(base, over, { collapsed: true }).addTo(map3);
 </script>
     <script src="/leaflet-providersESP/js/demo-controls.js"></script>
  </body>
