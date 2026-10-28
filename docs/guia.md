@@ -150,6 +150,24 @@ El [visor]({{ '/visor/' | relative_url }}) permite combinar un fondo con varias
 superposiciones y ajustar su opacidad. La clasificación del catálogo se deduce
 de las opciones de transparencia y opacidad del proveedor.
 
+En **Explorar**, busca y selecciona una capa. Pulsa **Usar como fondo** o
+**Añadir al mapa** para mostrarla. Seleccionar un resultado permite consultar su
+código sin cambiar las capas que ya estás viendo.
+
+La pestaña **En el mapa** permite mostrar u ocultar capas, ajustar su opacidad,
+cambiar el orden de las superposiciones y quitarlas. Los enlaces compartidos
+conservan estos ajustes y la posición del mapa.
+
+La franja superior ofrece **Con plugin** y **Sin plugin**. **Expandir** muestra el
+código completo de la capa seleccionada; **Copiar** copia el formato elegido.
+En móvil, abre el panel con **Capas** o consulta el código con **Código** en la
+barra inferior. El panel se cierra al añadir una capa para volver al mapa.
+
+El botón de la esquina superior derecha amplía el visor a pantalla completa.
+Puedes salir con el mismo botón o con Escape. Si alguna capa no carga, pulsa
+**Reintentar carga**. Al quitar una capa, **Deshacer** recupera su visibilidad,
+opacidad y posición entre las superposiciones.
+
 ## Compatibilidad y cambios de nombres
 
 La API de este plugin es `L.tileLayer.providerESP()`. La de **leaflet-providers**

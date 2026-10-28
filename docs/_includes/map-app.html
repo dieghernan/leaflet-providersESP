@@ -1,30 +1,44 @@
 <a class="map-skip" href="#map">Ir al mapa</a>
+<a class="map-skip" href="#layer-search">Ir a las capas</a>
+<a class="map-skip" href="#code-format">Ir al código</a>
 <main class="map-app" data-mode="{{ page.map_mode | default: 'viewer' }}" data-service="{{ page.map_service | default: '' }}">
-  <aside class="map-panel" aria-label="Selección de capas">
+  <aside id="layers-panel" class="map-panel" aria-label="Selección de capas">
+    <button id="close-panel" class="mobile-panel-close viewer-only" type="button">Cerrar panel</button>
     <h1>{{ page.title }}</h1>
-    <p>Busca una capa, comprueba su cobertura y copia el código para tu mapa.</p>
+    <p>Busca una capa, añádela al mapa y copia el código.</p>
+    <div class="panel-tabs viewer-only" role="tablist" aria-label="Panel de capas">
+      <button id="explore-tab" type="button" role="tab" aria-selected="true" aria-controls="explore-panel" tabindex="0">Explorar</button>
+      <button id="active-tab" type="button" role="tab" aria-selected="false" aria-controls="active-panel" tabindex="-1">En el mapa · <span id="active-count">0</span></button>
+    </div>
+    <div id="explore-panel" role="tabpanel" aria-labelledby="explore-tab">
     <label for="layer-search">Buscar capa o servicio</label>
     <input id="layer-search" type="search" placeholder="PNOA, límites, IGN…">
     <div class="map-filters">
       <div><label for="service-filter">Servicio</label><select id="service-filter"><option value="">Todos</option><option>WMS</option><option>WMTS</option></select></div>
       <div><label for="type-filter">Tipo de capa</label><select id="type-filter"><option value="">Todos</option><option value="base">Fondos</option><option value="overlay">Superposiciones</option></select></div>
     </div>
+    <button id="clear-filters" type="button">Limpiar filtros</button>
     <p id="layer-count" role="status" aria-live="polite"></p>
-    <label for="layer-select">Capas disponibles</label>
-    <select id="layer-select" size="6" aria-describedby="layer-count"></select>
+    <div class="catalog-selector"><label for="layer-select">Capas disponibles</label>
+    <select id="layer-select" size="6" aria-describedby="layer-count"></select></div>
+    <ul id="layer-results" class="layer-results viewer-only" aria-label="Resultados de capas"></ul>
+    <section class="selection-card viewer-only" aria-labelledby="selection-name"><h2 id="selection-name">Capa seleccionada</h2><p id="selection-kind"></p></section>
     <button id="show-layer" type="button">Ver capa</button>
+<textarea id="native-code" hidden readonly aria-label="Código Leaflet sin el plugin"></textarea>
     <div id="layer-previews" class="layer-previews" aria-label="Previsualizaciones de las capas"></div>
-    <details><summary>Código sin el plugin</summary><p>Requiere Leaflet y su CSS.</p><textarea id="native-code" rows="6" readonly spellcheck="false" aria-label="Código sin el plugin"></textarea><button id="copy-native" type="button">Copiar código Leaflet</button></details>
-    <details class="service-details"><summary>Detalles del servicio y cobertura</summary><div id="layer-details"></div><button id="fit-layer" type="button">Ver cobertura</button></details>
-    <section aria-labelledby="active-title"><h2 id="active-title">Capas en el mapa</h2><div id="active-layers"></div></section>
-    <p class="map-note">La clasificación se deduce de la transparencia y la opacidad configuradas. La disponibilidad y las condiciones de uso dependen de cada servicio.</p>
+    </div>
+    <section id="active-panel" role="tabpanel" aria-labelledby="active-tab" hidden><h2 id="active-title">Capas en el mapa</h2><p class="map-note">Un fondo y las superposiciones que quieras combinar.</p><div id="active-layers"></div></section>
+    <p class="map-note">Conserva la atribución del mapa y consulta las condiciones de cada proveedor.</p>
   </aside>
   <section class="map-stage" aria-label="Visor cartográfico">
     <section class="map-code" aria-labelledby="selected-title">
       <h2 id="selected-title" class="sr-only">Código de la capa</h2>
-      <label class="sr-only" for="layer-code">Código con el plugin</label>
+      <label class="sr-only" for="code-format">Formato del código</label>
+      <select id="code-format"><option value="plugin">Con plugin</option><option value="native">Sin plugin</option></select>
+      <label class="sr-only" for="layer-code">Código de la capa seleccionada</label>
       <textarea id="layer-code" rows="1" readonly spellcheck="false"></textarea>
       <button id="copy-code" type="button">Copiar</button>
+      <button id="expand-code" type="button" aria-haspopup="dialog">Expandir</button>
     </section>
     <div class="map-actions">
       <button id="view-spain" type="button">Península y Baleares</button>
@@ -32,9 +46,23 @@
       <button id="locate" type="button">Mi ubicación</button>
       <button id="share-view" type="button">Compartir vista</button>
     </div>
-    <p id="map-status" role="status" aria-live="polite">Cargando el mapa…</p>
+    <p id="selection-status" class="selection-status" role="status" aria-live="polite"></p>
+    <div class="map-feedback"><p id="map-status" role="status" aria-live="polite">Cargando el mapa…</p><button id="retry-layers" type="button" hidden>Reintentar carga</button></div>
+    <div id="undo-notice" class="undo-notice" hidden><span id="undo-message" role="status" aria-live="polite"></span><button id="undo-remove" type="button">Deshacer</button><button id="dismiss-undo" type="button" aria-label="Descartar aviso">Cerrar</button></div>
     <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
     <div id="map" role="region" aria-label="Mapa de las capas seleccionadas" tabindex="0"></div>
   </section>
+  <div class="mobile-map-bar viewer-only">
+    <button id="open-panel" type="button" aria-expanded="false" aria-controls="layers-panel">Capas · <span id="mobile-count">0</span></button>
+    <button id="mobile-code" type="button" aria-haspopup="dialog">Código</button>
+    <button id="mobile-copy" type="button">Copiar código</button>
+  </div>
+  <dialog id="code-dialog" aria-labelledby="code-dialog-title">
+    <div class="dialog-heading"><h2 id="code-dialog-title">Código de la capa seleccionada</h2><button id="close-code" type="button">Cerrar</button></div>
+    <p id="code-dialog-caption"></p>
+    <label for="dialog-code-format">Formato</label><select id="dialog-code-format"><option value="plugin">Con plugin</option><option value="native">Sin plugin</option></select>
+    <pre><code id="expanded-code"></code></pre>
+    <button id="copy-native" type="button">Copiar código</button>
+  </dialog>
 </main>
 <noscript><p>Activa JavaScript para explorar el catálogo y el mapa. Puedes consultar la <a href="{{ '/guia/' | relative_url }}">guía de uso</a>.</p></noscript>
