@@ -180,7 +180,7 @@
 				<ul class="navbar-nav ml-auto"><li class="nav-item">
 						<a class="nav-link  active font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/guia/" aria-current="page">Guía de uso<span class="sr-only">(current)</span></a>
 					</li><li class="nav-item">
-						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Catálogo</a>
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Preview</a>
 					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/visor/">Visor</a>
 					</li><li class="nav-item">
@@ -330,6 +330,20 @@ muestran información a partir de un nivel de zoom o dentro de su cobertura.</p>
 <p>El <a href="/leaflet-providersESP/visor/">visor</a> permite combinar un fondo con varias
 superposiciones y ajustar su opacidad. La clasificación del catálogo se deduce
 de las opciones de transparencia y opacidad del proveedor.</p>
+<p>En <strong>Explorar</strong>, busca y selecciona una capa. Pulsa <strong>Usar como fondo</strong> o
+<strong>Añadir al mapa</strong> para mostrarla. Seleccionar un resultado permite consultar su
+código sin cambiar las capas que ya estás viendo.</p>
+<p>La pestaña <strong>En el mapa</strong> permite mostrar u ocultar capas, ajustar su opacidad,
+cambiar el orden de las superposiciones y quitarlas. Los enlaces compartidos
+conservan estos ajustes y la posición del mapa.</p>
+<p>La franja superior ofrece <strong>Con plugin</strong> y <strong>Sin plugin</strong>. <strong>Expandir</strong> muestra el
+código completo de la capa seleccionada; <strong>Copiar</strong> copia el formato elegido.
+En móvil, abre el panel con <strong>Capas</strong> o consulta el código con <strong>Código</strong> en la
+barra inferior. El panel se cierra al añadir una capa para volver al mapa.</p>
+<p>El botón de la esquina superior derecha amplía el visor a pantalla completa.
+Puedes salir con el mismo botón o con Escape. Si alguna capa no carga, pulsa
+<strong>Reintentar carga</strong>. Al quitar una capa, <strong>Deshacer</strong> recupera su visibilidad,
+opacidad y posición entre las superposiciones.</p>
 <h2 id="compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</h2>
 <p>La API de este plugin es <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>. La de <strong>leaflet-providers</strong>
 es <code class="language-plaintext highlighter-rouge">L.tileLayer.provider()</code>. Puedes usar ambas en el mismo mapa; no necesitas
