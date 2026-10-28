@@ -2,25 +2,13 @@
 layout: compress
 ---
 <!doctype html>
-<html lang="{{- site.locale | default: 'en-US' -}}">
-	{%- include fullmap_head.html -%}
-	
-	<!-- Display map full page -->
-	<style>
-	html {
-		height: 100%
-	}
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	#map{
-		height: 100%;
-		width: 100%
-	}
-	</style>
-	<body>
-	{{- content -}}
-	</body>
+<html lang="es">
+  {% include fullmap_head.html %}
+  <body>
+    <a id="demo-fullscreen" class="demo-fullscreen" href="{{ page.url | relative_url }}" target="_top" title="Abrir el mapa a toda ventana" aria-label="Abrir el mapa a toda ventana" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg>
+    </a>
+    {{ content }}
+    <script src="{{ '/js/demo-controls.js' | relative_url }}"></script>
+  </body>
 </html>

@@ -1,20 +1,22 @@
-![GitHub release (latest
-SemVer)](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)
-[![CodeQL](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/codeql-analysis.yml)
-![jsDelivr hits
-(GitHub)](https://img.shields.io/jsdelivr/gh/hy/dieghernan/leaflet-providersESP)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg)](https://doi.org/10.5281/zenodo.5731395)
-[![ko-fi](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://ko-fi.com/dieghernan)
-[![FOSSA
-Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP?ref=badge_shield)
-
 # leaflet-providersESP
 
-An extension to Leaflet that contains configurations for various free WMS/WMTS
-tile providers of Spain.
+Spanish public mapping services for [Leaflet](https://leafletjs.com/): add IGN
+basemaps, PNOA imagery, administrative boundaries and thematic WMS/WMTS layers
+with a provider name.
 
-Compatible with
-[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers)
+[![Release](https://img.shields.io/github/v/release/dieghernan/leaflet-providersESP)](https://github.com/dieghernan/leaflet-providersESP/releases)
+[![JavaScript checks](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/javascript-checks.yml/badge.svg)](https://github.com/dieghernan/leaflet-providersESP/actions/workflows/javascript-checks.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5731395.svg)](https://doi.org/10.5281/zenodo.5731395)
+
+![Example of Spanish cartography displayed with Leaflet](docs/assets/example.jpg)
+
+**[Explore layers](https://dieghernan.github.io/leaflet-providersESP/preview/)**
+· **[Open the map](https://dieghernan.github.io/leaflet-providersESP/visor/)**
+· **[Usage guide (ES)](https://dieghernan.github.io/leaflet-providersESP/guia/)**
+
+The plugin works directly with Leaflet. You can also combine it with
+[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) on the
+same map.
 
 ## Installation
 
@@ -83,74 +85,44 @@ L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
 </html>
 ```
 
-![example](./docs/assets/example.png)
+## Choose and combine layers
 
-[Full demo](https://dieghernan.github.io/leaflet-providersESP/) and
-[providers](https://dieghernan.github.io/leaflet-providersESP#proveedores-disponibles)
-(ES).
+Use `Provider.Variant` to select a layer. Omitting the variant selects the
+provider's default: `IGNBase` and `IGNBase.Todo` display the same cartography.
+Each call creates a separate Leaflet layer.
 
-## Copernicus services
-
-Version 1.4.0 uses the official EEA services for the existing Copernicus
-2012 and 2015 products. Public variant names are unchanged; coverage follows the
-European products rather than the retired Spain service. `ForestLeaf` requests
-EPSG:4326 automatically, including on a default Leaflet Mercator map. The other
-variants use EPSG:3857. Resolution and raster/vector layers are combined so the
-services can select the appropriate representation at each scale.
-
-`Copernicus.RiparianGreen` remains deprecated and unavailable at the old IGN
-endpoint; no equivalent official WMS has been identified.
-
-## Development
-
-Use Node.js 22.13+ (22.x) or Node.js 24 or newer. Install the development
-dependencies and Chromium:
-
-``` sh
-npm ci
-npx playwright install chromium
+```js
+var map = L.map('map').setView([40.4166, -3.7038], 12);
+var base = L.tileLayer.providerESP('IGNBase.Gris').addTo(map);
+var boundaries = L.tileLayer.providerESP('UnidadesAdm.Limites', {
+    opacity: 0.7
+}).addTo(map);
+L.control.layers({ 'IGN gray': base }, { Boundaries: boundaries }).addTo(map);
 ```
 
-After changing the plugin, regenerate the minified distribution with UglifyJS,
-as in leaflet-providers, then run all checks before submitting a change:
+The [catalog](https://dieghernan.github.io/leaflet-providersESP/preview/)
+lets you search layers, inspect their service and zoom limits and copy code.
+The [map viewer](https://dieghernan.github.io/leaflet-providersESP/visor/)
+combines basemaps and overlays and shares the selected view through a URL.
+Documentation and map controls are in Spanish.
 
-``` sh
-npm run build
-npm test
-```
+## Availability and attribution
 
-Individual checks are available as `npm run lint`, `npm run test:unit` and
-`npm run test:browser`. ESLint checks the JavaScript files and inline scripts in
-HTML, following the conventions of
-[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers). Use
-`npm run lint:fix` to apply automatic formatting fixes. Keep the copies of
-`leaflet-providersESP.js` in `dist/` and `dev/` identical; the unit tests check
-this. `npm run build:check` verifies that `dist/leaflet-providersESP.min.js` is
-up to date without rewriting it. This check is also part of `npm test`. Both
-distributions pass ESLint's correctness rules; stylistic rules apply to the
-editable sources.
+Coverage, zoom limits, availability and terms of use depend on each service.
+Keep Leaflet's attribution control visible and check the provider's terms before
+reusing its maps. The MIT license covers this plugin's code.
 
-Browser tests exercise both the source and minified distributions with Leaflet
-1.9.4 in Chromium and check WMS parameters, coordinate axis order, tile loading,
-opacity, native zoom limits and compatibility with leaflet-providers in both
-script-loading orders. Tile responses are controlled by the tests so remote
-service outages do not affect these checks. Use the [live audit
-tool](dev/capabilities-audit.md#reproduce-the-checks) to check current provider
-availability separately.
+See the [changelog](CHANGELOG.md) for aliases, deprecated layers and known
+issues, including `Copernicus.RiparianGreen`. The
+[service audit](dev/capabilities-audit.md) records dated checks; inclusion in the
+catalog does not guarantee that a remote service is currently available.
 
-The JavaScript checks workflow runs lint and tests on pushes and pull requests
-to `main`. On Linux, install browser system dependencies with
-`npx playwright install --with-deps chromium`, as the workflow does.
+## Contribute
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development commands, tests and how to
+report broken services or propose a provider.
 
 ## License
 
-[![FOSSA
-Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdieghernan%2Fleaflet-providersESP?ref=badge_large)
-
-## Author identity and Webmentions
-
-The site keeps its project branding and shows the author's avatar and name in an
-h-card linked to <https://dieghernan.github.io/>. The custom head advertises the
-existing Webmention.io receiver for `dieghernan.github.io`. This enables
-endpoint discovery for incoming mentions; it does not display mentions or send
-them.
+[MIT](LICENSE). This project builds on the provider configuration approach of
+[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers).

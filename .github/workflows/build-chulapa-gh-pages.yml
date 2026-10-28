@@ -27,6 +27,8 @@ jobs:
       - name: Set up Pages
         id: pages
         uses: actions/configure-pages@v6
+      - name: Copy plugin distribution into the site
+        run: cp -r dist docs/dist
       - name: Build with Jekyll
         working-directory: docs
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

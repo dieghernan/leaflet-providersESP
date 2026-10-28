@@ -8,6 +8,12 @@
 <link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
 <link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
 
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/icon/favicon.svg' | relative_url }}">
+{% unless page.layout == 'fullmap' %}
+<meta name="twitter:title" content="{{ social_title | escape_once }}">
+<meta name="twitter:image" content="{{ ogimage | escape_once }}">
+<meta name="twitter:image:alt" content="{{ page.og_image_alt | default: site.og_image_alt | escape_once }}">
+{% endunless %}
 <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
@@ -21,17 +27,25 @@
 <meta name="application-name" content="leaflet-providersESP">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
-<meta name="theme-color" content="#240202">
+<meta name="theme-color" content="#22272e">
 
 
+{% if page.layout == 'fullmap' %}
 <!-- Load Leaflet -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	<!-- Install leaflet-providersESP -->
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+	<script src="{{ '/dist/leaflet-providersESP.min.js' | relative_url }}"></script>
 
 <!-- Easy Button -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 		<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
 
+{% endif %}
 <!-- end custom head snippets -->
+
+{% if page.map_mode %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-geosearch@4.4.0/assets/css/leaflet.css">
+<link rel="stylesheet" href="{{ '/assets/css/map-app.css' | relative_url }}">
+{% endif %}

@@ -1,17 +1,15 @@
 ---
 layout: fullmap
-title: Minimal example
-excerpt: Ejemplo de aplicacion del plugin
+permalink: /demo/minimal/
+title: Ejemplo mínimo
+excerpt: Ejemplo de aplicación del plugin
 ---
 	<!-- Create map -->
 	<div id="map"></div>
-	<!-- Puerta del Sol - IDErioja server -->
+	<!-- Puerta del Sol - IGNBase -->
 	<script>
-var mymap = L.map('map').setView([40.4166, -3.7038400], 18);
-L.tileLayer.providerESP('IDErioja').addTo(mymap);
+var mymap = L.map('map').setView([40.4166, -3.7038400], 12);
+L.tileLayer.providerESP('IGNBase.Todo').addTo(mymap);
 
-L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function() {
-	window.location.href = 'https://dieghernan.github.io/leaflet-providersESP#btndemo1';
-}).addTo(mymap);
 	</script>
 

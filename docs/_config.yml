@@ -1,161 +1,155 @@
-github: [metadata]
-
+# Sitio del proyecto. Compilar con docs/ como directorio de trabajo.
 remote_theme: dieghernan/chulapa
-
 repository: dieghernan/leaflet-providersESP
-url: "https://dieghernan.github.io"
-baseurl: "/leaflet-providersESP"
+url: https://dieghernan.github.io
+baseurl: /leaflet-providersESP
 
+locale: es-ES
+og_locale: es_ES
+timezone: Europe/Madrid
+title: Leaflet-providersESP
+subtitle: Cartografía pública de España para Leaflet
+description: >-
+  Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.
 
-locale                  :     es-ES
-title                   :
-title_separator         :     #default [" | "]
-subtitle                :   Leaflet plugin
-description             : Leaflet plugin con proveedores de teselas y WMS de diferentes organismos públicos de España
-timezone                : "Europe/Madrid"
+og_image: /assets/social-preview.jpg
+og_image_alt: Leaflet-providersESP. Cartografía pública de España para mapas Leaflet, con un mapa de la península ibérica.
+og_image_width: 1200
+og_image_height: 630
+og_image_type: image/jpeg
 
-og_image                :     ./assets/leaflet-providersESP.png
-twitter_site            :   dieghernan
+twitter_site: dhernangomez
+gtag_id: G-B7DT123587
+
 author:
+  name: dieghernan
   url: https://dieghernan.github.io/
   avatar: https://dieghernan.github.io/assets/img/site/avatar.png
-  name                  :  dieghernan
-  location              :  "Madrid, Spain"
-gtag_id                 :  G-B7DT123587
-analytics_id            :
+  location: Madrid, Spain
+  links:
+    - url: https://dieghernan.github.io/
+      icon: fas fa-blog
+      label: Web personal
+    - url: https://github.com/dieghernan
+      icon: fab fa-github
+      label: GitHub
+    - url: https://orcid.org/0000-0001-8457-4658
+      icon: fa-brands fa-orcid
+      label: ORCID
+    - url: https://fosstodon.org/@dhernangomez
+      icon: fa-brands fa-mastodon
+      label: Mastodon
+    - url: https://bsky.app/profile/dieghernan.bsky.social
+      icon: fa-brands fa-square-bluesky
+      label: Bluesky
+    - url: https://x.com/dhernangomez
+      icon: fab fa-square-x-twitter
+      label: Twitter/X
+    - url: https://stackoverflow.com/users/7877917/dieghernan
+      icon: fab fa-stack-overflow
+      label: Stack Overflow
 
-# B. Navigation
-# Configure your navbar and the footer of your site
+publisher:
+  type: Person
+  name: dieghernan
+  url: https://dieghernan.github.io/
+  image: https://dieghernan.github.io/assets/img/site/avatar.png
 
-# Navbar:
-#   "brand" options would be set on the left side of your navbar
-#   "nav" would be set on the right side. Two-level nav links available
+fa_version: "6"
+
+googlefonts:
+  - url: https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap
+  - url: https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap
+
+chulapa-skin:
+  skin: gitdev
+  vars:
+    font-family-monospace: Fira Code
+    enable-responsive-font-sizes: true
+  highlight: github
+
+webmentions:
+  endpoint: https://webmention.io/dieghernan.github.io/webmention
+  pingback: https://webmention.io/dieghernan.github.io/xmlrpc
+
 navbar:
   brand:
-    title   :  '<i class="fas fa-home" style="color: white"></i><span class="d-none">Home</span>'
+    title: '<i class="fas fa-home" aria-hidden="true" style="color: white"></i><span class="sr-only">Inicio</span>'
+
   nav:
-  - title: Preview
-    url: ./preview
-  - title: Visor - Webapp
-    url: ./visor
-  - title: Changelog
-    url: https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md
-  - title   : <i class="fab fa-github fa-lg"></i> # Label
-    url     : https://github.com/dieghernan/leaflet-providersESP
+    - title: Guía de uso
+      url: /guia/
+    - title: Catálogo
+      url: /preview/
+    - title: Visor
+      url: /visor/
+    - title: Cambios
+      url: https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md
+    - title: GitHub
+      url: https://github.com/dieghernan/leaflet-providersESP
 
 footer:
   links:
-    - label : Github # Label
-      icon  : fab fa-github
-      url   : https://github.com/dieghernan
-    - label: "RSS"
-      icon: "fa fa-rss"
-      url:  "./atom.xml"
-    - label: Blog
+    - label: dieghernan
       icon: fas fa-blog
       url: https://dieghernan.github.io/
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/dieghernan/leaflet-providersESP
+    - label: ORCID
+      icon: fa-brands fa-orcid
+      url: https://orcid.org/0000-0001-8457-4658
+    - label: Mastodon
+      icon: fa-brands fa-mastodon
+      url: https://fosstodon.org/@dhernangomez
+    - label: Bluesky
+      icon: fa-brands fa-square-bluesky
+      url: https://bsky.app/profile/dieghernan.bsky.social
+    - label: Twitter/X
+      icon: fab fa-square-x-twitter
+      url: https://x.com/dhernangomez
+    - label: Stack Overflow
+      icon: fab fa-stack-overflow
+      url: https://stackoverflow.com/users/7877917/dieghernan
 
-# C. Theme Settings
-
-# C.1. Google Fonts
-googlefonts:
-- url: https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap
-- url: https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap
-
-# Theme and colors
-chulapa-skin:
-  highlight: github
-  skin: gitdev
-  vars:
-    font-family-monospace: 'Fira Code'
-    enable-responsive-font-sizes: true
-
-# D. Jekyll Defaults and collections: see https://jekyllrb.com/
-
-# Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
-paginate: 7
-paginate_path: "/blog/page:num/"
-paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
-
-# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-collections:
-collections_dir     :
-permalink           : /:year:month:day_:title/
-
-
-# Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
-      layout: "default"
-      header_type: "base"
-      include_on_search   : false
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      header_type       : "post"
-      include_on_search : true
-      include_on_feed   : true
-      show_date         : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      breadcrumb_list   :
-        - label: Blog
-          url: /blog/
-
-# XX. Other settings - no need to modify
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  blanklines: true
+      layout: default
+      header_type: base
+      show_author: false
+      show_date: false
+      show_sociallinks: false
+      show_webmentions: true
+      include_on_search: false
+      include_on_feed: false
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-github-metadata
-  - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-remote-theme
-
-
-# Exclude these files from production site
-exclude:
-  - LICENSE
-  - README.md
-  - Gemfile
-  - vendor
 
 include:
- - _pages
+  - _pages
 
-# Identify the individual publishing this site in JSON-LD.
-publisher:
-  type: Person
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .bundle
+  - LICENSE
 
-# Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
-  footnote_nr: 1
-  footnote_backlink: '&uarr;'
-  entity_output: as_char
-  toc_levels: 2..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  toc_levels: 2..4
 
-# Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
@@ -167,3 +161,8 @@ sass:
   - abs-percent
   - function-units
 
+compress_html:
+  clippings: all
+  blanklines: true
+
+strict_front_matter: true

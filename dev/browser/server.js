@@ -25,7 +25,27 @@ function installationExample(file) {
 }
 
 files.set('/readme-example.html', installationExample('README.md'));
-files.set('/docs-example.html', installationExample('docs/index.md'));
+files.set('/docs-example.html', installationExample('docs/guia.md'));
+
+
+function mapApplication(mode, service = '') {
+	const fragment = fs.readFileSync(path.join(root, 'docs/_includes/map-app.html'), 'utf8')
+		.replace(/\{\{\s*'([^']*)'\s*\|\s*relative_url\s*\}\}/g, '$1')
+		.replace(/\{\{ page\.map_mode[^}]*\}\}/g, mode)
+		.replace(/\{\{ page\.map_service[^}]*\}\}/g, service)
+		.replace(/\{\{ page\.title \}\}/g, 'Catálogo de capas');
+	return { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/map-app.css"></head><body>' + fragment + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/map-app.js"></script></body></html>',
+		contentType: 'text/html' };
+}
+files.set('/catalog.html', mapApplication('catalog'));
+files.set('/viewer.html', mapApplication('viewer'));
+files.set('/wms.html', mapApplication('viewer', 'WMS'));
+files.set('/wmts.html', mapApplication('viewer', 'WMTS'));
+for (const [url, file, contentType] of [
+	['/map-app.js', 'docs/js/map-app.js', 'text/javascript'],
+	['/map-app.css', 'docs/assets/css/map-app.css', 'text/css']
+]) files.set(url, { body: fs.readFileSync(path.join(root, file)),
+	contentType });
 
 http.createServer((request, response) => {
 	const file = files.get(request.url);

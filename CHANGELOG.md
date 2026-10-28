@@ -1,3 +1,9 @@
+# Unreleased
+
+## Changed
+
+- The documentation now separates the introduction, usage guide and contributor instructions. The Spanish catalog and map viewer share searchable service filters, layer details, code copying, opacity controls and shareable views. Existing WMS, WMTS and all-provider pages use the same viewer. Geolocation runs only on request.
+
 # v1.4.0 - *2026-10-28*
 
 Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual review approved by the maintainer on 2026-10-28. See the [audit report](dev/capabilities-audit.md) for evidence, service versions and unresolved services.

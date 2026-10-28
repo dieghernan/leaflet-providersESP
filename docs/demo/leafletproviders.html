@@ -1,5 +1,6 @@
 ---
 layout: fullmap
+permalink: /demo/leafletproviders/
 title: Leaflet providers
 excerpt: Compatible con el plugin leaflet-providers
 ---
@@ -15,7 +16,4 @@ var base = { 'OpenStreetMap.Mapnik': L.tileLayer.provider('OpenStreetMap.Mapnik'
 var over = { 'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias', { transparent: true }).addTo(map3) };
 L.control.layers(base, over, { collapsed: false }).addTo(map3);
 
-L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function() {
-	window.location.href = 'https://dieghernan.github.io/leaflet-providersESP#btndemo3';
-}).addTo(map3);
 </script>

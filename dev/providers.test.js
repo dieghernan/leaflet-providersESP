@@ -163,16 +163,6 @@ test('site lists exclude deprecated variants and retain supported variant names'
 	assert.ok(names.includes('Copernicus.RiparianLandCover'));
 });
 
-test('preview examples support WMS variants that clear inherited zoom limits', () => {
-	const context = load();
-	const preview = fs.readFileSync(path.join(__dirname, '../docs/js/preview.js'), 'utf8');
-	vm.runInContext(preview.slice(preview.indexOf('function escapeHtml'), preview.indexOf('// collect all layers')), context);
-	assert.equal(context.renderValue(undefined), 'undefined');
-	assert.match(context.getExampleJS('MDT.CurvasNivel'), /maxNativeZoom: undefined/);
-	assert.match(context.getExampleJS('Copernicus.ForestLeaf'), /crs: L\.CRS\.EPSG4326/);
-	assert.match(context.getExampleJS('PNOA.Mosaico'), /L\.tileLayer\.wms/);
-});
-
 test('resolving every provider leaves a frozen catalog unchanged', () => {
 	const context = load();
 	const original = JSON.stringify(context.providersESP);

@@ -6,7 +6,7 @@ import globals from 'globals';
 // Follow leaflet-providers' tabs, single quotes, braces and semicolon conventions.
 export default [
 	{
-		ignores: ['node_modules/**', 'docs/_site/**', 'docs/.jekyll-cache/**', 'test-results/**', 'playwright-report/**']
+		ignores: ['node_modules/**', 'docs/dist/**', 'docs/_site/**', 'docs/.jekyll-cache/**', 'test-results/**', 'playwright-report/**']
 	},
 	{
 		files: ['**/*.js', '**/*.mjs', '**/*.html'],
@@ -53,7 +53,7 @@ export default [
 		}
 	},
 	{
-		files: ['**/*.html', 'docs/js/preview.js'],
+		files: ['**/*.html'],
 		languageOptions: {
 			globals: { allnames: 'readonly',
 				isIgnored: 'readonly',
