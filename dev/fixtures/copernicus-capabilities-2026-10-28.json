@@ -1,0 +1,417 @@
+{
+  "checked_at": "2026-10-28T17:50:33.572571+00:00",
+  "services": [
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3035",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "708704.412202"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3035",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "708705.357143"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bil",
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/svg",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "HRL_DominantLeafType_2015",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:3035",
+            "EPSG:4326"
+          ],
+          "web_mercator": false
+        }
+      ]
+    },
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "708704.412202"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "708705.357143"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "708704.412202"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "708705.357143"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "708704.412202"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "708705.357143"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "472470.238095"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "472469.293155"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "0",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "472470.238095"
+        },
+        {
+          "name": "1",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "472469.293155"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "Land_Use_Raster1402",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "708705.357143"
+        },
+        {
+          "name": "City_Boundary",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "944940.476190",
+          "MaxScaleDenominator": "2362351.190476"
+        },
+        {
+          "name": "Greater_City_Boundary",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MinScaleDenominator": "944940.476190",
+          "MaxScaleDenominator": "2362351.190476"
+        },
+        {
+          "name": "Land_Use_vector52160",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "708704.412202"
+        },
+        {
+          "name": "City__Boundary56962",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "944939.531250"
+        },
+        {
+          "name": "Greater_City_Boundary6752",
+          "styles": [
+            "default"
+          ],
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:3857",
+            "EPSG:4326"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "944939.531250"
+        }
+      ]
+    }
+  ]
+}

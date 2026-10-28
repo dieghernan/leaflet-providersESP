@@ -1,0 +1,1426 @@
+{
+  "checked_at": "2026-10-27T16:41:57.258139+00:00",
+  "services": [
+    {
+      "endpoint": "https://www.ign.es/wmts/ign-base",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "IGNBase-gris",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible",
+            "EPSG:4258"
+          ]
+        },
+        {
+          "name": "IGNBaseTodo-nofondo",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible"
+          ]
+        },
+        {
+          "name": "IGNBaseOrto",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible",
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830"
+          ]
+        },
+        {
+          "name": "IGNBaseTodo",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg",
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "GoogleMapsCompatible",
+            "EPSG:25831",
+            "EPSG:25828",
+            "EPSG:25829"
+          ]
+        },
+        {
+          "name": "IGNBaseSimplificado",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wmts/mdt",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "EL.ElevationGridCoverage",
+          "styles": [
+            "Elevaciones"
+          ],
+          "formats": [
+            "image/png",
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "GoogleMapsCompatible"
+          ]
+        },
+        {
+          "name": "Relieve",
+          "styles": [
+            "Default"
+          ],
+          "formats": [
+            "image/jpeg",
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "GoogleMapsCompatible"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wms-inspire/mdt",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/pdf",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kmz",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "EL.SpotElevation",
+          "styles": [
+            "puntosacotados",
+            "EL.SpotElevation.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "50000"
+        },
+        {
+          "name": "EL.ContourLine",
+          "styles": [
+            "curvasnivel",
+            "EL.ContourLine.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "200000"
+        },
+        {
+          "name": "EL.ElevationGridCoverage",
+          "styles": [
+            "Elevaciones",
+            "EL.ElevationGridCoverage.Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wmts/pnoa-ma",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "OI.OrthoimageCoverage",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg",
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "EPSG:3857",
+            "GoogleMapsCompatible",
+            "EPSG:25831",
+            "EPSG:25829",
+            "EPSG:25828"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "name": "OI.MosaicElement",
+          "styles": [
+            "OI.MosaicElement.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "OI.OrthoimageCoverage",
+          "styles": [
+            "OI.OrthoimageCoverage.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "fondo",
+          "styles": [
+            "fondo.Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wmts/ocupacion-suelo",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "LC.LandCoverSurfaces",
+          "styles": [
+            "LC.LandCoverSurfaces.Default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "GoogleMapsCompatible"
+          ]
+        },
+        {
+          "name": "LU.ExistingLandUse",
+          "styles": [
+            "LU.ExistingLandUse.Default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "GoogleMapsCompatible"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wmts-mapa-lidar.idee.es/lidar",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "EL.GridCoverageDSM",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "EPSG:4326",
+            "EPSG:4258",
+            "GoogleMapsCompatible",
+            "InspireCRS84Quad"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://ign.es/wmts/mapa-raster",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "name": "MTN",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg",
+            "image/png"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "GoogleMapsCompatible"
+          ]
+        },
+        {
+          "name": "MTN_Fondo",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "InspireCRS84Quad",
+            "EPSG:4326",
+            "EPSG:4258",
+            "EPSG:25830",
+            "GoogleMapsCompatible"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wms-inspire/geofisica",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "Ultimos10dias",
+          "styles": [
+            "Terremotos10dias"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "Ultimos30dias",
+          "styles": [
+            "Terremotos"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "Ultimos365dias",
+          "styles": [
+            "Terremotos"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "GE.Geophysics.seismologicalStation",
+          "styles": [
+            "EstacionesSismicas",
+            "GE.SeismologicalStation.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "NZ.ObservedEvent",
+          "styles": [
+            "Terremotos",
+            "InspireCommon.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HazardArea2002.NCSE-02",
+          "styles": [
+            "NormaSismorresistente",
+            "InspireCommon.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HazardArea2015.PGA475_p",
+          "styles": [
+            "PGA475_p",
+            "InspireCommon.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HazardArea2015.PGA475_c",
+          "styles": [
+            "PGA475_c",
+            "InspireCommon.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HazardArea2015.Int475",
+          "styles": [
+            "Int475",
+            "InspireCommon.Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wms-volcanologia.ign.es/volcanologia",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "sis",
+          "styles": [
+            "sis"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "gps",
+          "styles": [
+            "gps"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "displacement-asc",
+          "styles": [
+            "displacement"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "phase-asc",
+          "styles": [
+            "phase"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "coh-asc",
+          "styles": [
+            "coherence"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "displacement-des",
+          "styles": [
+            "displacement"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "phase-des",
+          "styles": [
+            "phase"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "coh-des",
+          "styles": [
+            "coherence"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "eto",
+          "styles": [
+            "eto"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "inc",
+          "styles": [
+            "inc"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "gqme",
+          "styles": [
+            "gqme"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "gqmp",
+          "styles": [
+            "gqmp"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "gra",
+          "styles": [
+            "gra"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "rega",
+          "styles": [
+            "rega"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "mag",
+          "styles": [
+            "mag"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "erupciones",
+          "styles": [
+            "erupciones"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "wcmv",
+          "styles": [
+            "wcmv"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "wcmt",
+          "styles": [
+            "wcmt"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wms-inspire/camino-santiago",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "camino_frances",
+          "styles": [
+            "cs.frances",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_galicia",
+          "styles": [
+            "cs.galicia",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_norte",
+          "styles": [
+            "cs.norte",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_andaluces",
+          "styles": [
+            "cs.andaluces",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_centro",
+          "styles": [
+            "cs.centro",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_este",
+          "styles": [
+            "cs.este",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_nordeste",
+          "styles": [
+            "cs.nordeste",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_sureste",
+          "styles": [
+            "cs.sureste",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_insulares",
+          "styles": [
+            "cs.insulares",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_francia",
+          "styles": [
+            "cs.francia",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "caminos_portugueses",
+          "styles": [
+            "cs.portugueses",
+            "cs.amarillo",
+            "cs.azul"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://ovc.catastro.meh.es/cartografia/INSPIRE/spadgcwms.aspx",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/tif"
+      ],
+      "layers": [
+        {
+          "name": "CP.CadastralParcel",
+          "styles": [
+            "CP.CadastralParcel.Default",
+            "CP.CadastralParcel.LabelOnReferencePoint",
+            "CP.CadastralParcel.BoundariesOnly",
+            "CP.CadastralParcel.ReferencePointOnly",
+            "CP.CadastralParcel.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "CP.CadastralZoning",
+          "styles": [
+            "CP.CadastralZoning.Default",
+            "CP.CadastralZoning.BoundariesOnly",
+            "CP.CadastralZoning.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "AD.Address",
+          "styles": [
+            "AD.Address.Default",
+            "AD.Address.Number.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "BU.Building",
+          "styles": [
+            "BU.Building.Default",
+            "BU.Building.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "BU.BuildingPart",
+          "styles": [
+            "BU.BuildingPart.Default",
+            "BU.BuildingPart.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "AU.AdministrativeUnit",
+          "styles": [
+            "AU.AdministrativeUnit.Default",
+            "AU.AdministrativeUnit.ElfCadastre"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "AU.AdministrativeBoundary",
+          "styles": [
+            "AU.AdministrativeBoundary.Default",
+            "AU.AdministrativeBoundary.ElfCadastre"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx",
+      "service": "WMS",
+      "version": "1.1.1",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/tif"
+      ],
+      "layers": [
+        {
+          "name": "Catastro",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "CONSTRU",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TXTCONSTRU",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "SUBPARCE",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TXTSUBPARCE",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "PARCELA",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TXTPARCELA",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "MASA",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TXTMASA",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "EJES",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "LIMITES",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TEXTOS",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "ELEMLIN",
+          "styles": [
+            "Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wms-inspire/transportes",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/pdf",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8"
+      ],
+      "layers": [
+        {
+          "name": "TN.RailTransportNetwork.RailwayLink",
+          "styles": [
+            "ferrocarriles",
+            "TN.RailTransportNetwork.RailwayLink.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "40000000"
+        },
+        {
+          "name": "TN.RoadTransportNetwork.RoadLink",
+          "styles": [
+            "carreteras",
+            "TN.RoadTransportNetwork.RoadLink.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "40000000"
+        },
+        {
+          "name": "TN.AirTransportNetwork.RunwayArea",
+          "styles": [
+            "pistas",
+            "TN.AirTransportNetwork.RunwayArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.AirTransportNetwork.TaxiwayArea",
+          "styles": [
+            "rodaje",
+            "TN.AirTransportNetwork.TaxiwayArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.AirTransportNetwork.ApronArea",
+          "styles": [
+            "plataformas",
+            "TN.AirTransportNetwork.ApronArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.RoadTransportNetwork.RoadServiceArea",
+          "styles": [
+            "areaservicio",
+            "TN.RoadTransportNetwork.RoadServiceArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.RailTransportNetwork.RailwayStationArea",
+          "styles": [
+            "estacionesffcc",
+            "TN.RailTransportNetwork.RailwayStationArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.AirTransportNetwork.AerodromeArea",
+          "styles": [
+            "aerodromos",
+            "TN.AirTransportNetwork.AerodromeArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.WaterTransportNetwork.PortArea",
+          "styles": [
+            "puertos",
+            "TN.WaterTransportNetwork.PortArea.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "TN.CableTransportNetwork.CablewayLink",
+          "styles": [
+            "cable",
+            "TN.CableTransportNetwork.CablewayLink.Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.cartociudad.es/wms-inspire/direcciones-ccpp",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/pdf",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8"
+      ],
+      "layers": [
+        {
+          "name": "AD.Address",
+          "styles": [
+            "portalpk",
+            "AD.Address.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "8000"
+        },
+        {
+          "name": "codigo-postal",
+          "styles": [
+            "codigopostal"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "500000"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wms-inspire/ngbe",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "GN.GeographicalNames",
+          "styles": [
+            "nombresgeograficos",
+            "GN.GeographicalNames.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "6000000"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wms-inspire/unidades-administrativas",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "AU.AdministrativeBoundary",
+          "styles": [
+            "LimitesAdministrativos",
+            "LimitesRojo",
+            "LimitesGris",
+            "LimitesCruz",
+            "EstadoJuridico",
+            "AU.AdministrativeBoundary.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "AU.AdministrativeUnit",
+          "styles": [
+            "UnidadesAdministrativas",
+            "ua-comparador",
+            "ua-EscalaGris",
+            "ccaa-gris",
+            "provincias-gris",
+            "municipios-gris",
+            "AU.AdministrativeUnit.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "LimitesHistoricos",
+          "styles": [
+            "Historicos"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "LimitesTime",
+          "styles": [
+            "Historicos",
+            "EstadoJuridico",
+            "LimitesAdministrativos",
+            "LimitesRojo",
+            "LimitesGris",
+            "LimitesCruz"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wms-inspire/hidrografia",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/pdf",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8"
+      ],
+      "layers": [
+        {
+          "name": "HY.PhysicalWaters.HydroPointOfInterest",
+          "styles": [
+            "puntosinteres",
+            "HY.PhysicalWaters.HydroPointOfInterest.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "40000000"
+        },
+        {
+          "name": "HY.PhysicalWaters.ManMadeObject",
+          "styles": [
+            "objetoartificial",
+            "HY.PhysicalWaters.ManMadeObject.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "550000"
+        },
+        {
+          "name": "HY.PhysicalWaters.LandWaterBoundary",
+          "styles": [
+            "lineacosta",
+            "HY.PhysicalWaters.LandWaterBoundary.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "40000000"
+        },
+        {
+          "name": "HY.Network",
+          "styles": [
+            "redhidrografica",
+            "HY.Network.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "10000000"
+        },
+        {
+          "name": "HY.PhysicalWaters.Waterbodies",
+          "styles": [
+            "masasagua",
+            "HY.PhysicalWaters.Waterbodies.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HY.PhysicalWaters.Wetland",
+          "styles": [
+            "masasagua",
+            "HY.PhysicalWaters.Wetland.Default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "HY.PhysicalWaters.Catchments",
+          "styles": [
+            "captacion",
+            "HY.PhysicalWaters.Catchments.Default"
+          ],
+          "web_mercator": true,
+          "MaxScaleDenominator": "40000000"
+        }
+      ]
+    },
+    {
+      "endpoint": "https://gis.miteco.gob.es/geoserver/agua/subcuencas/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/geopackage+sqlite3",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "subcuencas",
+          "styles": [
+            "subcuencas_estilo",
+            "HY.PhysicalWaters.Catchments.Default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wms-defensa.idee.es/mapas",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/png"
+      ],
+      "layers": [
+        {
+          "name": "Ministerio-Defensa",
+          "styles": [
+            "default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "cecaf_cnv_1M",
+          "styles": [],
+          "web_mercator": true
+        },
+        {
+          "name": "CEGET_1M",
+          "styles": [],
+          "web_mercator": true
+        },
+        {
+          "name": "ceget_M682",
+          "styles": [],
+          "web_mercator": true
+        },
+        {
+          "name": "ceget_P713",
+          "styles": [],
+          "web_mercator": true
+        },
+        {
+          "name": "CEGET_M7814",
+          "styles": [],
+          "web_mercator": true
+        },
+        {
+          "name": "CEGET_M7815",
+          "styles": [],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://ideihm.covam.es/ihm-inspire/wms-unidadesmaritimas",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/png; subtype=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/x-ms-bmp"
+      ],
+      "layers": [
+        {
+          "name": "AU.Baseline",
+          "styles": [
+            "AU.Baseline.IHM",
+            "AU.Baseline.Default",
+            "default"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "AU.MaritimeBoundary",
+          "styles": [
+            "AU.MaritimeBoundary.IHM",
+            "AU.MaritimeBoundary.Default",
+            "default"
+          ],
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sigred.oapn.es/geoserverOAPN/LimitesParquesNacionalesZPP/ows",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "name": "view_red_oapn_limite_pn",
+          "styles": [
+            "LimitePN_url_copy"
+          ],
+          "web_mercator": true
+        },
+        {
+          "name": "view_red_oapn_zpp",
+          "styles": [
+            "Zona_Periferica_Proteccion_visor"
+          ],
+          "web_mercator": true
+        }
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "endpoint": "http://ideadif.adif.es/services/wms",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wms/copernicus-landservice-spain",
+      "error": "Remote end closed connection without response"
+    }
+  ]
+}

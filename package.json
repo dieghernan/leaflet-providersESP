@@ -1,0 +1,30 @@
+{
+  "name": "leaflet-providersesp",
+  "private": true,
+  "description": "Development checks for the Leaflet providers of Spain plugin",
+  "license": "MIT",
+  "scripts": {
+    "build": "node dev/build.js",
+    "build:check": "node dev/build.js --check",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run build:check && npm run test:unit && npm run test:browser",
+    "test:unit": "node --test dev/providers.test.js",
+    "test:browser": "playwright test"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-html": "^8.2.1",
+    "globals": "^17.13.0",
+    "leaflet": "1.9.4",
+    "leaflet-providers": "4.0.0",
+    "uglify-js": "^3.19.3"
+  },
+  "version": "1.4.0"
+}

@@ -56,7 +56,9 @@ excerpt: Preview con minimaps de los proveedores incluidos
 		<link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/zenburn.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script>/* global hljs, map */
+hljs.initHighlightingOnLoad();
+</script>
 		<!-- Control Layers Minimap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/control.layers.minimap.css">
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.layerscontrol-minimap@1.0.20/L.Control.Layers.Minimap.min.js"></script>
@@ -72,18 +74,18 @@ excerpt: Preview con minimaps de los proveedores incluidos
 	<script src="../js/shared.js"></script>
 	<script src="../js/preview.js"></script>
 	<script>
-	    L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
-		window.location.href = "https://dieghernan.github.io/leaflet-providersESP/";
-	}, {position: 'bottomleft'}).addTo(map);
-	
-		L.easyButton('<i class="fas fa-globe"></i>', function(){
-    map.setView([40,-3],2);
-}, {position: 'bottomleft'}).addTo(map);
-	
-	L.easyButton('<i class="fas fa-expand"></i>', function(){
-    map.setView([40,-3],5);
-}, {position: 'bottomleft'}).addTo(map);
-	
+L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function() {
+	window.location.href = 'https://dieghernan.github.io/leaflet-providersESP/';
+}, { position: 'bottomleft' }).addTo(map);
+
+L.easyButton('<i class="fas fa-globe"></i>', function() {
+	map.setView([40, -3], 2);
+}, { position: 'bottomleft' }).addTo(map);
+
+L.easyButton('<i class="fas fa-expand"></i>', function() {
+	map.setView([40, -3], 5);
+}, { position: 'bottomleft' }).addTo(map);
+
 	</script>
 </body>
 </html>

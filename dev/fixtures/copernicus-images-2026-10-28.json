@@ -1,0 +1,599 @@
+{
+  "checked_at": "2026-10-28T17:51:50.556140+00:00",
+  "images": [
+    {
+      "name": "Copernicus",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 39556
+    },
+    {
+      "name": "Copernicus",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 16261
+    },
+    {
+      "name": "Copernicus",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 34633
+    },
+    {
+      "name": "Copernicus",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 49004
+    },
+    {
+      "name": "Copernicus",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 23983
+    },
+    {
+      "name": "Copernicus",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 6836
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 39556
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 16261
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 34633
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 49004
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 23983
+    },
+    {
+      "name": "Copernicus.Forest",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_TreeCoverDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 6836
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=40.44694705960049%2C-4.21875%2C40.97989806962013%2C-3.515625",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 28537
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=39.909736234537185%2C-4.21875%2C40.44694705960049%2C-3.515625",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 9270
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=42.03297433244139%2C-2.8125%2C42.553080288955805%2C-2.109375",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 25788
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=40.780541431860314%2C-4.130859375%2C40.84706035607122%2C-4.04296875",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 49005
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=40.380028402511826%2C-3.779296875%2C40.44694705960049%2C-3.69140625",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 24005
+    },
+    {
+      "name": "Copernicus.ForestLeaf",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_DominantLeafType_2015/ImageServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=HRL_DominantLeafType_2015&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A4326&width=256&height=256&bbox=42.42345651793831%2C-2.4609375%2C42.48830197960225%2C-2.373046875",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 6846
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 1366
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 3141
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 229
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 96
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 518
+    },
+    {
+      "name": "Copernicus.WaterWet",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_WaterWetness_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 1718
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 8468
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 13179
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 2661
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 0
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 37908
+    },
+    {
+      "name": "Copernicus.SoilSeal",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_ImperviousnessDensity_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 16745
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 10969
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 4644
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 4083
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 1379
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 1886
+    },
+    {
+      "name": "Copernicus.GrassLand",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/GioLandPublic/HRL_Grassland_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 3159
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 8462
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 8833
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 12218
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 350
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 5998
+    },
+    {
+      "name": "Copernicus.RiparianLandCover",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/RiparianZones/RZ_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 29451
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 51006
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 26346
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 22199
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 65536
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 0
+    },
+    {
+      "name": "Copernicus.Natura2k",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://copernicus.discomap.eea.europa.eu/arcgis/services/Natura2000/N2K_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=0%2C1&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 0
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Guadarrama",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4931105.56873329%2C-391357.5848201029%2C5009377.085697312",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 43869
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Madrid",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-469629.10178412125%2C4852834.05176927%2C-391357.5848201029%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 57157
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Logrono",
+      "zoom": 9,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-313086.06785608083%2C5165920.119625352%2C-234814.55089206249%2C5244191.6365893725",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 8764
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Guadarrama",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-459845.16216361895%2C4980025.266835803%2C-450061.22254311666%2C4989809.206456305",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 4256
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Madrid",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-420709.4036816098%2C4921321.629112788%2C-410925.4640611075%2C4931105.56873329",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 65536
+    },
+    {
+      "name": "Copernicus.UrbanAtlas",
+      "location": "Logrono",
+      "zoom": 12,
+      "url": "https://image.discomap.eea.europa.eu/arcgis/services/UrbanAtlas/UA_UrbanAtlas_2012/MapServer/WMSServer?service=WMS&request=GetMap&version=1.3.0&layers=Land_Use_Raster1402%2CLand_Use_vector52160&styles=&format=image%2Fpng&transparent=true&crs=EPSG%3A3857&width=256&height=256&bbox=-273950.30937407166%2C5224623.757348368%2C-264166.36975356936%2C5234407.69696887",
+      "size": [
+        256,
+        256
+      ],
+      "visible_pixels": 65536
+    }
+  ]
+}

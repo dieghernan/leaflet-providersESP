@@ -1,3 +1,47 @@
+# v1.4.0 - *2026-10-28*
+
+Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual review approved by the maintainer on 2026-10-28. See the [audit report](dev/capabilities-audit.md) for evidence, service versions and unresolved services.
+
+## Added
+
+- `IGNBase.Simplificado` adds the simplified street map.
+- `Geofisica.EstacionesSismicas`, `HazardArea2015PGA`, `HazardArea2015Isolineas` and `HazardArea2015Intensidad` add seismic stations and the 2015 hazard maps.
+- `RedTransporte.Pistas`, `CallesRodaje`, `Plataformas` and `TransporteCable` add airport detail and cable transport links.
+- `UnidadesAdm.LimitesHistoricos` adds historical administrative boundaries.
+
+- A reproducible `dist/leaflet-providersESP.min.js` distribution, generated with UglifyJS. The test command checks that it matches the source and runs browser checks against both versions.
+- `CaminoDeSantiago.CaminosNordeste` is the preferred name for the current Caminos del Nordeste layer. `CaminosCatalanes` remains an alias for compatibility.
+- `Geofisica.HazardArea2002` explicitly names the 2002 NCSE-02 hazard map. `HazardArea` remains an alias for compatibility.
+
+## Deprecated
+
+- `Copernicus.RiparianGreen` is deprecated because its service is unavailable and no equivalent official WMS has been identified. Creating the layer warns once per page. The variant remains callable for compatibility and is excluded from the site's available-layer lists and previews.
+
+## Changed
+
+- `Copernicus` and its eight supported variants use the official EEA WMS 1.3.0 services, preserving their public names and 2012/2015 products. Coverage now follows the European products rather than the retired Spain service. High-resolution layers request both 20 m and 100 m resolutions; Riparian, Natura 2000 and Urban Atlas request raster and vector layers to cover different scales. `ForestLeaf` uses EPSG:4326, including on the default Mercator map, and attribution credits the European Union's Copernicus Land Monitoring Service.
+
+- Use WMS 1.3.0 for the verified services. `Catastro.Catastro` and `Catastro.Parcela` retain WMS 1.1.1; WMTS services retain version 1.0.0. Callers can still override `version`.
+
+## Fixed
+
+- Installation examples include Leaflet 1.9.4, its CSS, script loading order and a map container with an explicit height. CDN examples pin v1.4.0 and distinguish it from the main development branch. The tag URLs become available after publication.
+- `CaminoDeSantiago.CaminosCatalanes` now requests the advertised `caminos_nordeste` layer, keeping the existing public variant name.
+- `Cartociudad` and `Cartociudad.CodigosPostales` display postal codes from zoom 11 instead of 14, matching nonempty GetMap responses in Madrid and Logrono.
+- `Cartociudad.Direcciones` starts at zoom 17 instead of 15, avoiding empty tiles at zooms 15 and 16 in the tested locations.
+- `Catastro.Catastro`, `Catastro.Parcela`, `LimitesMaritimos`, `Militar`, `ParquesNaturales` and `PNOA.Mosaico` use verified HTTPS endpoints.
+- `Geofisica.HazardArea` requests `HazardArea2002.NCSE-02` (the 2002 NCSE-02 hazard map), replacing the unavailable `NZ.HazardArea` layer.
+- `Hidrografia.Subcuencas` uses MITECO's current GeoServer endpoint and its `subcuencas` layer, replacing an endpoint that returned an XML exception.
+- `IGNBase`, `LiDAR`, `MDT`, `MTN`, `OcupacionSuelo` and `PNOA` limit native WMTS requests to zoom 20 and allow Leaflet to scale those tiles at higher configured zooms. WMS variants do not inherit this limit.
+- `MDT` and `MDT.Relieve` request the advertised WMTS styles, `Elevaciones` and `Default` respectively.
+- `MTN` and `OcupacionSuelo` send a single WMTS style parameter. `OcupacionSuelo` requests the advertised style for each layer.
+- `providerOpts()` copies catalog options before resolving a layer, preventing provider names, attribution expansion and nested bounds from leaking between layers. Leaflet CRS objects, class instances and caller option precedence are preserved.
+
+## Known issues
+
+- `ADIF` returns HTTP 403 from this audit environment over HTTP and HTTPS. Its availability and supported WMS version remain unverified.
+- `Copernicus.RiparianGreen` retains the retired IGN endpoint and remains unavailable, with no identified equivalent official WMS. The other Copernicus variants were migrated and verified on 2026-10-28.
+
 # v1.3.3 - *2023-07-05*
 
 ## Added
@@ -149,17 +193,4 @@ NA
 - [x] Bump version on script
 - [x] Beautify
 - [ ] Lint
-
- On dev - *unreleased*
-
-## Added
-
-
-## Changed
-
-
-## Removed
-
-
-## Fixed
 

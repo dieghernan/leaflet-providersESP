@@ -26,67 +26,75 @@ Este plugin es compatible con el plugin [leaflet-providers](https://github.com/l
 
 
 
-## Instalación 
+## Instalación
 
-### Via CDN
+Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
+El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.
+
+### Vía CDN
+
+Para usar `v1.4.0` con Leaflet `1.9.4`. Estas URL estarán disponibles cuando se
+publique la etiqueta `v1.4.0`; hasta entonces, usa los archivos locales:
 
 ```html
-<!-- Latest -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
-
-<!-- By version -->
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.3.3/dist/leaflet-providersESP.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
 ```
+
+Para seguir el desarrollo en `main`, sustituye solo el script del plugin por:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@main/dist/leaflet-providersESP.min.js"></script>
+```
+
+La URL de `main` sigue esa rama y puede cambiar. Para probar los cambios sin
+publicar de tu copia del repositorio, usa los archivos locales.
 
 ### Local
 
-Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP/tree/master/dist):
+Copia `dist/leaflet-providersESP.min.js` junto a tu archivo HTML y sustituye el
+script del plugin en el ejemplo completo de abajo por:
 
 ```html
-<!-- Last version -->
-<script src="./path/to/your/folder/leaflet-providersESP.js"></script>
+<script src="./leaflet-providersESP.min.js"></script>
 ```
+
+También puedes copiar `dist/leaflet-providersESP.js` y usar
+`src="./leaflet-providersESP.js"` para cargar el código sin minificar. Los archivos
+están en [dist/](https://github.com/dieghernan/leaflet-providersESP/tree/main/dist).
+Mantén las referencias al CSS y al JavaScript de Leaflet antes del plugin.
 
 ## Demos
 
-### Full page
+### Página completa
+
+Guarda este ejemplo como `index.html` y ábrelo en el navegador. El contenedor del
+mapa necesita una altura explícita para ser visible.
+
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-	<title>Minimal page | leaflet-providersESP</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Load Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
-	<!-- Install leaflet-providersESP -->
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP/dist/leaflet-providersESP.min.js"></script>
-	<!-- Display map full page -->
-	<style>
-	html {
-		height: 100%
-	}
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	#mapid {
-		height: 100%;
-		width: 100%
-	}
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapa de España</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+    <style>
+        html, body { height: 100%; margin: 0; }
+        #map { height: 100%; width: 100%; }
+    </style>
 </head>
 <body>
-	<!-- Create map -->
-	<div id="mapid"></div>
-	<!-- Puerta del Sol - IDErioja server -->
-	<script>
-	var mymap = L.map('mapid').setView([40.4166, -3.7038400], 18);
-	L.tileLayer.providerESP('IDErioja').addTo(mymap);
-	</script>
+    <div id="map"></div>
+    <script>
+var map = L.map('map').setView([40.4166, -3.7038], 12);
+L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
+    </script>
 </body>
+</html>
 ```
 
 <div class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
@@ -99,13 +107,17 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 
 ### Varias capas
 
+Los siguientes fragmentos sustituyen el contenedor y el script del mapa del
+ejemplo completo. Conserva los estilos y las dependencias del `<head>`.
+
 ```html
 <div id="map"></div>
 <script>
-  var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('LiDAR').addTo(map2);
-			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
-			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
+var map2 = L.map('map', { center: [37.053333, -3.311389],
+	zoom: 15 });
+L.tileLayer.providerESP('LiDAR').addTo(map2);
+L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
+L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
 </script>
 ```
 
@@ -120,14 +132,14 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 
 ```html
 <div id="map"></div>
-  <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@4.0.0/leaflet-providers.js"></script>
 <script>
-  var map3 = L.map('map',{center: [38.8,-5.3],zoom: 5});
-  var base = {'CartoDB.Positron': L.tileLayer.provider('CartoDB.Positron').addTo(map3),
-              'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap')
-  };
-  var over ={'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias',{transparent: true}).addTo(map3)};
-  L.control.layers(base, over, {collapsed: false}).addTo(map3);
+var map3 = L.map('map', { center: [38.8, -5.3],
+	zoom: 5 });
+var base = { 'OpenStreetMap.Mapnik': L.tileLayer.provider('OpenStreetMap.Mapnikn').addTo(map3),
+	'Esri.WorldTopoMap': L.tileLayer.provider('Esri.WorldTopoMap') };
+var over = { 'Terremotos Ult. 30dias': L.tileLayer.providerESP('Geofisica.Terremotos30dias', { transparent: true }).addTo(map3) };
+L.control.layers(base, over, { collapsed: false }).addTo(map3);
 </script>
 ```
 
@@ -141,6 +153,25 @@ Get [leaflet-providersESP.js](https://github.com/dieghernan/leaflet-providersESP
 
 
 ## Proveedores disponibles
+
+### Nombres de variantes y deprecaciones
+
+Desde la versión 1.4.0, los nombres recomendados son
+`CaminoDeSantiago.CaminosNordeste` y `Geofisica.HazardArea2002` (mapa NCSE-02 de
+2002). Los nombres anteriores, `CaminoDeSantiago.CaminosCatalanes` y
+`Geofisica.HazardArea`, siguen funcionando como alias de las mismas capas.
+
+Las demás variantes de `Copernicus` usan los servicios oficiales de EEA y conservan
+sus nombres y los productos de 2012/2015. La cobertura sigue los productos europeos.
+`ForestLeaf` solicita EPSG:4326 automáticamente, también en el mapa Mercator
+predeterminado de Leaflet. Las otras variantes usan EPSG:3857. Las peticiones
+combinan las resoluciones o las capas ráster y vectoriales disponibles para que el
+servicio seleccione la representación adecuada según la escala.
+
+`Copernicus.RiparianGreen` está deprecada: el servicio no está disponible y no se
+ha identificado un WMS oficial equivalente. La llamada sigue admitida por
+compatibilidad y muestra un aviso en la consola una vez por página. Esta variante
+ya no se incluye en las listas de capas disponibles ni en las previsualizaciones.
 
 **View all: [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/)**
 {: .lead}
@@ -178,6 +209,9 @@ L.tileLayer.providerESP('IGNBase') === L.tileLayer.providerESP('IGNBase.Todo')
     if (providersESP[provider].variants) {
       var allnames = [];
       for (var variant in providersESP[provider].variants) {
+        if (providersESP[provider].variants[variant].deprecated) {
+          continue;
+        }
         allnames.push('<code>' + variant +'</code>');
       }
     } else {		

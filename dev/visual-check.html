@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pruebas visuales · leaflet-providersESP</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; font: 15px/1.5 system-ui, sans-serif; color: #203444; background: #f3f6f8; }
+		main { display: grid; grid-template-columns: 350px 1fr; height: 100dvh; }
+		aside { padding: 22px; overflow-y: auto; border-right: 1px solid #cbd5df; }
+		h1 { font-size: 22px; line-height: 1.2; margin: 0 0 12px; }
+		p { margin: 10px 0; }
+		label { display: block; margin-top: 14px; font-weight: 600; }
+		select, button, textarea { font: inherit; }
+		select, textarea { width: 100%; padding: 7px; border: 1px solid #9cacbb; border-radius: 5px; background: white; }
+		input[type=range] { width: 100%; }
+		button { padding: 7px 12px; border: 1px solid #9cacbb; border-radius: 5px; background: white; cursor: pointer; }
+		button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #087caa; outline-offset: 2px; }
+		.row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+		.card { padding: 12px; background: white; border: 1px solid #d4dfe7; border-radius: 7px; margin: 16px 0; }
+		.small { font-size: 13px; color: #465d70; overflow-wrap: anywhere; }
+		#map { min-width: 0; height: 100%; background: #dde4ea; }
+		#status { white-space: pre-line; }
+		#notes { min-height: 80px; }
+		@media (max-width: 760px) { main { display: flex; flex-direction: column; height: auto; } aside { overflow: visible; } #map { height: 65dvh; order: -1; } }
+	</style>
+</head>
+<body>
+<main>
+	<aside>
+		<h1>Pruebas visuales</h1>
+		<p class="small">Catálogo local en desarrollo · Leaflet 1.9.4. Las imágenes se solicitan a los servicios reales y necesitan conexión.</p>
+		<label for="build">Distribución</label>
+		<select id="build"><option value="source">Fuente</option><option value="minified">Minificada</option></select>
+		<label for="scenario">Recorrido recomendado</label>
+		<select id="scenario"></select>
+		<div class="row"><button id="previous" type="button">Anterior</button><button id="next" type="button">Siguiente</button><button id="reset" type="button">Restablecer vista</button></div>
+		<div class="card"><strong id="title"></strong><p id="expected"></p></div>
+		<label for="layer">Capa (selección libre)</label>
+		<select id="layer"></select>
+		<label for="location">Ubicación (selección libre)</label>
+		<select id="location"></select>
+		<label for="opacity">Opacidad de la capa: <output id="opacity-value">100 %</output></label>
+		<input id="opacity" type="range" min="0" max="1" step="0.05" value="1">
+		<label><input id="background" type="checkbox" checked> Fondo IGN gris</label>
+		<div class="card small"><strong>Estado de las peticiones</strong><p id="status" role="status" aria-live="polite">Cargando biblioteca…</p><p id="position"></p><p>Una tesela cargada puede ser transparente. La comprobación del contenido es visual.</p></div>
+		<label for="notes">Notas de la revisión</label>
+		<textarea id="notes" placeholder="Capa, ubicación, zoom y resultado observado"></textarea>
+		<div class="row"><button id="copy" type="button">Copiar informe</button></div>
+		<p id="copy-status" class="small" role="status"></p>
+		<p class="small">ADIF se conserva como prueba opcional; puede devolver 403. RiparianGreen sigue deprecada y no forma parte del recorrido. Puedes seleccionarla para comprobar su aviso en la consola.</p>
+	</aside>
+	<div id="map" aria-label="Mapa para comprobar las capas"></div>
+</main>
+<script>
+'use strict';
+const build = document.getElementById('build');
+build.value = new URLSearchParams(location.search).get('build') === 'minified'
+	? 'minified'
+	: 'source';
+build.addEventListener('change', () => {
+	const url = new URL(location.href);
+	url.searchParams.set('build', build.value);
+	location.href = url.href;
+});
+const plugin = document.createElement('script');
+plugin.src = build.value === 'minified'
+	? '../dist/leaflet-providersESP.min.js'
+	: '../dist/leaflet-providersESP.js';
+plugin.onerror = () => {
+	document.getElementById('status').textContent = 'No se pudo cargar la distribución local. Abre este HTML desde la carpeta dev del repositorio.';
+};
+plugin.onload = () => {
+	const places = {
+		Madrid: [40.4166, -3.7038, 12],
+		Guadarrama: [40.8, -4.05, 12],
+		Logrono: [42.465, -2.4456, 12],
+		Barajas: [40.49, -3.57, 14],
+		Teide: [28.26, -16.64, 14],
+		Canarias: [28.3, -16.6, 8],
+		Espana: [39.4, -3.7, 6]
+	};
+	const scenarios = [
+		['IGNBase.Simplificado', 'Madrid', 12, 'Callejero simplificado', 'Comprueba calles y etiquetas legibles. Repite en Canarias y compara con IGNBase.Todo.'],
+		['Geofisica.EstacionesSismicas', 'Espana', 6, 'Estaciones sísmicas', 'Deben aparecer símbolos de estaciones. Acércate y comprueba que se mantienen sobre el fondo.'],
+		['Geofisica.HazardArea2015PGA', 'Espana', 6, 'Peligrosidad: aceleración', 'Deben verse zonas coloreadas. No debe confundirse con el mapa NCSE-02 de 2002.'],
+		['Geofisica.HazardArea2015Isolineas', 'Espana', 6, 'Peligrosidad: isolíneas', 'Comprueba las líneas y sus etiquetas; alterna el fondo si cuesta distinguirlas.'],
+		['Geofisica.HazardArea2015Intensidad', 'Espana', 6, 'Peligrosidad: intensidad', 'Comprueba la zonificación y que cambia respecto a la capa PGA.'],
+		['RedTransporte.Pistas', 'Barajas', 14, 'Pistas de aeropuerto', 'Deben distinguirse las pistas de Barajas. Acerca hasta zoom 16.'],
+		['RedTransporte.CallesRodaje', 'Barajas', 14, 'Calles de rodaje', 'Comprueba las vías que conectan pistas y plataformas.'],
+		['RedTransporte.Plataformas', 'Barajas', 14, 'Plataformas', 'Comprueba polígonos junto a las terminales; compáralos con las pistas.'],
+		['RedTransporte.TransporteCable', 'Teide', 14, 'Transporte por cable', 'Busca el trazado del teleférico del Teide. Acerca o desplaza ligeramente la vista si queda en el borde.'],
+		['UnidadesAdm.LimitesHistoricos', 'Espana', 6, 'Límites históricos', 'Acerca a zoom 8–10 y comprueba líneas. Compara con UnidadesAdm.Limites: son productos distintos.'],
+		['Copernicus.Forest', 'Guadarrama', 9, 'Densidad arbórea 2015', 'Pasa lentamente de zoom 9 a 12: debe haber contenido a ambas escalas, sin un corte permanente al cambiar de resolución.'],
+		['Copernicus.ForestLeaf', 'Guadarrama', 12, 'Tipo de hoja 2015', 'Los polígonos deben alinearse con el fondo. Baja opacidad para comprobar que no hay desplazamientos ni ejes invertidos.'],
+		['Copernicus.WaterWet', 'Logrono', 12, 'Agua y humedales 2015', 'Busca contenido junto al Ebro. Compara zooms 9 y 12. Las zonas sin agua pueden ser transparentes.'],
+		['Copernicus.SoilSeal', 'Madrid', 12, 'Impermeabilización 2015', 'Debe destacar el suelo urbano. Compara con el entorno rural y con zoom 9.'],
+		['Copernicus.GrassLand', 'Guadarrama', 12, 'Pastizales 2015', 'Busca manchas de pastizal y comprueba contenido también en zoom 9.'],
+		['Copernicus.RiparianLandCover', 'Logrono', 9, 'Zonas ribereñas 2012', 'Debe aparecer cobertura localizada. Acerca hasta zoom 12: la representación vectorial debe sustituir al ráster donde exista cobertura.'],
+		['Copernicus.Natura2k', 'Guadarrama', 9, 'Natura 2000: usos del suelo 2012', 'Es cobertura de usos del suelo en áreas seleccionadas, no un mapa completo de espacios protegidos. Acerca y desplázate sobre una mancha visible.'],
+		['Copernicus.UrbanAtlas', 'Madrid', 9, 'Urban Atlas 2012', 'Acerca hasta zoom 12–15: deben mantenerse los usos del suelo urbanos al pasar del ráster al vector.'],
+		['Cartociudad.CodigosPostales', 'Madrid', 10, 'Códigos postales: zoom 11', 'En zoom 10 la capa está oculta por configuración. En zoom 11 deben aparecer límites o etiquetas. Repite en Logroño.'],
+		['Cartociudad.Direcciones', 'Madrid', 16, 'Direcciones: zoom 17', 'En zoom 16 está oculta por configuración. En zoom 17 deben aparecer direcciones.'],
+		['MDT', 'Guadarrama', 20, 'WMTS: ampliación por encima de zoom 20', 'Sube a zoom 21 y 22. La imagen se amplía; en Red de las herramientas del navegador, TileMatrix debe seguir siendo 20.'],
+		['IGNBase.Simplificado', 'Canarias', 8, 'Comprobación en Canarias', 'Acerca a una población. Comprueba alineación, etiquetas y ausencia de errores de teselas. Copernicus puede no cubrir esta zona.']
+	];
+	const map = L.map('map', { maxZoom: 24 }).setView(places.Madrid.slice(0, 2), 12);
+	const background = L.tileLayer.providerESP('IGNBase.Gris', { maxZoom: 24 }).addTo(map);
+	const layerSelect = document.getElementById('layer');
+	const locationSelect = document.getElementById('location');
+	const scenarioSelect = document.getElementById('scenario');
+	const status = document.getElementById('status');
+	let active;
+	let loaded = 0;
+	let failed = 0;
+	function position() {
+		const center = map.getCenter();
+		document.getElementById('position').textContent = 'Zoom ' + map.getZoom() + ' · ' + center.lat.toFixed(5) + ', ' + center.lng.toFixed(5);
+	}
+	function updateStatus() {
+		if (!active) return;
+		status.textContent = layerSelect.value + '\nTeselas cargadas: ' + loaded + ' · Errores: ' + failed + (map.getZoom() < (active.options.minZoom || 0)
+			? '\nOculta por minZoom: ' + active.options.minZoom
+			: '');
+	}
+	function changeLayer() {
+		if (active) map.removeLayer(active);
+		loaded = 0;
+		failed = 0;
+		active = L.tileLayer.providerESP(layerSelect.value, { maxZoom: 24,
+			opacity: Number(document.getElementById('opacity').value) });
+		active.on('tileload', () => {
+			loaded++; updateStatus();
+		});
+		active.on('tileerror', () => {
+			failed++; updateStatus();
+		});
+		active.addTo(map);
+		updateStatus();
+	}
+	function selectScenario() {
+		const [layer, place, zoom, title, expected] = scenarios[Number(scenarioSelect.value)];
+		layerSelect.value = layer;
+		locationSelect.value = place;
+		document.getElementById('title').textContent = title;
+		document.getElementById('expected').textContent = expected;
+		map.setView(places[place].slice(0, 2), zoom);
+		changeLayer();
+	}
+	for (const [name, provider] of Object.entries(providersESP)) {
+		for (const variant of ['', ...Object.keys(provider.variants || {})]) {
+			const id = name + (variant
+				? '.' + variant
+				: '');
+			layerSelect.add(new Option(id, id));
+		}
+	}
+	for (const name of Object.keys(places)) locationSelect.add(new Option(name, name));
+	scenarios.forEach((item, index) => scenarioSelect.add(new Option(index + 1 + '. ' + item[3], index)));
+	scenarioSelect.addEventListener('change', selectScenario);
+	layerSelect.addEventListener('change', () => {
+		document.getElementById('title').textContent = 'Exploración libre';
+		document.getElementById('expected').textContent = 'Comprueba contenido, alineación y atribución. Restablecer vista vuelve al caso seleccionado.';
+		changeLayer();
+	});
+	locationSelect.addEventListener('change', () => {
+		const place = places[locationSelect.value];
+		map.setView(place.slice(0, 2), place[2]);
+	});
+	for (const [id, step] of [['previous', -1], ['next', 1]]) {
+		document.getElementById(id).addEventListener('click', () => {
+			scenarioSelect.value = (Number(scenarioSelect.value) + step + scenarios.length) % scenarios.length;
+			selectScenario();
+		});
+	}
+	document.getElementById('reset').addEventListener('click', selectScenario);
+	document.getElementById('opacity').addEventListener('input', (event) => {
+		active.setOpacity(Number(event.target.value));
+		document.getElementById('opacity-value').textContent = Math.round(Number(event.target.value) * 100) + ' %';
+	});
+	document.getElementById('background').addEventListener('change', (event) => {
+		if (event.target.checked) {
+			background.addTo(map); background.bringToBack();
+		} else map.removeLayer(background);
+	});
+	document.getElementById('copy').addEventListener('click', async() => {
+		const report = [document.title, 'Distribución: ' + build.value, status.textContent, document.getElementById('position').textContent, document.getElementById('notes').value].join('\n');
+		try {
+			await navigator.clipboard.writeText(report);
+			document.getElementById('copy-status').textContent = 'Informe copiado.';
+		} catch {
+			document.getElementById('notes').value = report;
+			document.getElementById('notes').select();
+			document.getElementById('copy-status').textContent = 'Copia el informe seleccionado en el campo de notas.';
+		}
+	});
+	map.on('moveend zoomend', () => {
+		position(); updateStatus();
+	});
+	selectScenario();
+	position();
+};
+document.head.appendChild(plugin);
+</script>
+</body>
+</html>

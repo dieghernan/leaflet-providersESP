@@ -6,13 +6,14 @@ excerpt: Superposicion de varias capas
 
 <div id="map"></div>
 <script>
-  var map2 = L.map('map', {center: [37.053333,-3.311389],zoom: 15});
-			L.tileLayer.providerESP('LiDAR').addTo(map2);
-			L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
-			L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
-			
-			L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function(){
-              window.location.href = "https://dieghernan.github.io/leaflet-providersESP#btndemo2";
-              }).addTo(map2);
-			
+var map2 = L.map('map', { center: [37.053333, -3.311389],
+	zoom: 15 });
+L.tileLayer.providerESP('LiDAR').addTo(map2);
+L.tileLayer.providerESP('MDT.CurvasNivel').addTo(map2);
+L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
+
+L.easyButton('<i class="fas fa-home" style="color: #FABD00"></i>', function() {
+	window.location.href = 'https://dieghernan.github.io/leaflet-providersESP#btndemo2';
+}).addTo(map2);
+
 </script>
