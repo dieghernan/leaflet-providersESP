@@ -14,7 +14,7 @@
 	toggle.title = 'Mostrar u ocultar capas del mapa'; toggle.setAttribute('aria-label', 'Mostrar u ocultar capas del mapa');
 	const badge = document.createElement('span'); badge.className = 'layer-count-badge'; badge.setAttribute('aria-hidden', 'true'); toggle.append(badge);
 	const hint = document.createElement('p'); hint.id = 'layers-hint'; hint.className = 'layers-hint'; hint.setAttribute('role', 'tooltip'); hint.hidden = true;
-	hint.textContent = 'Pulsa este icono y activa la capa para verla en el mapa.'; control.getContainer().append(hint);
+	hint.textContent = 'Aquí puedes cambiar el fondo y mostrar u ocultar transparencias.'; control.getContainer().append(hint);
 	let hintShown = false;
 	let hintTimer;
 	let feedbackTimer;
@@ -52,28 +52,57 @@
 	service.value = document.querySelector('.map-app').dataset.service;
 	const entries = [];
 	const registered = new Map();
+	function renderLayerStates() {
+		const enabled = entries.filter((entry) => registered.has(entry.name) && map.hasLayer(registered.get(entry.name)));
+		for (const entry of entries) {
+			const active = enabled.includes(entry);
+			entry.row.classList.toggle('is-visible', active); entry.visible.hidden = !registered.has(entry.name);
+			entry.visible.textContent = active
+				? 'Activa'
+				: 'En el selector';
+		}
+		const loading = enabled.filter((entry) => entry.load?.loading);
+		const failed = enabled.filter((entry) => entry.load?.error);
+		document.getElementById('map').setAttribute('aria-busy', String(loading.length > 0));
+		const message = failed.length
+			? 'Error de carga: ' + failed.map((entry) => entry.name).join(', ') + '. Algunas teselas no han podido cargarse.'
+			: loading.length
+				? 'Cargando ' + loading.length + ' capas…'
+				: '';
+		const output = document.getElementById('tile-status');
+		if (output.textContent !== message) output.textContent = message;
+	}
 	let currentTab = 'backgrounds';
 	const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase();
 	function register(entry, userAction = false) {
 		if (entry.input.checked) {
 			const layer = L.tileLayer.providerESP(entry.name);
-			layer.on('tileerror', () => {
-				if (map.hasLayer(layer)) status.textContent = 'No se ha podido cargar parte de ' + entry.name + '. El servicio puede no estar disponible.';
-			});
+			entry.load = window.watchLayerStatus(layer, renderLayerStates);
 			registered.set(entry.name, layer);
 			if (entry.overlay) control.addOverlay(layer, entry.name);
 			else control.addBaseLayer(layer, entry.name);
+			layer.setZIndex(entry.overlay
+				? 1
+				: 0);
+			if (!entry.overlay) {
+				for (const other of entries) {
+					const previous = registered.get(other.name);
+					if (!other.overlay && previous && previous !== layer && map.hasLayer(previous)) map.removeLayer(previous);
+				}
+			}
+			layer.addTo(map);
 		} else {
 			const layer = registered.get(entry.name);
 			map.removeLayer(layer); control.removeLayer(layer); registered.delete(entry.name);
 		}
 		document.getElementById('registered-count').textContent = '· ' + registered.size + ' en el selector';
 		badge.textContent = registered.size;
+		renderLayerStates();
 		if (userAction) {
 			const feedback = document.getElementById('layer-feedback');
 			feedback.textContent = entry.input.checked
-				? 'Capa añadida al selector.'
+				? 'Capa añadida al selector y activada.'
 				: 'Capa eliminada del selector.';
 			window.clearTimeout(feedbackTimer); feedbackTimer = window.setTimeout(() => {
 				feedback.textContent = '';
@@ -107,20 +136,16 @@
 		const label = document.createElement('label'); label.className = 'ribbon-layer'; label.title = entry.name;
 		const input = document.createElement('input'); input.type = 'checkbox'; input.setAttribute('aria-label', 'Incluir ' + entry.name); entry.input = input;
 		const name = document.createElement('span'); name.textContent = entry.name;
-		const visible = document.createElement('small'); visible.className = 'layer-visible'; visible.textContent = 'Visible'; visible.hidden = true; entry.visible = visible;
+		const visible = document.createElement('small'); visible.className = 'layer-visible'; visible.id = 'membership-' + entries.indexOf(entry); visible.hidden = true; entry.visible = visible; input.setAttribute('aria-describedby', visible.id);
 		label.append(input, name, visible); entry.row = label;
 		document.getElementById(entry.overlay
 			? 'overlays-panel'
 			: 'backgrounds-panel').append(label);
 		input.addEventListener('change', () => register(entry, true));
 	}
-	map.on('layeradd layerremove', () => {
-		for (const entry of entries) {
-			const layer = registered.get(entry.name);
-			const visible = Boolean(layer && map.hasLayer(layer));
-			entry.row.classList.toggle('is-visible', visible); entry.visible.hidden = !visible;
-		}
-	});
+	map.on('layeradd layerremove', renderLayerStates);
+	const ribbon = document.getElementById('viewer-controls');
+	ribbon.open = !window.matchMedia('(max-width: 600px)').matches;
 	document.getElementById('close-ribbon').addEventListener('click', () => {
 		document.getElementById('viewer-controls').open = false;
 		document.querySelector('#viewer-controls summary').focus();
@@ -167,7 +192,7 @@
 	}
 	new ResizeObserver(resize).observe(document.getElementById('map'));
 	const initial = entries.find((entry) => entry.name === 'IGNBase.Todo');
-	initial.input.checked = true; register(initial); registered.get(initial.name).addTo(map); status.textContent = '';
+	initial.input.checked = true; register(initial); status.textContent = '';
 	filter();
 	const locate = L.control({ position: 'topleft' });
 	let position;
@@ -203,4 +228,5 @@
 		return container;
 	};
 	locate.addTo(map);
+	window.addAddressSearch(map, () => control.collapse());
 })();

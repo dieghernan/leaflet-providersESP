@@ -316,7 +316,7 @@
         <label class="sr-only" for="service-filter">Servicio</label>
         <select id="service-filter"><option value="">WMS y WMTS</option><option>WMS</option><option>WMTS</option></select>
       </div>
-      <ol class="ribbon-help"><li><strong>Marca las capas</strong> que quieras usar.</li><li><strong>Pulsa el icono de capas apiladas</strong> del mapa para mostrarlas.</li></ol>
+      <ol class="ribbon-help"><li><strong>Marcada = en el selector.</strong> Al añadirla también se activa; los fondos se sustituyen y las transparencias se acumulan.</li><li><strong>Activa = habilitada en el mapa.</strong> Usa el icono de capas apiladas para cambiarla. Puede no tener datos en esta zona o escala.</li></ol>
       <div id="backgrounds-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="backgrounds-tab"></div>
       <div id="overlays-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="overlays-tab" hidden></div>
       <div class="ribbon-footer"><p id="layer-count" role="status" aria-live="polite"></p><button id="close-ribbon" type="button">Cerrar y ver mapa</button></div>
@@ -324,13 +324,15 @@
   </details>
   <section class="map-stage" aria-label="Vista del mapa">
     <div id="map" role="region" aria-label="Mapa de España" tabindex="0"></div>
-    <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+    <div class="map-messages"><p id="tile-status" class="map-status" role="status" aria-live="polite" aria-atomic="true"></p><p id="map-status" class="map-status" role="status" aria-live="polite"></p></div>
     <p id="layer-feedback" class="layer-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
   </section>
 </main>
 
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="/leaflet-providersESP/dist/leaflet-providersESP.js"></script>
+    <script src="/leaflet-providersESP/js/layer-status.js"></script>
+    <script src="/leaflet-providersESP/js/address-search.js"></script>
     <script src="/leaflet-providersESP/js/map-app.js"></script>
     	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

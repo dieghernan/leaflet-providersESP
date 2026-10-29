@@ -24,6 +24,12 @@ button { margin-top: 8px; }
 #preview-status { display: block; margin-top: 5px; padding: 5px 7px; background: #e5f1eb; color: #215a3e; border-radius: 3px; font-weight: bold; }
 #preview-status:empty { display: none; }
 #preview-base-active { color: #215a3e; overflow-wrap: anywhere; }
+#preview-load-status { padding: 4px 6px; border-radius: 3px; background: #fff7dc; color: #604514; overflow-wrap: anywhere; }
+#preview-load-status:empty { display: none; }
+.preview-load-note { color: #555; font-size: 11px; }
+.preview-tile-status { position: absolute; top: 3px; left: 3px; z-index: 500; padding: 2px 5px; background: #fffffff2; color: #4a4a4a; border-radius: 3px; font-size: 11px; }
+.preview-tile-status[data-error="true"] { background: #fff0ed; color: #8b3026; }
+.preview-tile-status[hidden] { display: none; }
 .preview-code-block { margin-top: 7px; }
 .preview-code-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3px 8px; margin-bottom: 4px; }
 #preview-info .preview-code-heading h2, #preview-info .preview-code-heading button { margin: 0; }

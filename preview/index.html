@@ -326,6 +326,8 @@
     <details open>
       <summary>Capas activas y código</summary>
       <p id="preview-base-active"></p>
+      <p id="preview-load-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p class="preview-load-note">Una capa activa puede no tener datos en esta zona o escala.</p>
       <section class="preview-code-block" aria-labelledby="plugin-heading">
         <div class="preview-code-heading"><h2 id="plugin-heading">Con el plugin</h2><button id="preview-copy-plugin" type="button" aria-label="Copiar código con plugin">Copiar código con plugin</button></div>
         <pre tabindex="0" aria-label="Código con plugin"><code id="preview-plugin"></code></pre>
@@ -348,6 +350,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="/leaflet-providersESP/dist/leaflet-providersESP.js"></script>
+    <script src="/leaflet-providersESP/js/layer-status.js"></script>
     <script src="/leaflet-providersESP/js/preview.js"></script>
     	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

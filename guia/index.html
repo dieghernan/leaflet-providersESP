@@ -326,7 +326,8 @@ muestran información a partir de un nivel de zoom o dentro de su cobertura.</p>
 </code></pre></div></div>
 <p>El <a href="/leaflet-providersESP/visor/">visor</a> muestra un mapa a toda página con una
 franja colapsable. En las pestañas <strong>Fondos</strong> y <strong>Transparencias</strong>, busca y marca
-las capas que quieras incorporar al selector. Marcarlas no las muestra todavía.
+las capas que quieras incorporar al selector y mostrar directamente en el mapa.
+Un fondo nuevo sustituye al fondo visible; las transparencias se acumulan.
 La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.</p>
 <p>Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
 y activar o desactivar transparencias con el control estándar de Leaflet.
@@ -334,11 +335,19 @@ Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con <strong>×</strong>, Escape o un clic fuera.
 El número sobre el icono indica cuántas capas hay en el selector. La etiqueta
-<strong>Visible</strong> en el listado identifica las capas que están activas en el mapa.
-En móvil, <strong>Cerrar y ver mapa</strong> colapsa la franja sin cambiar tu selección.</p>
+<strong>Activa</strong> identifica una capa habilitada en el mapa; <strong>En el selector</strong> indica
+que está disponible, pero desactivada. Ninguna de las dos etiquetas garantiza
+que haya datos en la zona o escala actual. Los avisos <strong>Cargando</strong> y <strong>Error de
+carga</strong> describen las peticiones de teselas, tanto en el visor como en Preview.
+En móvil, la franja comienza cerrada. Puedes abrirla y usar <strong>Cerrar y ver mapa</strong>
+para colapsarla sin cambiar tu selección.</p>
 <p>El botón <strong>Localizarme</strong>, junto al zoom, solicita tu ubicación únicamente al
 pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
 <a href="/leaflet-providersESP/preview/">Preview</a>.</p>
+<p>La <strong>lupa</strong>, junto a los controles del mapa, abre la búsqueda de direcciones de
+CartoCiudad. Introduce calle, número y municipio, pulsa <strong>Buscar</strong> y elige un
+resultado para centrar el mapa. Puedes cerrar el formulario con <strong>×</strong>, Escape
+o un clic fuera; las capas seleccionadas se conservan.</p>
 <h2 id="compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</h2>
 <p>La API de este plugin es <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>. La de <strong>leaflet-providers</strong>
 es <code class="language-plaintext highlighter-rouge">L.tileLayer.provider()</code>. Puedes usar ambas en el mismo mapa; no necesitas
@@ -377,7 +386,7 @@ organismo antes de reutilizar sus mapas. La licencia MIT del código no sustituy
 las condiciones de los servicios cartográficos.</p>
 <p>La presencia de una capa en el catálogo no garantiza su disponibilidad. Consulta
 las <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">incidencias conocidas</a>
-y la <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md">auditoría de servicios</a>
+y la <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md">auditoría de servicios</a>
 para conocer las comprobaciones realizadas y sus fechas.</p>
 </div>
 			</article>
