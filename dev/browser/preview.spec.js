@@ -98,11 +98,13 @@ test('active indicators follow selections and empty search preserves the applied
 	await expect(indicator).not.toBeVisible();
 	const code = await page.locator('#preview-plugin').textContent();
 	await page.locator('#preview-search').fill('no-such-layer');
-	await expect(page.locator('#preview-empty')).toHaveText('No se han encontrado capas con ese nombre.');
+	await expect(page.locator('#preview-empty')).toContainText('No se han encontrado capas con ese nombre.');
 	await expect(page.locator('#preview-empty')).toBeVisible();
 	await expect(page.locator('#preview-count')).toHaveText(/^0 de \d+ capas$/);
 	await expect(page.locator('#preview-plugin')).toHaveText(code);
-	await page.locator('#preview-search').fill('');
+	await page.getByRole('button', { name: 'Borrar búsqueda' }).click();
+	await expect(page.locator('#preview-search')).toBeFocused();
+	await expect(page.locator('#preview-search')).toHaveValue('');
 	await expect(page.locator('#preview-empty')).not.toBeVisible();
 	await expect(gray).toBeChecked();
 });

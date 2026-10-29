@@ -60,6 +60,7 @@
 			entry.visible.textContent = active
 				? 'Activa'
 				: 'En el selector';
+			entry.opacityControl.hidden = !active;
 		}
 		const loading = enabled.filter((entry) => entry.load?.loading);
 		const failed = enabled.filter((entry) => entry.load?.error);
@@ -85,6 +86,7 @@
 			layer.setZIndex(entry.overlay
 				? 1
 				: 0);
+			layer.setOpacity(Number(entry.opacity.value) / 100);
 			if (!entry.overlay) {
 				for (const other of entries) {
 					const previous = registered.get(other.name);
@@ -138,10 +140,23 @@
 		const name = document.createElement('span'); name.textContent = entry.name;
 		const visible = document.createElement('small'); visible.className = 'layer-visible'; visible.id = 'membership-' + entries.indexOf(entry); visible.hidden = true; entry.visible = visible; input.setAttribute('aria-describedby', visible.id);
 		label.append(input, name, visible); entry.row = label;
+		const opacityControl = document.createElement('label'); opacityControl.className = 'layer-opacity'; opacityControl.hidden = true;
+		const opacity = document.createElement('input'); opacity.type = 'range'; opacity.min = '0'; opacity.max = '100'; opacity.step = '5'; opacity.value = String(Math.round((providerOpts(entry.name).options.opacity ?? 1) * 100));
+		opacity.setAttribute('aria-label', 'Opacidad de ' + entry.name);
+		const percentage = document.createElement('output'); percentage.textContent = opacity.value + '%';
+		opacity.setAttribute('aria-valuetext', percentage.textContent);
+		opacityControl.append('Opacidad ', opacity, percentage);
+		const item = document.createElement('div'); item.append(label, opacityControl);
+		entry.opacityControl = opacityControl; entry.opacity = opacity;
+		opacity.addEventListener('input', () => {
+			percentage.textContent = opacity.value + '%'; opacity.setAttribute('aria-valuetext', percentage.textContent);
+			registered.get(entry.name)?.setOpacity(Number(opacity.value) / 100);
+		});
 		document.getElementById(entry.overlay
 			? 'overlays-panel'
-			: 'backgrounds-panel').append(label);
+			: 'backgrounds-panel').append(item);
 		input.addEventListener('change', () => register(entry, true));
+		entry.item = item;
 	}
 	map.on('layeradd layerremove', renderLayerStates);
 	const ribbon = document.getElementById('viewer-controls');
@@ -151,7 +166,10 @@
 		document.querySelector('#viewer-controls summary').focus();
 	});
 	function filter() {
-		for (const entry of entries) entry.row.hidden = !normalize(entry.name).includes(normalize(search.value.trim())) || Boolean(service.value && entry.service !== service.value);
+		for (const entry of entries) {
+			entry.row.hidden = !normalize(entry.name).includes(normalize(search.value.trim())) || Boolean(service.value && entry.service !== service.value);
+			entry.item.hidden = entry.row.hidden;
+		}
 		const overlays = currentTab === 'overlays';
 		const count = entries.filter((entry) => entry.overlay === overlays && !entry.row.hidden).length;
 		document.getElementById('layer-count').textContent = count + (overlays

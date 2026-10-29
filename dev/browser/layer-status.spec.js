@@ -41,6 +41,11 @@ for (const mode of ['viewer', 'preview']) {
 			: 'IGNBase.Gris',
 		exact: true }).check();
 		await expect(status).toContainText('Error de carga: IGNBase.Gris');
+		if (!viewer) {
+			await expect(status).toHaveAttribute('data-state', 'error');
+			await page.getByText('Capas activas y código', { exact: true }).click();
+			await expect(status).toBeVisible();
+		}
 		await expect(map).toHaveAttribute('aria-busy', 'false');
 		if (viewer) {
 			await page.locator('.leaflet-control-layers-toggle').click();

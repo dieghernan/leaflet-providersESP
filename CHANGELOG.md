@@ -6,6 +6,8 @@
 
 ## Changed
 
+- The viewer offers keyboard-accessible opacity sliders with visible percentages for active layers. Preview displays clipboard feedback over the map, distinguishes loading and error notices visually and lets users clear an empty search.
+
 - Both map pages offer a reset action that reloads their initial state, clearing layer selections, map position, searches and markers without rebuilding Leaflet controls manually.
 
 - The viewer distinguishes active layers from layers only available in its selector and starts with its ribbon collapsed on mobile. Both map pages report tile loading and errors; Preview miniatures have their own status indicators. Empty images are not classified as missing coverage.

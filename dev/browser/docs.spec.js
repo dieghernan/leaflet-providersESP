@@ -1,6 +1,25 @@
 const { test, expect } = require('@playwright/test');
 const tile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=', 'base64');
 
+test('opacity supports keyboard input and preserves its value when a layer is added again', async({ page }) => {
+	await page.goto('/viewer.html');
+	await page.locator('#layer-search').fill('IGNBase.Todo');
+	const slider = page.getByRole('slider', { name: 'Opacidad de IGNBase.Todo',
+		exact: true });
+	await expect(slider).toHaveValue('100');
+	await slider.focus();
+	await page.keyboard.press('ArrowLeft');
+	await expect(slider).toHaveAttribute('aria-valuetext', '95%');
+	await expect(page.locator('.leaflet-layer').first()).toHaveCSS('opacity', '0.95');
+	const include = page.getByRole('checkbox', { name: 'Incluir IGNBase.Todo',
+		exact: true });
+	await include.uncheck();
+	await expect(slider).not.toBeVisible();
+	await include.check();
+	await expect(slider).toHaveValue('95');
+	await expect(page.locator('.leaflet-layer').first()).toHaveCSS('opacity', '0.95');
+});
+
 test.beforeEach(async({ page }, testInfo) => {
 	if (testInfo.project.name === 'minified') await page.route('**/providers.js', async(route) => route.fulfill({ response: await page.request.get('/providers.min.js') }));
 	await page.route('https://**/*', (route) => route.fulfill({ contentType: 'image/png',

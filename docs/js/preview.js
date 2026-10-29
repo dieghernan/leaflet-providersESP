@@ -28,6 +28,11 @@
 				? 'Cargando ' + loading.length + ' capas…'
 				: '';
 		const output = document.getElementById('preview-load-status');
+		output.dataset.state = failed.length
+			? 'error'
+			: loading.length
+				? 'loading'
+				: 'ready';
 		if (output.textContent !== message) output.textContent = message;
 	}
 	const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -172,6 +177,9 @@
 		}
 	}
 	search.addEventListener('input', filter);
+	document.getElementById('preview-clear-search').addEventListener('click', () => {
+		search.value = ''; filter(); search.focus();
+	});
 	function readHash() {
 		search.value = new URLSearchParams(location.hash.slice(1)).get('filter') || '';
 		filter();

@@ -4,10 +4,10 @@
   <section id="preview-info" aria-label="Código de las capas activas">
     <div class="preview-title-row"><h1><a href="{{ '/' | relative_url }}">leaflet-providersESP</a> · Preview</h1><button type="button" data-reset-map title="Recarga la página y restablece las capas, la búsqueda y el mapa">Restablecer vista inicial</button></div>
     <p>Miniaturas de todas las capas disponibles, sincronizadas con el mapa.</p>
+    <p id="preview-load-status" role="status" aria-live="polite" aria-atomic="true"></p>
     <details open>
       <summary>Capas activas y código</summary>
       <p id="preview-base-active"></p>
-      <p id="preview-load-status" role="status" aria-live="polite" aria-atomic="true"></p>
       <p class="preview-load-note">Una capa activa puede no tener datos en esta zona o escala.</p>
       <section class="preview-code-block" aria-labelledby="plugin-heading">
         <div class="preview-code-heading"><h2 id="plugin-heading">Con el plugin</h2><button id="preview-copy-plugin" type="button" aria-label="Copiar código con plugin">Copiar código con plugin</button></div>
@@ -18,13 +18,13 @@
         <pre tabindex="0" aria-label="Código sin plugin"><code id="preview-native"></code></pre>
       </section>
     </details>
-    <span id="preview-status" role="status" aria-live="polite" aria-atomic="true"></span>
   </section>
   <aside id="preview-layers" aria-label="Capas disponibles">
     <label for="preview-search">Buscar capa</label>
     <input id="preview-search" type="search" placeholder="IGN, PNOA, IDErioja…">
     <p id="preview-count" role="status" aria-live="polite"></p>
-    <p id="preview-empty" role="status" aria-live="polite" hidden>No se han encontrado capas con ese nombre.</p>
+    <div id="preview-empty" hidden><p role="status" aria-live="polite">No se han encontrado capas con ese nombre.</p><p>Prueba con otro nombre o borra la búsqueda para ver todas las capas.</p><button id="preview-clear-search" type="button">Borrar búsqueda</button></div>
     <div id="preview-list"></div>
   </aside>
+  <span id="preview-status" role="status" aria-live="polite" aria-atomic="true"></span>
 </main>
