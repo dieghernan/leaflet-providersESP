@@ -119,6 +119,15 @@ issues, including `Copernicus.RiparianGreen`. The
 [service audit](dev/audit/capabilities-audit.md) records dated checks; inclusion in the
 catalog does not guarantee that a remote service is currently available.
 
+## Webmentions
+
+After each successful deployment, the `Send outgoing Webmentions` workflow
+checks external links in published page content and sends mentions to
+destinations that advertise a compatible endpoint. It uses the HTML built from
+`docs/` and stores delivery state in the `webmention-state` branch to avoid
+repeated submissions while the content is unchanged. Failed requests are retried
+on later runs. The workflow can also be run manually from GitHub Actions.
+
 ## Contribute
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development commands, tests and how to
