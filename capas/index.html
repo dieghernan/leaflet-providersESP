@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+    <meta charset="utf-8">
+    <!-- Chulapa Jekyll Theme - v2.2.1 (development) -->
+    <!-- MIT License -->
+    <!-- Docs: https://dieghernan.github.io/chulapa -->
+    <!-- Repo: https://github.com/dieghernan/chulapa -->
+    <!-- Page build 2026-10-29 -->
+    <!-- Jekyll Version 4.4.1 -->
+    <!-- Google structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://dieghernan.github.io/leaflet-providersESP/capas/",
+        "name": "Referencia de capas",
+        "description": "Qué representa cada capa y qué debes tener en cuenta al utilizarla - Nombres, contenido y limitaciones de las capas de leaflet-providersESP, agrupadas por proveedor.",
+        "headline": "Referencia de capas",
+        "image": "https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "dieghernan",
+          "url": "https://dieghernan.github.io/",
+          "sameAs": [
+            "https://github.com/dieghernan",
+            "https://orcid.org/0000-0001-8457-4658",
+            "https://fosstodon.org/@dhernangomez",
+            "https://bsky.app/profile/dieghernan.bsky.social",
+            "https://x.com/dhernangomez",
+            "https://stackoverflow.com/users/7877917/dieghernan"
+          ]
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "dieghernan",
+          "url": "https://dieghernan.github.io/",
+          "image": "https://dieghernan.github.io/assets/img/site/avatar.png"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://dieghernan.github.io/leaflet-providersESP/capas/#breadcrumb",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "@id": "https://dieghernan.github.io/leaflet-providersESP/capas/#breadcrumb-1",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://dieghernan.github.io/leaflet-providersESP/"
+          },{
+            "@type": "ListItem",
+            "@id": "https://dieghernan.github.io/leaflet-providersESP/capas/#breadcrumb-2",
+            "position": 2,
+            "item": "https://dieghernan.github.io/leaflet-providersESP/capas/",
+            "name": "Referencia de capas"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "image": "https://dieghernan.github.io/assets/img/site/avatar.png",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Madrid, Spain"
+        },
+        "description": "Site author",
+        "name": "dieghernan",
+        "url": "https://dieghernan.github.io/leaflet-providersESP/",
+        "sameAs": [
+          "https://dieghernan.github.io/",
+          "https://github.com/dieghernan",
+          "https://orcid.org/0000-0001-8457-4658",
+          "https://fosstodon.org/@dhernangomez",
+          "https://bsky.app/profile/dieghernan.bsky.social",
+          "https://x.com/dhernangomez",
+          "https://stackoverflow.com/users/7877917/dieghernan"
+        ]
+      }
+    </script>
+    <title>Referencia de capas | Leaflet-providersESP</title>
+    <link rel="canonical" href="https://dieghernan.github.io/leaflet-providersESP/capas/">
+    <!-- Atom feed -->
+    <link href="https://dieghernan.github.io/leaflet-providersESP/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed Leaflet-providersESP" >
+    <!-- RSS 2.0 feed -->
+    <link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" type="application/rss+xml" rel="alternate" title="RSS 2.0 feed Leaflet-providersESP" >
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="dieghernan" >
+    <meta name="copyright" content="dieghernan" >
+    <meta name="description" content="Qué representa cada capa y qué debes tener en cuenta al utilizarla - Nombres, contenido y limitaciones de las capas de leaflet-providersESP, agrupadas por proveedor.">
+    <meta name="thumbnail" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg" >
+    <meta name="robots" content="index, follow">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Referencia de capas | Leaflet-providersESP" >
+    <meta property="og:site_name" content="Leaflet-providersESP" >
+    <meta property="og:url" content="https://dieghernan.github.io/leaflet-providersESP/capas/" >
+    <meta property="og:type" content="website" >
+    <meta property="og:description" content="Qué representa cada capa y qué debes tener en cuenta al utilizarla - Nombres, contenido y limitaciones de las capas de leaflet-providersESP, agrupadas por proveedor." >
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg" >
+    <meta property="og:image:alt" content="Leaflet-providersESP. Cartografía pública de España para mapas Leaflet, con un mapa de la península ibérica." >
+    <meta property="og:image:width" content="1200" >
+    <meta property="og:image:height" content="630" >
+    <meta property="og:image:type" content="image/jpeg" >
+    <!-- Twitter/X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Qué representa cada capa y qué debes tener en cuenta al utilizarla - Nombres, contenido y limitaciones de las capas de leaflet-providersESP, agrupadas por proveedor.">
+    <meta name="twitter:site" content="@dhernangomez" >
+    <meta name="twitter:creator" content="@dhernangomez" >
+    <!-- start custom head snippets -->
+<!-- this script is inserted before the css stylesheet -->
+<!-- end custom head snippets -->
+    <!-- CSS -->
+    <!-- Preconnect with Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Fontawesome-->
+    <!-- v6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <link rel="preload" href="/leaflet-providersESP/assets/js/chulapa_script.js" as="script" >
+    <link rel="preload" href="/leaflet-providersESP/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
+    <!-- Theme css (Bootstrap included) -->
+    <link rel="stylesheet" id="maincss" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/main.css" >
+    <!-- Highlighter -->
+    <link id="csshigh" rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/highlighter.css" >
+    <!-- Custom css -->
+    <link rel="stylesheet" href="https://dieghernan.github.io/leaflet-providersESP/assets/css/custom.css" >
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7DT123587"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B7DT123587');
+    </script>
+    <link rel="describedby" type="text/plain" href="/leaflet-providersESP/llms.txt">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="c23b83bb-5f33-4256-a5b5-fbc59c1c7ae8" data-domains="dieghernan.github.io"></script>
+<!-- Author identity and incoming Webmention discovery -->
+<link rel="author" href="https://dieghernan.github.io/">
+<link rel="me" href="https://github.com/dieghernan">
+<link rel="me" href="https://fosstodon.org/@dhernangomez">
+<meta name="fediverse:creator" content="@dhernangomez@fosstodon.org">
+<link rel="webmention" href="https://webmention.io/dieghernan.github.io/webmention">
+<link rel="pingback" href="https://webmention.io/dieghernan.github.io/xmlrpc">
+<link rel="icon" type="image/svg+xml" href="/leaflet-providersESP/assets/icon/favicon.svg">
+<meta name="twitter:title" content="Referencia de capas | Leaflet-providersESP">
+<meta name="twitter:image" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg">
+<meta name="twitter:image:alt" content="Leaflet-providersESP. Cartografía pública de España para mapas Leaflet, con un mapa de la península ibérica.">
+<!-- start custom head snippets -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/site.webmanifest">
+<link rel="mask-icon" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/safari-pinned-tab.svg" color="#ff0000">
+<link rel="shortcut icon" href="https://dieghernan.github.io/leaflet-providersESP/assets/icon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="leaflet-providersESP">
+<meta name="application-name" content="leaflet-providersESP">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="https://dieghernan.github.io/leaflet-providersESP/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#22272e">
+<!-- end custom head snippets -->
+<link rel="stylesheet" href="/leaflet-providersESP/assets/css/layer-reference.css">
+</head>
+<body class="d-flex flex-column" id="body">
+	<a class="sr-only sr-only-focusable chulapa-skip-link" href="#chulapa-content">Skip to content</a>
+	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
+	<div class="container-fluid mx-md-2">
+			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/"><i class="fas fa-home" aria-hidden="true" style="color: white"></i><span class="sr-only">Inicio</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav ml-auto"><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/guia/">Guía de uso</a>
+					</li><li class="nav-item">
+						<a class="nav-link  active font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/capas/" aria-current="page">Capas<span class="sr-only">(current)</span></a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Preview</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/visor/">Visor</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">Cambios</a>
+					</li><li class="nav-item">
+						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP">GitHub</a>
+					</li>
+			</ul>
+			</div></div>
+</nav>
+			<div id="chulapa-content" tabindex="-1"></div><div class="h-entry d-flex flex-column flex-fill">
+    <a class="u-url d-none" href="https://dieghernan.github.io/leaflet-providersESP/capas/">Invisible link to canonical for Microformats</a>
+	<main class="d-flex flex-column flex-fill">
+	<header class="text-center header-chulapa"><div class="container-lg mt-2">
+       <div class="row">
+           <div class="col-lg-8 offset-lg-2">
+           <h1 class="p-name">Referencia de capas</h1><p class="lead chulapa-subtitle p-summary">Qué representa cada capa y qué debes tener en cuenta al utilizarla</p>
+           <hr class="mb-0">
+			</div>
+		</div>
+	</div>
+</header>
+	<div class="container-lg pb-3 flex-fill">
+		<div class="row pt-2">
+			<div class="col-lg-2 mt-lg-3 small"></div>
+			<article id="maincontent" class="col-lg-8 mt-3">
+			<div class="e-content"><p>Consulta aquí los nombres que acepta <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>, su contenido y
+sus limitaciones. Para comparar imágenes y copiar código, abre
+<a href="/leaflet-providersESP/preview/">Preview</a>. Para combinar capas, usa el
+<a href="/leaflet-providersESP/visor/">visor</a>.</p>
+<ul id="markdown-toc">
+ <li><a href="#cómo-leer-esta-referencia" id="markdown-toc-cómo-leer-esta-referencia">Cómo leer esta referencia</a></li>
+ <li><a href="#iderioja" id="markdown-toc-iderioja">IDErioja</a></li>
+ <li><a href="#ignbase" id="markdown-toc-ignbase">IGNBase</a></li>
+ <li><a href="#mdt" id="markdown-toc-mdt">MDT</a></li>
+ <li><a href="#pnoa" id="markdown-toc-pnoa">PNOA</a></li>
+ <li><a href="#ocupacionsuelo" id="markdown-toc-ocupacionsuelo">OcupacionSuelo</a></li>
+ <li><a href="#lidar" id="markdown-toc-lidar">LiDAR</a></li>
+ <li><a href="#mtn" id="markdown-toc-mtn">MTN</a></li>
+ <li><a href="#geofisica" id="markdown-toc-geofisica">Geofisica</a></li>
+ <li><a href="#vigilanciavolcanica" id="markdown-toc-vigilanciavolcanica">VigilanciaVolcanica</a></li>
+ <li><a href="#caminodesantiago" id="markdown-toc-caminodesantiago">CaminoDeSantiago</a></li>
+ <li><a href="#catastro" id="markdown-toc-catastro">Catastro</a></li>
+ <li><a href="#redtransporte" id="markdown-toc-redtransporte">RedTransporte</a></li>
+ <li><a href="#cartociudad" id="markdown-toc-cartociudad">Cartociudad</a></li>
+ <li><a href="#nombresgeograficos" id="markdown-toc-nombresgeograficos">NombresGeograficos</a></li>
+ <li><a href="#unidadesadm" id="markdown-toc-unidadesadm">UnidadesAdm</a></li>
+ <li><a href="#hidrografia" id="markdown-toc-hidrografia">Hidrografia</a></li>
+ <li><a href="#militar" id="markdown-toc-militar">Militar</a></li>
+ <li><a href="#adif" id="markdown-toc-adif">ADIF</a></li>
+ <li><a href="#limitesmaritimos" id="markdown-toc-limitesmaritimos">LimitesMaritimos</a></li>
+ <li><a href="#copernicus" id="markdown-toc-copernicus">Copernicus</a></li>
+ <li><a href="#parquesnaturales" id="markdown-toc-parquesnaturales">ParquesNaturales</a></li>
+</ul>
+<h2 id="cómo-leer-esta-referencia">Cómo leer esta referencia</h2>
+<ul>
+ <li>Los nombres sin variante seleccionan una capa predeterminada. Cuando dos nombres
+aparecen en la misma fila, representan la misma configuración.</li>
+ <li><strong>Zoom mínimo</strong> significa el mínimo configurado en el plugin. No garantiza que
+haya datos visibles en todo el territorio a esa escala. Si no se indica, el
+plugin no fija un mínimo específico para esa capa.</li>
+ <li><strong>Zoom nativo 20</strong> significa que el servicio WMTS proporciona teselas hasta ese
+nivel. Al ampliar más, Leaflet reutiliza esas teselas si la aplicación lo permite;
+no obtiene más detalle. Este límite no se aplica a las variantes WMS.</li>
+ <li>Los rectángulos de cobertura configurados no describen la huella real de los
+datos. Una imagen vacía puede indicar falta de datos en esa zona o escala.</li>
+ <li>Las capas son imágenes de servicios remotos: no descargan entidades vectoriales.
+Conserva la atribución y consulta las condiciones y metadatos de cada organismo.</li>
+</ul>
+<p>Las observaciones de disponibilidad proceden de las comprobaciones del <strong>27 y 28
+de octubre de 2026</strong>. No son una monitorización en tiempo real. Puedes consultar
+la <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md">auditoría de servicios</a>
+y las <a href="https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/additional-layers-audit.md">comprobaciones de capas adicionales</a>.</p>
+<div class="layer-reference">
+ <h2 id="iderioja">IDErioja</h2>
+ <p>Cartografía de <a href="https://www.iderioja.org/">IDErioja</a>, servida como teselas XYZ.
+Las variantes se comprobaron alrededor de Logroño. No debe suponerse que ofrecen
+el mismo contenido o detalle fuera de La Rioja. No hay un documento OGC de
+capacidades para este servicio.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IDErioja</code>, <code class="language-plaintext highlighter-rouge">IDErioja.Base</code></td>
+       <td>Mapa base de IDErioja.</td>
+       <td>Predeterminado; detalle según la cobertura del servicio.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IDErioja.Relieve</code></td>
+       <td>Mapa base con representación del relieve.</td>
+       <td>Fondo cartográfico; no proporciona valores de elevación consultables.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IDErioja.Claro</code></td>
+       <td>Versión clara del mapa base.</td>
+       <td>Estilo de fondo para superponer información.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IDErioja.Oscuro</code></td>
+       <td>Versión oscura del mapa base.</td>
+       <td>Estilo cartográfico oscuro; no cambia el tema de la aplicación.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="ignbase">IGNBase</h2>
+ <p>Mapa base del IGN. <a href="https://www.ign.es/wmts/ign-base?service=WMTS&amp;request=GetCapabilities">Capacidades del servicio WMTS</a>.
+Todas las variantes tienen <strong>zoom nativo 20</strong>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IGNBase</code>, <code class="language-plaintext highlighter-rouge">IGNBase.Todo</code></td>
+       <td>Mapa base completo del IGN.</td>
+       <td>Fondo predeterminado.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IGNBase.Simplificado</code></td>
+       <td>Callejero simplificado.</td>
+       <td>Reduce el contenido representado frente al mapa completo.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IGNBase.Gris</code></td>
+       <td>Mapa base en tonos grises.</td>
+       <td>Fondo neutro para combinar con capas temáticas.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IGNBase.TodoNoFondo</code></td>
+       <td>Contenido del mapa base sin su fondo cartográfico.</td>
+       <td>Zoom mínimo 4; conserva la configuración de imagen de este producto.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">IGNBase.Orto</code></td>
+       <td>Cartografía del IGN preparada para acompañar ortofotografía.</td>
+       <td>Zoom mínimo 5; no sustituye a la ortofoto de PNOA.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="mdt">MDT</h2>
+ <p>Representaciones del terreno de IDEE/IGN. <a href="https://servicios.idee.es/wmts/mdt?service=WMTS&amp;request=GetCapabilities">WMTS</a>
+y <a href="https://servicios.idee.es/wms-inspire/mdt?service=WMS&amp;request=GetCapabilities">WMS</a>.
+Las imágenes de elevación y relieve no son una descarga del modelo numérico.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">MDT</code>, <code class="language-plaintext highlighter-rouge">MDT.Elevaciones</code></td>
+       <td>Representación cartográfica de elevaciones.</td>
+       <td>WMTS; zoom nativo 20.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">MDT.Relieve</code></td>
+       <td>Representación del relieve del terreno.</td>
+       <td>WMTS; zoom nativo 20.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">MDT.CurvasNivel</code></td>
+       <td>Curvas de nivel.</td>
+       <td>WMS; zoom mínimo 12.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">MDT.SpotElevation</code></td>
+       <td>Puntos de cota.</td>
+       <td>WMS; zoom mínimo 14.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="pnoa">PNOA</h2>
+ <p>Ortofotografía del Plan Nacional de Ortofotografía Aérea.
+<a href="https://www.ign.es/wmts/pnoa-ma?service=WMTS&amp;request=GetCapabilities">WMTS</a>
+y <a href="https://www.ign.es/wms-inspire/pnoa-ma?service=WMS&amp;request=GetCapabilities">WMS</a>.
+«Máxima actualidad» no implica fotografía en tiempo real ni una fecha de vuelo
+única para todas las zonas.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">PNOA</code>, <code class="language-plaintext highlighter-rouge">PNOA.MaximaActualidad</code></td>
+       <td>Ortofoto de máxima actualidad disponible en el servicio.</td>
+       <td>WMTS; zoom mínimo 4 y nativo 20. Fecha y resolución según la zona.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">PNOA.Mosaico</code></td>
+       <td>Elementos del mosaico de ortofotografía.</td>
+       <td>WMS; zoom mínimo 4. No es la misma capa que la imagen continua de máxima actualidad.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="ocupacionsuelo">OcupacionSuelo</h2>
+ <p>Cartografía de ocupación y uso del suelo de IDEE.
+<a href="https://servicios.idee.es/wmts/ocupacion-suelo?service=WMTS&amp;request=GetCapabilities">Capacidades WMTS</a>.
+Zoom nativo 20; las clases representadas dependen del producto y su fecha de referencia.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">OcupacionSuelo</code>, <code class="language-plaintext highlighter-rouge">OcupacionSuelo.Ocupacion</code></td>
+       <td>Cobertura u ocupación del suelo.</td>
+       <td>Describe la cobertura representada por el servicio, no su evolución en tiempo real.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">OcupacionSuelo.Usos</code></td>
+       <td>Usos del suelo.</td>
+       <td>El uso y la cobertura son conceptos distintos; consulta la leyenda del producto.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="lidar">LiDAR</h2>
+ <p><a href="https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&amp;request=GetCapabilities">Servicio WMTS LiDAR</a>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">LiDAR</code></td>
+       <td>Visualización del modelo digital de superficie derivado de LiDAR.</td>
+       <td>Zoom nativo 20. Es una imagen cartográfica, no una nube de puntos ni una descarga de alturas.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="mtn">MTN</h2>
+ <p><a href="https://ign.es/wmts/mapa-raster?service=WMTS&amp;request=GetCapabilities">Mapa ráster del IGN</a>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">MTN</code></td>
+       <td>Mapa Topográfico Nacional en formato ráster.</td>
+       <td>Zoom mínimo 4 y nativo 20. La escala y edición del mapa condicionan el detalle.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="geofisica">Geofisica</h2>
+ <p><a href="https://www.ign.es/wms-inspire/geofisica?service=WMS&amp;request=GetCapabilities">Servicio WMS de geofísica del IGN</a>.
+Las capas de eventos y las de peligrosidad representan conceptos diferentes.
+Las primeras cambian con los datos del servicio; las segundas son productos de
+referencia y no una predicción de un terremoto concreto.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica</code>, <code class="language-plaintext highlighter-rouge">Geofisica.Terremotos10dias</code></td>
+       <td>Terremotos de los últimos 10 días.</td>
+       <td>Ventana temporal móvil; puede no haber eventos en la vista.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.Terremotos30dias</code></td>
+       <td>Terremotos de los últimos 30 días.</td>
+       <td>Ventana temporal móvil.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.Terremotos365dias</code></td>
+       <td>Terremotos de los últimos 365 días.</td>
+       <td>Ventana temporal móvil.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.ObservedEvents</code></td>
+       <td>Eventos observados de la capa INSPIRE del servicio.</td>
+       <td>Su alcance lo define el servicio; no equivale a una ventana de 10, 30 o 365 días.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.EstacionesSismicas</code></td>
+       <td>Estaciones sísmicas de velocidad.</td>
+       <td>Localización de instrumentación, no terremotos.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2002</code></td>
+       <td>Áreas de peligrosidad sísmica del mapa NCSE-02 de 2002.</td>
+       <td>Producto de 2002; no es el mapa de 2015.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.HazardArea</code></td>
+       <td>Alias de <code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2002</code>.</td>
+       <td>Conservado por compatibilidad; prefiere el nombre con el año.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2015PGA</code></td>
+       <td>Áreas de peligrosidad 2015, PGA-475.</td>
+       <td>Interpreta sus valores con la leyenda y documentación del producto.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2015Isolineas</code></td>
+       <td>Isolíneas de peligrosidad 2015, PGA-475.</td>
+       <td>Representación por isolíneas del producto de 2015.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Geofisica.HazardArea2015Intensidad</code></td>
+       <td>Áreas de peligrosidad 2015, intensidad-475.</td>
+       <td>Representa intensidad, no aceleración PGA.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="vigilanciavolcanica">VigilanciaVolcanica</h2>
+ <p><a href="https://wms-volcanologia.ign.es/volcanologia?service=WMS&amp;request=GetCapabilities">Servicio WMS de volcanología del IGN</a>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">VigilanciaVolcanica</code>, <code class="language-plaintext highlighter-rouge">VigilanciaVolcanica.ErupcionesHistoricas</code></td>
+       <td>Erupciones históricas registradas en el servicio.</td>
+       <td>Cobertura localizada; comprobada alrededor de La Palma. No es un sistema de alertas en tiempo real.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="caminodesantiago">CaminoDeSantiago</h2>
+ <p><a href="https://www.ign.es/wms-inspire/camino-santiago?service=WMS&amp;request=GetCapabilities">Servicio WMS del Camino de Santiago</a>.
+Cada variante muestra la familia de itinerarios indicada. No todas tienen
+contenido en toda España; para información práctica de una ruta, consulta a su organismo responsable.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago</code>, <code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminoFrances</code></td>
+       <td>Camino Francés.</td>
+       <td>Itinerario predeterminado.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosFrancia</code></td>
+       <td>Caminos de Francia.</td>
+       <td>Cobertura de los itinerarios recogidos en el servicio.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosGalicia</code></td>
+       <td>Caminos de Galicia.</td>
+       <td>Cobertura regional.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosDelNorte</code></td>
+       <td>Caminos del norte.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosAndaluces</code></td>
+       <td>Caminos andaluces.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosCentro</code></td>
+       <td>Caminos del centro.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosEste</code></td>
+       <td>Caminos del este.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosNordeste</code></td>
+       <td>Caminos del nordeste.</td>
+       <td>Nombre recomendado para la capa actual <code class="language-plaintext highlighter-rouge">caminos_nordeste</code>.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosCatalanes</code></td>
+       <td>Alias de <code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosNordeste</code>.</td>
+       <td>Compatibilidad: ya no solicita la antigua capa <code class="language-plaintext highlighter-rouge">caminos_catalanes</code>.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosSureste</code></td>
+       <td>Caminos del sureste.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosInsulares</code></td>
+       <td>Caminos insulares.</td>
+       <td>Cobertura insular según el servicio.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">CaminoDeSantiago.CaminosPortugueses</code></td>
+       <td>Caminos portugueses.</td>
+       <td>Cobertura de esa familia de itinerarios.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="catastro">Catastro</h2>
+ <p><a href="https://ovc.catastro.meh.es/cartografia/INSPIRE/spadgcwms.aspx?service=WMS&amp;request=GetCapabilities">WMS INSPIRE de Catastro</a>
+y <a href="https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?service=WMS&amp;request=GetCapabilities">WMS clásico</a>.
+La cobertura es la ofrecida por estos servicios. La imagen WMS no permite
+seleccionar una parcela ni obtener por sí sola su ficha catastral.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro</code>, <code class="language-plaintext highlighter-rouge">Catastro.CadastralParcel</code></td>
+       <td>Parcelas catastrales INSPIRE.</td>
+       <td>Zoom mínimo 10; WMS 1.3.0.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.Catastro</code></td>
+       <td>Cartografía catastral del servicio clásico.</td>
+       <td>Zoom mínimo 1; WMS 1.1.1. El servicio decide qué detalle muestra a cada escala.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.Parcela</code></td>
+       <td>Parcelas del servicio clásico.</td>
+       <td>Zoom mínimo 15; WMS 1.1.1.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.CadastralZoning</code></td>
+       <td>Zonificación catastral INSPIRE.</td>
+       <td>Zoom mínimo 10.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.Address</code></td>
+       <td>Direcciones INSPIRE de Catastro.</td>
+       <td>Zoom mínimo 10; no es la capa de direcciones de Cartociudad.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.Building</code></td>
+       <td>Edificios INSPIRE.</td>
+       <td>Zoom mínimo 10.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.BuildingPart</code></td>
+       <td>Partes de edificios INSPIRE.</td>
+       <td>Zoom mínimo 10.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.AdministrativeBoundary</code></td>
+       <td>Límites administrativos del servicio catastral.</td>
+       <td>Zoom mínimo 10; fuente distinta de UnidadesAdm.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Catastro.AdministrativeUnit</code></td>
+       <td>Unidades administrativas del servicio catastral.</td>
+       <td>Zoom mínimo 10.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="redtransporte">RedTransporte</h2>
+ <p><a href="https://servicios.idee.es/wms-inspire/transportes?service=WMS&amp;request=GetCapabilities">Servicio WMS de transportes de IDEE</a>.
+Las capas representan infraestructuras, no tráfico, horarios ni disponibilidad
+en tiempo real. Los elementos pequeños requieren acercarse a su ubicación.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte</code>, <code class="language-plaintext highlighter-rouge">RedTransporte.Carreteras</code></td>
+       <td>Tramos de la red de carreteras.</td>
+       <td>Representación de la red, no un servicio de cálculo de rutas.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.Ferroviario</code></td>
+       <td>Tramos de la red ferroviaria.</td>
+       <td>No incluye información operativa en tiempo real.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.Aerodromo</code></td>
+       <td>Áreas de aeródromos.</td>
+       <td>Cobertura localizada.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.Pistas</code></td>
+       <td>Áreas de pistas de aeródromos.</td>
+       <td>Detalle aeroportuario; cobertura localizada.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.CallesRodaje</code></td>
+       <td>Áreas de calles de rodaje.</td>
+       <td>Detalle aeroportuario; cobertura localizada.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.Plataformas</code></td>
+       <td>Áreas de plataformas aeroportuarias.</td>
+       <td>Detalle aeroportuario; cobertura localizada.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.TransporteCable</code></td>
+       <td>Enlaces de transporte por cable.</td>
+       <td>Solo donde el servicio recoge estos elementos.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.AreaServicio</code></td>
+       <td>Áreas de servicio de la red viaria.</td>
+       <td>Elementos localizados, no un inventario de servicios comerciales.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.EstacionesFerroviario</code></td>
+       <td>Áreas de estaciones ferroviarias.</td>
+       <td>No muestra salidas, llegadas ni horarios.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">RedTransporte.Puertos</code></td>
+       <td>Áreas portuarias.</td>
+       <td>Cobertura localizada en puertos.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="cartociudad">Cartociudad</h2>
+ <p><a href="https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&amp;request=GetCapabilities">Servicio WMS de direcciones y códigos postales</a>.
+Los umbrales se comprobaron en Madrid y Logroño con teselas estándar de 256 × 256
+píxeles. El renderizado depende de la escala; parámetros o tamaños de tesela
+distintos pueden modificar lo que se ve.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Cartociudad</code>, <code class="language-plaintext highlighter-rouge">Cartociudad.CodigosPostales</code></td>
+       <td>Representación de códigos postales.</td>
+       <td>Zoom mínimo 11; las muestras en zoom 9 y 10 eran transparentes. No es una descarga de polígonos postales.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Cartociudad.Direcciones</code></td>
+       <td>Direcciones de Cartociudad.</td>
+       <td>Zoom mínimo 17; las muestras en zoom 15 y 16 eran transparentes. No es un geocodificador.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="nombresgeograficos">NombresGeograficos</h2>
+ <p><a href="https://www.ign.es/wms-inspire/ngbe?service=WMS&amp;request=GetCapabilities">Servicio WMS de nombres geográficos del IGN</a>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">NombresGeograficos</code></td>
+       <td>Topónimos de la capa INSPIRE de nombres geográficos.</td>
+       <td>Zoom mínimo 6. La colocación de etiquetas depende del servicio y la escala.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="unidadesadm">UnidadesAdm</h2>
+ <p><a href="https://www.ign.es/wms-inspire/unidades-administrativas?service=WMS&amp;request=GetCapabilities">Servicio WMS de unidades administrativas del IGN</a>.
+La capa histórica se sirve por separado; el plugin no añade un selector temporal.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">UnidadesAdm</code>, <code class="language-plaintext highlighter-rouge">UnidadesAdm.Limites</code></td>
+       <td>Límites administrativos.</td>
+       <td>Representa líneas de límite, no las superficies de las unidades.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">UnidadesAdm.LimitesHistoricos</code></td>
+       <td>Límites administrativos históricos.</td>
+       <td>Consulta los metadatos del servicio para interpretar su referencia temporal.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">UnidadesAdm.Unidades</code></td>
+       <td>Unidades administrativas.</td>
+       <td>Representa las unidades del servicio; no sustituye a una descarga de sus geometrías.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="hidrografia">Hidrografia</h2>
+ <p><a href="https://servicios.idee.es/wms-inspire/hidrografia?service=WMS&amp;request=GetCapabilities">Servicio WMS de hidrografía de IDEE</a>.
+Subcuencas usa un <a href="https://gis.miteco.gob.es/geoserver/agua/subcuencas/wms?service=WMS&amp;request=GetCapabilities">servicio específico de MITECO</a>.
+Son capas de referencia hidrográfica, no mediciones de caudal o estado del agua
+en tiempo real. La presencia de elementos y su detalle varían con la zona y escala.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia</code>, <code class="language-plaintext highlighter-rouge">Hidrografia.MasaAgua</code></td>
+       <td>Masas de agua.</td>
+       <td>Representación de elementos hidrográficos.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.Cuencas</code></td>
+       <td>Cuencas hidrográficas.</td>
+       <td>Delimitaciones de cuencas del servicio IDEE.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.Subcuencas</code></td>
+       <td>Subcuencas de los cauces de la red hidrográfica básica.</td>
+       <td>Servicio MITECO distinto del resto de variantes.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.POI</code></td>
+       <td>Puntos de interés hidrográfico.</td>
+       <td>Solo donde existen elementos en el servicio.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.ManMade</code></td>
+       <td>Objetos artificiales de la hidrografía.</td>
+       <td>Zoom mínimo 10.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.LineaCosta</code></td>
+       <td>Límite entre tierra y agua.</td>
+       <td>No equivale a los límites marítimos de la capa LimitesMaritimos.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.Rios</code></td>
+       <td>Red hidrográfica.</td>
+       <td>Zoom mínimo 6.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Hidrografia.Humedales</code></td>
+       <td>Humedales.</td>
+       <td>Cobertura localizada según el inventario del servicio.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="militar">Militar</h2>
+ <p><a href="https://wms-defensa.idee.es/mapas?service=WMS&amp;request=GetCapabilities">Servicio WMS de cartografía militar</a>.
+Cada variante representa una serie cartográfica. Su cobertura, edición y detalle
+dependen de esa serie; ampliar la imagen no aumenta el detalle de origen.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Militar</code>, <code class="language-plaintext highlighter-rouge">Militar.CEGET1M</code></td>
+       <td>Cartografía de la serie CEGET 1M.</td>
+       <td>Consulta la cobertura y edición de la serie.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Militar.CEGETM7814</code></td>
+       <td>Cartografía de la serie CEGET M7814.</td>
+       <td>Cobertura y detalle propios de esa serie.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Militar.CEGETM7815</code></td>
+       <td>Cartografía de la serie CEGET M7815.</td>
+       <td>Cobertura y detalle propios de esa serie.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Militar.CEGETM682</code></td>
+       <td>Cartografía de la serie CEGET M682.</td>
+       <td>Cobertura y detalle propios de esa serie.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Militar.CECAF1M</code></td>
+       <td>Cartografía de la serie CECAF CNV 1M.</td>
+       <td>Producto distinto de las series CEGET.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="adif">ADIF</h2>
+ <p>El servicio configurado es <code class="language-plaintext highlighter-rouge">http://ideadif.adif.es/services/wms</code>.
+Las peticiones HTTP y HTTPS devolvieron <strong>403</strong> en la auditoría del 27 de octubre
+de 2026. No se pudo verificar su contenido; eso no demuestra que se haya retirado.
+Además, la URL HTTP configurada puede quedar bloqueada como contenido mixto en
+una página HTTPS. Las configuraciones se conservan, pero no se garantiza su uso.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa según la configuración</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">ADIF</code>, <code class="language-plaintext highlighter-rouge">ADIF.Vias</code></td>
+       <td>Tramos de la red ferroviaria de ADIF.</td>
+       <td>Servicio no verificado; respuesta 403 en la auditoría.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">ADIF.Nodos</code></td>
+       <td>Nodos de la red ferroviaria.</td>
+       <td>Servicio no verificado; respuesta 403 en la auditoría.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">ADIF.Estaciones</code></td>
+       <td>Nodos de estaciones ferroviarias.</td>
+       <td>Servicio no verificado; respuesta 403 en la auditoría.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="limitesmaritimos">LimitesMaritimos</h2>
+ <p><a href="https://ideihm.covam.es/ihm-inspire/wms-unidadesmaritimas?service=WMS&amp;request=GetCapabilities">Servicio WMS del Instituto Hidrográfico de la Marina</a>.
+Son capas de referencia de unidades marítimas, no cartas para navegación.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">LimitesMaritimos</code>, <code class="language-plaintext highlighter-rouge">LimitesMaritimos.LimitesMaritimos</code></td>
+       <td>Límites de unidades marítimas.</td>
+       <td>Cobertura marítima; puede no haber contenido sobre tierra.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">LimitesMaritimos.LineasBase</code></td>
+       <td>Líneas de base.</td>
+       <td>Elementos distintos de los límites de unidades marítimas.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="copernicus">Copernicus</h2>
+ <p>Productos de <a href="https://land.copernicus.eu/">Copernicus Land Monitoring Service</a>,
+servidos por EEA. Las ocho variantes soportadas se migraron y comprobaron el
+28 de octubre de 2026. Su cobertura es europea, con zonas sin datos según el
+producto; conservan los años de referencia 2012 y 2015, no la actualidad.
+Consulta la <a href="https://land.copernicus.eu/en/data-policy">política de datos</a>.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus</code>, <code class="language-plaintext highlighter-rouge">Copernicus.Forest</code></td>
+       <td>Densidad de cobertura arbórea de 2015.</td>
+       <td>Combina las capas WMS de 20 m y 100 m según escala; no es un inventario forestal actual.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.ForestLeaf</code></td>
+       <td>Tipo de hoja dominante de 2015.</td>
+       <td>WMS en EPSG:4326; el plugin configura ese CRS automáticamente.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.WaterWet</code></td>
+       <td>Agua y humedad de 2015.</td>
+       <td>Producto temático de referencia; no muestra inundaciones actuales.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.SoilSeal</code></td>
+       <td>Densidad de impermeabilización del suelo de 2015.</td>
+       <td>No representa cambios posteriores a ese producto.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.GrassLand</code></td>
+       <td>Pastizales de 2015.</td>
+       <td>Cobertura y clasificación propias del producto.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.RiparianLandCover</code></td>
+       <td>Cobertura del suelo de zonas ribereñas de 2012.</td>
+       <td>Cobertura localizada; combina capas ráster y vectoriales del WMS según escala.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.Natura2k</code></td>
+       <td>Producto Natura 2000 de 2012.</td>
+       <td>Limitado a la cobertura del producto; no es el inventario vigente de espacios protegidos.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.UrbanAtlas</code></td>
+       <td>Usos del suelo de Urban Atlas 2012.</td>
+       <td>Zoom mínimo 8; cobertura de las zonas urbanas incluidas en el producto.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">Copernicus.RiparianGreen</code></td>
+       <td>Antigua capa de elementos lineales verdes de zonas ribereñas.</td>
+       <td>Deprecada: endpoint IGN no disponible, sin sustituto equivalente confirmado. No aparece en Preview ni en el visor.</td>
+     </tr>
+   </tbody>
+ </table>
+ <h2 id="parquesnaturales">ParquesNaturales</h2>
+ <p>Aunque el proveedor se llama <code class="language-plaintext highlighter-rouge">ParquesNaturales</code>, sus capas corresponden a
+<strong>parques nacionales</strong> y sus zonas periféricas de protección del OAPN.
+<a href="https://sigred.oapn.es/geoserverOAPN/LimitesParquesNacionalesZPP/ows?service=WMS&amp;request=GetCapabilities">Capacidades del servicio WMS</a>.
+No es un inventario de todos los espacios naturales protegidos. En la auditoría,
+algunos clientes tuvieron problemas con la cadena de certificados del servidor;
+la comprobación con el almacén TLS de Windows sí obtuvo imágenes.</p>
+ <table>
+  <thead>
+     <tr>
+       <th>Nombre</th>
+       <th>Qué representa</th>
+       <th>Limitaciones o notas</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">ParquesNaturales</code>, <code class="language-plaintext highlighter-rouge">ParquesNaturales.Limites</code></td>
+       <td>Límites de parques nacionales.</td>
+       <td>Cobertura localizada en los parques recogidos por OAPN.</td>
+     </tr>
+     <tr>
+       <td><code class="language-plaintext highlighter-rouge">ParquesNaturales.ZonasPerifericas</code></td>
+       <td>Zonas periféricas de protección de parques nacionales.</td>
+       <td>No todos los parques tienen necesariamente una zona representada.</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+</div>
+			</article>
+		</div>
+	</div>
+	</main></div>
+  <!-- Footer -->
+  <footer class="footer-chulapa text-center mt-0 pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <nav aria-label="Footer links" class="d-flex flex-wrap justify-content-center">
+            <a href="https://dieghernan.github.io/" title="footerdieghernan" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-blog fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">dieghernan</span>
+            </a>
+            <a href="https://github.com/dieghernan/leaflet-providersESP" title="footerGitHub" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a href="https://orcid.org/0000-0001-8457-4658" title="footerORCID" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-orcid fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">ORCID</span>
+            </a>
+            <a href="https://fosstodon.org/@dhernangomez" title="footerMastodon" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Mastodon</span>
+            </a>
+            <a href="https://bsky.app/profile/dieghernan.bsky.social" title="footerBluesky" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa-brands fa-square-bluesky fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Bluesky</span>
+            </a>
+            <a href="https://x.com/dhernangomez" title="footerTwitter/X" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-square-x-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Twitter/X</span>
+            </a>
+            <a href="https://stackoverflow.com/users/7877917/dieghernan" title="footerStack Overflow" class="chulapa-footer-sociallink lead">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Stack Overflow</span>
+            </a>
+          </nav>
+          <p class="mt-2 mb-3">&copy; 2026 dieghernan</p>
+          <!-- Do not remove this in order to give attributions -->
+          <p class="chulapa-footer-brand">Powered by <a href="https://dieghernan.github.io/chulapa"> <span class="chulapa">Chulapa</span> Jekyll Theme</a><br><b>GitDev</b> skin by <a href="https://github.com/dieghernan">dieghernan</a></p>
+          <!-- End attributions -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="/leaflet-providersESP/assets/js/chulapa_script.js"></script>
+	<!-- start custom scripts to be placed at the bottom of the page -->
+<!-- end custom bottom scripts -->
+	</body>
+</html>

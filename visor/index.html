@@ -17,7 +17,7 @@
       
         "@id": "https://dieghernan.github.io/leaflet-providersESP/visor/",
         "name": "Visor de mapas",
-        "description": "Explora las capas de leaflet-providersESP, combina mapas y copia el código.",
+        "description": "Selecciona fondos y transparencias para el control de capas de Leaflet en un mapa a toda página.",
       
         "headline": "Visor de mapas",
       
@@ -126,7 +126,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="dieghernan" >
     <meta name="copyright" content="dieghernan" >
-    <meta name="description" content="Explora las capas de leaflet-providersESP, combina mapas y copia el código.">
+    <meta name="description" content="Selecciona fondos y transparencias para el control de capas de Leaflet en un mapa a toda página.">
     <meta name="thumbnail" content="https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg" >
     <meta name="robots" content="index, follow">
     
@@ -138,7 +138,7 @@
     
     <meta property="og:type" content="website" >
     
-    <meta property="og:description" content="Explora las capas de leaflet-providersESP, combina mapas y copia el código." >
+    <meta property="og:description" content="Selecciona fondos y transparencias para el control de capas de Leaflet en un mapa a toda página." >
     
     
     
@@ -187,7 +187,7 @@
     
     <!-- Twitter/X Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Explora las capas de leaflet-providersESP, combina mapas y copia el código.">
+    <meta name="twitter:description" content="Selecciona fondos y transparencias para el control de capas de Leaflet en un mapa a toda página.">
     
     <meta name="twitter:site" content="@dhernangomez" >
     
@@ -285,108 +285,51 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-geosearch@4.4.0/assets/css/leaflet.css">
 <link rel="stylesheet" href="/leaflet-providersESP/assets/css/map-app.css">
+
 
 
 
 
 </head>
 
-  <body class="map-page d-flex flex-column" id="body">
-    <nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-label="primary-navigation">
-	<div class="container-fluid mx-md-2">
-			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/"><i class="fas fa-home" aria-hidden="true" style="color: white"></i><span class="sr-only">Inicio</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarToggler">
-				<ul class="navbar-nav ml-auto"><li class="nav-item">
-						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/guia/">Guía de uso</a>
-					</li><li class="nav-item">
-						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Preview</a>
-					</li><li class="nav-item">
-						<a class="nav-link  active font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/visor/" aria-current="page">Visor<span class="sr-only">(current)</span></a>
-					</li><li class="nav-item">
-						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md">Cambios</a>
-					</li><li class="nav-item">
-						<a class="nav-link " href="https://github.com/dieghernan/leaflet-providersESP">GitHub</a>
-					</li>
-			</ul>
-			</div></div>
-</nav>
-
-    <a class="map-skip" href="#map">Ir al mapa</a>
-<a class="map-skip" href="#layer-search">Ir a las capas</a>
-<a class="map-skip" href="#code-format">Ir al código</a>
-<main class="map-app" data-mode="viewer" data-service="">
-  <aside id="layers-panel" class="map-panel" aria-label="Selección de capas">
-    <button id="close-panel" class="mobile-panel-close viewer-only" type="button">Cerrar panel</button>
-    <h1>Visor de mapas</h1>
-    <p>Busca una capa, añádela al mapa y copia el código.</p>
-    <div class="panel-tabs viewer-only" role="tablist" aria-label="Panel de capas">
-      <button id="explore-tab" type="button" role="tab" aria-selected="true" aria-controls="explore-panel" tabindex="0">Explorar</button>
-      <button id="active-tab" type="button" role="tab" aria-selected="false" aria-controls="active-panel" tabindex="-1">En el mapa · <span id="active-count">0</span></button>
+  <body class="map-page" id="body">
+    <main class="map-app" data-service="">
+  <h1 class="sr-only">Visor de mapas</h1>
+  <nav class="map-toolbar" aria-label="Navegación del visor">
+    <a href="/leaflet-providersESP/">Inicio</a>
+    <a href="/leaflet-providersESP/guia/">Guía de uso</a>
+    <a href="/leaflet-providersESP/capas/">Referencia de capas</a>
+    <a href="/leaflet-providersESP/preview/">Preview y código</a>
+    <span>leaflet-providersESP · Visor</span>
+  </nav>
+  <details id="viewer-controls" class="viewer-controls" open>
+    <summary>Añadir o quitar capas del selector <span id="registered-count"></span></summary>
+    <div class="viewer-controls-content">
+      <div class="ribbon-heading">
+        <div class="ribbon-tabs" role="tablist" aria-label="Tipo de capa">
+          <button id="backgrounds-tab" type="button" role="tab" aria-selected="true" aria-controls="backgrounds-panel" tabindex="0">Fondos</button>
+          <button id="overlays-tab" type="button" role="tab" aria-selected="false" aria-controls="overlays-panel" tabindex="-1">Transparencias</button>
+        </div>
+        <label class="sr-only" for="layer-search">Buscar capas</label>
+        <input id="layer-search" type="search" placeholder="Buscar capas…">
+        <label class="sr-only" for="service-filter">Servicio</label>
+        <select id="service-filter"><option value="">WMS y WMTS</option><option>WMS</option><option>WMTS</option></select>
+      </div>
+      <p class="ribbon-help">Marca las capas que quieras en el selector. En <strong>Capas</strong>, sobre el mapa, elige cuáles mostrar.</p>
+      <div id="backgrounds-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="backgrounds-tab"></div>
+      <div id="overlays-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="overlays-tab" hidden></div>
+      <p id="layer-count" role="status" aria-live="polite"></p>
     </div>
-    <div id="explore-panel" role="tabpanel" aria-labelledby="explore-tab">
-    <label for="layer-search">Buscar capa o servicio</label>
-    <input id="layer-search" type="search" placeholder="PNOA, límites, IGN…">
-    <div class="map-filters">
-      <div><label for="service-filter">Servicio</label><select id="service-filter"><option value="">Todos</option><option>WMS</option><option>WMTS</option></select></div>
-      <div><label for="type-filter">Tipo de capa</label><select id="type-filter"><option value="">Todos</option><option value="base">Fondos</option><option value="overlay">Superposiciones</option></select></div>
-    </div>
-    <button id="clear-filters" type="button">Limpiar filtros</button>
-    <p id="layer-count" role="status" aria-live="polite"></p>
-    <div class="catalog-selector"><label for="layer-select">Capas disponibles</label>
-    <select id="layer-select" size="6" aria-describedby="layer-count"></select></div>
-    <ul id="layer-results" class="layer-results viewer-only" aria-label="Resultados de capas"></ul>
-    <section class="selection-card viewer-only" aria-labelledby="selection-name"><h2 id="selection-name">Capa seleccionada</h2><p id="selection-kind"></p></section>
-    <button id="show-layer" type="button">Ver capa</button>
-<textarea id="native-code" hidden readonly aria-label="Código Leaflet sin el plugin"></textarea>
-    <div id="layer-previews" class="layer-previews" aria-label="Previsualizaciones de las capas"></div>
-    </div>
-    <section id="active-panel" role="tabpanel" aria-labelledby="active-tab" hidden><h2 id="active-title">Capas en el mapa</h2><p class="map-note">Un fondo y las superposiciones que quieras combinar.</p><div id="active-layers"></div></section>
-    <p class="map-note">Conserva la atribución del mapa y consulta las condiciones de cada proveedor.</p>
-  </aside>
-  <section class="map-stage" aria-label="Visor cartográfico">
-    <section class="map-code" aria-labelledby="selected-title">
-      <h2 id="selected-title" class="sr-only">Código de la capa</h2>
-      <label class="sr-only" for="code-format">Formato del código</label>
-      <select id="code-format"><option value="plugin">Con plugin</option><option value="native">Sin plugin</option></select>
-      <label class="sr-only" for="layer-code">Código de la capa seleccionada</label>
-      <textarea id="layer-code" rows="1" readonly spellcheck="false"></textarea>
-      <button id="copy-code" type="button">Copiar</button>
-      <button id="expand-code" type="button" aria-haspopup="dialog">Expandir</button>
-    </section>
-    <div class="map-actions">
-      <button id="view-spain" type="button">Península y Baleares</button>
-      <button id="view-canaries" type="button">Canarias</button>
-      <button id="locate" type="button">Mi ubicación</button>
-      <button id="share-view" type="button">Compartir vista</button>
-    </div>
-    <p id="selection-status" class="selection-status" role="status" aria-live="polite"></p>
-    <div class="map-feedback"><p id="map-status" role="status" aria-live="polite">Cargando el mapa…</p><button id="retry-layers" type="button" hidden>Reintentar carga</button></div>
-    <div id="undo-notice" class="undo-notice" hidden><span id="undo-message" role="status" aria-live="polite"></span><button id="undo-remove" type="button">Deshacer</button><button id="dismiss-undo" type="button" aria-label="Descartar aviso">Cerrar</button></div>
-    <input id="share-url" type="text" readonly hidden aria-label="Enlace a esta vista">
-    <div id="map" role="region" aria-label="Mapa de las capas seleccionadas" tabindex="0"></div>
+  </details>
+  <section class="map-stage" aria-label="Vista del mapa">
+    <div id="map" role="region" aria-label="Mapa de España" tabindex="0"></div>
+    <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
   </section>
-  <div class="mobile-map-bar viewer-only">
-    <button id="open-panel" type="button" aria-expanded="false" aria-controls="layers-panel">Capas · <span id="mobile-count">0</span></button>
-    <button id="mobile-code" type="button" aria-haspopup="dialog">Código</button>
-    <button id="mobile-copy" type="button">Copiar código</button>
-  </div>
-  <dialog id="code-dialog" aria-labelledby="code-dialog-title">
-    <div class="dialog-heading"><h2 id="code-dialog-title">Código de la capa seleccionada</h2><button id="close-code" type="button">Cerrar</button></div>
-    <p id="code-dialog-caption"></p>
-    <label for="dialog-code-format">Formato</label><select id="dialog-code-format"><option value="plugin">Con plugin</option><option value="native">Sin plugin</option></select>
-    <pre><code id="expanded-code"></code></pre>
-    <button id="copy-native" type="button">Copiar código</button>
-  </dialog>
 </main>
-<noscript><p>Activa JavaScript para explorar el catálogo y el mapa. Puedes consultar la <a href="/leaflet-providersESP/guia/">guía de uso</a>.</p></noscript>
 
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="/leaflet-providersESP/dist/leaflet-providersESP.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-geosearch@4.4.0/dist/bundle.min.js"></script>
     <script src="/leaflet-providersESP/js/map-app.js"></script>
     	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

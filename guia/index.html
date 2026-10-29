@@ -180,6 +180,8 @@
 				<ul class="navbar-nav ml-auto"><li class="nav-item">
 						<a class="nav-link  active font-weight-bold" href="https://dieghernan.github.io/leaflet-providersESP/guia/" aria-current="page">Guía de uso<span class="sr-only">(current)</span></a>
 					</li><li class="nav-item">
+						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/capas/">Capas</a>
+					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/preview/">Preview</a>
 					</li><li class="nav-item">
 						<a class="nav-link " href="https://dieghernan.github.io/leaflet-providersESP/visor/">Visor</a>
@@ -317,7 +319,9 @@ Si omites la variante se usa la predeterminada del proveedor: <code class="langu
 <code class="language-plaintext highlighter-rouge">IGNBase.Todo</code> muestran la misma cartografía, aunque cada llamada crea un objeto
 Leaflet distinto.</p>
 <p>Busca una capa en el <a href="/leaflet-providersESP/preview/">catálogo</a>, comprueba su
-aspecto y copia su llamada a <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>.</p>
+aspecto y copia su llamada a <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>.
+La <a href="/leaflet-providersESP/capas/">referencia de capas</a> explica qué representa
+cada nombre y sus limitaciones de cobertura, escala y disponibilidad.</p>
 <h2 id="fondos-superposiciones-y-opciones">Fondos, superposiciones y opciones</h2>
 <p>Un fondo aporta la cartografía principal. Las superposiciones añaden información
 sobre él, como límites administrativos o curvas de nivel. Algunas capas solo
@@ -327,23 +331,18 @@ muestran información a partir de un nivel de zoom o dentro de su cobertura.</p>
     <span class="na">opacity</span><span class="p">:</span> <span class="mf">0.7</span>
 <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 </code></pre></div></div>
-<p>El <a href="/leaflet-providersESP/visor/">visor</a> permite combinar un fondo con varias
-superposiciones y ajustar su opacidad. La clasificación del catálogo se deduce
-de las opciones de transparencia y opacidad del proveedor.</p>
-<p>En <strong>Explorar</strong>, busca y selecciona una capa. Pulsa <strong>Usar como fondo</strong> o
-<strong>Añadir al mapa</strong> para mostrarla. Seleccionar un resultado permite consultar su
-código sin cambiar las capas que ya estás viendo.</p>
-<p>La pestaña <strong>En el mapa</strong> permite mostrar u ocultar capas, ajustar su opacidad,
-cambiar el orden de las superposiciones y quitarlas. Los enlaces compartidos
-conservan estos ajustes y la posición del mapa.</p>
-<p>La franja superior ofrece <strong>Con plugin</strong> y <strong>Sin plugin</strong>. <strong>Expandir</strong> muestra el
-código completo de la capa seleccionada; <strong>Copiar</strong> copia el formato elegido.
-En móvil, abre el panel con <strong>Capas</strong> o consulta el código con <strong>Código</strong> en la
-barra inferior. El panel se cierra al añadir una capa para volver al mapa.</p>
-<p>El botón de la esquina superior derecha amplía el visor a pantalla completa.
-Puedes salir con el mismo botón o con Escape. Si alguna capa no carga, pulsa
-<strong>Reintentar carga</strong>. Al quitar una capa, <strong>Deshacer</strong> recupera su visibilidad,
-opacidad y posición entre las superposiciones.</p>
+<p>El <a href="/leaflet-providersESP/visor/">visor</a> muestra un mapa a toda página con una
+franja colapsable. En las pestañas <strong>Fondos</strong> y <strong>Transparencias</strong>, busca y marca
+las capas que quieras incorporar al selector. Marcarlas no las muestra todavía.
+La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.</p>
+<p>Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
+y activar o desactivar transparencias con el control estándar de Leaflet.
+Desmarcar una capa en la franja la retira del selector y del mapa.
+Puedes colapsar la franja para dedicar más espacio al mapa.
+El selector se abre al hacer clic y se cierra con <strong>×</strong>, Escape o un clic fuera.</p>
+<p>El botón <strong>Localizarme</strong>, junto al zoom, solicita tu ubicación únicamente al
+pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
+<a href="/leaflet-providersESP/preview/">Preview</a>.</p>
 <h2 id="compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</h2>
 <p>La API de este plugin es <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>. La de <strong>leaflet-providers</strong>
 es <code class="language-plaintext highlighter-rouge">L.tileLayer.provider()</code>. Puedes usar ambas en el mismo mapa; no necesitas
@@ -372,8 +371,8 @@ contenedor HTML.</li>
 territorio o a todas las escalas.</li>
  <li>Consulta la consola y la pestaña de red del navegador. Una petición fallida
 puede deberse al servicio remoto, a sus condiciones de acceso o a CORS.</li>
- <li>Si una capa transparente parece vacía, añade un fondo y comprueba su zoom
-mínimo en el catálogo.</li>
+ <li>Si una capa transparente parece vacía, añade un fondo y prueba a acercarte
+a su zona de cobertura.</li>
 </ul>
 <h2 id="atribución-y-condiciones-de-uso">Atribución y condiciones de uso</h2>
 <p>Mantén visible el control de atribución de Leaflet. El plugin incorpora la

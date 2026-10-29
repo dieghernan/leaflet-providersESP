@@ -10,8 +10,9 @@ El plugin contiene configuraciones de servicios cartográficos y es compatible c
 - [README](https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/main/README.md): Introducción y uso básico en Markdown.
 - [Fuente de la documentación](https://raw.githubusercontent.com/dieghernan/leaflet-providersESP/main/docs/guia.md): Instrucciones y ejemplos de integración con Leaflet.
 
-- [Catálogo](https://dieghernan.github.io/leaflet-providersESP/preview/): Búsqueda, filtros y código de las capas.
-- [Visor](https://dieghernan.github.io/leaflet-providersESP/visor/): Combinación de capas y vistas compartidas.
+- [Referencia de capas](https://dieghernan.github.io/leaflet-providersESP/capas/): Nombre, contenido, cobertura y limitaciones de cada capa.
+- [Preview](https://dieghernan.github.io/leaflet-providersESP/preview/): Miniaturas sincronizadas y código de las capas.
+- [Visor](https://dieghernan.github.io/leaflet-providersESP/visor/): Selección de fondos y transparencias para el control nativo de capas de Leaflet.
 
 ## Código y distribución
 
