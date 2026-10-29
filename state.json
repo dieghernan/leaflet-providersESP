@@ -1,0 +1,57 @@
+{
+  "posts": {
+    "https://dieghernan.github.io/leaflet-providersESP/": {
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CONTRIBUTING.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
+      "https://github.com/dieghernan/leaflet-providersESP/issues": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58"
+    },
+    "https://dieghernan.github.io/leaflet-providersESP/404.html": {},
+    "https://dieghernan.github.io/leaflet-providersESP/capas/": {
+      "https://gis.miteco.gob.es/geoserver/agua/subcuencas/wms?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/additional-layers-audit.md": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://ideihm.covam.es/ihm-inspire/wms-unidadesmaritimas?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://iepnb.gob.es/geoserver/ENP/enp/wms?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://iepnb.gob.es/geoserver/RN2000/rn2000/wms?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://iepnb.gob.es/geoserver/foto_fija_mfe/ff_uso/wms?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://iepnb.gob.es/geoserver/vias_pecuarias/rgvp_2024/wms?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://ign.es/wmts/mapa-raster?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://land.copernicus.eu/": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://land.copernicus.eu/en/data-policy": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://mapas.igme.es/gis/services/Cartografia_Geologica/IGME_Geode_50/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wms-inspire/hidrografia?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wms-inspire/mdt?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wms-inspire/riesgos-naturales/inundaciones?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wms-inspire/transportes?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wmts/mdt?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.idee.es/wmts/ocupacion-suelo?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://servicios.ine.es/arcgis/services/WMS_INE_SECCIONES_G01/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://sigpac-hubcloud.es/wms?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wms-defensa.idee.es/mapas?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wms-pendientes.idee.es/pendientes?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wms-spainbybike.idee.es/spainbybike?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wms-volcanologia.ign.es/volcanologia?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wmts-potencial-solar.idee.es/potencial-solar?service=WMTS&request=GetCapabilities&version=1.0.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms-inspire/camino-santiago?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms-inspire/geofisica?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms-inspire/ngbe?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms-inspire/pnoa-ma?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms-inspire/unidades-administrativas?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wms/pnoa-historico?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wmts/ign-base?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wmts/minutas-cartograficas?service=WMTS&request=GetCapabilities&version=1.0.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wmts/pnoa-ma?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://www.ign.es/wmts/primera-edicion-mtn?service=WMTS&request=GetCapabilities&version=1.0.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf"
+    },
+    "https://dieghernan.github.io/leaflet-providersESP/guia/": {
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e",
+      "https://github.com/dieghernan/leaflet-providersESP/tree/main/dist": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e"
+    }
+  },
+  "version": 2
+}
