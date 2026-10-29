@@ -68,8 +68,8 @@ build.addEventListener('change', () => {
 });
 const plugin = document.createElement('script');
 plugin.src = build.value === 'minified'
-	? '../dist/leaflet-providersESP.min.js'
-	: '../dist/leaflet-providersESP.js';
+	? '../../dist/leaflet-providersESP.min.js'
+	: '../leaflet-providersESP.js';
 plugin.onerror = () => {
 	document.getElementById('status').textContent = 'No se pudo cargar la distribución local. Abre este HTML desde la carpeta dev del repositorio.';
 };

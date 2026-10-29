@@ -149,7 +149,8 @@ L.tileLayer.providerESP('UnidadesAdm.Limites', {
 
 El [visor]({{ '/visor/' | relative_url }}) muestra un mapa a toda página con una
 franja colapsable. En las pestañas **Fondos** y **Transparencias**, busca y marca
-las capas que quieras incorporar al selector. Marcarlas no las muestra todavía.
+las capas que quieras incorporar al selector y mostrar directamente en el mapa.
+Un fondo nuevo sustituye al fondo visible; las transparencias se acumulan.
 La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.
 
 Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
@@ -158,12 +159,21 @@ Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con **×**, Escape o un clic fuera.
 El número sobre el icono indica cuántas capas hay en el selector. La etiqueta
-**Visible** en el listado identifica las capas que están activas en el mapa.
-En móvil, **Cerrar y ver mapa** colapsa la franja sin cambiar tu selección.
+**Activa** identifica una capa habilitada en el mapa; **En el selector** indica
+que está disponible, pero desactivada. Ninguna de las dos etiquetas garantiza
+que haya datos en la zona o escala actual. Los avisos **Cargando** y **Error de
+carga** describen las peticiones de teselas, tanto en el visor como en Preview.
+En móvil, la franja comienza cerrada. Puedes abrirla y usar **Cerrar y ver mapa**
+para colapsarla sin cambiar tu selección.
 
 El botón **Localizarme**, junto al zoom, solicita tu ubicación únicamente al
 pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
 [Preview]({{ '/preview/' | relative_url }}).
+
+La **lupa**, junto a los controles del mapa, abre la búsqueda de direcciones de
+CartoCiudad. Introduce calle, número y municipio, pulsa **Buscar** y elige un
+resultado para centrar el mapa. Puedes cerrar el formulario con **×**, Escape
+o un clic fuera; las capas seleccionadas se conservan.
 
 ## Compatibilidad y cambios de nombres
 
@@ -211,5 +221,5 @@ las condiciones de los servicios cartográficos.
 
 La presencia de una capa en el catálogo no garantiza su disponibilidad. Consulta
 las [incidencias conocidas](https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md)
-y la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md)
+y la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md)
 para conocer las comprobaciones realizadas y sus fechas.

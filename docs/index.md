@@ -63,4 +63,4 @@ mantén visible la atribución. La licencia MIT del plugin se aplica al código.
 con el nombre de la capa, la zona y el nivel de zoom. Consulta también la
 [guía para contribuir](https://github.com/dieghernan/leaflet-providersESP/blob/main/CONTRIBUTING.md),
 los [cambios de versión](https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md)
-y la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md).
+y la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md).

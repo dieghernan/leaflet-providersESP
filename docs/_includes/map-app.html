@@ -20,7 +20,7 @@
         <label class="sr-only" for="service-filter">Servicio</label>
         <select id="service-filter"><option value="">WMS y WMTS</option><option>WMS</option><option>WMTS</option></select>
       </div>
-      <ol class="ribbon-help"><li><strong>Marca las capas</strong> que quieras usar.</li><li><strong>Pulsa el icono de capas apiladas</strong> del mapa para mostrarlas.</li></ol>
+      <ol class="ribbon-help"><li><strong>Marcada = en el selector.</strong> Al añadirla también se activa; los fondos se sustituyen y las transparencias se acumulan.</li><li><strong>Activa = habilitada en el mapa.</strong> Usa el icono de capas apiladas para cambiarla. Puede no tener datos en esta zona o escala.</li></ol>
       <div id="backgrounds-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="backgrounds-tab"></div>
       <div id="overlays-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="overlays-tab" hidden></div>
       <div class="ribbon-footer"><p id="layer-count" role="status" aria-live="polite"></p><button id="close-ribbon" type="button">Cerrar y ver mapa</button></div>
@@ -28,7 +28,7 @@
   </details>
   <section class="map-stage" aria-label="Vista del mapa">
     <div id="map" role="region" aria-label="Mapa de España" tabindex="0"></div>
-    <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+    <div class="map-messages"><p id="tile-status" class="map-status" role="status" aria-live="polite" aria-atomic="true"></p><p id="map-status" class="map-status" role="status" aria-live="polite"></p></div>
     <p id="layer-feedback" class="layer-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
   </section>
 </main>

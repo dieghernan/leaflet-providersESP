@@ -189,14 +189,14 @@ node --test dev/providers.test.js
 Retrieve current capabilities with Python and Node.js:
 
 ```sh
-py dev/audit-providers.py --output audit.json
+py dev/audit/audit-providers.py --output audit.json
 ```
 
 Add image checks with a Python installation that includes Pillow:
 
 ```sh
-py dev/audit-providers.py --images --output audit-with-images.json
-py dev/audit-providers.py --provider Cartociudad --images --output cartociudad.json
+py dev/audit/audit-providers.py --images --output audit-with-images.json
+py dev/audit/audit-providers.py --provider Cartociudad --images --output cartociudad.json
 ```
 
 The live audit exits with a nonzero status when a capabilities request, configured

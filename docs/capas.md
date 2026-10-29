@@ -31,8 +31,8 @@ sus limitaciones. Para comparar imágenes y copiar código, abre
 
 Las observaciones de disponibilidad proceden de las comprobaciones del **27 y 28
 de octubre de 2026**. No son una monitorización en tiempo real. Puedes consultar
-la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/capabilities-audit.md)
-y las [comprobaciones de capas adicionales](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/additional-layers-audit.md).
+la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md)
+y las [comprobaciones de capas adicionales](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/additional-layers-audit.md).
 
 <div class="layer-reference" markdown="1">
 

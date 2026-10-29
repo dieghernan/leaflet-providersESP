@@ -6,9 +6,9 @@ const test = require('node:test');
 const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '../dist/leaflet-providersESP.js'), 'utf8');
-const snapshot = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/capabilities-2026-10-27.json'), 'utf8'));
+const snapshot = JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/fixtures/capabilities-2026-10-27.json'), 'utf8'));
 
-snapshot.services.push(...JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/copernicus-capabilities-2026-10-28.json'), 'utf8')).services);
+snapshot.services.push(...JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/fixtures/copernicus-capabilities-2026-10-28.json'), 'utf8')).services);
 
 function load(script = source) {
 	const tileLayer = (url, options) => ({ type: 'tiles',
@@ -30,10 +30,6 @@ function load(script = source) {
 	vm.runInContext(script, context);
 	return context;
 }
-
-test('development demos use the same catalog as the distribution', () => {
-	assert.equal(fs.readFileSync(path.join(__dirname, 'leaflet-providersESP.js'), 'utf8'), source);
-});
 
 test('layer reference lists every provider and variant including aliases and deprecated layers', () => {
 	const context = load();

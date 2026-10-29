@@ -7,7 +7,7 @@ test.beforeEach(async({ page }, testInfo) => {
 		body: tile }));
 });
 
-test('ribbon registers dormant layers and the standard Leaflet control manages visibility', async({ page }) => {
+test('ribbon activates layers, replaces backgrounds and accumulates transparencies', async({ page }) => {
 	const errors = [];
 	page.on('pageerror', (error) => errors.push(error.message));
 	await page.goto('/viewer.html');
@@ -21,8 +21,7 @@ test('ribbon registers dormant layers and the standard Leaflet control manages v
 	await page.locator('.leaflet-control-layers-toggle').click();
 	const gray = page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Gris\s*$/ })
 		.locator('input');
-	await expect(gray).not.toBeChecked();
-	await gray.check();
+	await expect(gray).toBeChecked();
 	await expect(page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Todo\s*$/ })
 		.locator('input')).not.toBeChecked();
 	await page.getByRole('tab', { name: 'Transparencias' }).click();
@@ -30,17 +29,40 @@ test('ribbon registers dormant layers and the standard Leaflet control manages v
 	const include = page.getByRole('checkbox', { name: 'Incluir UnidadesAdm.Limites',
 		exact: true });
 	await include.check();
-	await expect(page.locator('.leaflet-tile-container')).toHaveCount(1);
+	await expect(page.locator('.leaflet-tile-container')).toHaveCount(2);
 	await page.locator('.leaflet-control-layers-toggle').click();
 	const overlay = page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*UnidadesAdm.Limites\s*$/ })
 		.locator('input');
-	await overlay.check();
+	await expect(overlay).toBeChecked();
 	await expect(page.locator('.leaflet-tile-container')).toHaveCount(2);
+	await page.locator('#layer-search').fill('UnidadesAdm.Unidades');
+	await page.getByRole('checkbox', { name: 'Incluir UnidadesAdm.Unidades',
+		exact: true }).check();
+	await expect(page.locator('.leaflet-tile-container')).toHaveCount(3);
+	await page.getByRole('tab', { name: 'Fondos' }).click();
+	await page.locator('#layer-search').fill('PNOA.MaximaActualidad');
+	await page.getByRole('checkbox', { name: 'Incluir PNOA.MaximaActualidad',
+		exact: true }).check();
+	await expect(page.locator('.leaflet-tile-container')).toHaveCount(3);
+	await page.locator('.leaflet-control-layers-toggle').click();
+	await expect(page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*PNOA.MaximaActualidad\s*$/ })
+		.locator('input')).toBeChecked();
+	await page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Todo\s*$/ })
+		.locator('input')
+		.check();
+	await expect(gray).not.toBeChecked();
+	await expect(overlay).toBeChecked();
+	await expect(page.locator('.leaflet-tile-container')).toHaveCount(3);
+	const zIndexes = await page.locator('.leaflet-tile-container').evaluateAll((containers) => containers.map((container) => Number(container.parentElement.style.zIndex)));
+	expect(zIndexes.filter((value) => value === 0)).toHaveLength(1);
+	expect(zIndexes.filter((value) => value === 1)).toHaveLength(2);
 	await overlay.uncheck();
-	await expect(page.locator('.leaflet-tile-container')).toHaveCount(1);
+	await expect(page.locator('.leaflet-tile-container')).toHaveCount(2);
+	await page.getByRole('tab', { name: 'Transparencias' }).click();
+	await page.locator('#layer-search').fill('UnidadesAdm.Limites');
 	await include.uncheck();
 	await expect(page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*UnidadesAdm.Limites\s*$/ })).toHaveCount(0);
-	await expect(page.locator('#registered-count')).toContainText('2 en el selector');
+	await expect(page.locator('#registered-count')).toContainText('4 en el selector');
 	await expect(page.locator('textarea, #copy-code, #expand-code')).toHaveCount(0);
 	expect(errors).toEqual([]);
 });
@@ -53,6 +75,10 @@ test('ribbon collapses to give space to the map on mobile and landscape', async(
 	]) {
 		await page.setViewportSize(size);
 		await page.goto('/viewer.html');
+		if (size.width <= 600) {
+			await expect(page.locator('#layer-search')).not.toBeVisible();
+			await page.locator('#viewer-controls summary').click();
+		}
 		const before = await page.locator('#map').boundingBox();
 		await page.locator('#viewer-controls summary').click();
 		await expect(page.locator('#layer-search')).not.toBeVisible();
@@ -98,14 +124,20 @@ test('registration feedback is temporary and visible state follows Leaflet indep
 		exact: true });
 	const row = page.locator('.ribbon-layer').filter({ has: include });
 	await include.check();
-	await expect(page.locator('#layer-feedback')).toHaveText('Capa añadida al selector.');
+	await expect(page.locator('#layer-feedback')).toHaveText('Capa añadida al selector y activada.');
 	await expect(count).toHaveClass(/count-updated/);
 	await expect(page.locator('.layer-count-badge')).toHaveText('2');
 	await expect(page.locator('#layers-hint')).toBeVisible();
-	await expect(row).not.toHaveClass(/is-visible/);
+	await expect(row).toHaveClass(/is-visible/);
+	await expect(row.locator('.layer-visible')).toHaveText('Activa');
 	await expect(page.locator('#layer-feedback')).toBeEmpty({ timeout: 3500 });
 	await page.locator('.leaflet-control-layers-toggle').click();
 	await expect(page.locator('#layers-hint')).not.toBeVisible();
+	await page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Todo\s*$/ })
+		.locator('input')
+		.check();
+	await expect(row).not.toHaveClass(/is-visible/);
+	await expect(row.locator('.layer-visible')).toHaveText('En el selector');
 	await page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Gris\s*$/ })
 		.locator('input')
 		.check();
@@ -123,6 +155,8 @@ test('mobile ribbon close button preserves selection and returns focus to its su
 	await page.setViewportSize({ width: 390,
 		height: 844 });
 	await page.goto('/viewer.html');
+	await expect(page.locator('#layer-search')).not.toBeVisible();
+	await page.locator('#viewer-controls summary').click();
 	await page.locator('#layer-search').fill('IGNBase.Gris');
 	await page.getByRole('checkbox', { name: 'Incluir IGNBase.Gris',
 		exact: true }).check();

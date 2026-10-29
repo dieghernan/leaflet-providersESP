@@ -1,7 +1,7 @@
 """Audit the live catalog. Requires Node.js; --images also requires Pillow.
 
-py dev/audit-providers.py --output audit.json
-py dev/audit-providers.py --provider Cartociudad --images --output cartociudad.json
+py dev/audit/audit-providers.py --output audit.json
+py dev/audit/audit-providers.py --provider Cartociudad --images --output cartociudad.json
 
 The output is evidence from one run, not a guarantee of future availability.
 """
@@ -208,7 +208,7 @@ def image(row, lon, lat, zoom, label):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=pathlib.Path, default=pathlib.Path(__file__).resolve().parents[1] / "dist/leaflet-providersESP.js")
+    parser.add_argument("--source", type=pathlib.Path, default=pathlib.Path(__file__).resolve().parents[2] / "dist/leaflet-providersESP.js")
     parser.add_argument("--provider", help="Audit only this provider")
     parser.add_argument("--images", action="store_true", help="Also request sample images (requires Pillow)")
     parser.add_argument("--output", type=pathlib.Path, required=True)

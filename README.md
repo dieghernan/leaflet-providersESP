@@ -116,7 +116,7 @@ reusing its maps. The MIT license covers this plugin's code.
 
 See the [changelog](CHANGELOG.md) for aliases, deprecated layers and known
 issues, including `Copernicus.RiparianGreen`. The
-[service audit](dev/capabilities-audit.md) records dated checks; inclusion in the
+[service audit](dev/audit/capabilities-audit.md) records dated checks; inclusion in the
 catalog does not guarantee that a remote service is currently available.
 
 ## Contribute

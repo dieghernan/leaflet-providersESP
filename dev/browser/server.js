@@ -33,17 +33,19 @@ function mapApplication(service = '') {
 		.replace(/\{\{\s*'([^']*)'\s*\|\s*relative_url\s*\}\}/g, '$1')
 		.replace(/\{\{ page\.map_service[^}]*\}\}/g, service)
 		.replace(/\{\{ page\.title \}\}/g, 'Visor de mapas');
-	return { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/map-app.css"></head><body class="map-page">' + fragment + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/map-app.js"></script></body></html>',
+	return { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/map-app.css"></head><body class="map-page">' + fragment + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/layer-status.js"></script><script src="/address-search.js"></script><script src="/map-app.js"></script></body></html>',
 		contentType: 'text/html' };
 }
 files.set('/viewer.html', mapApplication());
 files.set('/wms.html', mapApplication('WMS'));
 files.set('/wmts.html', mapApplication('WMTS'));
-files.set('/preview.html', { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/preview.css"></head><body class="preview-page">' + fs.readFileSync(path.join(root, 'docs/_includes/preview.html'), 'utf8').replace(/\{\{[^}]+\}\}/g, '/') + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/preview.js"></script></body></html>',
+files.set('/preview.html', { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/preview.css"></head><body class="preview-page">' + fs.readFileSync(path.join(root, 'docs/_includes/preview.html'), 'utf8').replace(/\{\{[^}]+\}\}/g, '/') + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/layer-status.js"></script><script src="/preview.js"></script></body></html>',
 	contentType: 'text/html' });
 for (const [url, file, contentType] of [
+	['/layer-status.js', 'docs/js/layer-status.js', 'text/javascript'],
 	['/preview.js', 'docs/js/preview.js', 'text/javascript'],
 	['/preview.css', 'docs/assets/css/preview.css', 'text/css'],
+	['/address-search.js', 'docs/js/address-search.js', 'text/javascript'],
 	['/map-app.js', 'docs/js/map-app.js', 'text/javascript'],
 	['/map-app.css', 'docs/assets/css/map-app.css', 'text/css']
 ]) files.set(url, { body: fs.readFileSync(path.join(root, file)),

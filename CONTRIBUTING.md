@@ -32,9 +32,10 @@ Individual checks are available as `npm run lint`, `npm run test:unit` and
 `npm run test:browser`. ESLint checks the JavaScript files and inline scripts in
 HTML, following the conventions of
 [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers). Use
-`npm run lint:fix` to apply automatic formatting fixes. Keep the copies of
-`leaflet-providersESP.js` in `dist/` and `dev/` identical; the unit tests check
-this. `npm run build:check` verifies that `dist/leaflet-providersESP.min.js` is
+`npm run lint:fix` to apply automatic formatting fixes. Use
+`dev/leaflet-providersESP.js` to try changes locally without modifying `dist/`. The pages in `dev/manual/` load this development copy. See the
+[development guide](dev/README.md) for local previews.
+`npm run build:check` verifies that `dist/leaflet-providersESP.min.js` is
 up to date without rewriting it. This check is also part of `npm test`. Both
 distributions pass ESLint's correctness rules; stylistic rules apply to the
 editable sources.
@@ -44,7 +45,7 @@ Browser tests exercise both the source and minified distributions with Leaflet
 opacity, native zoom limits and compatibility with leaflet-providers in both
 script-loading orders. Tile responses are controlled by the tests so remote
 service outages do not affect these checks. Use the [live audit
-tool](dev/capabilities-audit.md#reproduce-the-checks) to check current provider
+tool](dev/audit/capabilities-audit.md#reproduce-the-checks) to check current provider
 availability separately.
 
 The JavaScript checks workflow runs lint and tests on pushes and pull requests
@@ -77,9 +78,9 @@ remote availability is checked separately by the live audit.
 
 ## Social preview
 
-`dev/social-card.html` is the editable 1200 × 630 social card. Its map image,
-`dev/social-map.jpg`, is a snapshot of the viewer with live IGN tiles. Keep its
-attribution visible. Export the card as `docs/assets/social-preview.jpg` at
+`dev/social/social-card.html` is the editable 1200 × 630 social card. Its map image,
+`dev/social/social-map.jpg`, is a snapshot of the viewer with live IGN tiles.
+Keep its attribution visible. Export the card as `docs/assets/social-preview.jpg` at
 1200 × 630 and keep the file below 500 KB. Update `_config.yml` if the image
 format or dimensions change.
 

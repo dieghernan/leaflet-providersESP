@@ -17,6 +17,19 @@
 	const entries = [];
 	const active = new Map();
 	const miniatures = new Map();
+	function renderActiveStates() {
+		const selected = entries.filter((entry) => active.has(entry.name) && map.hasLayer(active.get(entry.name)));
+		const loading = selected.filter((entry) => entry.load?.loading);
+		const failed = selected.filter((entry) => entry.load?.error);
+		document.getElementById('preview-map').setAttribute('aria-busy', String(loading.length > 0));
+		const message = failed.length
+			? 'Error de carga: ' + failed.map((entry) => entry.name).join(', ') + '. Algunas teselas no han podido cargarse.'
+			: loading.length
+				? 'Cargando ' + loading.length + ' capas…'
+				: '';
+		const output = document.getElementById('preview-load-status');
+		if (output.textContent !== message) output.textContent = message;
+	}
 	const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase();
 	function nativeCode(entry) {
@@ -57,15 +70,18 @@
 			entry.input.checked = true;
 		}
 		if (entry.input.checked) {
-			const layer = L.tileLayer.providerESP(entry.name).addTo(map);
+			const layer = L.tileLayer.providerESP(entry.name);
+			entry.load = window.watchLayerStatus(layer, renderActiveStates);
 			layer.setZIndex(entry.overlay
 				? 2
 				: 1);
 			active.set(entry.name, layer);
+			layer.addTo(map);
 		} else {
 			map.removeLayer(active.get(entry.name)); active.delete(entry.name);
 		}
 		updateCode();
+		renderActiveStates();
 	}
 	for (const [provider, definition] of Object.entries(providersESP)) {
 		for (const variant of definition.variants
@@ -95,8 +111,20 @@
 					scrollWheelZoom: false,
 					boxZoom: false,
 					keyboard: false }).setView(map.getCenter(), map.getZoom());
-				if (entry.overlay) L.tileLayer.providerESP('IGNBase.Gris').addTo(miniature);
-				L.tileLayer.providerESP(entry.name).addTo(miniature);
+				const layers = entry.overlay
+					? [L.tileLayer.providerESP('IGNBase.Gris')]
+					: [];
+				layers.push(L.tileLayer.providerESP(entry.name));
+				const states = layers.map((layer) => window.watchLayerStatus(layer, () => {
+					const failed = states.some((state) => state.error);
+					entry.tileStatus.textContent = failed
+						? 'Error de carga'
+						: states.some((state) => state.loading)
+							? 'Cargando…'
+							: '';
+					entry.tileStatus.hidden = !entry.tileStatus.textContent; entry.tileStatus.dataset.error = String(failed);
+				}));
+				for (const layer of layers) layer.addTo(miniature);
 				miniatures.set(entry.name, miniature);
 			} else if (miniatures.has(entry.name)) {
 				miniatures.get(entry.name).remove(); miniatures.delete(entry.name);
@@ -112,16 +140,18 @@
 		for (const entry of entries.filter((item) => item.overlay === overlay)) {
 			const card = document.createElement('label'); card.className = 'preview-card'; card.entry = entry;
 			const canvas = document.createElement('div'); canvas.className = 'preview-mini'; canvas.setAttribute('aria-hidden', 'true'); entry.canvas = canvas;
+			const tileStatus = document.createElement('span'); tileStatus.className = 'preview-tile-status'; tileStatus.id = 'preview-tile-state-' + entries.indexOf(entry); tileStatus.hidden = true; entry.tileStatus = tileStatus;
 			const caption = document.createElement('span'); caption.className = 'preview-label';
 			const input = document.createElement('input'); input.type = overlay
 				? 'checkbox'
 				: 'radio'; input.name = overlay
 				? entry.name
 				: 'preview-base'; input.setAttribute('aria-label', entry.name); entry.input = input;
+			input.setAttribute('aria-describedby', tileStatus.id);
 			input.addEventListener('change', () => choose(entry));
 			const name = document.createElement('span'); name.className = 'preview-name'; name.textContent = entry.name; caption.title = entry.name;
 			const indicator = document.createElement('span'); indicator.className = 'preview-active'; indicator.textContent = 'Activa'; indicator.setAttribute('aria-hidden', 'true');
-			caption.append(input, name, indicator); card.append(canvas, caption); list.append(card); entry.card = card;
+			caption.append(input, name, indicator); card.append(canvas, tileStatus, caption); list.append(card); entry.card = card;
 			observer.observe(card);
 		}
 	}

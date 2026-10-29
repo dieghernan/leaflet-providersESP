@@ -2,11 +2,17 @@
 
 ## Changed
 
+- The viewer distinguishes active layers from layers only available in its selector and starts with its ribbon collapsed on mobile. Both map pages report tile loading and errors; Preview miniatures have their own status indicators. Empty images are not classified as missing coverage.
+
+- The viewer adds an expandable address search beside the location control, using CartoCiudad candidates and find endpoints. Selecting a result centers the map without changing its layers.
+
 - Preview provides matching copy actions for both code formats with brief clipboard confirmations, clearer active-layer indicators and an explicit empty-search message.
 
-- The viewer clarifies its two-step layer selection with brief feedback, a selector count badge, a one-time hint and visible-layer labels. Mobile users can close the ribbon with an explicit button. Long documentation pages use Chulapa's side table of contents.
+- Adding a layer in the viewer ribbon also displays it immediately. New backgrounds replace the visible background while transparencies accumulate and stay above backgrounds. Previously added backgrounds remain available in Leaflet's layer control.
 
-- The map viewer uses a full-page map, a compact navigation strip and a collapsible ribbon with background and transparency tabs. Checked layers are registered in Leaflet's standard layer control without loading tiles until activated there. Code copying stays in Preview. A location button requests geolocation only when clicked. Existing WMS, WMTS and all-provider pages use the same viewer.
+- The viewer provides brief selection feedback, a selector count badge, a one-time hint and visible-layer labels. Mobile users can close the ribbon with an explicit button. Long documentation pages use Chulapa's side table of contents.
+
+- The map viewer uses a full-page map, a compact navigation strip and a collapsible ribbon with background and transparency tabs. Checked layers are registered in Leaflet's standard layer control, which manages their visibility. Code copying stays in Preview. A location button requests geolocation only when clicked. Existing WMS, WMTS and all-provider pages use the same viewer.
 
 - The documentation now separates the introduction, usage guide and contributor instructions.
 - A layer reference describes every provider and variant, including default names, compatibility aliases, scale limits and availability observations with their audit dates.
@@ -14,7 +20,7 @@
 
 # v1.4.0 - *2026-10-28*
 
-Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual review approved by the maintainer on 2026-10-28. See the [audit report](dev/capabilities-audit.md) for evidence, service versions and unresolved services.
+Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual review approved by the maintainer on 2026-10-28. See the [audit report](dev/audit/capabilities-audit.md) for evidence, service versions and unresolved services.
 
 ## Added
 
