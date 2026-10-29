@@ -131,6 +131,8 @@ Leaflet distinto.
 
 Busca una capa en el [catálogo]({{ '/preview/' | relative_url }}), comprueba su
 aspecto y copia su llamada a `L.tileLayer.providerESP()`.
+La [referencia de capas]({{ '/capas/' | relative_url }}) explica qué representa
+cada nombre y sus limitaciones de cobertura, escala y disponibilidad.
 
 ## Fondos, superposiciones y opciones
 
@@ -146,27 +148,20 @@ L.tileLayer.providerESP('UnidadesAdm.Limites', {
 }).addTo(map);
 ```
 
-El [visor]({{ '/visor/' | relative_url }}) permite combinar un fondo con varias
-superposiciones y ajustar su opacidad. La clasificación del catálogo se deduce
-de las opciones de transparencia y opacidad del proveedor.
+El [visor]({{ '/visor/' | relative_url }}) muestra un mapa a toda página con una
+franja colapsable. En las pestañas **Fondos** y **Transparencias**, busca y marca
+las capas que quieras incorporar al selector. Marcarlas no las muestra todavía.
+La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.
 
-En **Explorar**, busca y selecciona una capa. Pulsa **Usar como fondo** o
-**Añadir al mapa** para mostrarla. Seleccionar un resultado permite consultar su
-código sin cambiar las capas que ya estás viendo.
+Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
+y activar o desactivar transparencias con el control estándar de Leaflet.
+Desmarcar una capa en la franja la retira del selector y del mapa.
+Puedes colapsar la franja para dedicar más espacio al mapa.
+El selector se abre al hacer clic y se cierra con **×**, Escape o un clic fuera.
 
-La pestaña **En el mapa** permite mostrar u ocultar capas, ajustar su opacidad,
-cambiar el orden de las superposiciones y quitarlas. Los enlaces compartidos
-conservan estos ajustes y la posición del mapa.
-
-La franja superior ofrece **Con plugin** y **Sin plugin**. **Expandir** muestra el
-código completo de la capa seleccionada; **Copiar** copia el formato elegido.
-En móvil, abre el panel con **Capas** o consulta el código con **Código** en la
-barra inferior. El panel se cierra al añadir una capa para volver al mapa.
-
-El botón de la esquina superior derecha amplía el visor a pantalla completa.
-Puedes salir con el mismo botón o con Escape. Si alguna capa no carga, pulsa
-**Reintentar carga**. Al quitar una capa, **Deshacer** recupera su visibilidad,
-opacidad y posición entre las superposiciones.
+El botón **Localizarme**, junto al zoom, solicita tu ubicación únicamente al
+pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
+[Preview]({{ '/preview/' | relative_url }}).
 
 ## Compatibilidad y cambios de nombres
 
@@ -202,8 +197,8 @@ ya no se incluye en las listas de capas disponibles ni en las previsualizaciones
   territorio o a todas las escalas.
 - Consulta la consola y la pestaña de red del navegador. Una petición fallida
   puede deberse al servicio remoto, a sus condiciones de acceso o a CORS.
-- Si una capa transparente parece vacía, añade un fondo y comprueba su zoom
-  mínimo en el catálogo.
+- Si una capa transparente parece vacía, añade un fondo y prueba a acercarte
+  a su zona de cobertura.
 
 ## Atribución y condiciones de uso
 

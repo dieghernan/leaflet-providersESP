@@ -2,11 +2,10 @@
 
 ## Changed
 
-- The viewer supports fullscreen with a full-window fallback, retrying failed tiles and undoing layer removal. Technical service details and configured bounds are removed from the interface.
+- The map viewer uses a full-page map, a compact navigation strip and a collapsible ribbon with background and transparency tabs. Checked layers are registered in Leaflet's standard layer control without loading tiles until activated there. Code copying stays in Preview. A location button requests geolocation only when clicked. Existing WMS, WMTS and all-provider pages use the same viewer.
 
-- The map viewer adds searchable layer results, explicit add actions, active-layer tabs, visibility and ordering controls, code format selection and a mobile bottom panel. Shared links preserve hidden layers, opacity and drawing order.
-
-- The documentation now separates the introduction, usage guide and contributor instructions. The Spanish catalog and map viewer share searchable service filters, code copying, opacity controls and shareable views. Existing WMS, WMTS and all-provider pages use the same viewer. Geolocation runs only on request.
+- The documentation now separates the introduction, usage guide and contributor instructions.
+- A layer reference describes every provider and variant, including default names, compatibility aliases, scale limits and availability observations with their audit dates.
 - The preview follows Leaflet Providers' full-map layout, with synchronized, lazy-loaded Spanish layer miniatures, active-layer code with and without the plugin and an initial view centered on Spain. It retains the shared site navigation and uses Spanish labels without a GitHub ribbon. Embedded examples open to a full-window map from their top-right control.
 
 # v1.4.0 - *2026-10-28*

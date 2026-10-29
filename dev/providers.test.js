@@ -35,6 +35,17 @@ test('development demos use the same catalog as the distribution', () => {
 	assert.equal(fs.readFileSync(path.join(__dirname, 'leaflet-providersESP.js'), 'utf8'), source);
 });
 
+test('layer reference lists every provider and variant including aliases and deprecated layers', () => {
+	const context = load();
+	const reference = fs.readFileSync(path.join(__dirname, '../docs/capas.md'), 'utf8');
+	const names = new Set([...reference.matchAll(/`([^`\n]+)`/g)].map((match) => match[1]));
+	for (const [name, definition] of Object.entries(context.providersESP)) {
+		for (const id of [name, ...Object.keys(definition.variants || {}).map((variant) => name + '.' + variant)]) {
+			assert.ok(names.has(id), 'Missing layer documentation: ' + id);
+		}
+	}
+});
+
 test('all verifiable providers and variants match the recorded capabilities', () => {
 	const context = load();
 	const unverified = new Set(snapshot.unverified.map((service) => service.endpoint));

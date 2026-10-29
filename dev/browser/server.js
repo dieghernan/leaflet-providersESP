@@ -28,19 +28,17 @@ files.set('/readme-example.html', installationExample('README.md'));
 files.set('/docs-example.html', installationExample('docs/guia.md'));
 
 
-function mapApplication(mode, service = '') {
+function mapApplication(service = '') {
 	const fragment = fs.readFileSync(path.join(root, 'docs/_includes/map-app.html'), 'utf8')
 		.replace(/\{\{\s*'([^']*)'\s*\|\s*relative_url\s*\}\}/g, '$1')
-		.replace(/\{\{ page\.map_mode[^}]*\}\}/g, mode)
 		.replace(/\{\{ page\.map_service[^}]*\}\}/g, service)
-		.replace(/\{\{ page\.title \}\}/g, 'Catálogo de capas');
-	return { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/map-app.css"></head><body>' + fragment + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/map-app.js"></script></body></html>',
+		.replace(/\{\{ page\.title \}\}/g, 'Visor de mapas');
+	return { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/map-app.css"></head><body class="map-page">' + fragment + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/map-app.js"></script></body></html>',
 		contentType: 'text/html' };
 }
-files.set('/catalog.html', mapApplication('catalog'));
-files.set('/viewer.html', mapApplication('viewer'));
-files.set('/wms.html', mapApplication('viewer', 'WMS'));
-files.set('/wmts.html', mapApplication('viewer', 'WMTS'));
+files.set('/viewer.html', mapApplication());
+files.set('/wms.html', mapApplication('WMS'));
+files.set('/wmts.html', mapApplication('WMTS'));
 files.set('/preview.html', { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/preview.css"></head><body class="preview-page">' + fs.readFileSync(path.join(root, 'docs/_includes/preview.html'), 'utf8').replace(/\{\{[^}]+\}\}/g, '/') + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/preview.js"></script></body></html>',
 	contentType: 'text/html' });
 for (const [url, file, contentType] of [

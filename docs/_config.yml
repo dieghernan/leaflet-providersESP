@@ -79,6 +79,8 @@ navbar:
   nav:
     - title: Guía de uso
       url: /guia/
+    - title: Capas
+      url: /capas/
     - title: Preview
       url: /preview/
     - title: Visor

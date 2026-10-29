@@ -39,17 +39,18 @@ con Leaflet y se puede combinar con **leaflet-providers**.
 - **Información temática**: superpone límites administrativos, hidrografía,
   transporte o información geofísica.
 
-En el [catálogo]({{ '/preview/' | relative_url }}) puedes buscar por nombre,
-filtrar por servicio y copiar el código. En el
-[visor]({{ '/visor/' | relative_url }}) puedes combinar capas, ajustar la
-opacidad y compartir una vista.
+En el [Preview]({{ '/preview/' | relative_url }}) puedes comparar miniaturas y
+copiar el código. En el [visor]({{ '/visor/' | relative_url }}) puedes seleccionar
+fondos y transparencias para incorporarlos al control de capas de Leaflet y
+elegir cuáles mostrar sobre el mapa.
 
 <a id="proveedores-disponibles"></a>
 ## Proveedores disponibles
 
-El [catálogo interactivo]({{ '/preview/' | relative_url }}) se genera a partir
-de las definiciones del plugin. Incluye los nombres de las variantes, sus
-servicios y las atribuciones configuradas.
+La [referencia de capas]({{ '/capas/' | relative_url }}) describe cada nombre,
+su contenido y sus limitaciones. Las miniaturas de
+[Preview]({{ '/preview/' | relative_url }}) se generan a partir de las definiciones
+del plugin.
 
 La cobertura y la disponibilidad dependen de cada organismo. Algunas capas solo
 se muestran a determinadas escalas. Consulta las condiciones del proveedor y

@@ -101,10 +101,12 @@ L.control.layers({ 'IGN gray': base }, { Boundaries: boundaries }).addTo(map);
 ```
 
 The [catalog](https://dieghernan.github.io/leaflet-providersESP/preview/)
-lets you search layers, inspect their service and zoom limits and copy code.
+lets you compare layer previews and copy code with or without the plugin.
 The [map viewer](https://dieghernan.github.io/leaflet-providersESP/visor/)
-combines basemaps and overlays and shares the selected view through a URL.
+lets you add basemaps and overlays to Leaflet's standard layer control and choose which ones to display. An optional location button centers the map on your position.
 Documentation and map controls are in Spanish.
+The [layer reference](https://dieghernan.github.io/leaflet-providersESP/capas/)
+describes every layer, including coverage, scale and availability limitations.
 
 ## Availability and attribution
 

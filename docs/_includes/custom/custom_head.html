@@ -46,10 +46,12 @@
 
 {% if page.map_mode %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-geosearch@4.4.0/assets/css/leaflet.css">
 <link rel="stylesheet" href="{{ '/assets/css/map-app.css' | relative_url }}">
 {% endif %}
 {% if page.layout == 'preview' %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="{{ '/assets/css/preview.css' | relative_url }}">
+{% endif %}
+{% if page.layer_reference %}
+<link rel="stylesheet" href="{{ '/assets/css/layer-reference.css' | relative_url }}">
 {% endif %}

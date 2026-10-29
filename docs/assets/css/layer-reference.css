@@ -1,0 +1,8 @@
+.layer-reference table { width: 100%; table-layout: fixed; margin-bottom: 2rem; }
+.layer-reference th, .layer-reference td { vertical-align: top; padding: .6rem; overflow-wrap: anywhere; }
+.layer-reference th:first-child { width: 35%; }
+.layer-reference code { white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .layer-reference table { font-size: .8rem; }
+  .layer-reference th, .layer-reference td { padding: .4rem; }
+}
