@@ -29,10 +29,10 @@ html = html.replace("'Distribución: ' + build.value", "'Distribución minificad
 places = dict(Madrid=[40.4166,-3.7038,13],Valencia=[39.4699,-0.3763,14],Guadarrama=[40.8,-4.05,11],Albufera=[39.3,-0.35,12],Cordoba=[37.8,-4.8,17],Jarama=[40.25,-3.5,15],Centro=[40.7,-3.8,8],Canarias=[28.3,-16.6,8],Espana=[39.4,-3.7,6])
 scenarios = [
 ['GEODE.Cuaternario','Jarama',13,'Pendiente · Cuaternario','Busca polígonos de depósitos cuaternarios en vegas fluviales. Compara con GEODE.Geologia. Las muestras anteriores fueron transparentes.'],
-['SIGPAC.PaisajeAreas','Cordoba',17,'Pendiente · Elementos del paisaje: áreas','Busca pequeños polígonos agrícolas. Prueba otras zonas rurales si no hay datos; no se ha confirmado contenido visible.'],
-['SIGPAC.PaisajeLineas','Cordoba',17,'Pendiente · Elementos del paisaje: líneas','Busca elementos lineales en el campo. Desplázate y cambia el zoom; las muestras anteriores fueron transparentes.'],
+['SIGPAC.PaisajeAreas','Cordoba',17,'Pendiente · Elementos del paisaje: áreas','Busca pequeños polígonos agrícolas. Prueba otras zonas rurales si no hay datos. No se ha confirmado contenido visible.'],
+['SIGPAC.PaisajeLineas','Cordoba',17,'Pendiente · Elementos del paisaje: líneas','Busca elementos lineales en el campo. Desplázate y cambia el zoom. Las muestras anteriores fueron transparentes.'],
 ['SIGPAC.PaisajePuntos','Cordoba',17,'Pendiente · Elementos del paisaje: puntos','Busca símbolos puntuales en zonas agrícolas. No dar por válida la capa únicamente porque cargue teselas.'],
-['PNOAHistorico.Nacional','Valencia',14,'Reintento · Vuelo Nacional en Valencia','Esta zona devolvió HTTP 502. Comprueba si ahora se ve la fotografía aérea; distingue un error de red de un área sin cobertura.'],
+['PNOAHistorico.Nacional','Valencia',14,'Reintento · Vuelo Nacional en Valencia','Esta zona devolvió HTTP 502. Comprueba si ahora se ve la fotografía aérea. Distingue un error de red de un área sin cobertura.'],
 ['SpainByBike.TiposVia','Centro',8,'Reintento · Tipos de vía ciclista','Una petición agotó el tiempo de espera. Busca itinerarios y compara también en Valencia.'],
 ['PNOAHistorico.Americano','Madrid',13,'PNOA histórico · Vuelo americano','Debe verse una fotografía histórica en blanco y negro. Recorre las otras nueve variantes: cada vuelo o año tiene cobertura propia.'],
 ['MTNHistorico.MTN50','Madrid',13,'MTN histórico · Primeras ediciones','Debe aparecer cartografía escaneada. Compara MTN25 y Minutas. Amplía a zoom 20–22: la imagen debe reutilizar teselas del nivel 19.'],
@@ -44,7 +44,7 @@ scenarios = [
 ['GEODE.Geologia','Madrid',13,'GEODE · Geología','Deben aparecer unidades y contactos. Comprueba que Unidades y Contactos se puedan mostrar por separado.'],
 ['SIGPAC.Recintos','Cordoba',17,'SIGPAC · Recintos y cultivos','Busca límites de recintos agrícolas y compara CultivoDeclarado2025. El centro de una ciudad puede no mostrar datos.'],
 ['MapaForestal.Usos','Guadarrama',11,'Mapa Forestal · Usos','Busca zonas forestales coloreadas y comprueba la alineación con el fondo.'],
-['Planimetrias.Minutas','Madrid',13,'Planimetrías históricas','Deben verse documentos escaneados. La fecha y la cobertura varían por hoja; comprueba también zoom 20–22.'],
+['Planimetrias.Minutas','Madrid',13,'Planimetrías históricas','Deben verse documentos escaneados. La fecha y la cobertura varían por hoja. Comprueba también zoom 20–22.'],
 ['CaminosNaturales.Etapas','Centro',8,'Caminos Naturales · Etapas','Busca trazados de itinerarios y acércate a uno visible. No es una red completa de caminos.'],
 ['SpainByBike.Etapas','Valencia',14,'Spain by Bike · Rutas y puntos','Compara Etapas y TiposVia. Explora CentrosBTT y los puertos de montaña en zonas con cobertura.'],
 ['ViasPecuarias.Red2024','Centro',8,'Vías pecuarias · Red 2024','Deben aparecer trazados. Acerca sobre una línea y comprueba que sigue alineada.'],

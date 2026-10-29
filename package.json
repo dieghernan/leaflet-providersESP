@@ -26,5 +26,5 @@
     "leaflet-providers": "4.0.0",
     "uglify-js": "^3.19.3"
   },
-  "version": "1.4.0"
+  "version": "1.5.0-dev"
 }

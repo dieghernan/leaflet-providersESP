@@ -23,6 +23,9 @@ same map.
 Load Leaflet's CSS and JavaScript first, then load leaflet-providersESP. The
 plugin works directly with Leaflet; loading leaflet-providers is optional.
 
+The next release is tentatively **1.5.0**. This branch identifies itself as
+`1.5.0-dev` until the release is finalized.
+
 ### Via CDN
 
 Use the published `v1.4.0` release with Leaflet `1.9.4`:

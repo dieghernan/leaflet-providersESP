@@ -22,14 +22,14 @@ sus limitaciones. Para comparar imágenes y copiar código, abre
   haya datos visibles en todo el territorio a esa escala. Si no se indica, el
   plugin no fija un mínimo específico para esa capa.
 - **Zoom nativo 20** significa que el servicio WMTS proporciona teselas hasta ese
-  nivel. Al ampliar más, Leaflet reutiliza esas teselas si la aplicación lo permite;
-  no obtiene más detalle. Este límite no se aplica a las variantes WMS.
+  nivel. Al ampliar más, Leaflet reutiliza esas teselas si la aplicación lo permite.
+  No obtiene más detalle. Este límite no se aplica a las variantes WMS.
 - Los rectángulos de cobertura configurados no describen la huella real de los
   datos. Una imagen vacía puede indicar falta de datos en esa zona o escala.
 - Las capas son imágenes de servicios remotos: no descargan entidades vectoriales.
   Conserva la atribución y consulta las condiciones y metadatos de cada organismo.
 
-Las observaciones de disponibilidad proceden de las comprobaciones del **27 y 28
+Las observaciones de disponibilidad proceden de las comprobaciones del **27 al 29
 de octubre de 2026**. No son una monitorización en tiempo real. Puedes consultar
 la [auditoría de servicios](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md)
 y las [comprobaciones de capas adicionales](https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/additional-layers-audit.md).
@@ -45,10 +45,10 @@ capacidades para este servicio.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `IDErioja`, `IDErioja.Base` | Mapa base de IDErioja. | Predeterminado; detalle según la cobertura del servicio. |
-| `IDErioja.Relieve` | Mapa base con representación del relieve. | Fondo cartográfico; no proporciona valores de elevación consultables. |
+| `IDErioja`, `IDErioja.Base` | Mapa base de IDErioja. | Predeterminado. Detalle según la cobertura del servicio. |
+| `IDErioja.Relieve` | Mapa base con representación del relieve. | Fondo cartográfico. No proporciona valores de elevación consultables. |
 | `IDErioja.Claro` | Versión clara del mapa base. | Estilo de fondo para superponer información. |
-| `IDErioja.Oscuro` | Versión oscura del mapa base. | Estilo cartográfico oscuro; no cambia el tema de la aplicación. |
+| `IDErioja.Oscuro` | Versión oscura del mapa base. | Estilo cartográfico oscuro. No cambia el tema de la aplicación. |
 
 ## IGNBase
 
@@ -60,8 +60,8 @@ Todas las variantes tienen **zoom nativo 20**.
 | `IGNBase`, `IGNBase.Todo` | Mapa base completo del IGN. | Fondo predeterminado. |
 | `IGNBase.Simplificado` | Callejero simplificado. | Reduce el contenido representado frente al mapa completo. |
 | `IGNBase.Gris` | Mapa base en tonos grises. | Fondo neutro para combinar con capas temáticas. |
-| `IGNBase.TodoNoFondo` | Contenido del mapa base sin su fondo cartográfico. | Zoom mínimo 4; conserva la configuración de imagen de este producto. |
-| `IGNBase.Orto` | Cartografía del IGN preparada para acompañar ortofotografía. | Zoom mínimo 5; no sustituye a la ortofoto de PNOA. |
+| `IGNBase.TodoNoFondo` | Contenido del mapa base sin su fondo cartográfico. | Zoom mínimo 4. Conserva la configuración de imagen de este producto. |
+| `IGNBase.Orto` | Cartografía del IGN preparada para acompañar ortofotografía. | Zoom mínimo 5. No sustituye a la ortofoto de PNOA. |
 
 ## MDT
 
@@ -71,10 +71,10 @@ Las imágenes de elevación y relieve no son una descarga del modelo numérico.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `MDT`, `MDT.Elevaciones` | Representación cartográfica de elevaciones. | WMTS; zoom nativo 20. |
-| `MDT.Relieve` | Representación del relieve del terreno. | WMTS; zoom nativo 20. |
-| `MDT.CurvasNivel` | Curvas de nivel. | WMS; zoom mínimo 12. |
-| `MDT.SpotElevation` | Puntos de cota. | WMS; zoom mínimo 14. |
+| `MDT`, `MDT.Elevaciones` | Representación cartográfica de elevaciones. | WMTS. Zoom nativo 20. |
+| `MDT.Relieve` | Representación del relieve del terreno. | WMTS. Zoom nativo 20. |
+| `MDT.CurvasNivel` | Curvas de nivel. | WMS. Zoom mínimo 12. |
+| `MDT.SpotElevation` | Puntos de cota. | WMS. Zoom mínimo 14. |
 
 ## PNOA
 
@@ -86,19 +86,19 @@ y [WMS](https://www.ign.es/wms-inspire/pnoa-ma?service=WMS&request=GetCapabiliti
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `PNOA`, `PNOA.MaximaActualidad` | Ortofoto de máxima actualidad disponible en el servicio. | WMTS; zoom mínimo 4 y nativo 20. Fecha y resolución según la zona. |
-| `PNOA.Mosaico` | Elementos del mosaico de ortofotografía. | WMS; zoom mínimo 4. No es la misma capa que la imagen continua de máxima actualidad. |
+| `PNOA`, `PNOA.MaximaActualidad` | Ortofoto de máxima actualidad disponible en el servicio. | WMTS. Zoom mínimo 4 y nativo 20. Fecha y resolución según la zona. |
+| `PNOA.Mosaico` | Elementos del mosaico de ortofotografía. | WMS. Zoom mínimo 4. No es la misma capa que la imagen continua de máxima actualidad. |
 
 ## OcupacionSuelo
 
 Cartografía de ocupación y uso del suelo de IDEE.
 [Capacidades WMTS](https://servicios.idee.es/wmts/ocupacion-suelo?service=WMTS&request=GetCapabilities).
-Zoom nativo 20; las clases representadas dependen del producto y su fecha de referencia.
+Zoom nativo 20. Las clases representadas dependen del producto y su fecha de referencia.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
 | `OcupacionSuelo`, `OcupacionSuelo.Ocupacion` | Cobertura u ocupación del suelo. | Describe la cobertura representada por el servicio, no su evolución en tiempo real. |
-| `OcupacionSuelo.Usos` | Usos del suelo. | El uso y la cobertura son conceptos distintos; consulta la leyenda del producto. |
+| `OcupacionSuelo.Usos` | Usos del suelo. | El uso y la cobertura son conceptos distintos. Consulta la leyenda del producto. |
 
 ## LiDAR
 
@@ -120,18 +120,18 @@ Zoom nativo 20; las clases representadas dependen del producto y su fecha de ref
 
 [Servicio WMS de geofísica del IGN](https://www.ign.es/wms-inspire/geofisica?service=WMS&request=GetCapabilities).
 Las capas de eventos y las de peligrosidad representan conceptos diferentes.
-Las primeras cambian con los datos del servicio; las segundas son productos de
+Las primeras cambian con los datos del servicio. Las segundas son productos de
 referencia y no una predicción de un terremoto concreto.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `Geofisica`, `Geofisica.Terremotos10dias` | Terremotos de los últimos 10 días. | Ventana temporal móvil; puede no haber eventos en la vista. |
+| `Geofisica`, `Geofisica.Terremotos10dias` | Terremotos de los últimos 10 días. | Ventana temporal móvil. Puede no haber eventos en la vista. |
 | `Geofisica.Terremotos30dias` | Terremotos de los últimos 30 días. | Ventana temporal móvil. |
 | `Geofisica.Terremotos365dias` | Terremotos de los últimos 365 días. | Ventana temporal móvil. |
-| `Geofisica.ObservedEvents` | Eventos observados de la capa INSPIRE del servicio. | Su alcance lo define el servicio; no equivale a una ventana de 10, 30 o 365 días. |
+| `Geofisica.ObservedEvents` | Eventos observados de la capa INSPIRE del servicio. | Su alcance lo define el servicio. No equivale a una ventana de 10, 30 o 365 días. |
 | `Geofisica.EstacionesSismicas` | Estaciones sísmicas de velocidad. | Localización de instrumentación, no terremotos. |
-| `Geofisica.HazardArea2002` | Áreas de peligrosidad sísmica del mapa NCSE-02 de 2002. | Producto de 2002; no es el mapa de 2015. |
-| `Geofisica.HazardArea` | Alias de `Geofisica.HazardArea2002`. | Conservado por compatibilidad; prefiere el nombre con el año. |
+| `Geofisica.HazardArea2002` | Áreas de peligrosidad sísmica del mapa NCSE-02 de 2002. | Producto de 2002. No es el mapa de 2015. |
+| `Geofisica.HazardArea` | Alias de `Geofisica.HazardArea2002`. | Conservado por compatibilidad. Prefiere el nombre con el año. |
 | `Geofisica.HazardArea2015PGA` | Áreas de peligrosidad 2015, PGA-475. | Interpreta sus valores con la leyenda y documentación del producto. |
 | `Geofisica.HazardArea2015Isolineas` | Isolíneas de peligrosidad 2015, PGA-475. | Representación por isolíneas del producto de 2015. |
 | `Geofisica.HazardArea2015Intensidad` | Áreas de peligrosidad 2015, intensidad-475. | Representa intensidad, no aceleración PGA. |
@@ -142,13 +142,13 @@ referencia y no una predicción de un terremoto concreto.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `VigilanciaVolcanica`, `VigilanciaVolcanica.ErupcionesHistoricas` | Erupciones históricas registradas en el servicio. | Cobertura localizada; comprobada alrededor de La Palma. No es un sistema de alertas en tiempo real. |
+| `VigilanciaVolcanica`, `VigilanciaVolcanica.ErupcionesHistoricas` | Erupciones históricas registradas en el servicio. | Cobertura localizada. Comprobada alrededor de La Palma. No es un sistema de alertas en tiempo real. |
 
 ## CaminoDeSantiago
 
 [Servicio WMS del Camino de Santiago](https://www.ign.es/wms-inspire/camino-santiago?service=WMS&request=GetCapabilities).
 Cada variante muestra la familia de itinerarios indicada. No todas tienen
-contenido en toda España; para información práctica de una ruta, consulta a su organismo responsable.
+contenido en toda España. Para información práctica de una ruta, consulta a su organismo responsable.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
@@ -174,14 +174,14 @@ seleccionar una parcela ni obtener por sí sola su ficha catastral.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `Catastro`, `Catastro.CadastralParcel` | Parcelas catastrales INSPIRE. | Zoom mínimo 10; WMS 1.3.0. |
-| `Catastro.Catastro` | Cartografía catastral del servicio clásico. | Zoom mínimo 1; WMS 1.1.1. El servicio decide qué detalle muestra a cada escala. |
-| `Catastro.Parcela` | Parcelas del servicio clásico. | Zoom mínimo 15; WMS 1.1.1. |
+| `Catastro`, `Catastro.CadastralParcel` | Parcelas catastrales INSPIRE. | Zoom mínimo 10. WMS 1.3.0. |
+| `Catastro.Catastro` | Cartografía catastral del servicio clásico. | Zoom mínimo 1. WMS 1.1.1. El servicio decide qué detalle muestra a cada escala. |
+| `Catastro.Parcela` | Parcelas del servicio clásico. | Zoom mínimo 15. WMS 1.1.1. |
 | `Catastro.CadastralZoning` | Zonificación catastral INSPIRE. | Zoom mínimo 10. |
-| `Catastro.Address` | Direcciones INSPIRE de Catastro. | Zoom mínimo 10; no es la capa de direcciones de Cartociudad. |
+| `Catastro.Address` | Direcciones INSPIRE de Catastro. | Zoom mínimo 10. No es la capa de direcciones de Cartociudad. |
 | `Catastro.Building` | Edificios INSPIRE. | Zoom mínimo 10. |
 | `Catastro.BuildingPart` | Partes de edificios INSPIRE. | Zoom mínimo 10. |
-| `Catastro.AdministrativeBoundary` | Límites administrativos del servicio catastral. | Zoom mínimo 10; fuente distinta de UnidadesAdm. |
+| `Catastro.AdministrativeBoundary` | Límites administrativos del servicio catastral. | Zoom mínimo 10. Fuente distinta de UnidadesAdm. |
 | `Catastro.AdministrativeUnit` | Unidades administrativas del servicio catastral. | Zoom mínimo 10. |
 
 ## RedTransporte
@@ -195,9 +195,9 @@ en tiempo real. Los elementos pequeños requieren acercarse a su ubicación.
 | `RedTransporte`, `RedTransporte.Carreteras` | Tramos de la red de carreteras. | Representación de la red, no un servicio de cálculo de rutas. |
 | `RedTransporte.Ferroviario` | Tramos de la red ferroviaria. | No incluye información operativa en tiempo real. |
 | `RedTransporte.Aerodromo` | Áreas de aeródromos. | Cobertura localizada. |
-| `RedTransporte.Pistas` | Áreas de pistas de aeródromos. | Detalle aeroportuario; cobertura localizada. |
-| `RedTransporte.CallesRodaje` | Áreas de calles de rodaje. | Detalle aeroportuario; cobertura localizada. |
-| `RedTransporte.Plataformas` | Áreas de plataformas aeroportuarias. | Detalle aeroportuario; cobertura localizada. |
+| `RedTransporte.Pistas` | Áreas de pistas de aeródromos. | Detalle aeroportuario. Cobertura localizada. |
+| `RedTransporte.CallesRodaje` | Áreas de calles de rodaje. | Detalle aeroportuario. Cobertura localizada. |
+| `RedTransporte.Plataformas` | Áreas de plataformas aeroportuarias. | Detalle aeroportuario. Cobertura localizada. |
 | `RedTransporte.TransporteCable` | Enlaces de transporte por cable. | Solo donde el servicio recoge estos elementos. |
 | `RedTransporte.AreaServicio` | Áreas de servicio de la red viaria. | Elementos localizados, no un inventario de servicios comerciales. |
 | `RedTransporte.EstacionesFerroviario` | Áreas de estaciones ferroviarias. | No muestra salidas, llegadas ni horarios. |
@@ -207,13 +207,13 @@ en tiempo real. Los elementos pequeños requieren acercarse a su ubicación.
 
 [Servicio WMS de direcciones y códigos postales](https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&request=GetCapabilities).
 Los umbrales se comprobaron en Madrid y Logroño con teselas estándar de 256 × 256
-píxeles. El renderizado depende de la escala; parámetros o tamaños de tesela
+píxeles. El renderizado depende de la escala. Parámetros o tamaños de tesela
 distintos pueden modificar lo que se ve.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `Cartociudad`, `Cartociudad.CodigosPostales` | Representación de códigos postales. | Zoom mínimo 11; las muestras en zoom 9 y 10 eran transparentes. No es una descarga de polígonos postales. |
-| `Cartociudad.Direcciones` | Direcciones de Cartociudad. | Zoom mínimo 17; las muestras en zoom 15 y 16 eran transparentes. No es un geocodificador. |
+| `Cartociudad`, `Cartociudad.CodigosPostales` | Representación de códigos postales. | Zoom mínimo 11. Las muestras en zoom 9 y 10 eran transparentes. No es una descarga de polígonos postales. |
+| `Cartociudad.Direcciones` | Direcciones de Cartociudad. | Zoom mínimo 17. Las muestras en zoom 15 y 16 eran transparentes. No es un geocodificador. |
 
 ## NombresGeograficos
 
@@ -226,13 +226,13 @@ distintos pueden modificar lo que se ve.
 ## UnidadesAdm
 
 [Servicio WMS de unidades administrativas del IGN](https://www.ign.es/wms-inspire/unidades-administrativas?service=WMS&request=GetCapabilities).
-La capa histórica se sirve por separado; el plugin no añade un selector temporal.
+La capa histórica se sirve por separado. El plugin no añade un selector temporal.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
 | `UnidadesAdm`, `UnidadesAdm.Limites` | Límites administrativos. | Representa líneas de límite, no las superficies de las unidades. |
 | `UnidadesAdm.LimitesHistoricos` | Límites administrativos históricos. | Consulta los metadatos del servicio para interpretar su referencia temporal. |
-| `UnidadesAdm.Unidades` | Unidades administrativas. | Representa las unidades del servicio; no sustituye a una descarga de sus geometrías. |
+| `UnidadesAdm.Unidades` | Unidades administrativas. | Representa las unidades del servicio. No sustituye a una descarga de sus geometrías. |
 
 ## Hidrografia
 
@@ -256,7 +256,7 @@ en tiempo real. La presencia de elementos y su detalle varían con la zona y esc
 
 [Servicio WMS de cartografía militar](https://wms-defensa.idee.es/mapas?service=WMS&request=GetCapabilities).
 Cada variante representa una serie cartográfica. Su cobertura, edición y detalle
-dependen de esa serie; ampliar la imagen no aumenta el detalle de origen.
+dependen de esa serie. Ampliar la imagen no aumenta el detalle de origen.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
@@ -270,15 +270,15 @@ dependen de esa serie; ampliar la imagen no aumenta el detalle de origen.
 
 El servicio configurado es `http://ideadif.adif.es/services/wms`.
 Las peticiones HTTP y HTTPS devolvieron **403** en la auditoría del 27 de octubre
-de 2026. No se pudo verificar su contenido; eso no demuestra que se haya retirado.
+de 2026. No se pudo verificar su contenido. Eso no demuestra que se haya retirado.
 Además, la URL HTTP configurada puede quedar bloqueada como contenido mixto en
 una página HTTPS. Las configuraciones se conservan, pero no se garantiza su uso.
 
 | Nombre | Qué representa según la configuración | Limitaciones o notas |
 | --- | --- | --- |
-| `ADIF`, `ADIF.Vias` | Tramos de la red ferroviaria de ADIF. | Servicio no verificado; respuesta 403 en la auditoría. |
-| `ADIF.Nodos` | Nodos de la red ferroviaria. | Servicio no verificado; respuesta 403 en la auditoría. |
-| `ADIF.Estaciones` | Nodos de estaciones ferroviarias. | Servicio no verificado; respuesta 403 en la auditoría. |
+| `ADIF`, `ADIF.Vias` | Tramos de la red ferroviaria de ADIF. | Servicio no verificado. Respuesta 403 en la auditoría. |
+| `ADIF.Nodos` | Nodos de la red ferroviaria. | Servicio no verificado. Respuesta 403 en la auditoría. |
+| `ADIF.Estaciones` | Nodos de estaciones ferroviarias. | Servicio no verificado. Respuesta 403 en la auditoría. |
 
 ## LimitesMaritimos
 
@@ -287,7 +287,7 @@ Son capas de referencia de unidades marítimas, no cartas para navegación.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `LimitesMaritimos`, `LimitesMaritimos.LimitesMaritimos` | Límites de unidades marítimas. | Cobertura marítima; puede no haber contenido sobre tierra. |
+| `LimitesMaritimos`, `LimitesMaritimos.LimitesMaritimos` | Límites de unidades marítimas. | Cobertura marítima. Puede no haber contenido sobre tierra. |
 | `LimitesMaritimos.LineasBase` | Líneas de base. | Elementos distintos de los límites de unidades marítimas. |
 
 ## Copernicus
@@ -295,19 +295,19 @@ Son capas de referencia de unidades marítimas, no cartas para navegación.
 Productos de [Copernicus Land Monitoring Service](https://land.copernicus.eu/),
 servidos por EEA. Las ocho variantes soportadas se migraron y comprobaron el
 28 de octubre de 2026. Su cobertura es europea, con zonas sin datos según el
-producto; conservan los años de referencia 2012 y 2015, no la actualidad.
+producto. Conservan los años de referencia 2012 y 2015, no la actualidad.
 Consulta la [política de datos](https://land.copernicus.eu/en/data-policy).
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
-| `Copernicus`, `Copernicus.Forest` | Densidad de cobertura arbórea de 2015. | Combina las capas WMS de 20 m y 100 m según escala; no es un inventario forestal actual. |
-| `Copernicus.ForestLeaf` | Tipo de hoja dominante de 2015. | WMS en EPSG:4326; el plugin configura ese CRS automáticamente. |
-| `Copernicus.WaterWet` | Agua y humedad de 2015. | Producto temático de referencia; no muestra inundaciones actuales. |
+| `Copernicus`, `Copernicus.Forest` | Densidad de cobertura arbórea de 2015. | Combina las capas WMS de 20 m y 100 m según escala. No es un inventario forestal actual. |
+| `Copernicus.ForestLeaf` | Tipo de hoja dominante de 2015. | WMS en EPSG:4326. El plugin configura ese CRS automáticamente. |
+| `Copernicus.WaterWet` | Agua y humedad de 2015. | Producto temático de referencia. No muestra inundaciones actuales. |
 | `Copernicus.SoilSeal` | Densidad de impermeabilización del suelo de 2015. | No representa cambios posteriores a ese producto. |
 | `Copernicus.GrassLand` | Pastizales de 2015. | Cobertura y clasificación propias del producto. |
-| `Copernicus.RiparianLandCover` | Cobertura del suelo de zonas ribereñas de 2012. | Cobertura localizada; combina capas ráster y vectoriales del WMS según escala. |
-| `Copernicus.Natura2k` | Producto Natura 2000 de 2012. | Limitado a la cobertura del producto; no es el inventario vigente de espacios protegidos. |
-| `Copernicus.UrbanAtlas` | Usos del suelo de Urban Atlas 2012. | Zoom mínimo 8; cobertura de las zonas urbanas incluidas en el producto. |
+| `Copernicus.RiparianLandCover` | Cobertura del suelo de zonas ribereñas de 2012. | Cobertura localizada. Combina capas ráster y vectoriales del WMS según escala. |
+| `Copernicus.Natura2k` | Producto Natura 2000 de 2012. | Limitado a la cobertura del producto. No es el inventario vigente de espacios protegidos. |
+| `Copernicus.UrbanAtlas` | Usos del suelo de Urban Atlas 2012. | Zoom mínimo 8. Cobertura de las zonas urbanas incluidas en el producto. |
 | `Copernicus.RiparianGreen` | Antigua capa de elementos lineales verdes de zonas ribereñas. | Deprecada: endpoint IGN no disponible, sin sustituto equivalente confirmado. No aparece en Preview ni en el visor. |
 
 ## ParquesNaturales
@@ -316,20 +316,20 @@ Aunque el proveedor se llama `ParquesNaturales`, sus capas corresponden a
 **parques nacionales** y sus zonas periféricas de protección del OAPN.
 [Capacidades del servicio WMS](https://sigred.oapn.es/geoserverOAPN/LimitesParquesNacionalesZPP/ows?service=WMS&request=GetCapabilities).
 No es un inventario de todos los espacios naturales protegidos. En la auditoría,
-algunos clientes tuvieron problemas con la cadena de certificados del servidor;
-la comprobación con el almacén TLS de Windows sí obtuvo imágenes.
+algunos clientes tuvieron problemas con la cadena de certificados del servidor.
+La comprobación con el almacén TLS de Windows sí obtuvo imágenes.
 
 | Nombre | Qué representa | Limitaciones o notas |
 | --- | --- | --- |
 | `ParquesNaturales`, `ParquesNaturales.Limites` | Límites de parques nacionales. | Cobertura localizada en los parques recogidos por OAPN. |
 | `ParquesNaturales.ZonasPerifericas` | Zonas periféricas de protección de parques nacionales. | No todos los parques tienen necesariamente una zona representada. |
 
-
 ## PNOAHistorico
 
-Vuelos históricos y selección quinquenal del PNOA. La cobertura varía por vuelo y año; las zonas sin ortofoto pueden devolver imágenes vacías.
+Vuelos históricos y selección quinquenal del PNOA. La cobertura varía por vuelo
+y año. Las zonas sin ortofoto pueden devolver imágenes vacías.
 
-[Capacidades del servicio](https://www.ign.es/wms/pnoa-historico?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://www.ign.es/wms/pnoa-historico?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
@@ -346,9 +346,10 @@ Vuelos históricos y selección quinquenal del PNOA. La cobertura varía por vue
 
 ## MTNHistorico
 
-Primeras ediciones MTN50 y MTN25 y minutas MTN50. Documentos históricos de fechas variables según la hoja; zoom nativo 19.
+Primeras ediciones de MTN50 y MTN25 y minutas de MTN50. Documentos históricos de
+fechas variables según la hoja. Zoom nativo 19.
 
-[Capacidades del servicio](https://www.ign.es/wmts/primera-edicion-mtn?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://www.ign.es/wmts/primera-edicion-mtn?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
@@ -358,7 +359,8 @@ Primeras ediciones MTN50 y MTN25 y minutas MTN50. Documentos históricos de fech
 
 ## Inundaciones
 
-Peligrosidad por inundación fluvial y marina. El periodo de retorno no es una predicción de fecha; cobertura limitada a las zonas estudiadas.
+Peligrosidad por inundación fluvial y marina. El periodo de retorno no es una
+predicción de fecha. Cobertura limitada a las zonas estudiadas.
 
 [Capacidades del servicio](https://servicios.idee.es/wms-inspire/riesgos-naturales/inundaciones?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
 
@@ -372,7 +374,8 @@ Peligrosidad por inundación fluvial y marina. El periodo de retorno no es una p
 
 ## RedNatura
 
-Red Natura 2000. Incluye espacios de la red europea; no equivale al conjunto de espacios naturales protegidos.
+Red Natura 2000. Incluye espacios de la red europea. No equivale al conjunto de
+espacios naturales protegidos.
 
 [Capacidades del servicio](https://iepnb.gob.es/geoserver/RN2000/rn2000/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
 
@@ -382,7 +385,8 @@ Red Natura 2000. Incluye espacios de la red europea; no equivale al conjunto de 
 
 ## EspaciosProtegidos
 
-Espacios naturales protegidos recopilados por MITECO. Las figuras y coberturas dependen de la información comunicada por las administraciones.
+Espacios naturales protegidos recopilados por MITECO. Las figuras y coberturas
+dependen de la información comunicada por las administraciones.
 
 [Capacidades del servicio](https://iepnb.gob.es/geoserver/ENP/enp/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
 
@@ -392,9 +396,10 @@ Espacios naturales protegidos recopilados por MITECO. Las figuras y coberturas d
 
 ## SeccionesINE
 
-Secciones y distritos estadísticos de 2026 y 2021. Son límites territoriales, sin indicadores de población; no deben mezclarse años al unir datos.
+Secciones y distritos estadísticos de 2026 y 2021. Son límites territoriales,
+sin indicadores de población. No deben mezclarse años al unir datos.
 
-[Capacidades del servicio](https://servicios.ine.es/arcgis/services/WMS_INE_SECCIONES_G01/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: Instituto Nacional de Estad&iacute;stica (INE).
+[Capacidades del servicio](https://servicios.ine.es/arcgis/services/WMS_INE_SECCIONES_G01/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: Instituto Nacional de Estadística (INE).
 
 | Nombre | Contenido |
 | --- | --- |
@@ -405,9 +410,10 @@ Secciones y distritos estadísticos de 2026 y 2021. Son límites territoriales, 
 
 ## Pendientes
 
-Modelo Digital de Pendientes MDP05. Imagen temática de pendientes; no descarga un modelo de elevaciones.
+Modelo Digital de Pendientes MDP05. Imagen temática de pendientes. No descarga
+un modelo de elevaciones.
 
-[Capacidades del servicio](https://wms-pendientes.idee.es/pendientes?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://wms-pendientes.idee.es/pendientes?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
@@ -415,7 +421,10 @@ Modelo Digital de Pendientes MDP05. Imagen temática de pendientes; no descarga 
 
 ## GEODE
 
-Cartografía geológica continua del IGME-CSIC. La composición predeterminada reúne unidades, contactos, Cuaternario, ejes, buzamientos y rótulos. Detalle y cobertura según la cartografía de origen. La variante Cuaternario estaba anunciada en capacidades, pero no mostró elementos en las muestras consultadas.
+Cartografía geológica continua del IGME-CSIC. La composición predeterminada
+reúne unidades, contactos, Cuaternario, ejes, buzamientos y rótulos. Detalle y
+cobertura según la cartografía de origen. La variante Cuaternario estaba
+anunciada en capacidades, pero no mostró elementos en las muestras consultadas.
 
 [Capacidades del servicio](https://mapas.igme.es/gis/services/Cartografia_Geologica/IGME_Geode_50/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGME-CSIC.
 
@@ -428,7 +437,11 @@ Cartografía geológica continua del IGME-CSIC. La composición predeterminada r
 
 ## SIGPAC
 
-Recintos y elementos del paisaje agrario. El servicio actual no publica una capa independiente de parcelas. El cultivo declarado corresponde a 2025; el contenido de recintos puede actualizarse. Las capas de elementos del paisaje estaban anunciadas en capacidades, pero las muestras consultadas no contenían elementos visibles.
+Recintos y elementos del paisaje agrario. El servicio actual no publica una capa
+independiente de parcelas. El cultivo declarado corresponde a 2025. El contenido
+de recintos puede actualizarse. Las capas de elementos del paisaje estaban
+anunciadas en capacidades, pero las muestras consultadas no contenían elementos
+visibles.
 
 [Capacidades del servicio](https://sigpac-hubcloud.es/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: FEGA / MAPA.
 
@@ -442,7 +455,8 @@ Recintos y elementos del paisaje agrario. El servicio actual no publica una capa
 
 ## MapaForestal
 
-Usos del Mapa Forestal de España, foto fija. Mapa general; no incluye una variante por especie.
+Usos del Mapa Forestal de España, foto fija. Mapa general. No incluye una
+variante por especie.
 
 [Capacidades del servicio](https://iepnb.gob.es/geoserver/foto_fija_mfe/ff_uso/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
 
@@ -452,9 +466,10 @@ Usos del Mapa Forestal de España, foto fija. Mapa general; no incluye una varia
 
 ## Planimetrias
 
-Planimetrías históricas de 1870 a 1950. Cobertura y fecha según la hoja; zoom nativo 20.
+Planimetrías históricas de 1870 a 1950. Cobertura y fecha según la hoja. Zoom
+nativo 20.
 
-[Capacidades del servicio](https://www.ign.es/wmts/minutas-cartograficas?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://www.ign.es/wmts/minutas-cartograficas?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
@@ -462,7 +477,8 @@ Planimetrías históricas de 1870 a 1950. Cobertura y fecha según la hoja; zoom
 
 ## CaminosNaturales
 
-Etapas de la Red de Caminos Naturales. Capa de itinerarios; no ofrece cálculo de rutas.
+Etapas de la Red de Caminos Naturales. Capa de itinerarios. No ofrece cálculo de
+rutas.
 
 [Capacidades del servicio](https://wms.mapama.gob.es/sig/desarrollorural/ccnn_etapas?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MAPA.
 
@@ -472,9 +488,10 @@ Etapas de la Red de Caminos Naturales. Capa de itinerarios; no ofrece cálculo d
 
 ## SpainByBike
 
-Etapas, tipos de vía, centros BTT y puertos de montaña. Las líneas y puntos se ofrecen por separado.
+Etapas, tipos de vía, centros BTT y puertos de montaña. Las líneas y puntos se
+ofrecen por separado.
 
-[Capacidades del servicio](https://wms-spainbybike.idee.es/spainbybike?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://wms-spainbybike.idee.es/spainbybike?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
@@ -486,7 +503,8 @@ Etapas, tipos de vía, centros BTT y puertos de montaña. Las líneas y puntos s
 
 ## ViasPecuarias
 
-Red General de Vías Pecuarias, edición 2024. La cobertura depende de la información incorporada al inventario.
+Red General de Vías Pecuarias, edición 2024. La cobertura depende de la
+información incorporada al inventario.
 
 [Capacidades del servicio](https://iepnb.gob.es/geoserver/vias_pecuarias/rgvp_2024/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
 
@@ -496,9 +514,10 @@ Red General de Vías Pecuarias, edición 2024. La cobertura depende de la inform
 
 ## PotencialSolar
 
-Potencial solar global y en edificios. Cartografía temática estimada; zoom nativo 20.
+Potencial solar global y en edificios. Cartografía temática estimada. Zoom
+nativo 20.
 
-[Capacidades del servicio](https://wmts-potencial-solar.idee.es/potencial-solar?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+[Capacidades del servicio](https://wmts-potencial-solar.idee.es/potencial-solar?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartográfico Nacional.
 
 | Nombre | Contenido |
 | --- | --- |
