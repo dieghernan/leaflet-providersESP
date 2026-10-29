@@ -42,6 +42,10 @@
 		document.getElementById('preview-plugin').textContent = selected.map((entry) => 'L.tileLayer.providerESP(' + JSON.stringify(entry.name) + ').addTo(map);').join('\n');
 		document.getElementById('preview-native').textContent = selected.map(nativeCode).join('\n\n');
 		status.textContent = '';
+		const base = selected.find((entry) => !entry.overlay);
+		document.getElementById('preview-base-active').textContent = 'Fondo activo: ' + (base
+			? base.name
+			: 'ninguno');
 	}
 	function choose(entry) {
 		if (!entry.overlay) {
@@ -116,7 +120,8 @@
 				: 'preview-base'; input.setAttribute('aria-label', entry.name); entry.input = input;
 			input.addEventListener('change', () => choose(entry));
 			const name = document.createElement('span'); name.className = 'preview-name'; name.textContent = entry.name; caption.title = entry.name;
-			caption.append(input, name); card.append(canvas, caption); list.append(card); entry.card = card;
+			const indicator = document.createElement('span'); indicator.className = 'preview-active'; indicator.textContent = 'Activa'; indicator.setAttribute('aria-hidden', 'true');
+			caption.append(input, name, indicator); card.append(canvas, caption); list.append(card); entry.card = card;
 			observer.observe(card);
 		}
 	}
@@ -130,6 +135,7 @@
 			if (!entry.card.hidden) count++;
 		}
 		document.getElementById('preview-count').textContent = count + ' de ' + entries.length + ' capas';
+		document.getElementById('preview-empty').hidden = count !== 0;
 		for (const heading of list.querySelectorAll('h2')) {
 			const overlay = heading.textContent === 'Superposiciones';
 			heading.hidden = !entries.some((entry) => entry.overlay === overlay && !entry.card.hidden);
@@ -144,14 +150,30 @@
 	readHash();
 	const initial = entries.find((entry) => entry.name === 'IGNBase.Todo') || entries.find((entry) => !entry.overlay);
 	choose(initial);
-	document.getElementById('preview-copy').addEventListener('click', async() => {
-		try {
-			await navigator.clipboard.writeText(document.getElementById('preview-native').textContent);
-			status.textContent = 'Código copiado.';
-		} catch {
-			const selection = window.getSelection(); const range = document.createRange();
-			range.selectNodeContents(document.getElementById('preview-native')); selection.removeAllRanges(); selection.addRange(range);
-			status.textContent = 'Código seleccionado. Usa la opción Copiar de tu navegador.';
-		}
-	});
+	let statusTimer;
+	for (const [buttonId, codeId] of [['preview-copy-plugin', 'preview-plugin'], ['preview-copy', 'preview-native']]) {
+		const button = document.getElementById(buttonId);
+		const original = button.textContent;
+		let buttonTimer;
+		button.addEventListener('click', async() => {
+			window.clearTimeout(statusTimer); window.clearTimeout(buttonTimer);
+			button.textContent = original; button.disabled = true;
+			try {
+				await navigator.clipboard.writeText(document.getElementById(codeId).textContent);
+				status.textContent = 'Código copiado al portapapeles'; button.textContent = '¡Copiado!';
+				statusTimer = window.setTimeout(() => {
+					status.textContent = '';
+				}, 2000);
+				buttonTimer = window.setTimeout(() => {
+					button.textContent = original;
+				}, 2000);
+			} catch {
+				const selection = window.getSelection(); const range = document.createRange();
+				range.selectNodeContents(document.getElementById(codeId)); selection.removeAllRanges(); selection.addRange(range);
+				status.textContent = 'Código seleccionado. Usa la opción Copiar de tu navegador.';
+			} finally {
+				button.disabled = false;
+			}
+		});
+	}
 })();
