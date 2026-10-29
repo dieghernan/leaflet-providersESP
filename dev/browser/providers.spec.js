@@ -14,7 +14,7 @@ for (const example of ['/readme-example.html', '/docs-example.html']) {
 		const resources = new Map([
 			['https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css', '/leaflet.css'],
 			['https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js', '/leaflet.js'],
-			['https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js', providerScript]
+			['https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js', providerScript]
 		]);
 		await page.route('https://cdn.jsdelivr.net/**', async(route) => {
 			const resource = resources.get(route.request().url());
@@ -214,3 +214,16 @@ for (const [variant, crs, layers] of [
 		await expect(page.locator('.leaflet-control-attribution')).toContainText('Copernicus Land Monitoring Service');
 	});
 }
+
+test('historical MTN tiles stop at their advertised native zoom 19', async({ page, providerScript }) => {
+	await page.addScriptTag({ url: providerScript });
+	const requested = page.waitForRequest((request) => request.url().startsWith('https://www.ign.es/wmts/primera-edicion-mtn'));
+	await page.evaluate(() => {
+		const map = L.map('map', { maxZoom: 22 }).setView([40.4166, -3.7038], 22);
+		L.tileLayer.providerESP('MTNHistorico.MTN50', { maxZoom: 22 }).addTo(map);
+	});
+	const params = new URL((await requested).url()).searchParams;
+	expect(params.get('TileMatrix')).toBe('19');
+	expect(params.get('layer')).toBe('mtn50-edicion1');
+	expect(params.get('tilematrixset')).toBe('GoogleMapsCompatible');
+});

@@ -1,4 +1,8 @@
-# Unreleased
+# v1.5.0 - *2026-10-29*
+
+## Added
+
+- Add 15 Spanish state mapping providers for historical imagery and maps, flood hazards, protected areas, statistical boundaries, slopes, geology, agriculture, forests, routes and solar potential. Each provider exposes at most 10 selected layers.
 
 ## Changed
 
@@ -75,7 +79,6 @@ Capabilities and sample images audited on 2026-10-27 and 2026-10-28. Visual revi
 ## Changed
 - IDErioja now is IDErioja.Base 
 
-
 ### Checks
 
 - [x] Bump version on script
@@ -99,8 +102,6 @@ Cleanup
 - CaminoDeSantiago updated
 - Copernicus updated 
 
-
-
 # v1.3.1 - *2022-10-25*
 
 ## Fixed
@@ -112,7 +113,6 @@ Fix MDT.Relieve
 - [x] Bump version on script
 - [x] Beautify
 - [ ] Lint
-
 
 # v1.3.0 - *2022-02-16*
 
@@ -149,7 +149,6 @@ NA
 ## Fixed 
 
 - CDN version.
-
 
 # v1.1.1 - *2020-10-25*
 
@@ -188,7 +187,6 @@ NA
 - [x] Bump version on script
 - [x] Beautify
 - [x] Lint
-
 
 # v1.0.0 - *2020-10-23*
 

@@ -25,12 +25,12 @@ plugin works directly with Leaflet; loading leaflet-providers is optional.
 
 ### Via CDN
 
-Use the published `v1.4.0` release with Leaflet `1.9.4`:
+Use the published `v1.5.0` release with Leaflet `1.9.4`:
 
 ``` html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
 ```
 
 To follow development on `main`, replace only the plugin script with this URL:
@@ -69,7 +69,7 @@ container needs an explicit height to be visible.
     <title>Map of Spain</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
     <style>
         html, body { height: 100%; margin: 0; }
         #map { height: 100%; width: 100%; }

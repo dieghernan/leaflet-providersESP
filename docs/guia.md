@@ -11,16 +11,16 @@ show_toc: false
 ## Instalación
 
 Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
-El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.
+El plugin funciona directamente con Leaflet. Cargar leaflet-providers es opcional.
 
 ### Vía CDN
 
-Para usar la versión publicada `v1.4.0` con Leaflet `1.9.4`:
+Para usar la versión publicada `v1.5.0` con Leaflet `1.9.4`:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
 ```
 
 Para seguir el desarrollo en `main`, sustituye solo el script del plugin por:
@@ -62,7 +62,7 @@ mapa necesita una altura explícita para ser visible.
     <title>Mapa de España</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
     <style>
         html, body { height: 100%; margin: 0; }
         #map { height: 100%; width: 100%; }
@@ -150,7 +150,7 @@ L.tileLayer.providerESP('UnidadesAdm.Limites', {
 El [visor]({{ '/visor/' | relative_url }}) muestra un mapa a toda página con una
 franja colapsable. En las pestañas **Fondos** y **Transparencias**, busca y marca
 las capas que quieras incorporar al selector y mostrar directamente en el mapa.
-Un fondo nuevo sustituye al fondo visible; las transparencias se acumulan.
+Un fondo nuevo sustituye al fondo visible. Las transparencias se acumulan.
 La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.
 
 Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
@@ -159,7 +159,7 @@ Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con **×**, Escape o un clic fuera.
 El número sobre el icono indica cuántas capas hay en el selector. La etiqueta
-**Activa** identifica una capa habilitada en el mapa; **En el selector** indica
+**Activa** identifica una capa habilitada en el mapa. **En el selector** indica
 que está disponible, pero desactivada. Ninguna de las dos etiquetas garantiza
 que haya datos en la zona o escala actual. Los avisos **Cargando** y **Error de
 carga** describen las peticiones de teselas, tanto en el visor como en Preview.
@@ -173,7 +173,7 @@ pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
 La **lupa**, junto a los controles del mapa, abre la búsqueda de direcciones de
 CartoCiudad. Introduce calle, número y municipio, pulsa **Buscar** y elige un
 resultado para centrar el mapa. Puedes cerrar el formulario con **×**, Escape
-o un clic fuera; las capas seleccionadas se conservan.
+o un clic fuera. Las capas seleccionadas se conservan.
 
 En el visor y en Preview, **Restablecer vista inicial** recarga la página y
 recupera el fondo inicial, la posición y el zoom del mapa, los filtros y los
@@ -182,7 +182,7 @@ controles predeterminados. También elimina los marcadores de ubicación y búsq
 ## Compatibilidad y cambios de nombres
 
 La API de este plugin es `L.tileLayer.providerESP()`. La de **leaflet-providers**
-es `L.tileLayer.provider()`. Puedes usar ambas en el mismo mapa; no necesitas
+es `L.tileLayer.provider()`. Puedes usar ambas en el mismo mapa. No necesitas
 cargar **leaflet-providers** si solo usas las capas de este proyecto.
 
 ### Nombres de variantes y deprecaciones

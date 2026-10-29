@@ -1,0 +1,3346 @@
+{
+  "checked_at": "2026-10-29",
+  "services": [
+    {
+      "endpoint": "https://www.ign.es/wms/pnoa-historico",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2024",
+          "Title": "PNOA 2024",
+          "Identifier": "Capa_pnoa2024_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2024",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2023",
+          "Title": "PNOA 2023",
+          "Identifier": "Capa_pnoa2023_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2023",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2022",
+          "Title": "PNOA 2022",
+          "Identifier": "Capa_pnoa2022_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2022",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2021",
+          "Title": "PNOA 2021",
+          "Identifier": "Capa_pnoa2021_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2021",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2020",
+          "Title": "PNOA 2020",
+          "Identifier": "Capa_pnoa2020_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2020",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2019",
+          "Title": "PNOA 2019",
+          "Identifier": "Capa_pnoa2019_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2019",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2018",
+          "Title": "PNOA 2018",
+          "Identifier": "Capa_pnoa2018_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2018",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2017",
+          "Title": "PNOA 2017",
+          "Identifier": "Capa_pnoa2017_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2017",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2016",
+          "Title": "PNOA 2016",
+          "Identifier": "Capa_pnoa2016_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2016",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2015",
+          "Title": "PNOA 2015",
+          "Identifier": "Capa_pnoa2015_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2015",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2014",
+          "Title": "PNOA 2014",
+          "Identifier": "Capa_pnoa2014_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2014",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2013",
+          "Title": "PNOA 2013",
+          "Identifier": "Capa_pnoa2013_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2013",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2012",
+          "Title": "PNOA 2012",
+          "Identifier": "Capa_pnoa2012_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2012",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2011",
+          "Title": "PNOA 2011",
+          "Identifier": "Capa_pnoa2011_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2011",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2010",
+          "Title": "PNOA 2010",
+          "Identifier": "Capa_pnoa2010_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2010",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2009",
+          "Title": "PNOA 2009",
+          "Identifier": "Capa_pnoa2009_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2009",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2008",
+          "Title": "PNOA 2008",
+          "Identifier": "Capa_pnoa2008_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2008",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2007",
+          "Title": "PNOA 2007",
+          "Identifier": "Capa_pnoa2007_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2007",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2006",
+          "Title": "PNOA 2006",
+          "Identifier": "Capa_pnoa2006_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2006",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2005",
+          "Title": "PNOA 2005",
+          "Identifier": "Capa_pnoa2005_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2005",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "PNOA2004",
+          "Title": "PNOA 2004",
+          "Identifier": "Capa_pnoa2004_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "PNOA2004",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2018",
+          "Title": "PNOA10:Galicia 2018",
+          "Identifier": "Capa_pnoa10_2018_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2018",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2016",
+          "Title": "PNOA10:Madrid 2016",
+          "Identifier": "Capa_pnoa10_2016_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2016",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2013",
+          "Title": "PNOA10:Madrid 2013",
+          "Identifier": "Capa_pnoa10_2013_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2013",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2009",
+          "Title": "PNOA10:Madrid 2009",
+          "Identifier": "Capa_pnoa10_2009_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2009",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2007",
+          "Title": "PNOA10:Castilla-La Mancha 2007",
+          "Identifier": "Capa_pnoa10_2007_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2007",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "pnoa10_2008",
+          "Title": "PNOA10:Illes Balears 2008",
+          "Identifier": "Capa_pnoa10_2008_WMS",
+          "styles": [
+            "default"
+          ],
+          "name": "pnoa10_2008",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "OrtoExpeditaLIDAR2024",
+          "Title": "PNOA LIDAR Expedita 2024",
+          "Identifier": "OrtoExpedita_LIDARcob3",
+          "styles": [
+            "default"
+          ],
+          "name": "OrtoExpeditaLIDAR2024",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "OrtoExpeditaLIDAR2023",
+          "Title": "PNOA LIDAR Expedita 2023",
+          "Identifier": "OrtoExpedita_LIDARcob3",
+          "styles": [
+            "default"
+          ],
+          "name": "OrtoExpeditaLIDAR2023",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "infoExpeditasLIDAR",
+          "Title": "Consultar ortoimágenes Expeditas LIDAR disponibles",
+          "Identifier": "OrtoExpedita_LIDARcob3",
+          "styles": [
+            "estilo-visible-ExpeditaLIDAR",
+            "estilo-invisible-ExpeditaLIDAR"
+          ],
+          "name": "infoExpeditasLIDAR",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CampoCartagena",
+          "Title": "Campo de Cartagena provisionales 2022",
+          "Identifier": "CampoCartagena",
+          "styles": [
+            "default"
+          ],
+          "name": "CampoCartagena",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "SIGPAC",
+          "Title": "SIGPAC (1997-2003)",
+          "Identifier": "Capa_SIGPAC_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "SIGPAC",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "OLISTAT",
+          "Title": "OLISTAT (1997-1998)",
+          "Identifier": "Capa_OLISTAT_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "OLISTAT",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Nacional_1981-1986",
+          "Title": "Nacional (1981-1986)",
+          "Identifier": "Capa_Nacional_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "Nacional_1981-1986",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326",
+            "EPSG:900913"
+          ],
+          "Name": "Interministerial_1973-1986",
+          "Title": "Interministerial (1973-1986)",
+          "Identifier": "Capa_Interministerial_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "Interministerial_1973-1986",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AMS_1956-1957",
+          "Title": "Americano (Serie B, 1956-1957)",
+          "Identifier": "Capa_AMS_WMS_IGN",
+          "styles": [
+            "default"
+          ],
+          "name": "AMS_1956-1957",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "infoVuelos",
+          "Title": "Consultar ortoimágenes disponibles",
+          "Identifier": "capa_infoVuelos",
+          "styles": [
+            "estilo-visible",
+            "estilo-invisible"
+          ],
+          "name": "infoVuelos",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wmts/primera-edicion-mtn",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "crs": [],
+          "Title": "Minutas MTN50 (catastrones)",
+          "Identifier": "catastrones",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "EPSG:25830",
+            "GoogleMapsCompatible",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "name": "catastrones",
+          "web_mercator": false
+        },
+        {
+          "crs": [],
+          "Title": "Primera edición MTN50",
+          "Identifier": "mtn50-edicion1",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "EPSG:25830",
+            "GoogleMapsCompatible",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "name": "mtn50-edicion1",
+          "web_mercator": false
+        },
+        {
+          "crs": [],
+          "Title": "Primera edición MTN25",
+          "Identifier": "mtn25-edicion1",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/jpeg"
+          ],
+          "matrix_sets": [
+            "EPSG:25830",
+            "GoogleMapsCompatible",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "name": "mtn25-edicion1",
+          "web_mercator": false
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.idee.es/wms-inspire/riesgos-naturales/inundaciones",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "NZ.Flood.FluvialT10",
+          "Title": "Fluvial T = 10 años",
+          "Identifier": "ESNZSNCZIMPFT010",
+          "styles": [
+            "default"
+          ],
+          "name": "NZ.Flood.FluvialT10",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "NZ.Flood.FluvialT100",
+          "Title": "Fluvial T = 100 años",
+          "Identifier": "ESNZSNCZIMPFT100",
+          "styles": [
+            "default"
+          ],
+          "name": "NZ.Flood.FluvialT100",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "NZ.Flood.FluvialT500",
+          "Title": "Fluvial T = 500 años",
+          "Identifier": "ESNZSNCZIMPFT500",
+          "styles": [
+            "default"
+          ],
+          "name": "NZ.Flood.FluvialT500",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "NZ.Flood.MarinaT100",
+          "Title": "Marina T = 100 años",
+          "Identifier": "ESMAGRAMADGCOSTASSNCZIMP1000003",
+          "styles": [
+            "default"
+          ],
+          "name": "NZ.Flood.MarinaT100",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "NZ.Flood.MarinaT500",
+          "Title": "Marina T = 500 años",
+          "Identifier": "ESMAGRAMADGCOSTASSNCZIMP5000004",
+          "styles": [
+            "default"
+          ],
+          "name": "NZ.Flood.MarinaT500",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32630",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "EL.GridCoverage",
+          "Title": "Modelo Digital del Terreno de las ARPSIs",
+          "Identifier": "ESMAGRAMADGAGUASNCZIMDT0001",
+          "styles": [
+            "default"
+          ],
+          "name": "EL.GridCoverage",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://iepnb.gob.es/geoserver/RN2000/rn2000/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/geopackage+sqlite3",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "rn2000",
+          "Title": "rn2000",
+          "styles": [
+            "rn2000_2024"
+          ],
+          "name": "rn2000",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://iepnb.gob.es/geoserver/ENP/enp/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/geopackage+sqlite3",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "enp",
+          "Title": "enp",
+          "styles": [
+            "enp"
+          ],
+          "name": "enp",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://servicios.ine.es/arcgis/services/WMS_INE_SECCIONES_G01/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CPV_Secciones2001",
+          "Title": "CPV_Secciones2001",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "CPV_Secciones2001",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CPV_Distritos2001",
+          "Title": "CPV_Distritos2001",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "CPV_Distritos2001",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Secciones2007",
+          "Title": "CE_Secciones2007",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "CE_Secciones2007",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Distritos2007",
+          "Title": "CE_Distritos2007",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "CE_Distritos2007",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2008",
+          "Title": "Secciones2008",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2008",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2008",
+          "Title": "Distritos2008",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2008",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2009",
+          "Title": "Secciones2009",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2009",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2009",
+          "Title": "Distritos2009",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2009",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Secciones2010",
+          "Title": "CE_Secciones2010",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "CE_Secciones2010",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Distritos2010",
+          "Title": "CE_Distritos2010",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "CE_Distritos2010",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Secciones2011",
+          "Title": "CE_Secciones2011",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "CE_Secciones2011",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CE_Distritos2011",
+          "Title": "CE_Distritos2011",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "CE_Distritos2011",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CPV_Secciones2011",
+          "Title": "CPV_Secciones2011",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "CPV_Secciones2011",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "CPV_Distritos2011",
+          "Title": "CPV_Distritos2011",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "CPV_Distritos2011",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2012",
+          "Title": "Secciones2012",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2012",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2012",
+          "Title": "Distritos2012",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2012",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2013",
+          "Title": "Secciones2013",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2013",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2013",
+          "Title": "Distritos2013",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2013",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2014",
+          "Title": "Secciones2014",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2014",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2014",
+          "Title": "Distritos2014",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2014",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2015",
+          "Title": "Secciones2015",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2015",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2015",
+          "Title": "Distritos2015",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2015",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2016",
+          "Title": "Secciones2016",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2016",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2016",
+          "Title": "Distritos2016",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2016",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2017",
+          "Title": "Secciones2017",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2017",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2017",
+          "Title": "Distritos2017",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2017",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2018",
+          "Title": "Secciones2018",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2018",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2018",
+          "Title": "Distritos2018",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2018",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2019",
+          "Title": "Secciones2019",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2019",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2019",
+          "Title": "Distritos2019",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2019",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2020",
+          "Title": "Secciones2020",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2020",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2020",
+          "Title": "Distritos2020",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2020",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2021",
+          "Title": "Secciones2021",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2021",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2021",
+          "Title": "Distritos2021",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2021",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2022",
+          "Title": "Secciones2022",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2022",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2022",
+          "Title": "Distritos2022",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2022",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2023",
+          "Title": "Secciones2023",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2023",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2023",
+          "Title": "Distritos2023",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2023",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2024",
+          "Title": "Secciones2024",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2024",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2024",
+          "Title": "Distritos2024",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2024",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2025",
+          "Title": "Secciones2025",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2025",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2025",
+          "Title": "Distritos2025",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2025",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Secciones2026",
+          "Title": "Secciones2026",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "236235.119048",
+          "name": "Secciones2026",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:103214",
+            "EPSG:103215",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "Distritos2026",
+          "Title": "Distritos2026",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "944940.476190",
+          "name": "Distritos2026",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wms-pendientes.idee.es/pendientes",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "MDP05",
+          "Title": "Modelo Digital de Pendientes",
+          "Identifier": "MDP05",
+          "styles": [
+            "default"
+          ],
+          "name": "MDP05",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://mapas.igme.es/gis/services/Cartografia_Geologica/IGME_Geode_50/MapServer/WMSServer",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "0",
+          "Title": "Zonas GEODE",
+          "styles": [
+            "default"
+          ],
+          "MinScaleDenominator": "283482.142857",
+          "name": "0",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "1",
+          "Title": "Recintos geología",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "283482.142857",
+          "name": "1",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "2",
+          "Title": "Contactos",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "283482.142857",
+          "name": "2",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "3",
+          "Title": "Cuaternario - Recintos ",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "188988.095238",
+          "name": "3",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "4",
+          "Title": "Cuaternario - Lineas auxiliares",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "188988.095238",
+          "name": "4",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "5",
+          "Title": "Ejes",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "188988.095238",
+          "name": "5",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "6",
+          "Title": "Buzamientos",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "94494.047619",
+          "name": "6",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "7",
+          "Title": "Indicios minerales",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "94494.047619",
+          "name": "7",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "8",
+          "Title": "Lineas auxiliares",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "47247.023810",
+          "name": "8",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:102100",
+            "EPSG:23028",
+            "EPSG:23029",
+            "EPSG:23030",
+            "EPSG:23031",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4230",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "9",
+          "Title": "Rótulos unidades",
+          "styles": [
+            "default"
+          ],
+          "MaxScaleDenominator": "47247.023810",
+          "name": "9",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://sigpac-hubcloud.es/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/jpeg",
+        "image/png"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AU.Sigpac:cultivo_declarado",
+          "Title": "Cultivo Declarado 2025",
+          "Identifier": "ESFEGADECLARACIONESSIGPAC20201001001",
+          "styles": [
+            "cultivo_declarado"
+          ],
+          "name": "AU.Sigpac:cultivo_declarado",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AU.Sigpac:e_paisaje",
+          "Title": "E. Paisaje - Área",
+          "Identifier": "ESFEGAEEPPSIGPAC20200401001",
+          "styles": [
+            "e_paisaje"
+          ],
+          "name": "AU.Sigpac:e_paisaje",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AU.Sigpac:e_paisaje_linea",
+          "Title": "E. Paisaje - Línea",
+          "Identifier": "ESFEGAEEPPSIGPAC20200401001",
+          "styles": [
+            "e_paisaje_linea"
+          ],
+          "name": "AU.Sigpac:e_paisaje_linea",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AU.Sigpac:e_paisaje_punto",
+          "Title": "E. Paisaje - Punto",
+          "Identifier": "ESFEGAEEPPSIGPAC20200401001",
+          "styles": [
+            "e_paisaje_punto"
+          ],
+          "name": "AU.Sigpac:e_paisaje_punto",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "AU.Sigpac:recinto",
+          "Title": "Recinto",
+          "Identifier": "ESFEGARECINTOSSIGPAC20050101001",
+          "styles": [
+            "recinto"
+          ],
+          "name": "AU.Sigpac:recinto",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://iepnb.gob.es/geoserver/foto_fija_mfe/ff_uso/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/geopackage+sqlite3",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "ff_uso",
+          "Title": "ff_uso",
+          "styles": [
+            "uso_mfe"
+          ],
+          "MaxScaleDenominator": "6400000.0",
+          "name": "ff_uso",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://www.ign.es/wmts/minutas-cartograficas",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "crs": [],
+          "Title": "Planimetrías (1870-1950)",
+          "Identifier": "Minutas",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible",
+            "EPSG:3857"
+          ],
+          "name": "Minutas",
+          "web_mercator": false
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wms.mapama.gob.es/sig/desarrollorural/ccnn_etapas",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/svg+xml",
+        "image/tiff"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:32627",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "ccnn_etapas",
+          "Title": "Caminos Naturales - Etapas",
+          "styles": [
+            "ccnn_Etapas"
+          ],
+          "name": "ccnn_etapas",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wms-spainbybike.idee.es/spainbybike",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "centros_btt",
+          "Title": "Centros BTT",
+          "Identifier": "centros_btt",
+          "styles": [
+            "centros"
+          ],
+          "name": "centros_btt",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "puertos_pto",
+          "Title": "Puertos de montaña (puntos)",
+          "Identifier": "puertos_pto",
+          "styles": [
+            "puertos_pto"
+          ],
+          "name": "puertos_pto",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "puertos_linea",
+          "Title": "Puertos de montaña (líneas)",
+          "Identifier": "puertos_linea",
+          "styles": [
+            "puertos_linea"
+          ],
+          "name": "puertos_linea",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "etapas",
+          "Title": "Etapas",
+          "Identifier": "etapas",
+          "styles": [
+            "etapas"
+          ],
+          "name": "etapas",
+          "web_mercator": true
+        },
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:32629",
+            "EPSG:32630",
+            "EPSG:32631",
+            "EPSG:3857",
+            "EPSG:4080",
+            "EPSG:4081",
+            "EPSG:4082",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "tipo_via",
+          "Title": "Tipos de vía",
+          "Identifier": "tipo_via",
+          "styles": [
+            "tipo_via"
+          ],
+          "name": "tipo_via",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://iepnb.gob.es/geoserver/vias_pecuarias/rgvp_2024/wms",
+      "service": "WMS",
+      "version": "1.3.0",
+      "formats": [
+        "application/atom+xml",
+        "application/geopackage+sqlite3",
+        "application/json;type=geojson",
+        "application/json;type=topojson",
+        "application/json;type=utfgrid",
+        "application/pdf",
+        "application/rss+xml",
+        "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kml+xml;mode=networklink",
+        "application/vnd.google-earth.kmz",
+        "application/vnd.mapbox-vector-tile",
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff",
+        "image/tiff8",
+        "image/vnd.jpeg-png",
+        "image/vnd.jpeg-png8",
+        "text/html; subtype=openlayers",
+        "text/html; subtype=openlayers2",
+        "text/html; subtype=openlayers3"
+      ],
+      "layers": [
+        {
+          "crs": [
+            "CRS:84",
+            "EPSG:25828",
+            "EPSG:25829",
+            "EPSG:25830",
+            "EPSG:25831",
+            "EPSG:3035",
+            "EPSG:32628",
+            "EPSG:3857",
+            "EPSG:4083",
+            "EPSG:4258",
+            "EPSG:4326"
+          ],
+          "Name": "rgvp_2024",
+          "Title": "rgvp_2024",
+          "styles": [
+            "vias_pecuarias_v5"
+          ],
+          "name": "rgvp_2024",
+          "web_mercator": true
+        }
+      ]
+    },
+    {
+      "endpoint": "https://wmts-potencial-solar.idee.es/potencial-solar",
+      "service": "WMTS",
+      "version": "1.0.0",
+      "formats": [],
+      "layers": [
+        {
+          "crs": [],
+          "Title": "Potencial Solar Edificios",
+          "Identifier": "potencial-solar",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "GoogleMapsCompatible",
+            "EPSG:3857"
+          ],
+          "name": "potencial-solar",
+          "web_mercator": false
+        },
+        {
+          "crs": [],
+          "Title": "Potencial Solar Global",
+          "Identifier": "potencial-solar-global",
+          "styles": [
+            "default"
+          ],
+          "formats": [
+            "image/png"
+          ],
+          "matrix_sets": [
+            "EPSG:3857",
+            "GoogleMapsCompatible"
+          ],
+          "name": "potencial-solar-global",
+          "web_mercator": false
+        }
+      ]
+    }
+  ]
+}
