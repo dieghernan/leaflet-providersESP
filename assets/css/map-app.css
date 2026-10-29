@@ -34,6 +34,9 @@ html, body.map-page { height: 100%; margin: 0; }
 .layers-hint { position: absolute; right: calc(100% + 10px); top: 0; width: min(230px, calc(100vw - 90px)); padding: 8px; margin: 0; border: 1px solid #adc6d4; border-radius: 4px; background: white; box-shadow: 0 2px 8px #0002; font-size: 12px; color: #333; pointer-events: none; }
 .layer-feedback { position: absolute; z-index: 800; left: 50%; bottom: 60px; transform: translateX(-50%); max-width: calc(100% - 120px); padding: 6px 10px; border-radius: 4px; background: #fffffff2; box-shadow: 0 2px 8px #0002; margin: 0; font-size: 12px; pointer-events: none; }
 .layer-feedback:empty { display: none; }
+.layer-opacity { display: flex; align-items: center; gap: 6px; padding: 2px 5px 5px; font-size: 12px; }
+.layer-opacity input { min-width: 0; flex: 1; height: 32px; accent-color: #245775; }
+.layer-opacity output { min-width: 4ch; text-align: right; }
 .ribbon-panel { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 .5rem; max-height: 132px; overflow: auto; overscroll-behavior: contain; }
 .ribbon-layer { display: flex; align-items: center; gap: .35rem; margin: 0; min-width: 0; min-height: 26px; padding: 1px 5px; border-radius: 3px; cursor: pointer; font-weight: normal; }
 .ribbon-layer:hover { background: #f7f4ed; }

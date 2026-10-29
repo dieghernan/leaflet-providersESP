@@ -25,12 +25,17 @@ button { margin-top: 8px; }
 :focus-visible { outline: 3px solid #0969da; outline-offset: 2px; }
 #preview-status { display: block; margin-top: 5px; padding: 5px 7px; background: #e5f1eb; color: #215a3e; border-radius: 3px; font-weight: bold; }
 #preview-status:empty { display: none; }
+#preview-status { position: absolute; z-index: 1100; bottom: 40px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 32px); padding: 10px 14px; border: 1px solid #81ab94; box-shadow: 0 2px 12px #0003; }
+#preview-load-status[data-state="error"] { background: #fff0ed; color: #8b3026; border-left: 4px solid #8b3026; }
+#preview-load-status[data-state="loading"] { background: #edf4fb; color: #245775; border-left: 4px solid #245775; }
 #preview-base-active { color: #215a3e; overflow-wrap: anywhere; }
 #preview-load-status { padding: 4px 6px; border-radius: 3px; background: #fff7dc; color: #604514; overflow-wrap: anywhere; }
 #preview-load-status:empty { display: none; }
 .preview-load-note { color: #555; font-size: 11px; }
 .preview-tile-status { position: absolute; top: 3px; left: 3px; z-index: 500; padding: 2px 5px; background: #fffffff2; color: #4a4a4a; border-radius: 3px; font-size: 11px; }
 .preview-tile-status[data-error="true"] { background: #fff0ed; color: #8b3026; }
+.preview-tile-status { max-width: calc(100% - 6px); border: 1px solid #a1a8ae; box-shadow: 0 1px 4px #0003; font-weight: bold; }
+.preview-card:has(.preview-tile-status[data-error="true"]:not([hidden])) { box-shadow: inset 0 0 0 2px #8b3026; }
 .preview-tile-status[hidden] { display: none; }
 .preview-code-block { margin-top: 7px; }
 .preview-code-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3px 8px; margin-bottom: 4px; }
@@ -42,6 +47,7 @@ button { margin-top: 8px; }
 #preview-search { font-size: 12px; min-width: 0; width: 100%; padding: 5px 6px; }
 #preview-count { font-size: 11px; margin: 3px 0; }
 #preview-empty { padding: 8px; font-size: 12px; background: #f0f4f6; border-radius: 3px; }
+#preview-empty[hidden] { display: none; }
 #preview-list { overflow: auto; flex: 1; min-height: 0; }
 #preview-list h2 { font-size: 12px; margin: 6px 0; }
 .preview-card { display: block; height: 110px; position: relative; margin-bottom: 3px; background: #e3e8eb; }
@@ -59,6 +65,7 @@ button { margin-top: 8px; }
 @media (max-width: 600px) {
   #preview-info { left: 10px; right: 10px; width: auto; max-height: 36%; }
   #preview-info > p { display: none; }
+  #preview-info > #preview-load-status:not(:empty) { display: block; }
   #preview-layers { top: 39%; width: 170px; }
   #preview-info pre { max-height: 75px; }
   #preview-map .leaflet-top.leaflet-left { top: 39%; }
