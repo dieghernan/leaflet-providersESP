@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="es">
+  {% include head.html theme_script=true %}
+  <body class="preview-page d-flex flex-column" id="body">
+    {% include_cached navbar.html pageurl=page.url %}
+    {% include preview.html %}
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ '/dist/leaflet-providersESP.js' | relative_url }}"></script>
+    <script src="{{ '/js/preview.js' | relative_url }}"></script>
+    {% include components/scripts.html theme=true %}
+  </body>
+</html>

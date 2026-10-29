@@ -1,0 +1,23 @@
+<a class="preview-skip" href="#preview-search">Ir a las capas</a>
+<main>
+  <div id="preview-map" role="region" aria-label="Mapa de España con las capas seleccionadas" tabindex="0"></div>
+  <section id="preview-info" aria-label="Código de las capas activas">
+    <h1><a href="{{ '/' | relative_url }}">leaflet-providersESP</a> · Preview</h1>
+    <p>Miniaturas de todas las capas disponibles, sincronizadas con el mapa.</p>
+    <details open>
+      <summary>Capas activas y código</summary>
+      <h2>Con el plugin</h2>
+      <pre><code id="preview-plugin"></code></pre>
+      <h2>Sin el plugin · JavaScript</h2>
+      <pre><code id="preview-native"></code></pre>
+      <button id="preview-copy" type="button">Copiar código sin plugin</button>
+      <span id="preview-status" role="status" aria-live="polite"></span>
+    </details>
+  </section>
+  <aside id="preview-layers" aria-label="Capas disponibles">
+    <label for="preview-search">Buscar capa</label>
+    <input id="preview-search" type="search" placeholder="IGN, PNOA, IDErioja…">
+    <p id="preview-count" role="status" aria-live="polite"></p>
+    <div id="preview-list"></div>
+  </aside>
+</main>

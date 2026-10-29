@@ -1,0 +1,46 @@
+/* Layout follows leaflet-providers' full-map preview and miniature layer list. */
+* { box-sizing: border-box; }
+html, body { height: 100%; width: 100%; margin: 0; }
+body.preview-page { display: flex; flex-direction: column; overflow: hidden; }
+.preview-page > nav { flex-shrink: 0; }
+.preview-page main { position: relative; flex: 1; min-height: 0; width: 100%; font: 14px/1.4 Arial, Helvetica, sans-serif; color: #22272e; }
+#preview-map { height: 100%; width: 100%; }
+#preview-info, #preview-layers { position: absolute; z-index: 1000; background: rgb(255 255 255 / 90%); box-shadow: 0 0 15px #0003; border-radius: 5px; padding: 8px; }
+#preview-info { top: 10px; left: 50px; width: min(520px, calc(100% - 330px)); max-height: calc(100% - 50px); overflow: auto; background: rgb(255 255 255 / 75%); padding: 6px 8px; font-size: 12px; line-height: 1.3; }
+#preview-info h1 { font-size: 14px; margin-bottom: 3px; }
+#preview-info h2 { font-size: 12px; margin: 6px 0 3px; }
+#preview-info p { margin: 3px 0 5px; }
+#preview-info pre { font-size: 10px; line-height: 1.3; max-height: 120px; }
+#preview-info button { font-size: 12px; padding: 4px 6px; margin-top: 5px; }
+h1 { font-size: 16px; margin: 0 0 5px; }
+h2 { font-size: 14px; margin: 8px 0 4px; }
+p { margin: 4px 0 8px; }
+a { color: #0969aa; }
+summary, button, .preview-card { cursor: pointer; }
+pre { margin: 0; overflow: auto; font-size: 11px; line-height: 1.4; max-height: 180px; white-space: pre; }
+button, input[type="search"] { font: inherit; padding: 6px 8px; border: 1px solid #a1a8ae; border-radius: 4px; background: white; color: inherit; }
+button { margin-top: 8px; }
+:focus-visible { outline: 3px solid #0969da; outline-offset: 2px; }
+#preview-status { display: block; }
+#preview-layers { top: 10px; right: 10px; bottom: 30px; width: 240px; display: flex; flex-direction: column; }
+#preview-layers > label { font-weight: bold; font-size: 12px; }
+#preview-search { font-size: 12px; min-width: 0; width: 100%; padding: 5px 6px; }
+#preview-count { font-size: 11px; margin: 3px 0; }
+#preview-list { overflow: auto; flex: 1; min-height: 0; }
+#preview-list h2 { font-size: 12px; margin: 6px 0; }
+.preview-card { display: block; height: 110px; position: relative; margin-bottom: 3px; background: #e3e8eb; }
+.preview-card[hidden] { display: none; }
+.preview-mini { height: 100%; width: 100%; pointer-events: none; }
+.preview-label { position: absolute; bottom: 0; left: 0; right: 0; z-index: 500; display: flex; align-items: center; gap: 4px; height: 23px; background: #000c; color: white; padding: 2px 4px; font-size: 11px; line-height: 1.2; }
+.preview-label input { flex: 0 0 auto; margin: 0; }
+.preview-name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.preview-card:has(input:checked) { outline: 3px solid #0969da; outline-offset: -3px; }
+.preview-skip { position: absolute; top: -100px; z-index: 2000; background: white; padding: 8px; }
+.preview-skip:focus { top: 0; }
+@media (max-width: 600px) {
+  #preview-info { left: 10px; right: 10px; width: auto; max-height: 36%; }
+  #preview-info > p { display: none; }
+  #preview-layers { top: 39%; width: 170px; }
+  #preview-info pre { max-height: 75px; }
+  #preview-map .leaflet-top.leaflet-left { top: 39%; }
+}

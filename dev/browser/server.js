@@ -41,7 +41,11 @@ files.set('/catalog.html', mapApplication('catalog'));
 files.set('/viewer.html', mapApplication('viewer'));
 files.set('/wms.html', mapApplication('viewer', 'WMS'));
 files.set('/wmts.html', mapApplication('viewer', 'WMTS'));
+files.set('/preview.html', { body: '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/leaflet.css"><link rel="stylesheet" href="/preview.css"></head><body class="preview-page">' + fs.readFileSync(path.join(root, 'docs/_includes/preview.html'), 'utf8').replace(/\{\{[^}]+\}\}/g, '/') + '<script src="/leaflet.js"></script><script src="/providers.js"></script><script src="/preview.js"></script></body></html>',
+	contentType: 'text/html' });
 for (const [url, file, contentType] of [
+	['/preview.js', 'docs/js/preview.js', 'text/javascript'],
+	['/preview.css', 'docs/assets/css/preview.css', 'text/css'],
 	['/map-app.js', 'docs/js/map-app.js', 'text/javascript'],
 	['/map-app.css', 'docs/assets/css/map-app.css', 'text/css']
 ]) files.set(url, { body: fs.readFileSync(path.join(root, file)),
