@@ -8,9 +8,6 @@ show_sidetoc: true
 show_toc: false
 ---
 
-La próxima versión prevista es **1.5.0**. Esta rama se identifica como
-`1.5.0-dev` hasta que se publique la versión definitiva.
-
 ## Instalación
 
 Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
@@ -18,12 +15,12 @@ El plugin funciona directamente con Leaflet. Cargar leaflet-providers es opciona
 
 ### Vía CDN
 
-Para usar la versión publicada `v1.4.0` con Leaflet `1.9.4`:
+Para usar la versión publicada `v1.5.0` con Leaflet `1.9.4`:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
 ```
 
 Para seguir el desarrollo en `main`, sustituye solo el script del plugin por:
@@ -65,7 +62,7 @@ mapa necesita una altura explícita para ser visible.
     <title>Mapa de España</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"></script>
     <style>
         html, body { height: 100%; margin: 0; }
         #map { height: 100%; width: 100%; }

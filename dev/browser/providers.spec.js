@@ -14,7 +14,7 @@ for (const example of ['/readme-example.html', '/docs-example.html']) {
 		const resources = new Map([
 			['https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css', '/leaflet.css'],
 			['https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js', '/leaflet.js'],
-			['https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.4.0/dist/leaflet-providersESP.min.js', providerScript]
+			['https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js', providerScript]
 		]);
 		await page.route('https://cdn.jsdelivr.net/**', async(route) => {
 			const resource = resources.get(route.request().url());

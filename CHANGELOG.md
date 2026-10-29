@@ -1,4 +1,4 @@
-# v1.5.0 (tentative, unreleased)
+# v1.5.0 - *2026-10-29*
 
 ## Added
 
