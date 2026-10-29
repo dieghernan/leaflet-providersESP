@@ -325,18 +325,23 @@
     <p>Miniaturas de todas las capas disponibles, sincronizadas con el mapa.</p>
     <details open>
       <summary>Capas activas y código</summary>
-      <h2>Con el plugin</h2>
-      <pre><code id="preview-plugin"></code></pre>
-      <h2>Sin el plugin · JavaScript</h2>
-      <pre><code id="preview-native"></code></pre>
-      <button id="preview-copy" type="button">Copiar código sin plugin</button>
-      <span id="preview-status" role="status" aria-live="polite"></span>
+      <p id="preview-base-active"></p>
+      <section class="preview-code-block" aria-labelledby="plugin-heading">
+        <div class="preview-code-heading"><h2 id="plugin-heading">Con el plugin</h2><button id="preview-copy-plugin" type="button" aria-label="Copiar código con plugin">Copiar código con plugin</button></div>
+        <pre tabindex="0" aria-label="Código con plugin"><code id="preview-plugin"></code></pre>
+      </section>
+      <section class="preview-code-block" aria-labelledby="native-heading">
+        <div class="preview-code-heading"><h2 id="native-heading">Sin el plugin · JavaScript</h2><button id="preview-copy" type="button" aria-label="Copiar código sin plugin">Copiar código sin plugin</button></div>
+        <pre tabindex="0" aria-label="Código sin plugin"><code id="preview-native"></code></pre>
+      </section>
     </details>
+    <span id="preview-status" role="status" aria-live="polite" aria-atomic="true"></span>
   </section>
   <aside id="preview-layers" aria-label="Capas disponibles">
     <label for="preview-search">Buscar capa</label>
     <input id="preview-search" type="search" placeholder="IGN, PNOA, IDErioja…">
     <p id="preview-count" role="status" aria-live="polite"></p>
+    <p id="preview-empty" role="status" aria-live="polite" hidden>No se han encontrado capas con ese nombre.</p>
     <div id="preview-list"></div>
   </aside>
 </main>
