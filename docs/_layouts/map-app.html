@@ -2,6 +2,7 @@
 <html lang="es">
   {% include head.html theme_script=true %}
   <body class="map-page" id="body">
+    {% include map-application.html %}
     {% include map-app.html %}
     <script src="{{ '/js/reset-map.js' | relative_url }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>

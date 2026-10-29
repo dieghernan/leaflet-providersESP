@@ -1,0 +1,22 @@
+{%- assign application_name = page.title | append: ' | ' | append: site.title -%}
+{%- assign application_description = page.description | default: page.excerpt | default: site.description | strip_html | strip -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": {{ application_name | jsonify | replace: '<', '\u003c' }},
+  "description": {{ application_description | jsonify | replace: '<', '\u003c' }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "image": {{ site.og_image | absolute_url | jsonify }},
+  "inLanguage": {{ site.locale | jsonify }},
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requiere un navegador web con JavaScript habilitado.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "EUR"
+  }
+}
+</script>
