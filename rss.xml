@@ -7,8 +7,8 @@
 		<description>Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.</description>
 		<language>es-ES</language>
 		<copyright>(c) 2026, dieghernan</copyright>	
-		<pubDate>Thu, 29 Oct 2026 14:08:18 +0100</pubDate>
-		<lastBuildDate>Thu, 29 Oct 2026 14:08:18 +0100</lastBuildDate>
+		<pubDate>Thu, 29 Oct 2026 15:05:57 +0100</pubDate>
+		<lastBuildDate>Thu, 29 Oct 2026 15:05:57 +0100</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
