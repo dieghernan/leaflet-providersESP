@@ -1,0 +1,77 @@
+{
+  "PNOAHistorico": {
+    "Americano": "AMS_1956-1957",
+    "Interministerial": "Interministerial_1973-1986",
+    "Nacional": "Nacional_1981-1986",
+    "OLISTAT": "OLISTAT",
+    "SIGPAC": "SIGPAC",
+    "PNOA2004": "PNOA2004",
+    "PNOA2009": "PNOA2009",
+    "PNOA2014": "PNOA2014",
+    "PNOA2019": "PNOA2019",
+    "PNOA2024": "PNOA2024"
+  },
+  "MTNHistorico": {
+    "MTN50": "mtn50-edicion1",
+    "MTN25": "mtn25-edicion1",
+    "Minutas": "catastrones"
+  },
+  "Inundaciones": {
+    "FluvialT10": "NZ.Flood.FluvialT10",
+    "FluvialT100": "NZ.Flood.FluvialT100",
+    "FluvialT500": "NZ.Flood.FluvialT500",
+    "MarinaT100": "NZ.Flood.MarinaT100",
+    "MarinaT500": "NZ.Flood.MarinaT500"
+  },
+  "RedNatura": {
+    "General": "rn2000"
+  },
+  "EspaciosProtegidos": {
+    "General": "enp"
+  },
+  "SeccionesINE": {
+    "Secciones2026": "Secciones2026",
+    "Distritos2026": "Distritos2026",
+    "Secciones2021": "Secciones2021",
+    "Distritos2021": "Distritos2021"
+  },
+  "Pendientes": {
+    "MDP05": "MDP05"
+  },
+  "GEODE": {
+    "Geologia": "1,2,3,4,5,6,9",
+    "Unidades": "1",
+    "Contactos": "2",
+    "Cuaternario": "3"
+  },
+  "SIGPAC": {
+    "Recintos": "AU.Sigpac:recinto",
+    "CultivoDeclarado2025": "AU.Sigpac:cultivo_declarado",
+    "PaisajeAreas": "AU.Sigpac:e_paisaje",
+    "PaisajeLineas": "AU.Sigpac:e_paisaje_linea",
+    "PaisajePuntos": "AU.Sigpac:e_paisaje_punto"
+  },
+  "MapaForestal": {
+    "Usos": "ff_uso"
+  },
+  "Planimetrias": {
+    "Minutas": "Minutas"
+  },
+  "CaminosNaturales": {
+    "Etapas": "ccnn_etapas"
+  },
+  "SpainByBike": {
+    "Etapas": "etapas",
+    "TiposVia": "tipo_via",
+    "CentrosBTT": "centros_btt",
+    "Puertos": "puertos_linea",
+    "PuertosPuntos": "puertos_pto"
+  },
+  "ViasPecuarias": {
+    "Red2024": "rgvp_2024"
+  },
+  "PotencialSolar": {
+    "Global": "potencial-solar-global",
+    "Edificios": "potencial-solar"
+  }
+}

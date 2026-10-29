@@ -324,4 +324,185 @@ la comprobación con el almacén TLS de Windows sí obtuvo imágenes.
 | `ParquesNaturales`, `ParquesNaturales.Limites` | Límites de parques nacionales. | Cobertura localizada en los parques recogidos por OAPN. |
 | `ParquesNaturales.ZonasPerifericas` | Zonas periféricas de protección de parques nacionales. | No todos los parques tienen necesariamente una zona representada. |
 
+
+## PNOAHistorico
+
+Vuelos históricos y selección quinquenal del PNOA. La cobertura varía por vuelo y año; las zonas sin ortofoto pueden devolver imágenes vacías.
+
+[Capacidades del servicio](https://www.ign.es/wms/pnoa-historico?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `PNOAHistorico.Americano`, `PNOAHistorico` | Americano (Serie B, 1956-1957) |
+| `PNOAHistorico.Interministerial` | Interministerial (1973-1986) |
+| `PNOAHistorico.Nacional` | Nacional (1981-1986) |
+| `PNOAHistorico.OLISTAT` | OLISTAT (1997-1998) |
+| `PNOAHistorico.SIGPAC` | SIGPAC (1997-2003) |
+| `PNOAHistorico.PNOA2004` | PNOA 2004 |
+| `PNOAHistorico.PNOA2009` | PNOA 2009 |
+| `PNOAHistorico.PNOA2014` | PNOA 2014 |
+| `PNOAHistorico.PNOA2019` | PNOA 2019 |
+| `PNOAHistorico.PNOA2024` | PNOA 2024 |
+
+## MTNHistorico
+
+Primeras ediciones MTN50 y MTN25 y minutas MTN50. Documentos históricos de fechas variables según la hoja; zoom nativo 19.
+
+[Capacidades del servicio](https://www.ign.es/wmts/primera-edicion-mtn?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `MTNHistorico.MTN50`, `MTNHistorico` | Primera edición MTN50 |
+| `MTNHistorico.MTN25` | Primera edición MTN25 |
+| `MTNHistorico.Minutas` | Minutas MTN50 (catastrones) |
+
+## Inundaciones
+
+Peligrosidad por inundación fluvial y marina. El periodo de retorno no es una predicción de fecha; cobertura limitada a las zonas estudiadas.
+
+[Capacidades del servicio](https://servicios.idee.es/wms-inspire/riesgos-naturales/inundaciones?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
+
+| Nombre | Contenido |
+| --- | --- |
+| `Inundaciones.FluvialT10`, `Inundaciones` | Fluvial T = 10 años |
+| `Inundaciones.FluvialT100` | Fluvial T = 100 años |
+| `Inundaciones.FluvialT500` | Fluvial T = 500 años |
+| `Inundaciones.MarinaT100` | Marina T = 100 años |
+| `Inundaciones.MarinaT500` | Marina T = 500 años |
+
+## RedNatura
+
+Red Natura 2000. Incluye espacios de la red europea; no equivale al conjunto de espacios naturales protegidos.
+
+[Capacidades del servicio](https://iepnb.gob.es/geoserver/RN2000/rn2000/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
+
+| Nombre | Contenido |
+| --- | --- |
+| `RedNatura.General`, `RedNatura` | Red Natura 2000 |
+
+## EspaciosProtegidos
+
+Espacios naturales protegidos recopilados por MITECO. Las figuras y coberturas dependen de la información comunicada por las administraciones.
+
+[Capacidades del servicio](https://iepnb.gob.es/geoserver/ENP/enp/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
+
+| Nombre | Contenido |
+| --- | --- |
+| `EspaciosProtegidos.General`, `EspaciosProtegidos` | Espacios naturales protegidos |
+
+## SeccionesINE
+
+Secciones y distritos estadísticos de 2026 y 2021. Son límites territoriales, sin indicadores de población; no deben mezclarse años al unir datos.
+
+[Capacidades del servicio](https://servicios.ine.es/arcgis/services/WMS_INE_SECCIONES_G01/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: Instituto Nacional de Estad&iacute;stica (INE).
+
+| Nombre | Contenido |
+| --- | --- |
+| `SeccionesINE.Secciones2026`, `SeccionesINE` | Secciones2026 |
+| `SeccionesINE.Distritos2026` | Distritos2026 |
+| `SeccionesINE.Secciones2021` | Secciones2021 |
+| `SeccionesINE.Distritos2021` | Distritos2021 |
+
+## Pendientes
+
+Modelo Digital de Pendientes MDP05. Imagen temática de pendientes; no descarga un modelo de elevaciones.
+
+[Capacidades del servicio](https://wms-pendientes.idee.es/pendientes?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `Pendientes.MDP05`, `Pendientes` | Modelo Digital de Pendientes |
+
+## GEODE
+
+Cartografía geológica continua del IGME-CSIC. La composición predeterminada reúne unidades, contactos, Cuaternario, ejes, buzamientos y rótulos. Detalle y cobertura según la cartografía de origen. La variante Cuaternario estaba anunciada en capacidades, pero no mostró elementos en las muestras consultadas.
+
+[Capacidades del servicio](https://mapas.igme.es/gis/services/Cartografia_Geologica/IGME_Geode_50/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGME-CSIC.
+
+| Nombre | Contenido |
+| --- | --- |
+| `GEODE.Geologia`, `GEODE` | Recintos geología + Contactos + Cuaternario - Recintos  + Cuaternario - Lineas auxiliares + Ejes + Buzamientos + Rótulos unidades |
+| `GEODE.Unidades` | Recintos geología |
+| `GEODE.Contactos` | Contactos |
+| `GEODE.Cuaternario` | Cuaternario - Recintos  |
+
+## SIGPAC
+
+Recintos y elementos del paisaje agrario. El servicio actual no publica una capa independiente de parcelas. El cultivo declarado corresponde a 2025; el contenido de recintos puede actualizarse. Las capas de elementos del paisaje estaban anunciadas en capacidades, pero las muestras consultadas no contenían elementos visibles.
+
+[Capacidades del servicio](https://sigpac-hubcloud.es/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: FEGA / MAPA.
+
+| Nombre | Contenido |
+| --- | --- |
+| `SIGPAC.Recintos`, `SIGPAC` | Recinto |
+| `SIGPAC.CultivoDeclarado2025` | Cultivo Declarado 2025 |
+| `SIGPAC.PaisajeAreas` | E. Paisaje - Área |
+| `SIGPAC.PaisajeLineas` | E. Paisaje - Línea |
+| `SIGPAC.PaisajePuntos` | E. Paisaje - Punto |
+
+## MapaForestal
+
+Usos del Mapa Forestal de España, foto fija. Mapa general; no incluye una variante por especie.
+
+[Capacidades del servicio](https://iepnb.gob.es/geoserver/foto_fija_mfe/ff_uso/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
+
+| Nombre | Contenido |
+| --- | --- |
+| `MapaForestal.Usos`, `MapaForestal` | Usos del Mapa Forestal de España |
+
+## Planimetrias
+
+Planimetrías históricas de 1870 a 1950. Cobertura y fecha según la hoja; zoom nativo 20.
+
+[Capacidades del servicio](https://www.ign.es/wmts/minutas-cartograficas?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `Planimetrias.Minutas`, `Planimetrias` | Planimetrías (1870-1950) |
+
+## CaminosNaturales
+
+Etapas de la Red de Caminos Naturales. Capa de itinerarios; no ofrece cálculo de rutas.
+
+[Capacidades del servicio](https://wms.mapama.gob.es/sig/desarrollorural/ccnn_etapas?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MAPA.
+
+| Nombre | Contenido |
+| --- | --- |
+| `CaminosNaturales.Etapas`, `CaminosNaturales` | Caminos Naturales - Etapas |
+
+## SpainByBike
+
+Etapas, tipos de vía, centros BTT y puertos de montaña. Las líneas y puntos se ofrecen por separado.
+
+[Capacidades del servicio](https://wms-spainbybike.idee.es/spainbybike?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `SpainByBike.Etapas`, `SpainByBike` | Etapas |
+| `SpainByBike.TiposVia` | Tipos de vía |
+| `SpainByBike.CentrosBTT` | Centros BTT |
+| `SpainByBike.Puertos` | Puertos de montaña (líneas) |
+| `SpainByBike.PuertosPuntos` | Puertos de montaña (puntos) |
+
+## ViasPecuarias
+
+Red General de Vías Pecuarias, edición 2024. La cobertura depende de la información incorporada al inventario.
+
+[Capacidades del servicio](https://iepnb.gob.es/geoserver/vias_pecuarias/rgvp_2024/wms?service=WMS&request=GetCapabilities&version=1.3.0). Atribución: MITECO.
+
+| Nombre | Contenido |
+| --- | --- |
+| `ViasPecuarias.Red2024`, `ViasPecuarias` | Red General de Vías Pecuarias (2024) |
+
+## PotencialSolar
+
+Potencial solar global y en edificios. Cartografía temática estimada; zoom nativo 20.
+
+[Capacidades del servicio](https://wmts-potencial-solar.idee.es/potencial-solar?service=WMTS&request=GetCapabilities&version=1.0.0). Atribución: IGN / Sistema Cartogr&aacute;fico Nacional.
+
+| Nombre | Contenido |
+| --- | --- |
+| `PotencialSolar.Global`, `PotencialSolar` | Potencial Solar Global |
+| `PotencialSolar.Edificios` | Potencial Solar Edificios |
+
 </div>

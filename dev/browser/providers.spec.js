@@ -214,3 +214,16 @@ for (const [variant, crs, layers] of [
 		await expect(page.locator('.leaflet-control-attribution')).toContainText('Copernicus Land Monitoring Service');
 	});
 }
+
+test('historical MTN tiles stop at their advertised native zoom 19', async({ page, providerScript }) => {
+	await page.addScriptTag({ url: providerScript });
+	const requested = page.waitForRequest((request) => request.url().startsWith('https://www.ign.es/wmts/primera-edicion-mtn'));
+	await page.evaluate(() => {
+		const map = L.map('map', { maxZoom: 22 }).setView([40.4166, -3.7038], 22);
+		L.tileLayer.providerESP('MTNHistorico.MTN50', { maxZoom: 22 }).addTo(map);
+	});
+	const params = new URL((await requested).url()).searchParams;
+	expect(params.get('TileMatrix')).toBe('19');
+	expect(params.get('layer')).toBe('mtn50-edicion1');
+	expect(params.get('tilematrixset')).toBe('GoogleMapsCompatible');
+});

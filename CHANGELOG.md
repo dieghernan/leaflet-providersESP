@@ -1,5 +1,9 @@
 # Unreleased
 
+## Added
+
+- Add 15 Spanish state mapping providers for historical imagery and maps, flood hazards, protected areas, statistical boundaries, slopes, geology, agriculture, forests, routes and solar potential. Each provider exposes at most 10 selected layers.
+
 ## Changed
 
 - Both map pages offer a reset action that reloads their initial state, clearing layer selections, map position, searches and markers without rebuilding Leaflet controls manually.

@@ -10,6 +10,8 @@ const snapshot = JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/fixtures
 
 snapshot.services.push(...JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/fixtures/copernicus-capabilities-2026-10-28.json'), 'utf8')).services);
 
+snapshot.services.push(...JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/fixtures/state-candidates-2026-10-29.json'), 'utf8')).services);
+
 function load(script = source) {
 	const tileLayer = (url, options) => ({ type: 'tiles',
 		url,
@@ -77,7 +79,9 @@ test('all verifiable providers and variants match the recorded capabilities', ()
 				}
 				assert.ok(service.formats.includes(layer.options.format), id + ': WMS image format');
 			} else {
-				assert.equal(layer.options.maxNativeZoom, 20, id + ': native WMTS zoom limit');
+				assert.equal(layer.options.maxNativeZoom, name === 'MTNHistorico'
+					? 19
+					: 20, id + ': native WMTS zoom limit');
 				assert.equal(url.searchParams.get('version'), service.version, id + ': WMTS version');
 				assert.ok(advertised.formats.includes(url.searchParams.get('Format')), id + ': WMTS image format');
 				assert.equal(url.searchParams.getAll('style').length, 1, id + ': duplicate style parameters');
@@ -87,7 +91,7 @@ test('all verifiable providers and variants match the recorded capabilities', ()
 			verified++;
 		}
 	}
-	assert.equal(verified, 104);
+	assert.equal(verified, 164);
 	assert.equal(unavailable, 5); // ADIF and deprecated RiparianGreen; explicitly unresolved.
 });
 
@@ -101,6 +105,21 @@ test('Cartociudad keeps postal codes available before street addresses', () => {
 	assert.equal(addresses.options.minZoom, 17);
 	assert.equal(codes.options.layers, 'codigo-postal');
 	assert.equal(addresses.options.layers, 'AD.Address');
+});
+
+test('state providers keep a compact selection and defaults resolve to the first variant', () => {
+	const context = load();
+	const selection = JSON.parse(fs.readFileSync(path.join(__dirname, 'audit/state-selection.json'), 'utf8'));
+	assert.equal(Object.keys(selection).length, 15);
+	for (const [name, variants] of Object.entries(selection)) {
+		assert.ok(Object.keys(variants).length <= 10, name + ': too many layers');
+		const first = Object.keys(variants)[0];
+		const standard = context.providerOpts(name);
+		const variant = context.providerOpts(name + '.' + first);
+		assert.equal(standard.url, variant.url);
+		assert.equal(standard.options.layers, variant.options.layers);
+		assert.equal(standard.options.variant, variant.options.variant);
+	}
 });
 
 test('WMS version overrides remain available for existing clients', () => {
