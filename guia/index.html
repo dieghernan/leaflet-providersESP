@@ -209,28 +209,21 @@
 		<div class="row pt-2">
 			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<div class="e-content"><ul id="markdown-toc">
- <li><a href="#instalación" id="markdown-toc-instalación">Instalación</a>   <ul>
-     <li><a href="#vía-cdn" id="markdown-toc-vía-cdn">Vía CDN</a></li>
-     <li><a href="#local" id="markdown-toc-local">Local</a></li>
-   </ul>
- </li>
- <li><a href="#ejemplos" id="markdown-toc-ejemplos">Ejemplos</a>   <ul>
-     <li><a href="#un-mapa-completo" id="markdown-toc-un-mapa-completo">Un mapa completo</a></li>
-     <li><a href="#varias-capas" id="markdown-toc-varias-capas">Varias capas</a></li>
-     <li><a href="#leaflet-providersesp--leaflet-providers" id="markdown-toc-leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</a></li>
-   </ul>
- </li>
- <li><a href="#elegir-una-capa" id="markdown-toc-elegir-una-capa">Elegir una capa</a></li>
- <li><a href="#fondos-superposiciones-y-opciones" id="markdown-toc-fondos-superposiciones-y-opciones">Fondos, superposiciones y opciones</a></li>
- <li><a href="#compatibilidad-y-cambios-de-nombres" id="markdown-toc-compatibilidad-y-cambios-de-nombres">Compatibilidad y cambios de nombres</a>   <ul>
-     <li><a href="#nombres-de-variantes-y-deprecaciones" id="markdown-toc-nombres-de-variantes-y-deprecaciones">Nombres de variantes y deprecaciones</a></li>
-   </ul>
- </li>
- <li><a href="#si-el-mapa-no-se-ve" id="markdown-toc-si-el-mapa-no-se-ve">Si el mapa no se ve</a></li>
- <li><a href="#atribución-y-condiciones-de-uso" id="markdown-toc-atribución-y-condiciones-de-uso">Atribución y condiciones de uso</a></li>
-</ul>
-<h2 id="instalación">Instalación</h2>
+	<button type="button" class="btn btn-primary btn-sm rounded-right position-fixed chulapa-btn-sidebar bs-canvas-anim chulapa-btn-nofocus chulapa-fa-static" id='chulapa-sidetoc-toggle' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar">
+		<i class="fa-solid fa-plus"></i><span class="sr-only">Open Sidebar</span>
+	</button>
+	<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar' aria-hidden="true" inert>
+		<p class="pt-2 pb-1 px-3">
+			<button type="button" class="navbar-text close chulapa-btn-nofocus chulapa-fa-static" aria-label="Close" onclick="closeSideBar()">
+				<i class="fa-solid fa-times"></i><span class="sr-only">Close Sidebar</span>
+			</button>
+		</p>
+		<nav class="navbar-nav px-3 my-auto" aria-label="Sidebar table of contents">
+		 <p class="mb-2"><a class="nav-link font-weight-bold lead" href="#">Guía de uso</a></p>
+			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav d-block"><a href="#instalación" class="nav-link">Instalación</a><ul><li class="nav-item nav d-block"><a href="#vía-cdn" class="nav-link">Vía CDN</a></li><li class="nav-item nav d-block"><a href="#local" class="nav-link">Local</a></li></ul></li><li class="nav-item nav d-block"><a href="#ejemplos" class="nav-link">Ejemplos</a><ul><li class="nav-item nav d-block"><a href="#un-mapa-completo" class="nav-link">Un mapa completo</a></li><li class="nav-item nav d-block"><a href="#varias-capas" class="nav-link">Varias capas</a></li><li class="nav-item nav d-block"><a href="#leaflet-providersesp--leaflet-providers" class="nav-link">leaflet-providersESP + leaflet-providers</a></li></ul></li><li class="nav-item nav d-block"><a href="#elegir-una-capa" class="nav-link">Elegir una capa</a></li><li class="nav-item nav d-block"><a href="#fondos-superposiciones-y-opciones" class="nav-link">Fondos, superposiciones y opciones</a></li><li class="nav-item nav d-block"><a href="#compatibilidad-y-cambios-de-nombres" class="nav-link">Compatibilidad y cambios de nombres</a><ul><li class="nav-item nav d-block"><a href="#nombres-de-variantes-y-deprecaciones" class="nav-link">Nombres de variantes y deprecaciones</a></li></ul></li><li class="nav-item nav d-block"><a href="#si-el-mapa-no-se-ve" class="nav-link">Si el mapa no se ve</a></li><li class="nav-item nav d-block"><a href="#atribución-y-condiciones-de-uso" class="nav-link">Atribución y condiciones de uso</a></li></ul>
+		</nav>   
+	</div>
+			<div class="e-content"><h2 id="instalación">Instalación</h2>
 <p>Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
 El plugin funciona directamente con Leaflet; cargar leaflet-providers es opcional.</p>
 <h3 id="vía-cdn">Vía CDN</h3>
@@ -339,7 +332,10 @@ La clasificación se deduce de las opciones de transparencia y opacidad del prov
 y activar o desactivar transparencias con el control estándar de Leaflet.
 Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
-El selector se abre al hacer clic y se cierra con <strong>×</strong>, Escape o un clic fuera.</p>
+El selector se abre al hacer clic y se cierra con <strong>×</strong>, Escape o un clic fuera.
+El número sobre el icono indica cuántas capas hay en el selector. La etiqueta
+<strong>Visible</strong> en el listado identifica las capas que están activas en el mapa.
+En móvil, <strong>Cerrar y ver mapa</strong> colapsa la franja sin cambiar tu selección.</p>
 <p>El botón <strong>Localizarme</strong>, junto al zoom, solicita tu ubicación únicamente al
 pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa
 <a href="/leaflet-providersESP/preview/">Preview</a>.</p>

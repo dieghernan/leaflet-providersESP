@@ -210,34 +210,24 @@
 		<div class="row pt-2">
 			<div class="col-lg-2 mt-lg-3 small"></div>
 			<article id="maincontent" class="col-lg-8 mt-3">
+	<button type="button" class="btn btn-primary btn-sm rounded-right position-fixed chulapa-btn-sidebar bs-canvas-anim chulapa-btn-nofocus chulapa-fa-static" id='chulapa-sidetoc-toggle' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar">
+		<i class="fa-solid fa-plus"></i><span class="sr-only">Open Sidebar</span>
+	</button>
+	<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar' aria-hidden="true" inert>
+		<p class="pt-2 pb-1 px-3">
+			<button type="button" class="navbar-text close chulapa-btn-nofocus chulapa-fa-static" aria-label="Close" onclick="closeSideBar()">
+				<i class="fa-solid fa-times"></i><span class="sr-only">Close Sidebar</span>
+			</button>
+		</p>
+		<nav class="navbar-nav px-3 my-auto" aria-label="Sidebar table of contents">
+		 <p class="mb-2"><a class="nav-link font-weight-bold lead" href="#">Referencia de capas</a></p>
+			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav d-block"><a href="#cómo-leer-esta-referencia" class="nav-link">Cómo leer esta referencia</a></li><li class="nav-item nav d-block"><a href="#iderioja" class="nav-link">IDErioja</a></li><li class="nav-item nav d-block"><a href="#ignbase" class="nav-link">IGNBase</a></li><li class="nav-item nav d-block"><a href="#mdt" class="nav-link">MDT</a></li><li class="nav-item nav d-block"><a href="#pnoa" class="nav-link">PNOA</a></li><li class="nav-item nav d-block"><a href="#ocupacionsuelo" class="nav-link">OcupacionSuelo</a></li><li class="nav-item nav d-block"><a href="#lidar" class="nav-link">LiDAR</a></li><li class="nav-item nav d-block"><a href="#mtn" class="nav-link">MTN</a></li><li class="nav-item nav d-block"><a href="#geofisica" class="nav-link">Geofisica</a></li><li class="nav-item nav d-block"><a href="#vigilanciavolcanica" class="nav-link">VigilanciaVolcanica</a></li><li class="nav-item nav d-block"><a href="#caminodesantiago" class="nav-link">CaminoDeSantiago</a></li><li class="nav-item nav d-block"><a href="#catastro" class="nav-link">Catastro</a></li><li class="nav-item nav d-block"><a href="#redtransporte" class="nav-link">RedTransporte</a></li><li class="nav-item nav d-block"><a href="#cartociudad" class="nav-link">Cartociudad</a></li><li class="nav-item nav d-block"><a href="#nombresgeograficos" class="nav-link">NombresGeograficos</a></li><li class="nav-item nav d-block"><a href="#unidadesadm" class="nav-link">UnidadesAdm</a></li><li class="nav-item nav d-block"><a href="#hidrografia" class="nav-link">Hidrografia</a></li><li class="nav-item nav d-block"><a href="#militar" class="nav-link">Militar</a></li><li class="nav-item nav d-block"><a href="#adif" class="nav-link">ADIF</a></li><li class="nav-item nav d-block"><a href="#limitesmaritimos" class="nav-link">LimitesMaritimos</a></li><li class="nav-item nav d-block"><a href="#copernicus" class="nav-link">Copernicus</a></li><li class="nav-item nav d-block"><a href="#parquesnaturales" class="nav-link">ParquesNaturales</a></li></ul>
+		</nav>   
+	</div>
 			<div class="e-content"><p>Consulta aquí los nombres que acepta <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>, su contenido y
 sus limitaciones. Para comparar imágenes y copiar código, abre
 <a href="/leaflet-providersESP/preview/">Preview</a>. Para combinar capas, usa el
 <a href="/leaflet-providersESP/visor/">visor</a>.</p>
-<ul id="markdown-toc">
- <li><a href="#cómo-leer-esta-referencia" id="markdown-toc-cómo-leer-esta-referencia">Cómo leer esta referencia</a></li>
- <li><a href="#iderioja" id="markdown-toc-iderioja">IDErioja</a></li>
- <li><a href="#ignbase" id="markdown-toc-ignbase">IGNBase</a></li>
- <li><a href="#mdt" id="markdown-toc-mdt">MDT</a></li>
- <li><a href="#pnoa" id="markdown-toc-pnoa">PNOA</a></li>
- <li><a href="#ocupacionsuelo" id="markdown-toc-ocupacionsuelo">OcupacionSuelo</a></li>
- <li><a href="#lidar" id="markdown-toc-lidar">LiDAR</a></li>
- <li><a href="#mtn" id="markdown-toc-mtn">MTN</a></li>
- <li><a href="#geofisica" id="markdown-toc-geofisica">Geofisica</a></li>
- <li><a href="#vigilanciavolcanica" id="markdown-toc-vigilanciavolcanica">VigilanciaVolcanica</a></li>
- <li><a href="#caminodesantiago" id="markdown-toc-caminodesantiago">CaminoDeSantiago</a></li>
- <li><a href="#catastro" id="markdown-toc-catastro">Catastro</a></li>
- <li><a href="#redtransporte" id="markdown-toc-redtransporte">RedTransporte</a></li>
- <li><a href="#cartociudad" id="markdown-toc-cartociudad">Cartociudad</a></li>
- <li><a href="#nombresgeograficos" id="markdown-toc-nombresgeograficos">NombresGeograficos</a></li>
- <li><a href="#unidadesadm" id="markdown-toc-unidadesadm">UnidadesAdm</a></li>
- <li><a href="#hidrografia" id="markdown-toc-hidrografia">Hidrografia</a></li>
- <li><a href="#militar" id="markdown-toc-militar">Militar</a></li>
- <li><a href="#adif" id="markdown-toc-adif">ADIF</a></li>
- <li><a href="#limitesmaritimos" id="markdown-toc-limitesmaritimos">LimitesMaritimos</a></li>
- <li><a href="#copernicus" id="markdown-toc-copernicus">Copernicus</a></li>
- <li><a href="#parquesnaturales" id="markdown-toc-parquesnaturales">ParquesNaturales</a></li>
-</ul>
 <h2 id="cómo-leer-esta-referencia">Cómo leer esta referencia</h2>
 <ul>
  <li>Los nombres sin variante seleccionan una capa predeterminada. Cuando dos nombres
