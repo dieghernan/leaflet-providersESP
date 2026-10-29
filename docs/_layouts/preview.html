@@ -4,6 +4,7 @@
   <body class="preview-page d-flex flex-column" id="body">
     {% include_cached navbar.html pageurl=page.url %}
     {% include preview.html %}
+    <script src="{{ '/js/reset-map.js' | relative_url }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="{{ '/dist/leaflet-providersESP.js' | relative_url }}"></script>
     <script src="{{ '/js/layer-status.js' | relative_url }}"></script>

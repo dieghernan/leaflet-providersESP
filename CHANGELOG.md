@@ -2,6 +2,8 @@
 
 ## Changed
 
+- Both map pages offer a reset action that reloads their initial state, clearing layer selections, map position, searches and markers without rebuilding Leaflet controls manually.
+
 - The viewer distinguishes active layers from layers only available in its selector and starts with its ribbon collapsed on mobile. Both map pages report tile loading and errors; Preview miniatures have their own status indicators. Empty images are not classified as missing coverage.
 
 - The viewer adds an expandable address search beside the location control, using CartoCiudad candidates and find endpoints. Selecting a result centers the map without changing its layers.

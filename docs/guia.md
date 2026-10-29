@@ -175,6 +175,10 @@ CartoCiudad. Introduce calle, número y municipio, pulsa **Buscar** y elige un
 resultado para centrar el mapa. Puedes cerrar el formulario con **×**, Escape
 o un clic fuera; las capas seleccionadas se conservan.
 
+En el visor y en Preview, **Restablecer vista inicial** recarga la página y
+recupera el fondo inicial, la posición y el zoom del mapa, los filtros y los
+controles predeterminados. También elimina los marcadores de ubicación y búsqueda.
+
 ## Compatibilidad y cambios de nombres
 
 La API de este plugin es `L.tileLayer.providerESP()`. La de **leaflet-providers**
