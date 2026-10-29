@@ -5,15 +5,14 @@ title: Referencia de capas
 subtitle: Qué representa cada capa y qué debes tener en cuenta al utilizarla
 excerpt: Nombres, contenido y limitaciones de las capas de leaflet-providersESP, agrupadas por proveedor.
 layer_reference: true
+show_sidetoc: true
+show_toc: false
 ---
 
 Consulta aquí los nombres que acepta `L.tileLayer.providerESP()`, su contenido y
 sus limitaciones. Para comparar imágenes y copiar código, abre
 [Preview]({{ '/preview/' | relative_url }}). Para combinar capas, usa el
 [visor]({{ '/visor/' | relative_url }}).
-
-* TOC
-{:toc}
 
 ## Cómo leer esta referencia
 

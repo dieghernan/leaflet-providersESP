@@ -4,10 +4,9 @@ permalink: /guia/
 title: Guía de uso
 subtitle: De la primera capa a un mapa con varios proveedores
 excerpt: Instalación, ejemplos y opciones de leaflet-providersESP.
+show_sidetoc: true
+show_toc: false
 ---
-
-* TOC
-{:toc}
 
 ## Instalación
 
@@ -158,6 +157,9 @@ y activar o desactivar transparencias con el control estándar de Leaflet.
 Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con **×**, Escape o un clic fuera.
+El número sobre el icono indica cuántas capas hay en el selector. La etiqueta
+**Visible** en el listado identifica las capas que están activas en el mapa.
+En móvil, **Cerrar y ver mapa** colapsa la franja sin cambiar tu selección.
 
 El botón **Localizarme**, junto al zoom, solicita tu ubicación únicamente al
 pulsarlo. Para comparar miniaturas y copiar código con o sin el plugin, usa

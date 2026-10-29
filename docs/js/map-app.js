@@ -11,7 +11,18 @@
 		zoomOutTitle: 'Alejar' }).addTo(map);
 	const control = L.control.layers({}, {}, { collapsed: true }).addTo(map);
 	const toggle = control.getContainer().querySelector('.leaflet-control-layers-toggle');
-	toggle.title = 'Mostrar u ocultar capas'; toggle.setAttribute('aria-label', 'Mostrar u ocultar capas');
+	toggle.title = 'Mostrar u ocultar capas del mapa'; toggle.setAttribute('aria-label', 'Mostrar u ocultar capas del mapa');
+	const badge = document.createElement('span'); badge.className = 'layer-count-badge'; badge.setAttribute('aria-hidden', 'true'); toggle.append(badge);
+	const hint = document.createElement('p'); hint.id = 'layers-hint'; hint.className = 'layers-hint'; hint.setAttribute('role', 'tooltip'); hint.hidden = true;
+	hint.textContent = 'Pulsa este icono y activa la capa para verla en el mapa.'; control.getContainer().append(hint);
+	let hintShown = false;
+	let hintTimer;
+	let feedbackTimer;
+	let countTimer;
+	function hideHint() {
+		hint.hidden = true; toggle.removeAttribute('aria-describedby'); window.clearTimeout(hintTimer);
+	}
+	toggle.addEventListener('click', hideHint);
 	const layersPanel = control.getContainer();
 	L.DomEvent.off(layersPanel, 'mouseenter mouseleave');
 	layersPanel.querySelector('.leaflet-control-layers-list').id = 'leaflet-layer-options';
@@ -44,7 +55,7 @@
 	let currentTab = 'backgrounds';
 	const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase();
-	function register(entry) {
+	function register(entry, userAction = false) {
 		if (entry.input.checked) {
 			const layer = L.tileLayer.providerESP(entry.name);
 			layer.on('tileerror', () => {
@@ -53,13 +64,26 @@
 			registered.set(entry.name, layer);
 			if (entry.overlay) control.addOverlay(layer, entry.name);
 			else control.addBaseLayer(layer, entry.name);
-			status.textContent = entry.name + ' añadida al selector Capas.';
 		} else {
 			const layer = registered.get(entry.name);
 			map.removeLayer(layer); control.removeLayer(layer); registered.delete(entry.name);
-			status.textContent = entry.name + ' retirada del selector Capas.';
 		}
 		document.getElementById('registered-count').textContent = '· ' + registered.size + ' en el selector';
+		badge.textContent = registered.size;
+		if (userAction) {
+			const feedback = document.getElementById('layer-feedback');
+			feedback.textContent = entry.input.checked
+				? 'Capa añadida al selector.'
+				: 'Capa eliminada del selector.';
+			window.clearTimeout(feedbackTimer); feedbackTimer = window.setTimeout(() => {
+				feedback.textContent = '';
+			}, 2000);
+			const count = document.getElementById('registered-count'); count.classList.add('count-updated');
+			window.clearTimeout(countTimer); countTimer = window.setTimeout(() => count.classList.remove('count-updated'), 1200);
+			if (entry.input.checked && !hintShown) {
+				hintShown = true; hint.hidden = false; toggle.setAttribute('aria-describedby', hint.id); hintTimer = window.setTimeout(hideHint, 4000);
+			}
+		}
 		resize();
 	}
 	for (const [provider, definition] of Object.entries(providersESP)) {
@@ -83,12 +107,24 @@
 		const label = document.createElement('label'); label.className = 'ribbon-layer'; label.title = entry.name;
 		const input = document.createElement('input'); input.type = 'checkbox'; input.setAttribute('aria-label', 'Incluir ' + entry.name); entry.input = input;
 		const name = document.createElement('span'); name.textContent = entry.name;
-		label.append(input, name); entry.row = label;
+		const visible = document.createElement('small'); visible.className = 'layer-visible'; visible.textContent = 'Visible'; visible.hidden = true; entry.visible = visible;
+		label.append(input, name, visible); entry.row = label;
 		document.getElementById(entry.overlay
 			? 'overlays-panel'
 			: 'backgrounds-panel').append(label);
-		input.addEventListener('change', () => register(entry));
+		input.addEventListener('change', () => register(entry, true));
 	}
+	map.on('layeradd layerremove', () => {
+		for (const entry of entries) {
+			const layer = registered.get(entry.name);
+			const visible = Boolean(layer && map.hasLayer(layer));
+			entry.row.classList.toggle('is-visible', visible); entry.visible.hidden = !visible;
+		}
+	});
+	document.getElementById('close-ribbon').addEventListener('click', () => {
+		document.getElementById('viewer-controls').open = false;
+		document.querySelector('#viewer-controls summary').focus();
+	});
 	function filter() {
 		for (const entry of entries) entry.row.hidden = !normalize(entry.name).includes(normalize(search.value.trim())) || Boolean(service.value && entry.service !== service.value);
 		const overlays = currentTab === 'overlays';

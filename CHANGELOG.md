@@ -2,6 +2,8 @@
 
 ## Changed
 
+- The viewer clarifies its two-step layer selection with brief feedback, a selector count badge, a one-time hint and visible-layer labels. Mobile users can close the ribbon with an explicit button. Long documentation pages use Chulapa's side table of contents.
+
 - The map viewer uses a full-page map, a compact navigation strip and a collapsible ribbon with background and transparency tabs. Checked layers are registered in Leaflet's standard layer control without loading tiles until activated there. Code copying stays in Preview. A location button requests geolocation only when clicked. Existing WMS, WMTS and all-provider pages use the same viewer.
 
 - The documentation now separates the introduction, usage guide and contributor instructions.

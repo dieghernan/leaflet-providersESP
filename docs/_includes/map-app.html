@@ -8,7 +8,7 @@
     <span>leaflet-providersESP · Visor</span>
   </nav>
   <details id="viewer-controls" class="viewer-controls" open>
-    <summary>Añadir o quitar capas del selector <span id="registered-count"></span></summary>
+    <summary>Añadir o quitar capas del selector <span id="registered-count" aria-live="polite" aria-atomic="true"></span></summary>
     <div class="viewer-controls-content">
       <div class="ribbon-heading">
         <div class="ribbon-tabs" role="tablist" aria-label="Tipo de capa">
@@ -20,14 +20,15 @@
         <label class="sr-only" for="service-filter">Servicio</label>
         <select id="service-filter"><option value="">WMS y WMTS</option><option>WMS</option><option>WMTS</option></select>
       </div>
-      <p class="ribbon-help">Marca las capas que quieras en el selector. En <strong>Capas</strong>, sobre el mapa, elige cuáles mostrar.</p>
+      <ol class="ribbon-help"><li><strong>Marca las capas</strong> que quieras usar.</li><li><strong>Pulsa el icono de capas apiladas</strong> del mapa para mostrarlas.</li></ol>
       <div id="backgrounds-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="backgrounds-tab"></div>
       <div id="overlays-panel" class="ribbon-panel" role="tabpanel" aria-labelledby="overlays-tab" hidden></div>
-      <p id="layer-count" role="status" aria-live="polite"></p>
+      <div class="ribbon-footer"><p id="layer-count" role="status" aria-live="polite"></p><button id="close-ribbon" type="button">Cerrar y ver mapa</button></div>
     </div>
   </details>
   <section class="map-stage" aria-label="Vista del mapa">
     <div id="map" role="region" aria-label="Mapa de España" tabindex="0"></div>
     <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+    <p id="layer-feedback" class="layer-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
   </section>
 </main>

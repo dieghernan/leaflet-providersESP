@@ -68,7 +68,7 @@ test('ribbon collapses to give space to the map on mobile and landscape', async(
 test('native stack button opens on click and closes explicitly, with Escape or outside click', async({ page }) => {
 	await page.goto('/viewer.html');
 	const toggle = page.locator('.leaflet-control-layers-toggle');
-	await expect(toggle).toHaveText('');
+	await expect(toggle.locator('.layer-count-badge')).toHaveText('1');
 	await expect(toggle).toHaveCSS('background-image', /layers(?:-2x)?\.png/);
 	await toggle.hover();
 	await expect(toggle).toHaveAttribute('aria-expanded', 'false');
@@ -87,6 +87,53 @@ test('native stack button opens on click and closes explicitly, with Escape or o
 	await expect(toggle).toHaveAttribute('aria-expanded', 'true');
 	await page.locator('#layer-search').click();
 	await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+});
+
+test('registration feedback is temporary and visible state follows Leaflet independently', async({ page }) => {
+	await page.goto('/viewer.html');
+	const count = page.locator('#registered-count');
+	await expect(count).toHaveAttribute('aria-live', 'polite');
+	await page.locator('#layer-search').fill('IGNBase.Gris');
+	const include = page.getByRole('checkbox', { name: 'Incluir IGNBase.Gris',
+		exact: true });
+	const row = page.locator('.ribbon-layer').filter({ has: include });
+	await include.check();
+	await expect(page.locator('#layer-feedback')).toHaveText('Capa añadida al selector.');
+	await expect(count).toHaveClass(/count-updated/);
+	await expect(page.locator('.layer-count-badge')).toHaveText('2');
+	await expect(page.locator('#layers-hint')).toBeVisible();
+	await expect(row).not.toHaveClass(/is-visible/);
+	await expect(page.locator('#layer-feedback')).toBeEmpty({ timeout: 3500 });
+	await page.locator('.leaflet-control-layers-toggle').click();
+	await expect(page.locator('#layers-hint')).not.toBeVisible();
+	await page.locator('.leaflet-control-layers label').filter({ hasText: /^\s*IGNBase.Gris\s*$/ })
+		.locator('input')
+		.check();
+	await expect(row).toHaveClass(/is-visible/);
+	await expect(row.locator('.layer-visible')).toBeVisible();
+	await include.uncheck();
+	await expect(row).not.toHaveClass(/is-visible/);
+	await expect(page.locator('#layer-feedback')).toHaveText('Capa eliminada del selector.');
+	await expect(page.locator('.layer-count-badge')).toHaveText('1');
+	await include.check();
+	await expect(page.locator('#layers-hint')).not.toBeVisible();
+});
+
+test('mobile ribbon close button preserves selection and returns focus to its summary', async({ page }) => {
+	await page.setViewportSize({ width: 390,
+		height: 844 });
+	await page.goto('/viewer.html');
+	await page.locator('#layer-search').fill('IGNBase.Gris');
+	await page.getByRole('checkbox', { name: 'Incluir IGNBase.Gris',
+		exact: true }).check();
+	await page.getByRole('button', { name: 'Cerrar y ver mapa',
+		exact: true }).click();
+	await expect(page.locator('#layer-search')).not.toBeVisible();
+	await expect(page.locator('#viewer-controls summary')).toBeFocused();
+	await expect(page.locator('.layer-count-badge')).toHaveText('2');
+	await page.locator('#viewer-controls summary').click();
+	await expect(page.getByRole('checkbox', { name: 'Incluir IGNBase.Gris',
+		exact: true })).toBeChecked();
 });
 
 test('service filters and keyboard tabs preserve registered layers', async({ page }) => {
