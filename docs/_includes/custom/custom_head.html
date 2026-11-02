@@ -14,6 +14,9 @@
 <meta name="twitter:image" content="{{ ogimage | escape_once }}">
 <meta name="twitter:image:alt" content="{{ page.og_image_alt | default: site.og_image_alt | escape_once }}">
 {% endunless %}
+{% if page.url == '/' %}
+{% include custom/source_code.html %}
+{% endif %}
 <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
