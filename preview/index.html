@@ -327,6 +327,12 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "@id": "https://dieghernan.github.io/leaflet-providersESP/preview/#app",
+  
+  "about": [
+    {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-ignbase"},
+    {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa"}
+  ],
+  
   "author": {"@type": "Person", "@id": "https://dieghernan.github.io/leaflet-providersESP/#author", "name": "Diego Hernangómez", "url": "https://dieghernan.github.io/", "sameAs": "https://orcid.org/0000-0001-8457-4658"},
   "isBasedOn": {"@type": "SoftwareSourceCode", "@id": "https://dieghernan.github.io/leaflet-providersESP/#source-code", "name": "leaflet-providersESP", "codeRepository": "https://github.com/dieghernan/leaflet-providersESP", "programmingLanguage": "JavaScript", "license": "https://opensource.org/licenses/MIT"},
   "name": "Preview de capas | Leaflet-providersESP",
@@ -345,6 +351,96 @@
   }
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    
+    
+    
+    {
+      "@type": "Dataset",
+      "@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-ignbase",
+      "name": "Mapa Base de España (IGNBase)",
+      "description": "Cartografía de referencia del IGN y del Sistema Cartográfico Nacional de España, compuesta a partir de bases topográficas, nombres geográficos, divisiones administrativas y otras fuentes oficiales. El visor permite consultar distintas representaciones del mismo conjunto mediante WMTS.",
+      "url": "https://www.ign.es/wmts/ign-base?SERVICE=WMTS&REQUEST=GetCapabilities",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creditText": "Sistema Cartográfico Nacional de España (scne.es).",
+      "publisher": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "isAccessibleForFree": true,
+      "inLanguage": "es",
+      "keywords": ["ignbase", "cartografía", "España"],
+      "subjectOf": [
+        
+        {"@type": "DigitalDocument", "name": "Metadatos GetCapabilities WMTS", "url": "https://www.ign.es/wmts/ign-base?SERVICE=WMTS&REQUEST=GetCapabilities", "encodingFormat": "application/xml"}
+        
+      ]
+    },
+    
+    {
+      "@type": "Service",
+      "@id": "https://www.ign.es/wmts/ign-base#service",
+      "name": "Mapa Base de España (IGNBase) — WMTS",
+      "serviceType": "OGC WMTS",
+      "url": "https://www.ign.es/wmts/ign-base",
+      "provider": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "serviceOutput": {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-ignbase"},
+      "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.ign.es/wmts/ign-base?SERVICE=WMTS&REQUEST=GetCapabilities"}
+    }
+    ,
+    
+    
+    
+    {
+      "@type": "Dataset",
+      "@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa",
+      "name": "PNOA de máxima actualidad",
+      "description": "Ortofotos del Plan Nacional de Ortofotografía Aérea y mosaicos con información de fechas de adquisición, de distinta resolución y fecha según la zona. El servicio incorpora imágenes Sentinel2 a escalas pequeñas y otras imágenes de fondo. La extensión de visualización no implica una fecha uniforme de captura.",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creditText": "Sistema Cartográfico Nacional de España (scne.es). PNOA: consultar también las atribuciones específicas de las imágenes en los metadatos oficiales.",
+      "publisher": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "isAccessibleForFree": true,
+      "inLanguage": "es",
+      "keywords": ["pnoa", "cartografía", "España"],
+      "subjectOf": [
+        
+        {"@type": "DigitalDocument", "name": "Metadatos GetCapabilities WMS", "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities", "encodingFormat": "application/xml"},
+        
+        {"@type": "DigitalDocument", "name": "Metadatos GetCapabilities WMTS", "url": "https://www.ign.es/wmts/pnoa-ma?SERVICE=WMTS&REQUEST=GetCapabilities", "encodingFormat": "application/xml"}
+        
+      ]
+    },
+    
+    {
+      "@type": "Service",
+      "@id": "https://www.ign.es/wms-inspire/pnoa-ma#service",
+      "name": "PNOA de máxima actualidad — WMS",
+      "serviceType": "OGC WMS",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "provider": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "serviceOutput": {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa"},
+      "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities"}
+    },
+    
+    {
+      "@type": "Service",
+      "@id": "https://www.ign.es/wmts/pnoa-ma#service",
+      "name": "PNOA de máxima actualidad — WMTS",
+      "serviceType": "OGC WMTS",
+      "url": "https://www.ign.es/wmts/pnoa-ma",
+      "provider": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "serviceOutput": {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa"},
+      "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.ign.es/wmts/pnoa-ma?SERVICE=WMTS&REQUEST=GetCapabilities"}
+    }
+    
+    
+  ]
+}
+</script>
+
+
 
     <a class="preview-skip" href="#preview-search">Ir a las capas</a>
 <main>

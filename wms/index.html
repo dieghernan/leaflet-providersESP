@@ -304,6 +304,12 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "@id": "https://dieghernan.github.io/leaflet-providersESP/wms/#app",
+  
+  "about": [
+    
+    {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa"}
+  ],
+  
   "author": {"@type": "Person", "@id": "https://dieghernan.github.io/leaflet-providersESP/#author", "name": "Diego Hernangómez", "url": "https://dieghernan.github.io/", "sameAs": "https://orcid.org/0000-0001-8457-4658"},
   "isBasedOn": {"@type": "SoftwareSourceCode", "@id": "https://dieghernan.github.io/leaflet-providersESP/#source-code", "name": "leaflet-providersESP", "codeRepository": "https://github.com/dieghernan/leaflet-providersESP", "programmingLanguage": "JavaScript", "license": "https://opensource.org/licenses/MIT"},
   "name": "Capas WMS | Leaflet-providersESP",
@@ -322,6 +328,50 @@
   }
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    
+    
+    
+    {
+      "@type": "Dataset",
+      "@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa",
+      "name": "PNOA de máxima actualidad",
+      "description": "Ortofotos del Plan Nacional de Ortofotografía Aérea y mosaicos con información de fechas de adquisición, de distinta resolución y fecha según la zona. El servicio incorpora imágenes Sentinel2 a escalas pequeñas y otras imágenes de fondo. La extensión de visualización no implica una fecha uniforme de captura.",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creditText": "Sistema Cartográfico Nacional de España (scne.es). PNOA: consultar también las atribuciones específicas de las imágenes en los metadatos oficiales.",
+      "publisher": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "isAccessibleForFree": true,
+      "inLanguage": "es",
+      "keywords": ["pnoa", "cartografía", "España"],
+      "subjectOf": [
+        
+        {"@type": "DigitalDocument", "name": "Metadatos GetCapabilities WMS", "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities", "encodingFormat": "application/xml"}
+        
+      ]
+    },
+    
+    {
+      "@type": "Service",
+      "@id": "https://www.ign.es/wms-inspire/pnoa-ma#service",
+      "name": "PNOA de máxima actualidad — WMS",
+      "serviceType": "OGC WMS",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "provider": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "serviceOutput": {"@id": "https://dieghernan.github.io/leaflet-providersESP/#dataset-pnoa"},
+      "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities"}
+    }
+    
+    
+  ]
+}
+</script>
+
+
 
     <main class="map-app" data-service="WMS">
   <h1 class="sr-only">Capas WMS</h1>
