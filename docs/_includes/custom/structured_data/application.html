@@ -1,0 +1,25 @@
+{%- assign application_name = page.title | append: ' | ' | append: site.title -%}
+{%- assign application_description = page.description | default: page.excerpt | default: site.description | strip_html | strip -%}
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": {{ page.url | absolute_url | append: '#app' | jsonify }},
+  {% if page.layout == 'map-app' or page.layout == 'preview' %}
+  {% include custom/structured_data/select_datasets.html %}
+  "about": [
+    {% for dataset in mapped_datasets %}
+    {"@id": {{ '/' | absolute_url | append: '#dataset-' | append: dataset.id | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% endif %}
+  "author": {% include custom/structured_data/author.html %},
+  "isBasedOn": {% include custom/structured_data/source_code.html summary=true %},
+  "name": {{ application_name | jsonify | replace: '<', '\u003c' }},
+  "description": {{ application_description | jsonify | replace: '<', '\u003c' }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "image": {{ site.og_image | absolute_url | jsonify }},
+  "inLanguage": {{ site.locale | jsonify }},
+  {% for property in site.data.structured_data.application %}
+  {{ property[0] | jsonify }}: {{ property[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+}

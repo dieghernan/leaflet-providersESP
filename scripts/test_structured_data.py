@@ -21,6 +21,7 @@ class StructuredDataTests(unittest.TestCase):
                 blocks = schemas(SITE / route / "index.html")
                 app, = [item for item in blocks if item.get("@type") == "WebApplication"]
                 graph, = [item["@graph"] for item in blocks if "@graph" in item]
+                self.assertEqual(len({item["@id"] for item in graph}), len(graph))
                 datasets = {item["@id"]: item for item in graph if item["@type"] == "Dataset"}
                 self.assertEqual({item["@id"] for item in app["about"]}, set(datasets))
                 self.assertEqual(len(datasets), 1 if route == "wms" else 2)
@@ -46,9 +47,19 @@ class StructuredDataTests(unittest.TestCase):
                 app, = [item for item in schemas(SITE / name) if item.get("@type") == "WebApplication"]
                 ids.append(app["@id"])
                 self.assertEqual(app["isBasedOn"]["@id"], code["@id"])
+                for key, value in app["isBasedOn"].items():
+                    self.assertEqual(value, code[key])
                 self.assertEqual(app["author"]["sameAs"], "https://orcid.org/0000-0001-8457-4658")
                 self.assertGreater(len(app["description"]), 40)
         self.assertEqual(len(set(ids)), 2)
+
+    def test_demos_do_not_advertise_the_full_dataset_catalog(self):
+        for name in ("leafletproviders", "minimal", "overlays"):
+            with self.subTest(demo=name):
+                blocks = schemas(SITE / "demo" / name / "index.html")
+                app, = [item for item in blocks if item.get("@type") == "WebApplication"]
+                self.assertNotIn("about", app)
+                self.assertEqual([item for item in blocks if "@graph" in item], [])
 
 
 if __name__ == "__main__":

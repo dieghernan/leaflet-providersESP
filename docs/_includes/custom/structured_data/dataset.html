@@ -1,0 +1,18 @@
+{
+  "@type": "Dataset",
+  "@id": {{ '/' | absolute_url | append: '#dataset-' | append: include.dataset.id | jsonify }},
+  "name": {{ include.dataset.name | jsonify }},
+  "description": {{ include.dataset.description | jsonify }},
+  "url": {{ include.services.first.capabilities | jsonify }},
+  "license": {{ include.dataset.license | jsonify }},
+  "creditText": {{ include.dataset.credit | jsonify }},
+  "publisher": {{ site.data.structured_data.cartography.publisher | jsonify }},
+  "isAccessibleForFree": {{ site.data.structured_data.cartography.isAccessibleForFree | jsonify }},
+  "inLanguage": {{ site.data.structured_data.cartography.inLanguage | jsonify }},
+  "keywords": [{{ include.dataset.id | jsonify }}, {% for keyword in site.data.structured_data.cartography.keywords %}{{ keyword | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "subjectOf": [
+    {% for service in include.services %}
+    {"@type": "DigitalDocument", "name": {{ service.protocol | prepend: 'Metadatos GetCapabilities ' | jsonify }}, "url": {{ service.capabilities | jsonify }}, "encodingFormat": "application/xml"}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

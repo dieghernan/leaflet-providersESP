@@ -1,0 +1,15 @@
+{
+  {% unless include.summary %}"@context": "https://schema.org",{% endunless %}
+  "@type": "SoftwareSourceCode",
+  "@id": {{ '/' | absolute_url | append: '#source-code' | jsonify }},
+  {% for property in site.data.structured_data.software %}
+  {% unless property[0] == 'name' or include.summary and property[0] == 'runtimePlatform' %}
+  {{ property[0] | jsonify }}: {{ property[1] | jsonify }},
+  {% endunless %}
+  {% endfor %}
+  "name": {{ site.data.structured_data.software.name | jsonify }}{% unless include.summary %},
+  "description": {{ site.description | strip | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "author": {% include custom/structured_data/author.html %}
+  {% endunless %}
+}

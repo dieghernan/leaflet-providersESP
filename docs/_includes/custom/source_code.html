@@ -1,15 +1,3 @@
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareSourceCode",
-  "@id": {{ '/' | absolute_url | append: '#source-code' | jsonify }},
-  "name": "leaflet-providersESP",
-  "description": {{ site.description | strip | jsonify }},
-  "url": {{ '/' | absolute_url | jsonify }},
-  "codeRepository": "https://github.com/dieghernan/leaflet-providersESP",
-  "programmingLanguage": "JavaScript",
-  "runtimePlatform": "Leaflet",
-  "license": "https://opensource.org/licenses/MIT",
-  "author": {"@type": "Person", "@id": {{ '/' | absolute_url | append: '#author' | jsonify }}, "name": "Diego Hernangómez", "url": "https://dieghernan.github.io/", "sameAs": "https://orcid.org/0000-0001-8457-4658"}
-}
+{% include custom/structured_data/source_code.html %}
 </script>

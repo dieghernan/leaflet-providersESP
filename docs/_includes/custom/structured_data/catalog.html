@@ -1,0 +1,14 @@
+{%- include custom/structured_data/select_datasets.html -%}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for dataset in mapped_datasets %}
+    {% assign dataset_services = dataset.services %}
+    {% if page.map_service and page.map_service != '' %}{% assign dataset_services = dataset_services | where: 'protocol', page.map_service %}{% endif %}
+    {% include custom/structured_data/dataset.html dataset=dataset services=dataset_services %},
+    {% for service in dataset_services %}
+    {% include custom/structured_data/service.html dataset=dataset service=service %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

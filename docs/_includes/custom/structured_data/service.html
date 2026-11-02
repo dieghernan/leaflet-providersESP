@@ -1,0 +1,10 @@
+{
+  "@type": "Service",
+  "@id": {{ include.service.endpoint | append: '#service' | jsonify }},
+  "name": {{ include.dataset.name | append: ' — ' | append: include.service.protocol | jsonify }},
+  "serviceType": {{ include.service.protocol | prepend: 'OGC ' | jsonify }},
+  "url": {{ include.service.endpoint | jsonify }},
+  "provider": {{ site.data.structured_data.cartography.publisher | jsonify }},
+  "serviceOutput": {"@id": {{ '/' | absolute_url | append: '#dataset-' | append: include.dataset.id | jsonify }}},
+  "availableChannel": {"@type": "ServiceChannel", "serviceUrl": {{ include.service.capabilities | jsonify }}}
+}

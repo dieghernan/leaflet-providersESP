@@ -1,0 +1,39 @@
+{
+  "creator": {
+    "@type": "Person",
+    "name": "Diego Hernangómez",
+    "url": "https://dieghernan.github.io/",
+    "sameAs": "https://orcid.org/0000-0001-8457-4658"
+  },
+  "software": {
+    "name": "leaflet-providersESP",
+    "codeRepository": "https://github.com/dieghernan/leaflet-providersESP",
+    "programmingLanguage": "JavaScript",
+    "runtimePlatform": "Leaflet",
+    "license": "https://opensource.org/licenses/MIT"
+  },
+  "application": {
+    "applicationCategory": "ReferenceApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requiere un navegador web con JavaScript habilitado.",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": 0,
+      "priceCurrency": "EUR"
+    }
+  },
+  "cartography": {
+    "publisher": {
+      "@type": "GovernmentOrganization",
+      "name": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/"
+    },
+    "isAccessibleForFree": true,
+    "inLanguage": "es",
+    "keywords": [
+      "cartografía",
+      "España"
+    ]
+  }
+}

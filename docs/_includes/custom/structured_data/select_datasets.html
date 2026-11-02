@@ -1,0 +1,10 @@
+{%- assign mapped_datasets = '' | split: ',' -%}
+{%- for candidate in site.data.cartographic_datasets -%}
+  {%- assign candidate_services = candidate.services -%}
+  {%- if page.map_service and page.map_service != '' -%}
+    {%- assign candidate_services = candidate_services | where: 'protocol', page.map_service -%}
+  {%- endif -%}
+  {%- if candidate_services.size > 0 -%}
+    {%- assign mapped_datasets = mapped_datasets | push: candidate -%}
+  {%- endif -%}
+{%- endfor -%}
