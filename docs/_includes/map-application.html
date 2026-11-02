@@ -5,6 +5,12 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "@id": {{ page.url | absolute_url | append: '#app' | jsonify }},
+  {% if page.layout == 'map-app' or page.layout == 'preview' %}
+  "about": [
+    {% unless page.map_service == 'WMS' %}{"@id": {{ '/' | absolute_url | append: '#dataset-ignbase' | jsonify }}},{% endunless %}
+    {"@id": {{ '/' | absolute_url | append: '#dataset-pnoa' | jsonify }}}
+  ],
+  {% endif %}
   "author": {"@type": "Person", "@id": {{ '/' | absolute_url | append: '#author' | jsonify }}, "name": "Diego Hernangómez", "url": "https://dieghernan.github.io/", "sameAs": "https://orcid.org/0000-0001-8457-4658"},
   "isBasedOn": {"@type": "SoftwareSourceCode", "@id": {{ '/' | absolute_url | append: '#source-code' | jsonify }}, "name": "leaflet-providersESP", "codeRepository": "https://github.com/dieghernan/leaflet-providersESP", "programmingLanguage": "JavaScript", "license": "https://opensource.org/licenses/MIT"},
   "name": {{ application_name | jsonify | replace: '<', '\u003c' }},
@@ -23,3 +29,6 @@
   }
 }
 </script>
+{% if page.layout == 'map-app' or page.layout == 'preview' %}
+{% include cartographic-datasets.html %}
+{% endif %}

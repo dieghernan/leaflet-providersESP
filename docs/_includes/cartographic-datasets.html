@@ -1,0 +1,45 @@
+{%- assign mapped_datasets = site.data.cartographic_datasets -%}
+{%- if page.map_service == 'WMS' -%}
+  {%- assign mapped_datasets = mapped_datasets | where: 'id', 'pnoa' -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for dataset in mapped_datasets %}
+    {% assign dataset_services = dataset.services %}
+    {% if page.map_service and page.map_service != '' %}{% assign dataset_services = dataset_services | where: 'protocol', page.map_service %}{% endif %}
+    {
+      "@type": "Dataset",
+      "@id": {{ '/' | absolute_url | append: '#dataset-' | append: dataset.id | jsonify }},
+      "name": {{ dataset.name | jsonify }},
+      "description": {{ dataset.description | jsonify }},
+      "url": {{ dataset_services.first.capabilities | jsonify }},
+      "license": {{ dataset.license | jsonify }},
+      "creditText": {{ dataset.credit | jsonify }},
+      "publisher": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "isAccessibleForFree": true,
+      "inLanguage": "es",
+      "keywords": [{{ dataset.id | jsonify }}, "cartografía", "España"],
+      "subjectOf": [
+        {% for service in dataset_services %}
+        {"@type": "DigitalDocument", "name": {{ service.protocol | prepend: 'Metadatos GetCapabilities ' | jsonify }}, "url": {{ service.capabilities | jsonify }}, "encodingFormat": "application/xml"}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {% for service in dataset_services %}
+    {
+      "@type": "Service",
+      "@id": {{ service.endpoint | append: '#service' | jsonify }},
+      "name": {{ dataset.name | append: ' — ' | append: service.protocol | jsonify }},
+      "serviceType": {{ service.protocol | prepend: 'OGC ' | jsonify }},
+      "url": {{ service.endpoint | jsonify }},
+      "provider": {"@type": "GovernmentOrganization", "name": "Instituto Geográfico Nacional", "url": "https://www.ign.es/"},
+      "serviceOutput": {"@id": {{ '/' | absolute_url | append: '#dataset-' | append: dataset.id | jsonify }}},
+      "availableChannel": {"@type": "ServiceChannel", "serviceUrl": {{ service.capabilities | jsonify }}}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

@@ -15,6 +15,25 @@ def schemas(path):
 
 
 class StructuredDataTests(unittest.TestCase):
+    def test_datasets_and_access_services_are_distinct(self):
+        for route in ("visor", "preview", "allproviders", "wms", "wmts"):
+            with self.subTest(route=route):
+                blocks = schemas(SITE / route / "index.html")
+                app, = [item for item in blocks if item.get("@type") == "WebApplication"]
+                graph, = [item["@graph"] for item in blocks if "@graph" in item]
+                datasets = {item["@id"]: item for item in graph if item["@type"] == "Dataset"}
+                self.assertEqual({item["@id"] for item in app["about"]}, set(datasets))
+                self.assertEqual(len(datasets), 1 if route == "wms" else 2)
+                for dataset in datasets.values():
+                    self.assertGreaterEqual(len(dataset["description"]), 50)
+                    self.assertEqual(dataset["publisher"]["url"], "https://www.ign.es/")
+                    self.assertEqual(dataset["license"], "https://creativecommons.org/licenses/by/4.0/")
+                    self.assertNotIn("distribution", dataset)
+                for service in (item for item in graph if item["@type"] == "Service"):
+                    self.assertIn(service["serviceOutput"]["@id"], datasets)
+                    if route in ("wms", "wmts"):
+                        self.assertEqual(service["serviceType"], "OGC " + route.upper())
+
     def test_plugin_and_tools_have_distinct_linked_identities(self):
         code, = [item for item in schemas(SITE / "index.html")
                  if item.get("@type") == "SoftwareSourceCode"]

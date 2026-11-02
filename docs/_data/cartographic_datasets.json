@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ignbase",
+    "name": "Mapa Base de España (IGNBase)",
+    "description": "Cartografía de referencia del IGN y del Sistema Cartográfico Nacional de España, compuesta a partir de bases topográficas, nombres geográficos, divisiones administrativas y otras fuentes oficiales. El visor permite consultar distintas representaciones del mismo conjunto mediante WMTS.",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "Sistema Cartográfico Nacional de España (scne.es).",
+    "services": [
+      {
+        "protocol": "WMTS",
+        "endpoint": "https://www.ign.es/wmts/ign-base",
+        "capabilities": "https://www.ign.es/wmts/ign-base?SERVICE=WMTS&REQUEST=GetCapabilities"
+      }
+    ]
+  },
+  {
+    "id": "pnoa",
+    "name": "PNOA de máxima actualidad",
+    "description": "Ortofotos del Plan Nacional de Ortofotografía Aérea y mosaicos con información de fechas de adquisición, de distinta resolución y fecha según la zona. El servicio incorpora imágenes Sentinel2 a escalas pequeñas y otras imágenes de fondo. La extensión de visualización no implica una fecha uniforme de captura.",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "Sistema Cartográfico Nacional de España (scne.es). PNOA: consultar también las atribuciones específicas de las imágenes en los metadatos oficiales.",
+    "services": [
+      {
+        "protocol": "WMS",
+        "endpoint": "https://www.ign.es/wms-inspire/pnoa-ma",
+        "capabilities": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetCapabilities"
+      },
+      {
+        "protocol": "WMTS",
+        "endpoint": "https://www.ign.es/wmts/pnoa-ma",
+        "capabilities": "https://www.ign.es/wmts/pnoa-ma?SERVICE=WMTS&REQUEST=GetCapabilities"
+      }
+    ]
+  }
+]
