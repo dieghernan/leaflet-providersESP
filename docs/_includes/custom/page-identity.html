@@ -1,3 +1,4 @@
-{% include snippets/microformats-url.html %}
+{%- include snippets/canonical-url.html url=page.url canonical=page.canonical_url -%}
+<a class="u-url" href="{{ canonical_url | escape }}" hidden></a>
 <span class="p-name d-none" hidden>{{ page.title | escape }}</span>
 {% include snippets/author-microformats.html author=page.author %}
