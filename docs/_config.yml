@@ -74,20 +74,20 @@ webmentions:
 
 navbar:
   brand:
-    title: '<i class="fas fa-home" aria-hidden="true" style="color: white"></i><span class="sr-only">Inicio</span>'
+    title: '<i class="fas fa-home mr-1" aria-hidden="true"></i> Leaflet-providersESP'
 
   nav:
     - title: Guía de uso
       url: /guia/
     - title: Capas
       url: /capas/
-    - title: Preview
+    - title: Vista previa
       url: /preview/
     - title: Visor
       url: /visor/
     - title: Cambios
       url: https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md
-    - title: GitHub
+    - title: '<i class="fab fa-github mr-1" aria-hidden="true"></i> GitHub'
       url: https://github.com/dieghernan/leaflet-providersESP
 
 footer:
