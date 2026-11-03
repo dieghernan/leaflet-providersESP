@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="es">
   {% include head.html theme_script=true %}
-  <body class="map-page" id="body">
+  <body class="map-page h-entry" id="body">
+    {% include custom/page-identity.html %}
     {% include map-application.html %}
     {% include map-app.html %}
     <script src="{{ '/js/reset-map.js' | relative_url }}"></script>

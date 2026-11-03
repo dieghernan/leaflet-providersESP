@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="es">
   {% include head.html theme_script=true %}
-  <body class="preview-page d-flex flex-column" id="body">
+  <body class="preview-page h-entry d-flex flex-column" id="body">
+    {% include custom/page-identity.html %}
     {% include_cached navbar.html pageurl=page.url %}
     {% include map-application.html %}
     {% include preview.html %}
