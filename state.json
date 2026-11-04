@@ -1,10 +1,10 @@
 {
   "posts": {
     "https://dieghernan.github.io/leaflet-providersESP/": {
-      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
-      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CONTRIBUTING.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
-      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58",
-      "https://github.com/dieghernan/leaflet-providersESP/issues": "5dd3ee1c5503b2001608f69b593f46eb21a252afc444aee8d16e755d79921a58"
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "126099fa2f265ef22cb2bafd11a8e992a59cee7e82823f8cd4fa8444ef09bf2a",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CONTRIBUTING.md": "126099fa2f265ef22cb2bafd11a8e992a59cee7e82823f8cd4fa8444ef09bf2a",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "126099fa2f265ef22cb2bafd11a8e992a59cee7e82823f8cd4fa8444ef09bf2a",
+      "https://github.com/dieghernan/leaflet-providersESP/issues": "126099fa2f265ef22cb2bafd11a8e992a59cee7e82823f8cd4fa8444ef09bf2a"
     },
     "https://dieghernan.github.io/leaflet-providersESP/404.html": {},
     "https://dieghernan.github.io/leaflet-providersESP/capas/": {
@@ -49,9 +49,9 @@
       "https://www.ign.es/wmts/primera-edicion-mtn?service=WMTS&request=GetCapabilities&version=1.0.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf"
     },
     "https://dieghernan.github.io/leaflet-providersESP/guia/": {
-      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e",
-      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e",
-      "https://github.com/dieghernan/leaflet-providersESP/tree/main/dist": "dc73591bc6dcd92fe9f76d233cf03c32e3bef9565ca5c399fd6bba49f9cecc9e"
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028",
+      "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028",
+      "https://github.com/dieghernan/leaflet-providersESP/tree/main/dist": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028"
     }
   },
   "version": 2
