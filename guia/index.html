@@ -226,10 +226,10 @@
 		</nav>   
 	</div>
 			<div class="e-content"><h2 id="instalación">Instalación</h2>
-<p>Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
-El plugin funciona directamente con Leaflet. Cargar leaflet-providers es opcional.</p>
+<p>Carga primero el CSS y el <strong>JavaScript</strong> de <strong>Leaflet</strong> y después <strong>leaflet-providersESP</strong>.
+El plugin funciona directamente con <strong>Leaflet</strong>. Cargar <strong>leaflet-providers</strong> es opcional.</p>
 <h3 id="vía-cdn">Vía CDN</h3>
-<p>Para usar la versión publicada <code class="language-plaintext highlighter-rouge">v1.5.0</code> con Leaflet <code class="language-plaintext highlighter-rouge">1.9.4</code>:</p>
+<p>Para usar la versión publicada <code class="language-plaintext highlighter-rouge">v1.5.0</code> con <strong>Leaflet</strong> <code class="language-plaintext highlighter-rouge">1.9.4</code>.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/dieghernan/leaflet-providersESP@v1.5.0/dist/leaflet-providersESP.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -247,7 +247,7 @@ script del plugin en el ejemplo completo de abajo por:</p>
 <p>También puedes copiar <code class="language-plaintext highlighter-rouge">dist/leaflet-providersESP.js</code> y usar
 <code class="language-plaintext highlighter-rouge">src="./leaflet-providersESP.js"</code> para cargar el código sin minificar. Los archivos
 están en <a href="https://github.com/dieghernan/leaflet-providersESP/tree/main/dist">dist/</a>.
-Mantén las referencias al CSS y al JavaScript de Leaflet antes del plugin.</p>
+Mantén las referencias al CSS y al JavaScript de <strong>Leaflet</strong> antes del plugin.</p>
 <h2 id="ejemplos">Ejemplos</h2>
 <h3 id="un-mapa-completo">Un mapa completo</h3>
 <p>Guarda este ejemplo como <code class="language-plaintext highlighter-rouge">index.html</code> y ábrelo en el navegador. El contenedor del
@@ -276,7 +276,7 @@ mapa necesita una altura explícita para ser visible.</p>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 <div id="btndemo1" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/minimal/" allowfullscreen="" loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="/leaflet-providersESP/demo/minimal/" allowfullscreen="" loading="lazy"></iframe>
 </div>
 <h3 id="varias-capas">Varias capas</h3>
 <p>Los siguientes fragmentos sustituyen el contenedor y el script del mapa del
@@ -291,7 +291,7 @@ ejemplo completo. Conserva los estilos y las dependencias del <code class="langu
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <div id="btndemo2" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/overlays/" allowfullscreen="" loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="/leaflet-providersESP/demo/overlays/" allowfullscreen="" loading="lazy"></iframe>
 </div>
 <h3 id="leaflet-providersesp--leaflet-providers">leaflet-providersESP + leaflet-providers</h3>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -306,13 +306,13 @@ ejemplo completo. Conserva los estilos y las dependencias del <code class="langu
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <div id="btndemo3" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="/leaflet-providersESP/demo/leafletproviders/" allowfullscreen="" loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="/leaflet-providersESP/demo/leafletproviders/" allowfullscreen="" loading="lazy"></iframe>
 </div>
 <h2 id="elegir-una-capa">Elegir una capa</h2>
 <p>Cada capa se identifica con <code class="language-plaintext highlighter-rouge">Proveedor.Variante</code>, por ejemplo <code class="language-plaintext highlighter-rouge">IGNBase.Gris</code>.
 Si omites la variante se usa la predeterminada del proveedor: <code class="language-plaintext highlighter-rouge">IGNBase</code> y
 <code class="language-plaintext highlighter-rouge">IGNBase.Todo</code> muestran la misma cartografía, aunque cada llamada crea un objeto
-Leaflet distinto.</p>
+<strong>Leaflet</strong> distinto.</p>
 <p>Busca una capa en el <a href="/leaflet-providersESP/preview/">catálogo</a>, comprueba su
 aspecto y copia su llamada a <code class="language-plaintext highlighter-rouge">L.tileLayer.providerESP()</code>.
 La <a href="/leaflet-providersESP/capas/">referencia de capas</a> explica qué representa
@@ -321,7 +321,7 @@ cada nombre y sus limitaciones de cobertura, escala y disponibilidad.</p>
 <p>Un fondo aporta la cartografía principal. Las superposiciones añaden información
 sobre él, como límites administrativos o curvas de nivel. Algunas capas solo
 muestran información a partir de un nivel de zoom o dentro de su cobertura.</p>
-<p>Puedes pasar opciones de Leaflet como segundo argumento:</p>
+<p>Puedes pasar opciones de <strong>Leaflet</strong> como segundo argumento:</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">.</span><span class="nf">providerESP</span><span class="p">(</span><span class="dl">'</span><span class="s1">UnidadesAdm.Limites</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
     <span class="na">opacity</span><span class="p">:</span> <span class="mf">0.7</span>
 <span class="p">}).</span><span class="nf">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
@@ -332,7 +332,7 @@ las capas que quieras incorporar al selector y mostrar directamente en el mapa.
 Un fondo nuevo sustituye al fondo visible. Las transparencias se acumulan.
 La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.</p>
 <p>Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
-y activar o desactivar transparencias con el control estándar de Leaflet.
+y activar o desactivar transparencias con el control estándar de <strong>Leaflet</strong>.
 Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con <strong>×</strong>, Escape o un clic fuera.
@@ -365,7 +365,7 @@ cargar <strong>leaflet-providers</strong> si solo usas las capas de este proyect
 <p>Las demás variantes de <code class="language-plaintext highlighter-rouge">Copernicus</code> usan los servicios oficiales de EEA y conservan
 sus nombres y los productos de 2012/2015. La cobertura sigue los productos europeos.
 <code class="language-plaintext highlighter-rouge">ForestLeaf</code> solicita EPSG:4326 automáticamente, también en el mapa Mercator
-predeterminado de Leaflet. Las otras variantes usan EPSG:3857. Las peticiones
+predeterminado de <strong>Leaflet</strong>. Las otras variantes usan EPSG:3857. Las peticiones
 combinan las resoluciones o las capas ráster y vectoriales disponibles para que el
 servicio seleccione la representación adecuada según la escala.</p>
 <p><code class="language-plaintext highlighter-rouge">Copernicus.RiparianGreen</code> está deprecada: el servicio no está disponible y no se
@@ -374,8 +374,8 @@ compatibilidad y muestra un aviso en la consola una vez por página. Esta varian
 ya no se incluye en las listas de capas disponibles ni en las previsualizaciones.</p>
 <h2 id="si-el-mapa-no-se-ve">Si el mapa no se ve</h2>
 <ul>
- <li>Comprueba que el contenedor tiene altura y que cargas el CSS de Leaflet.</li>
- <li>Carga el JavaScript de Leaflet antes del plugin y crea el mapa después del
+ <li>Comprueba que el contenedor tiene altura y que cargas el CSS de <strong>Leaflet</strong>.</li>
+ <li>Carga el <strong>JavaScript</strong> de <strong>Leaflet</strong> antes del plugin y crea el mapa después del
 contenedor HTML.</li>
  <li>Acércate a la zona de cobertura: una capa puede no tener datos en todo el
 territorio o a todas las escalas.</li>
@@ -385,7 +385,7 @@ puede deberse al servicio remoto, a sus condiciones de acceso o a CORS.</li>
 a su zona de cobertura.</li>
 </ul>
 <h2 id="atribución-y-condiciones-de-uso">Atribución y condiciones de uso</h2>
-<p>Mantén visible el control de atribución de Leaflet. El plugin incorpora la
+<p>Mantén visible el control de atribución de <strong>Leaflet</strong>. El plugin incorpora la
 atribución configurada para cada capa, pero debes consultar las condiciones del
 organismo antes de reutilizar sus mapas. La licencia MIT del código no sustituye
 las condiciones de los servicios cartográficos.</p>
