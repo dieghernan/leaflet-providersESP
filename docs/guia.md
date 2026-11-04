@@ -10,12 +10,12 @@ show_toc: false
 
 ## Instalación
 
-Carga primero el CSS y el JavaScript de Leaflet y después leaflet-providersESP.
-El plugin funciona directamente con Leaflet. Cargar leaflet-providers es opcional.
+Carga primero el CSS y el **JavaScript** de **Leaflet** y después **leaflet-providersESP**.
+El plugin funciona directamente con **Leaflet**. Cargar **leaflet-providers** es opcional.
 
 ### Vía CDN
 
-Para usar la versión publicada `v1.5.0` con Leaflet `1.9.4`:
+Para usar la versión publicada `v1.5.0` con **Leaflet** `1.9.4`.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -44,7 +44,7 @@ script del plugin en el ejemplo completo de abajo por:
 También puedes copiar `dist/leaflet-providersESP.js` y usar
 `src="./leaflet-providersESP.js"` para cargar el código sin minificar. Los archivos
 están en [dist/](https://github.com/dieghernan/leaflet-providersESP/tree/main/dist).
-Mantén las referencias al CSS y al JavaScript de Leaflet antes del plugin.
+Mantén las referencias al CSS y al JavaScript de **Leaflet** antes del plugin.
 
 ## Ejemplos
 
@@ -79,7 +79,7 @@ L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
 ```
 
 <div id="btndemo1" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="{{ '/demo/minimal/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="{{ '/demo/minimal/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
 </div>
 
 ### Varias capas
@@ -99,7 +99,7 @@ L.tileLayer.providerESP('NombresGeograficos').addTo(map2);
 ```
 
 <div id="btndemo2" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="{{ '/demo/overlays/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="{{ '/demo/overlays/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
 </div>
 
 ### leaflet-providersESP + leaflet-providers
@@ -118,7 +118,7 @@ L.control.layers(base, over, { collapsed: true }).addTo(map3);
 ```
 
 <div id="btndemo3" class="embed-responsive embed-responsive-4by3 my-2 chulapa-rounded-lg border border-primary">
-  <iframe title="Ejemplo interactivo de Leaflet" class="embed-responsive-item" src="{{ '/demo/leafletproviders/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
+  <iframe title="Ejemplo interactivo de **Leaflet**" class="embed-responsive-item" src="{{ '/demo/leafletproviders/' | relative_url }}" allowfullscreen loading="lazy"></iframe>
 </div>
 
 ## Elegir una capa
@@ -126,7 +126,7 @@ L.control.layers(base, over, { collapsed: true }).addTo(map3);
 Cada capa se identifica con `Proveedor.Variante`, por ejemplo `IGNBase.Gris`.
 Si omites la variante se usa la predeterminada del proveedor: `IGNBase` y
 `IGNBase.Todo` muestran la misma cartografía, aunque cada llamada crea un objeto
-Leaflet distinto.
+**Leaflet** distinto.
 
 Busca una capa en el [catálogo]({{ '/preview/' | relative_url }}), comprueba su
 aspecto y copia su llamada a `L.tileLayer.providerESP()`.
@@ -139,7 +139,7 @@ Un fondo aporta la cartografía principal. Las superposiciones añaden informaci
 sobre él, como límites administrativos o curvas de nivel. Algunas capas solo
 muestran información a partir de un nivel de zoom o dentro de su cobertura.
 
-Puedes pasar opciones de Leaflet como segundo argumento:
+Puedes pasar opciones de **Leaflet** como segundo argumento:
 
 ```js
 L.tileLayer.providerESP('UnidadesAdm.Limites', {
@@ -154,7 +154,7 @@ Un fondo nuevo sustituye al fondo visible. Las transparencias se acumulan.
 La clasificación se deduce de las opciones de transparencia y opacidad del proveedor.
 
 Pulsa el icono de capas apiladas, en la esquina superior derecha, para elegir un fondo
-y activar o desactivar transparencias con el control estándar de Leaflet.
+y activar o desactivar transparencias con el control estándar de **Leaflet**.
 Desmarcar una capa en la franja la retira del selector y del mapa.
 Puedes colapsar la franja para dedicar más espacio al mapa.
 El selector se abre al hacer clic y se cierra con **×**, Escape o un clic fuera.
@@ -195,7 +195,7 @@ Desde la versión 1.4.0, los nombres recomendados son
 Las demás variantes de `Copernicus` usan los servicios oficiales de EEA y conservan
 sus nombres y los productos de 2012/2015. La cobertura sigue los productos europeos.
 `ForestLeaf` solicita EPSG:4326 automáticamente, también en el mapa Mercator
-predeterminado de Leaflet. Las otras variantes usan EPSG:3857. Las peticiones
+predeterminado de **Leaflet**. Las otras variantes usan EPSG:3857. Las peticiones
 combinan las resoluciones o las capas ráster y vectoriales disponibles para que el
 servicio seleccione la representación adecuada según la escala.
 
@@ -206,8 +206,8 @@ ya no se incluye en las listas de capas disponibles ni en las previsualizaciones
 
 ## Si el mapa no se ve
 
-- Comprueba que el contenedor tiene altura y que cargas el CSS de Leaflet.
-- Carga el JavaScript de Leaflet antes del plugin y crea el mapa después del
+- Comprueba que el contenedor tiene altura y que cargas el CSS de **Leaflet**.
+- Carga el **JavaScript** de **Leaflet** antes del plugin y crea el mapa después del
   contenedor HTML.
 - Acércate a la zona de cobertura: una capa puede no tener datos en todo el
   territorio o a todas las escalas.
@@ -218,7 +218,7 @@ ya no se incluye en las listas de capas disponibles ni en las previsualizaciones
 
 ## Atribución y condiciones de uso
 
-Mantén visible el control de atribución de Leaflet. El plugin incorpora la
+Mantén visible el control de atribución de **Leaflet**. El plugin incorpora la
 atribución configurada para cada capa, pero debes consultar las condiciones del
 organismo antes de reutilizar sus mapas. La licencia MIT del código no sustituye
 las condiciones de los servicios cartográficos.

@@ -1,6 +1,6 @@
 # leaflet-providersESP
 
-Spanish public mapping services for [Leaflet](https://leafletjs.com/): add IGN
+Spanish public mapping services for [**Leaflet**](https://leafletjs.com/): add IGN
 basemaps, PNOA imagery, administrative boundaries and thematic WMS/WMTS layers
 with a provider name.
 
@@ -14,18 +14,18 @@ with a provider name.
 · **[Open the map](https://dieghernan.github.io/leaflet-providersESP/visor/)**
 · **[Usage guide (ES)](https://dieghernan.github.io/leaflet-providersESP/guia/)**
 
-The plugin works directly with Leaflet. You can also combine it with
-[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) on the
+The plugin works directly with **Leaflet**. You can also combine it with
+[**leaflet-providers**](https://github.com/leaflet-extras/leaflet-providers) on the
 same map.
 
 ## Installation
 
-Load Leaflet's CSS and JavaScript first, then load leaflet-providersESP. The
-plugin works directly with Leaflet; loading leaflet-providers is optional.
+Load the **Leaflet** CSS and **JavaScript** first, then load
+**leaflet-providersESP**. You can optionally load **leaflet-providers**.
 
 ### Via CDN
 
-Use the published `v1.5.0` release with Leaflet `1.9.4`:
+Use the published `v1.5.0` release with **Leaflet** `1.9.4`.
 
 ``` html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -53,7 +53,7 @@ plugin script in the complete example below with:
 
 You can also copy `dist/leaflet-providersESP.js` and use
 `src="./leaflet-providersESP.js"` for the readable source. Both files are in
-[dist/](dist/). Keep the Leaflet CSS and JavaScript includes before the plugin.
+[dist/](dist/). Keep the **Leaflet** CSS and **JavaScript** includes before the plugin.
 
 ## Usage
 
@@ -89,7 +89,7 @@ L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
 
 Use `Provider.Variant` to select a layer. Omitting the variant selects the
 provider's default: `IGNBase` and `IGNBase.Todo` display the same cartography.
-Each call creates a separate Leaflet layer.
+Each call creates a separate **Leaflet** layer.
 
 ```js
 var map = L.map('map').setView([40.4166, -3.7038], 12);
@@ -103,7 +103,7 @@ L.control.layers({ 'IGN gray': base }, { Boundaries: boundaries }).addTo(map);
 The [catalog](https://dieghernan.github.io/leaflet-providersESP/preview/)
 lets you compare layer previews and copy code with or without the plugin.
 The [map viewer](https://dieghernan.github.io/leaflet-providersESP/visor/)
-lets you add basemaps and overlays to Leaflet's standard layer control and choose which ones to display. An optional location button centers the map on your position.
+lets you add basemaps and overlays to the standard **Leaflet** layer control and choose which ones to display. An optional location button centers the map on your position.
 Documentation and map controls are in Spanish.
 The [layer reference](https://dieghernan.github.io/leaflet-providersESP/capas/)
 describes every layer, including coverage, scale and availability limitations.
@@ -111,7 +111,7 @@ describes every layer, including coverage, scale and availability limitations.
 ## Availability and attribution
 
 Coverage, zoom limits, availability and terms of use depend on each service.
-Keep Leaflet's attribution control visible and check the provider's terms before
+Keep the **Leaflet** attribution control visible and check the provider's terms before
 reusing its maps. The MIT license covers this plugin's code.
 
 See the [changelog](CHANGELOG.md) for aliases, deprecated layers and known
@@ -136,4 +136,4 @@ report broken services or propose a provider.
 ## License
 
 [MIT](LICENSE). This project builds on the provider configuration approach of
-[leaflet-providers](https://github.com/leaflet-extras/leaflet-providers).
+[**leaflet-providers**](https://github.com/leaflet-extras/leaflet-providers).

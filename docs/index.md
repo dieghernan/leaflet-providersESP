@@ -10,7 +10,7 @@ excerpt: Explora mapas base, ortofotos y capas temáticas de organismos público
 
 **Leaflet-providersESP** reúne configuraciones de servicios WMS y WMTS de
 organismos públicos como el IGN, el CNIG o Catastro. Elige una capa por su nombre
-y añádela a tu mapa Leaflet.
+y añádela a tu mapa **Leaflet**.
 
 <div class="row my-4">
   <div class="col-md-4 mb-3"><a class="btn btn-primary btn-block" href="{{ '/guia/' | relative_url }}">Empezar con Leaflet</a></div>
@@ -20,7 +20,7 @@ y añádela a tu mapa Leaflet.
 
 ## Una capa, una línea
 
-Una vez cargados Leaflet y el plugin, basta con indicar el proveedor:
+Una vez cargados **Leaflet** y el plugin, basta con indicar el proveedor:
 
 ```js
 L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
@@ -30,7 +30,7 @@ L.tileLayer.providerESP('IGNBase.Todo').addTo(map);
 
 La [guía de uso]({{ '/guia/' | relative_url }}) incluye la instalación y un
 HTML completo que puedes guardar y abrir en el navegador. El plugin funciona
-con Leaflet y se puede combinar con **leaflet-providers**.
+con **Leaflet** y se puede combinar con **leaflet-providers**.
 
 ## Encuentra la cartografía que necesitas
 
@@ -41,7 +41,7 @@ con Leaflet y se puede combinar con **leaflet-providers**.
 
 En el [Preview]({{ '/preview/' | relative_url }}) puedes comparar miniaturas y
 copiar el código. En el [visor]({{ '/visor/' | relative_url }}) puedes seleccionar
-fondos y transparencias para incorporarlos al control de capas de Leaflet y
+fondos y transparencias para incorporarlos al control de capas de **Leaflet** y
 elegir cuáles mostrar sobre el mapa.
 
 <a id="proveedores-disponibles"></a>

@@ -12,7 +12,7 @@ aliases or deprecations.
 
 ## Development
 
-Use Node.js 22.13+ (22.x) or Node.js 24 or newer. Install the development
+Use **Node.js** 22.13+ (22.x) or 24 or newer. Install the development
 dependencies and Chromium:
 
 ``` sh
@@ -29,7 +29,7 @@ npm test
 ```
 
 Individual checks are available as `npm run lint`, `npm run test:unit` and
-`npm run test:browser`. ESLint checks the JavaScript files and inline scripts in
+`npm run test:browser`. **ESLint** checks the **JavaScript** files and inline scripts in
 HTML, following the conventions of
 [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers). Use
 `npm run lint:fix` to apply automatic formatting fixes. Use
@@ -37,10 +37,10 @@ HTML, following the conventions of
 [development guide](dev/README.md) for local previews.
 `npm run build:check` verifies that `dist/leaflet-providersESP.min.js` is
 up to date without rewriting it. This check is also part of `npm test`. Both
-distributions pass ESLint's correctness rules; stylistic rules apply to the
+distributions pass the **ESLint** correctness rules. Stylistic rules apply to the
 editable sources.
 
-Browser tests exercise both the source and minified distributions with Leaflet
+Browser tests exercise both the source and minified distributions with **Leaflet**
 1.9.4 in Chromium and check WMS parameters, coordinate axis order, tile loading,
 opacity, native zoom limits and compatibility with leaflet-providers in both
 script-loading orders. Tile responses are controlled by the tests so remote
@@ -54,7 +54,7 @@ to `main`. On Linux, install browser system dependencies with
 
 ## Documentation and demos
 
-The English README introduces the plugin. The Spanish Jekyll site lives in
+The English README introduces the plugin. The Spanish **Jekyll** site lives in
 `docs/`: `index.md` introduces the project, `guia.md` contains the usage guide and
 `preview.html` and `visor.html` share the catalog and map application.
 
@@ -69,7 +69,7 @@ bundle exec jekyll build
 
 Use `bundle exec jekyll serve` for a local preview. Check the site at its
 configured `/leaflet-providersESP/` base path, including narrow mobile screens.
-The published site loads the plugin from this checkout through Jekyll's
+The published site loads the plugin from this checkout through **Jekyll**'s
 `/dist/` output. The Pages workflow copies the distribution before building.
 
 Keep the complete README and guide examples working. Browser tests exercise
