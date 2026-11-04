@@ -73,6 +73,7 @@ webmentions:
   pingback: https://webmention.io/dieghernan.github.io/xmlrpc
 
 navbar:
+  expand: lg
   brand:
     title: '<i class="fas fa-home mr-1" aria-hidden="true"></i> Leaflet-providersESP'
 
