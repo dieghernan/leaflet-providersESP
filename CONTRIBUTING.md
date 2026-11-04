@@ -20,8 +20,10 @@ npm ci
 npx playwright install chromium
 ```
 
-After changing the plugin, regenerate the minified distribution with UglifyJS,
-as in leaflet-providers, then run all checks before submitting a change:
+After testing changes in `dev/leaflet-providersESP.js`, apply the changes you
+intend to publish to `dist/leaflet-providersESP.js`. The build reads that file
+and regenerates the minified distribution with **UglifyJS**. Run all checks
+before submitting a change.
 
 ``` sh
 npm run build
