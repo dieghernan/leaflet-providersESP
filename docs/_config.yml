@@ -87,7 +87,7 @@ navbar:
       url: /visor/
     - title: Cambios
       url: https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md
-    - title: '<i class="fab fa-github mr-1" aria-hidden="true"></i> GitHub'
+    - title: <i class="fab fa-github mr-1" aria-hidden="true"></i><span class="d-lg-none">GitHub</span><span class="sr-only">GitHub repo of this project</span>
       url: https://github.com/dieghernan/leaflet-providersESP
 
 footer:
