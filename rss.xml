@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-	<channel>
-		<title>Leaflet-providersESP | Cartografía pública de España para Leaflet</title>
-		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
-		<link>https://dieghernan.github.io/leaflet-providersESP</link>
-		<description>Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.</description>
-		<language>es-ES</language>
-		<copyright>(c) 2026, Diego HH</copyright>
-		<pubDate>Sat, 07 Nov 2026 22:55:45 +0100</pubDate>
-		<lastBuildDate>Sat, 07 Nov 2026 22:55:45 +0100</lastBuildDate>
-		<category>blog</category>
-		<ttl>60</ttl>
-		<atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
-		<image>
-			<title>Leaflet-providersESP | Cartografía pública de España para Leaflet</title>
-			<url>https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg</url>
-			<link>https://dieghernan.github.io/leaflet-providersESP</link>
-			<description>Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.</description>
-		</image></channel>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Leaflet-providersESP | Cartografía pública de España para Leaflet</title>
+    <generator>(c) Chulapa Jekyll Theme RSS generator</generator>
+    <link>https://dieghernan.github.io/leaflet-providersESP</link>
+    <description>Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.</description>
+    <language>es-ES</language>
+    <copyright>(c) 2026, Diego HH</copyright>
+    <lastBuildDate>Mon, 16 Nov 2026 22:49:30 +0100</lastBuildDate>
+    <category>blog</category>
+    <ttl>60</ttl>
+    <atom:link href="https://dieghernan.github.io/leaflet-providersESP/rss.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <title>Leaflet-providersESP | Cartografía pública de España para Leaflet</title>
+      <url>https://dieghernan.github.io/leaflet-providersESP/assets/social-preview.jpg</url>
+      <link>https://dieghernan.github.io/leaflet-providersESP</link>
+      <description>Mapas base, ortofotos y capas WMS y WMTS de organismos públicos de España para Leaflet. Explora proveedores y copia el código para tu mapa.</description>
+    </image>
+    
+  </channel>
 </rss>
