@@ -52,7 +52,8 @@
       "https://github.com/dieghernan/leaflet-providersESP/blob/main/CHANGELOG.md": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028",
       "https://github.com/dieghernan/leaflet-providersESP/blob/main/dev/audit/capabilities-audit.md": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028",
       "https://github.com/dieghernan/leaflet-providersESP/tree/main/dist": "19fcce449b197a5661c83e9b2d7c6ea9e331636851e1afe26c0185b568452028"
-    }
+    },
+    "https://dieghernan.github.io/leaflet-providersESP/subscribe/": {}
   },
   "version": 2
 }
