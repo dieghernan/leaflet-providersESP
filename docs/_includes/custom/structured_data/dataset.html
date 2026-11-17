@@ -6,6 +6,7 @@
   "url": {{ include.services.first.capabilities | jsonify }},
   "license": {{ include.dataset.license | jsonify }},
   "creditText": {{ include.dataset.credit | jsonify }},
+  "creator": {{ include.dataset.creator | jsonify }},
   "publisher": {{ site.data.structured_data.cartography.publisher | jsonify }},
   "isAccessibleForFree": {{ site.data.structured_data.cartography.isAccessibleForFree | jsonify }},
   "inLanguage": {{ site.data.structured_data.cartography.inLanguage | jsonify }},

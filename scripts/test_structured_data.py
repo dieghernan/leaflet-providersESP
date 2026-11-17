@@ -16,6 +16,10 @@ def schemas(path):
 
 class StructuredDataTests(unittest.TestCase):
     def test_datasets_and_access_services_are_distinct(self):
+        creator_urls = {
+            "dataset-ignbase": "https://www.ign.es/",
+            "dataset-pnoa": "https://pnoa.ign.es/",
+        }
         for route in ("visor", "preview", "allproviders", "wms", "wmts"):
             with self.subTest(route=route):
                 blocks = schemas(SITE / route / "index.html")
@@ -27,11 +31,16 @@ class StructuredDataTests(unittest.TestCase):
                 self.assertEqual(len(datasets), 1 if route == "wms" else 2)
                 for dataset in datasets.values():
                     self.assertGreaterEqual(len(dataset["description"]), 50)
-                    self.assertEqual(dataset["publisher"]["url"], "https://www.ign.es/")
+                    dataset_id = dataset["@id"].split("#")[-1]
+                    self.assertEqual(dataset["creator"]["@type"], "Organization")
+                    self.assertEqual(dataset["creator"]["url"], creator_urls[dataset_id])
+                    self.assertEqual(dataset["publisher"]["@type"], "Organization")
+                    self.assertEqual(dataset["publisher"]["name"], "Centro Nacional de Información Geográfica")
                     self.assertEqual(dataset["license"], "https://creativecommons.org/licenses/by/4.0/")
                     self.assertNotIn("distribution", dataset)
                 for service in (item for item in graph if item["@type"] == "Service"):
                     self.assertIn(service["serviceOutput"]["@id"], datasets)
+                    self.assertEqual(service["provider"]["url"], "https://www.ign.es/")
                     if route in ("wms", "wmts"):
                         self.assertEqual(service["serviceType"], "OGC " + route.upper())
 

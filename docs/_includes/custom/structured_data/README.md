@@ -10,8 +10,10 @@ the cartographic reuse licenses remain separate.
 
 `docs/_data/cartographic_datasets.json` describes verified external datasets
 and their access services. Add a dataset only after checking its official
-metadata, attribution, license and availability in the viewer. Styles are not
-separate datasets. Do not invent release dates or versions.
+metadata, attribution, licenses and availability in the viewer. Each dataset
+defines its creator. The cartographic defaults identify the CNIG as dataset
+publisher and the IGN as service provider. Styles are not separate datasets.
+Do not invent release dates or versions.
 
 The application and catalog use the same service selection include. WMS and
 WMTS views only reference datasets with a matching service; demos retain their

@@ -25,6 +25,11 @@
   },
   "cartography": {
     "publisher": {
+      "@type": "Organization",
+      "name": "Centro Nacional de Información Geográfica",
+      "url": "https://www.ign.es/web/cnig/informacion-contacto"
+    },
+    "serviceProvider": {
       "@type": "GovernmentOrganization",
       "name": "Instituto Geográfico Nacional",
       "url": "https://www.ign.es/"

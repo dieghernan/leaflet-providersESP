@@ -2,6 +2,11 @@
   {
     "id": "ignbase",
     "name": "Mapa Base de España (IGNBase)",
+    "creator": {
+      "@type": "Organization",
+      "name": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/"
+    },
     "description": "Cartografía de referencia del IGN y del Sistema Cartográfico Nacional de España, compuesta a partir de bases topográficas, nombres geográficos, divisiones administrativas y otras fuentes oficiales. El visor permite consultar distintas representaciones del mismo conjunto mediante WMTS.",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "credit": "Sistema Cartográfico Nacional de España (scne.es).",
@@ -16,6 +21,11 @@
   {
     "id": "pnoa",
     "name": "PNOA de máxima actualidad",
+    "creator": {
+      "@type": "Organization",
+      "name": "Plan Nacional de Ortofotografía Aérea",
+      "url": "https://pnoa.ign.es/"
+    },
     "description": "Ortofotos del Plan Nacional de Ortofotografía Aérea y mosaicos con información de fechas de adquisición, de distinta resolución y fecha según la zona. El servicio incorpora imágenes Sentinel2 a escalas pequeñas y otras imágenes de fondo. La extensión de visualización no implica una fecha uniforme de captura.",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "credit": "Sistema Cartográfico Nacional de España (scne.es). PNOA: consultar también las atribuciones específicas de las imágenes en los metadatos oficiales.",
