@@ -34,6 +34,7 @@
       "https://wms-pendientes.idee.es/pendientes?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
       "https://wms-spainbybike.idee.es/spainbybike?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
       "https://wms-volcanologia.ign.es/volcanologia?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
+      "https://wms.mapama.gob.es/sig/desarrollorural/ccnn_etapas?service=WMS&request=GetCapabilities&version=1.3.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
       "https://wmts-mapa-lidar.idee.es/lidar?service=WMTS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
       "https://wmts-potencial-solar.idee.es/potencial-solar?service=WMTS&request=GetCapabilities&version=1.0.0": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
       "https://www.cartociudad.es/wms-inspire/direcciones-ccpp?service=WMS&request=GetCapabilities": "7b5e03a0686003690fc6a96bce7196d57cedc53cabfa8fdec4fe8f3694e495cf",
